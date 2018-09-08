@@ -6,7 +6,7 @@
 #    By: triou <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/08 16:31:09 by triou            ###   ########.fr        #
+#    Updated: 2018/09/08 17:30:25 by triou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = asm
 SDIR = srcs
 IDIR = includes
 ODIR = objs
-LDIR = libft
+LDIR = ../libft
 SRCS =	asm.c \
 		op.c
 LIB = ft

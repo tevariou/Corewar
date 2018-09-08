@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:55:36 by triou             #+#    #+#             */
-/*   Updated: 2018/04/03 23:32:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/08 18:40:31 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char			**ft_strsplit(const char *s, char c)
 {
 	char	**tab;
 
-	if (!(tab = (char **)malloc((ft_wordcount(s, c) + 1) * sizeof(*tab))))
+	if (!(tab = ft_memalloc((ft_wordcount(s, c) + 1) * sizeof(*tab))))
 		return (NULL);
 	if (!ft_worddup(s, c, tab))
 	{

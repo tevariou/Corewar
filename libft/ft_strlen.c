@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 13:52:30 by triou             #+#    #+#             */
-/*   Updated: 2018/06/20 19:28:55 by triou            ###   ########.fr       */
+/*   Created: 2018/04/03 13:53:44 by triou             #+#    #+#             */
+/*   Updated: 2018/09/08 18:22:03 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strcpy(char *dest, const char *src)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
 	len = 0;
-	while ((dest[len] = src[len]))
+	while (s && s[len])
 		len++;
-	return (dest);
+	return (len);
 }

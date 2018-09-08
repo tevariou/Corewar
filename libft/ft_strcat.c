@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 13:53:44 by triou             #+#    #+#             */
-/*   Updated: 2018/06/20 19:28:34 by triou            ###   ########.fr       */
+/*   Created: 2018/04/03 13:52:02 by triou             #+#    #+#             */
+/*   Updated: 2018/09/08 18:24:26 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
+char	*ft_strcat(char *dest, const char *src)
 {
-	size_t	len;
+	char	*d;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	if ((d = dest) && src)
+	{
+		while (*d)
+			d++;
+		while (*src)
+			*d++ = *src++;
+		*d = '\0';
+	}
+	return (dest);
 }

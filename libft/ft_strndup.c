@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 13:54:23 by triou             #+#    #+#             */
-/*   Updated: 2018/07/26 21:17:40 by triou            ###   ########.fr       */
+/*   Created: 2018/04/03 13:54:54 by triou             #+#    #+#             */
+/*   Updated: 2018/09/08 18:36:28 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
+#include "libft.h"
+#include <stdlib.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strndup(const char *s, size_t n)
 {
-	if (!n)
-		return (0);
-	while (--n && *s1 && *s2 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	char	*dest;
+	size_t	len;
+
+	if (!s || !(dest = ft_memalloc((n + 1) * sizeof(*dest))))
+		return (NULL);
+	if (n > (len = ft_strlen(s)))
+		n = len;
+	ft_memcpy(dest, s, n);
+	dest[n] = '\0';
+	return (dest);
 }

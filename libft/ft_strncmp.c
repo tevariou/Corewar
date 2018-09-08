@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 13:52:15 by triou             #+#    #+#             */
-/*   Updated: 2018/06/25 14:41:51 by triou            ###   ########.fr       */
+/*   Created: 2018/04/03 13:54:23 by triou             #+#    #+#             */
+/*   Updated: 2018/09/08 18:42:44 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strclr(char *s)
+#include <sys/types.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s)
-		*s++ = '\0';
+	if (!n)
+		return (0);
+	while (--n && *s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

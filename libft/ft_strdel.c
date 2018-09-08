@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_binsearch.c                                     :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/18 21:38:57 by triou             #+#    #+#             */
-/*   Updated: 2018/07/18 21:39:12 by triou            ###   ########.fr       */
+/*   Created: 2018/04/03 13:52:42 by triou             #+#    #+#             */
+/*   Updated: 2018/09/08 23:50:05 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
+#include "libft.h"
+#include <stdlib.h>
 
-ssize_t	ft_binsearch(int *tab, ssize_t size, int n)
+void	ft_strdel(char **as)
 {
-	ssize_t	left;
-	ssize_t	right;
-	ssize_t	m;
-
-	left = 0;
-	right = size - 1;
-	while (left <= right)
-	{
-		m = (right + left) / 2;
-		if (tab[m] < n)
-			left = m + 1;
-		else if (tab[m] > n)
-			right = m - 1;
-		else
-			return (m);
-	}
-	return (-1);
+	free(*as);
+	*as = NULL;
 }
