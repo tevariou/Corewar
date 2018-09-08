@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 10:59:00 by triou             #+#    #+#             */
-/*   Updated: 2018/09/09 00:29:11 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/09 00:44:48 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,18 @@ static int	ft_read_data(char *data, const int fd, char **line)
 {
 	char	*str;
 	size_t	size;
+	size_t	len;
 
 	if (fd < 0 || !line)
 		return (-1);
 	if ((str = ft_strchr(data, '\n')))
 	{
 		size = str - data;
+		len = ft_strlen(data) - (size + 1);
 		if (!(*line = ft_strsub(data, 0, size)))
 			return (-1);
-		if (!(str = ft_strdup(data + size + 1)))
-		{
-			ft_strdel(line);
-			return (-1);
-		}
-		ft_strclr(data);
-		ft_strcpy(data, str);
-		free(str);
+		ft_memmove(data, data + size + 1, len);
+		ft_strclr(data + len);
 		return (1);
 	}
 	*line = ft_strdup(data);
