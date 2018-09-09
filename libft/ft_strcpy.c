@@ -17,7 +17,10 @@ char	*ft_strcpy(char *dest, const char *src)
 	size_t	len;
 
 	len = 0;
-	while (dest && src && (dest[len] = src[len]))
-		len++;
+	if (dest && src)
+	{
+		while ((dest[len] = src[len]))
+			len++;
+	}
 	return (dest);
 }

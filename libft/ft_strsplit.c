@@ -63,7 +63,7 @@ char			**ft_strsplit(const char *s, char c)
 {
 	char	**tab;
 
-	if (!(tab = ft_memalloc((ft_wordcount(s, c) + 1) * sizeof(*tab))))
+	if (!s || !(tab = ft_memalloc((ft_wordcount(s, c) + 1) * sizeof(*tab))))
 		return (NULL);
 	if (!ft_worddup(s, c, tab))
 	{
