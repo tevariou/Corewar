@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 10:59:00 by triou             #+#    #+#             */
-/*   Updated: 2018/09/09 00:44:48 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/11 00:53:39 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,11 @@ static int	save_data(int ret, char **line, char *data)
 int			get_next_line(const int fd, char **line)
 {
 	int				ret;
-	static char		data[BUFF_SIZE + 1];
-	char			buff[BUFF_SIZE + 1];
+	static char		buff[BUFF_SIZE + 1];
 	char			*tmp;
 
-	if ((ret = read_data(data, fd, line)))
+	if ((ret = read_data(buff, fd, line)))
 		return (ret);
-	buff[0] = '\0';
 	while (!ft_strchr(buff, '\n')
 		&& (ret = read(fd, buff, BUFF_SIZE)) > 0)
 	{
@@ -80,5 +78,6 @@ int			get_next_line(const int fd, char **line)
 		if (!(*line))
 			return (-1);
 	}
-	return (save_data(ret, line, data));
+	ft_strclr(buff);
+	return (save_data(ret, line, buff));
 }
