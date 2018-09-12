@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/12 21:15:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/12 21:58:22 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ static t_bool	check_extension(char *file)
 	return (TRUE);
 }
 
-static t_bool	read_file(t_asm *a, char *file)
+static t_bool	read_file(t_asm *a, char *line)
 {
 	int		fd;
 	int		ret;
 	char	*line;
 
-	a->file = NULL;
+	a->input = NULL;
 	if ((fd = open(file, O_RDONLY)) < 0)
 		sys_free_exit(a);
 	line = NULL;
