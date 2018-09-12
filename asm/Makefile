@@ -6,7 +6,7 @@
 #    By: triou <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/08 17:30:25 by triou            ###   ########.fr        #
+#    Updated: 2018/09/12 16:04:46 by triou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LDIR = ../libft
 SRCS =	asm.c \
 		op.c
 LIB = ft
-_INCLUDES = op.h
+_INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))
 _OBJ = $(SRCS:.c=.o)
 OBJ = $(patsubst %, $(ODIR)/%, $(_OBJ))

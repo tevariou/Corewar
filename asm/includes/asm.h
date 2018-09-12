@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.c                                              :+:      :+:    :+:   */
+/*   asm.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
+/*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
 /*   Updated: 2018/09/12 20:25:42 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "asm.h"
+#ifndef ASM_H
+# define ASM_H
 
-int	main(int ac, char **av)
-{
-	int		i;
-	t_asm	a;
+# define USAGE "Usage:\t./asm [-a] <sourcefile.s>\n\t-a : Instead of creating a .cor file, outputs a stripped and annotated version of the code to the standard output\n"
+# define OPTION "-a"
+# define EXT ".s"
 
-	if (ac <= 1 || ac > 3)
-		print_usage_exit();
-	a.option = set_option(av);
-	compile_file(&a, av[a.option + 1]);
-	return (EXIT_SUCCESS);
-}
+/* ERROR MESSAGES */
+# define WRONT_EXT "Wrong filename extension\n"
+
+typedef struct		s_file {
+	char			*line;
+	struct s_file	*prev;
+	struct s_file	*next;
+}					t_file;
+
+typedef struct		s_asm {
+	t_bool			option;
+	t_file			*input;
+}					t_asm;
+
+#endif

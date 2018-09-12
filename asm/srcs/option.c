@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.c                                              :+:      :+:    :+:   */
+/*   option.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
+/*   Created: 2018/09/12 17:22:43 by triou             #+#    #+#             */
 /*   Updated: 2018/09/12 20:25:42 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "asm.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+t_bool	set_option(int ac, char **av)
 {
-	int		i;
-	t_asm	a;
-
-	if (ac <= 1 || ac > 3)
+	if (ac == 3 && ft_strequ(av[1], OPTION))
+		return (TRUE);
+	else if (ac == 2 && ft_strequ(av[1], OPTION))
 		print_usage_exit();
-	a.option = set_option(av);
-	compile_file(&a, av[a.option + 1]);
-	return (EXIT_SUCCESS);
+	return (FALSE);
 }
