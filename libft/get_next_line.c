@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 10:59:00 by triou             #+#    #+#             */
-/*   Updated: 2018/09/11 01:21:59 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/13 00:28:04 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int			get_next_line(const int fd, char **line)
 	while (!ft_strchr(buff, '\n')
 		&& (ret = read(fd, buff, BUFF_SIZE)) > 0)
 	{
+		buff[ret] = '\0';
 		tmp = *line;
 		*line = ft_strjoin(*line, buff);
 		free(tmp);
