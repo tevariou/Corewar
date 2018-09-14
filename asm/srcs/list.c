@@ -6,11 +6,15 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/09/12 21:56:31 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/14 16:17:58 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		add_input_line(t_asm *a, char *line)
+#include "asm.h"
+#include "libft.h"
+#include <stdlib.h>
+
+void		add_input_line(t_asm *a, char **line)
 {
 	t_file	*head;
 	t_file	*new;
@@ -20,7 +24,7 @@ void		add_input_line(t_asm *a, char *line)
 	tail = head->prev;
 	if (!(new = ft_memalloc(*new)))
 		sys_free_exit(a);
-	new->line = line;
+	new->line = *line;
 	if (!(head))
 	{
 		new->prev = a->input;
@@ -32,4 +36,5 @@ void		add_input_line(t_asm *a, char *line)
 	new->prev = tail;
 	new->next = head;
 	head->prev = new;
+	*line = NULL;
 }

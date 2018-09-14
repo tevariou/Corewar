@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
-/*   Updated: 2018/09/12 20:25:42 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/14 16:48:13 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(int ac, char **av)
 	if (ac <= 1 || ac > 3)
 		print_usage_exit();
 	a.option = set_option(av);
-	compile_file(&a, av[a.option + 1]);
-	return (EXIT_SUCCESS);
+	if (get_file(&a, av[a.option + 1]))
+		return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }

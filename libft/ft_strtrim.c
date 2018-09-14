@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:55:59 by triou             #+#    #+#             */
-/*   Updated: 2018/04/03 23:47:30 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/14 15:39:56 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char		*ft_strtrim(const char *s)
 {
 	size_t	len;
 
+	if (!s)
+		return (NULL);
 	while (ft_isspace(*s))
 		s++;
 	if ((len = ft_strlen(s)))

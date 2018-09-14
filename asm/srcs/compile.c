@@ -6,13 +6,15 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/12 21:58:22 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/14 16:48:30 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include "libft.h";
+#include "asm.h"
 
 static t_bool	check_extension(char *file)
 {
@@ -28,7 +30,20 @@ static t_bool	check_extension(char *file)
 	return (TRUE);
 }
 
-static t_bool	read_file(t_asm *a, char *line)
+static void		remove_whitespaces(t_asm *a, char **line)
+{
+	char	*tmp;
+
+	tmp = *line;
+	if (!(*line = ft_strtrim(*line)))
+	{
+		free(tmp);
+		sys_free_exit(a);
+	}
+	free(tmp);
+}
+
+static void		record_file(t_asm *a, char *file)
 {
 	int		fd;
 	int		ret;
@@ -42,19 +57,30 @@ static t_bool	read_file(t_asm *a, char *line)
 	{
 		if (ret < -1)
 			sys_free_exit(a);
-		add_input_line(a, line);
-		line = NULL;
+		ft_strclr(ft_strchr(line, COMMENT_CHAR));
+		remove_whitespaces(a, &line);
+		if (*line)
+			add_input_line(a, &line);
+		else
+			ft_strdel(&line);
 	}
 	if (close(fd) < 0)
 		sys_free_exit(a);
 }
 
-void		compile_file(t_asm *a, char *file)
+static void		remove_header(t_asm *a)
+{
+
+}
+
+t_bool			get_file(t_asm *a, char *file)
 {
 	int		fd;
 	t_asm	a;
 
 	if (!check_extension(file))
-		return ;
-		
+		return (FALSE);
+	record_file(a, file);
+	remove_header(a);
+	return (TRUE);
 }
