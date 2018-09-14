@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include "libft.h";
 #include "asm.h"
+#include "op.h"
 
 static t_bool	check_extension(char *file)
 {
@@ -70,7 +71,7 @@ static void		record_file(t_asm *a, char *file)
 
 static void		remove_header(t_asm *a)
 {
-
+	
 }
 
 t_bool			get_file(t_asm *a, char *file)
