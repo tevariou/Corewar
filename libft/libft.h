@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/18 21:37:47 by triou             #+#    #+#             */
-/*   Updated: 2018/09/09 00:15:56 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/15 15:53:24 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,13 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	**ft_strsplit(const char *s, char c);
 int		ft_isspace(int c);
 int		ft_isdigit(int c);
-void	ft_putchar(char c);
-void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
 void	ft_strclr(char *s);
 t_bool	ft_strequ(const char *s1, const char *s2);
 t_bool	ft_strnequ(const char *s1, const char *s2, size_t n);
-void	ft_putchar(char c);
-void	ft_putendl(const char *s);
+ssize_t	ft_putchar(char c);
+ssize_t	ft_putendl(const char *s);
+ssize_t	ft_putstr(const char *s);
 void	ft_bzero(void *s, size_t n);
 char	**ft_strsplit(const char *s, char c);
 char	*ft_strtrim(const char *s);

@@ -6,14 +6,15 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:51:02 by triou             #+#    #+#             */
-/*   Updated: 2018/07/14 21:23:42 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/15 15:44:13 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(const char *s)
+ssize_t	ft_putendl(const char *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (ft_putstr(s) < 0 || ft_putchar('\n') < 0)
+		return (-1);
+	return (0);
 }

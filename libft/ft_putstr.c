@@ -6,14 +6,16 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:51:42 by triou             #+#    #+#             */
-/*   Updated: 2018/06/23 19:27:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/15 15:54:15 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putstr(char const *s)
+ssize_t	ft_putstr(char const *s)
 {
-	write(1, s, ft_strlen(s));
+	if (s)
+		return (write(1, s, ft_strlen(s)));
+	return (-1);
 }

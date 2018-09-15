@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/12 21:16:48 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/15 20:54:41 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void		ft_puterr(const char *err)
+ssize_t		ft_puterr(const char *err)
 {
-	write(2, err, ft_strlen(err));
+	if (err)
+		return (write(2, err, ft_strlen(err)));
+	return (-1);
 }
 
 void		print_usage_exit(void)
@@ -46,9 +48,26 @@ static void	free_input(t_asm *a)
 	a->input = NULL;
 }
 
-void		sys_free_exit(t_asm *a)
+void		err_free_exit(t_asm *a, const char *err)
 {
-	perror(NULL);
-	free_input(a);
+	if (!err)
+		perror(NULL);
+	else
+		ft_puterr(err);
+	if (a)
+		free_input(a);
+	exit(EXIT_FAILURE);
+}
+
+void		parse_error(t_asm *a, char *line, size_t n)
+{
+	if (a)
+		free_input(a);
+	ft_puterr("Error at line ");
+	ft_putnbr(n);
+	ft_putstr(":\n\t");
+	ft_putstr(line);
+	ft_putchar('\n');
+	free(line);
 	exit(EXIT_FAILURE);
 }

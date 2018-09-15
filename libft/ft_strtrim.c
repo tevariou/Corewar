@@ -6,11 +6,12 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:55:59 by triou             #+#    #+#             */
-/*   Updated: 2018/09/14 15:39:56 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/15 15:54:32 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char		*ft_strtrim(const char *s)
 {
