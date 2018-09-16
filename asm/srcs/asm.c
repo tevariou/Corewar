@@ -14,7 +14,24 @@
 #include "asm.h"
 #include <stdlib.h>
 
-int	main(int ac, char **av)
+void	print_file(t_file *input)
+{
+	t_file	*f;
+
+	if (!(f = input))
+		return ;
+	ft_putstr(f->line);
+	ft_putchar('\n');
+	f = f->next;
+	while (f != input)
+	{
+		ft_putstr(f->line);
+		ft_putchar('\n');
+		f = f->next;
+	}
+}
+
+int		main(int ac, char **av)
 {
 	int		i;
 	t_asm	a;
@@ -23,5 +40,7 @@ int	main(int ac, char **av)
 		print_usage_exit();
 	a.option = set_option(av);
 	get_file(&a, av[a.option + 1]);
+	print_file(a->input);
+	err_free_exit(a, "OK");
 	return (EXIT_SUCCESS);
 }

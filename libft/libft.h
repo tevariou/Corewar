@@ -43,12 +43,13 @@ void	ft_putnbr(int n);
 void	ft_strclr(char *s);
 t_bool	ft_strequ(const char *s1, const char *s2);
 t_bool	ft_strnequ(const char *s1, const char *s2, size_t n);
-ssize_t	ft_putchar(char c);
-ssize_t	ft_putendl(const char *s);
-ssize_t	ft_putstr(const char *s);
+void	ft_putchar(char c);
+void	ft_putendl(const char *s);
+void	ft_putstr(const char *s);
 void	ft_bzero(void *s, size_t n);
 char	**ft_strsplit(const char *s, char c);
 char	*ft_strtrim(const char *s);
 int		get_next_line(const int fd, char **line);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif

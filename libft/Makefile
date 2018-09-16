@@ -34,6 +34,7 @@ SRCS =	ft_memset.c \
 		ft_strsplit.c \
 		ft_strtrim.c \
 		ft_strclr.c \
+		ft_strncpy.c \
 		get_next_line.c
 _INCLUDES = libft.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

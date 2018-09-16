@@ -37,53 +37,10 @@ static void		remove_whitespaces(t_asm *a, char **line)
 	free(tmp);
 }
 
-static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
-{
-	char	*s;
-
-	s = line;
-	while (ft_isspace(*s))
-		s++;
-	if (*s == '"')
-		s++;
-	else
-		parse_error(a, line, *n);
-	s = ft_strchr(s, '"');
-	ft_strcpy(a->header->prog_name, ft_strchr(s, '"') + 1
-	//wazaaaa
-}
-
-static void		get_name(t_asm *a, int fd, size_t *n)
-{
-	int		ret;
-	char	*line;
-	char	*tmp;
-
-	while ((ret = get_next_line(fd, &line)))
-	{
-		if (ret < 0)
-			err_free_exit(a, NULL);
-		remove_whitespaces(a, &line);
-		if (*line && *line != COMMENT_CHAR)
-			break ;		
-		ft_strdel(&line);
-		if (!(++(*n)))
-			err_free_exit(a, FILE_OVERFLOW);
-	}
-	if (!ft_strnequ(line, str, ft_strlen(NAME_CMD_STRING)))
-		parse_error(a, line, *n);
-	tmp = line;
-	line = ft_strdup(line + ft_strlen(NAME_CMD_STRING));
-	free(tmp);	
-	if (!line)
-		err_free_exit(a, NULL);
-	get_quote_name(a, fd, n, line);
-}
-
 static void		get_header(t_asm *a, int fd, size_t *n)
 {
 	get_name(a, fd, n);
-	get_commebt(a, fd, n);
+	get_comment(a, fd, n);
 }
 
 static void		record_file(t_asm *a, int fd)

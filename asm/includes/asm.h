@@ -15,14 +15,17 @@
 
 # include "op.h"
 
-# define USAGE "Usage:\t./asm [-a] <sourcefile.s>\n\t-a : Instead of creating a .cor file, outputs a stripped and annotated version of the code to the standard output\n"
-# define OPTION "-a"
-# define EXT ".s"
-# define QUOTE_CHAR '"'
+# define USAGE			"Usage:\t./asm [-a] <sourcefile.s>\n\t-a : Instead of "
+						"creating a .cor file, outputs a stripped and annotated "
+						"version of the code to the standard output\n"
+# define OPTION			"-a"
+# define EXT			".s"
 
 /* ERROR MESSAGES */
-# define WRONT_EXT "Wrong filename extension\n"
-# define FILE_OVERFLOW "File is too big\n"
+# define WRONT_EXT			"Wrong filename extension\n"
+# define FILE_OVERFLOW		"File is too big\n"
+# define NAME_TOO_LONG		"Program name is too long\n"
+# define COMMENT_TOO_LONG	"Program comment is too long\n"
 
 typedef struct		s_file {
 	size_t			n;

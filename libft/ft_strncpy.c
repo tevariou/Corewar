@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 13:50:35 by triou             #+#    #+#             */
-/*   Updated: 2018/09/15 15:52:52 by triou            ###   ########.fr       */
+/*   Created: 2018/04/03 13:54:31 by triou             #+#    #+#             */
+/*   Updated: 2018/04/03 19:19:46 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <sys/types>
 
-void	ft_putchar(char c)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	write(1, &c, 1);
+	size_t	len;
+
+	if (!dest || !src)
+		return (dest);
+	len = 0;
+	while (len < n && (dest[len] = src[len]))
+		len++;
+	while (len < n)
+		dest[len++] = '\0';
+	return (dest);
 }

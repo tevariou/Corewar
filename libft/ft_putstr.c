@@ -13,9 +13,8 @@
 #include "libft.h"
 #include <unistd.h>
 
-ssize_t	ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	if (s)
-		return (write(1, s, ft_strlen(s)));
-	return (-1);
+		write(1, s, ft_strlen(s));
 }
