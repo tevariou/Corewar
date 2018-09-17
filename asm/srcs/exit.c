@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 18:24:43 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 21:24:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,15 @@ void		parse_error(t_asm *a, char *line, size_t n)
 	ft_putstr(":\n\t");
 	ft_putstr(line);
 	ft_putchar('\n');
+	free(line);
+	exit(EXIT_FAILURE);
+}
+
+void		header_error(t_asm *a, char *line)
+{
+	if (a)
+		free_input(a);
+	ft_putstr(WRONG_HEADER);
 	free(line);
 	exit(EXIT_FAILURE);
 }

@@ -6,14 +6,14 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:55 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 18:41:00 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 21:28:23 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
 
-static void		record_prog_name(t_asm *a, char *line, char *s, size_t *n)
+static void		record_prog_name(t_asm *a, char *line, char *s)
 {
 	size_t	len;
 	
@@ -28,7 +28,7 @@ static void		record_prog_name(t_asm *a, char *line, char *s, size_t *n)
 	while (ft_isspace(*s))
 		s++;
 	if (*s && *s != '#')
-		parse_error(a, line, *n);
+		header_error(a, line);
 	free(line);
 }
 
@@ -45,7 +45,7 @@ static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
 	if (*s == '"')
 		s++;
 	else
-		parse_error(a, line, *n);
+		header_error(a, line);
 	buff = NULL;
 	while (!ft_strchr(ft_strchr(line, '"') + 1, '"') && (ret = get_next_line(fd, &buff)) > 0)
 	{
@@ -61,7 +61,7 @@ static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
 			err_free_exit(a, FILE_OVERFLOW);
 	}
 	if (!ret)
-		parse_error(a, line, *n);
+		header_error(a, line);
 	record_prog_name(a, line, ft_strchr(line, '"') + 1, n);
 }
 
@@ -85,7 +85,7 @@ void		get_name(t_asm *a, int fd, size_t *n)
 			err_free_exit(a, FILE_OVERFLOW);
 	}
 	if (!ft_strnequ(line, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
-		parse_error(a, line, *n);
+		header_error(a, line);
 	tmp = line;
 	line = ft_strdup(line + ft_strlen(NAME_CMD_STRING));
 	free(tmp);	

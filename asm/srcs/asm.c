@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 19:02:20 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 21:31:57 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int		main(int ac, char **av)
 		print_usage_exit();
 	a.option = set_option(ac, av);
 	get_file(&a, av[a.option + 1]);
-	print_file(a.input);
-	err_free_exit(&a, "OK\n");
+	lexer(&a);
 	return (EXIT_SUCCESS);
 }
