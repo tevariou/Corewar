@@ -6,21 +6,19 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/15 20:54:41 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 18:24:43 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "asm.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
 
-ssize_t		ft_puterr(const char *err)
+void		ft_puterr(const char *err)
 {
 	if (err)
-		return (write(2, err, ft_strlen(err)));
-	return (-1);
+		write(2, err, ft_strlen(err));
 }
 
 void		print_usage_exit(void)

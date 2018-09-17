@@ -6,11 +6,10 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
-/*   Updated: 2018/09/15 17:26:24 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 19:02:20 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "asm.h"
 #include <stdlib.h>
 
@@ -33,14 +32,13 @@ void	print_file(t_file *input)
 
 int		main(int ac, char **av)
 {
-	int		i;
 	t_asm	a;
 
 	if (ac <= 1 || ac > 3)
 		print_usage_exit();
-	a.option = set_option(av);
+	a.option = set_option(ac, av);
 	get_file(&a, av[a.option + 1]);
-	print_file(a->input);
-	err_free_exit(a, "OK");
+	print_file(a.input);
+	err_free_exit(&a, "OK\n");
 	return (EXIT_SUCCESS);
 }

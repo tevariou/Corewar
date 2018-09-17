@@ -6,12 +6,11 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:22:43 by triou             #+#    #+#             */
-/*   Updated: 2018/09/12 20:25:42 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 18:25:24 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
-#include "libft.h"
 
 t_bool	set_option(int ac, char **av)
 {

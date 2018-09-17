@@ -6,11 +6,11 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 13:54:31 by triou             #+#    #+#             */
-/*   Updated: 2018/04/03 19:19:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 18:24:11 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types>
+#include <sys/types.h>
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {

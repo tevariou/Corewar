@@ -1,4 +1,15 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   comment.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/17 18:24:35 by triou             #+#    #+#             */
+/*   Updated: 2018/09/17 18:40:49 by triou            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 #include <stdlib.h>
 
@@ -11,9 +22,9 @@ static void		record_comment(t_asm *a, char *line, char *s, size_t *n)
 		free(line);
 		err_free_exit(a, COMMENT_TOO_LONG);
 	}
-	ft_bzero(a->header->comment, COMMENT_LENGTH + 1);
-	ft_strncpy(a->header->comment, s, len);
-	s = ft_strchr(s, '"');
+	ft_bzero(a->header.comment, COMMENT_LENGTH + 1);
+	ft_strncpy(a->header.comment, s, len);
+	s = ft_strchr(s, '"') + 1;
 	while (ft_isspace(*s))
 		s++;
 	if (*s && *s != '#')
@@ -73,7 +84,7 @@ void		get_comment(t_asm *a, int fd, size_t *n)
 		if (!(++(*n)))
 			err_free_exit(a, FILE_OVERFLOW);
 	}
-	if (!ft_strnequ(line, str, ft_strlen(COMMENT_CMD_STRING)))
+	if (!ft_strnequ(line, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
 		parse_error(a, line, *n);
 	tmp = line;
 	line = ft_strdup(line + ft_strlen(COMMENT_CMD_STRING));

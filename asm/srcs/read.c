@@ -6,17 +6,16 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/15 22:06:43 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 18:27:13 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "libft.h";
 #include "asm.h"
 
-static t_bool	check_extension(char *file)
+static void		check_extension(char *file)
 {
 	size_t	len;
 

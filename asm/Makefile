@@ -6,7 +6,7 @@
 #    By: triou <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/12 16:04:46 by triou            ###   ########.fr        #
+#    Updated: 2018/09/17 18:25:56 by triou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,12 @@ IDIR = includes
 ODIR = objs
 LDIR = ../libft
 SRCS =	asm.c \
-		op.c
+		comment.c \
+		exit.c \
+		list.c \
+		name.c \
+		option.c \
+		read.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))
