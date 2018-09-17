@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 21:34:38 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 23:38:21 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/17 23:44:54 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ static char	*is_hexa_maj(char *str)
 			return (NULL);
 		return (str);
 	}
+	return (NULL);
 }
 
 static char	*is_hexa_min(char *str)
@@ -112,6 +113,7 @@ static char	*is_hexa_min(char *str)
 			return (NULL);
 		return (str);
 	}
+	return (NULL);
 }
 
 char	*ft_number(char *str)
