@@ -16,21 +16,18 @@
 # include "op.h"
 # include "libft.h"
 
-# define USAGE				"Usage:\t./asm [-a] <sourcefile.s>\n\t-a : Instead of " \
-							"creating a .cor file, outputs a stripped and annotated " \
-							"version of the code to the standard output\n"
-# define OPTION				"-a"
+# define USAGE				"Usage:\t./asm [-a] <sourcefile.s>\n\t-a : " \
+							"Instead of creating a .cor file, outputs a " \
+							"stripped and annotated version of the code " \
+							"to the standard output\n\t-d : Translate a " \
+							"binary file into assembly\n"
+# define OPTION_STR_A		"-a"
+# define OPTION_STR_D		"-d"
+# define OPTION_A			1
+# define OPTION_D			2
 # define EXT				".s"
 # define HEXA_MAJ			"0123456789ABCDEF"
 # define HEXA_MIN			"0123456789abcdef"
-# define L_STR_LABEL		1
-# define L_LABEL_STR		2
-# define L_DIRECT			3
-# define L_SEPARATOR		4
-# define L_REG				5
-# define L_OP				6
-# define L_NUM				7
-# define L_BLANKS			8
 
 /* ERROR MESSAGES */
 # define WRONG_EXT			"Wrong filename extension\n"
@@ -38,6 +35,17 @@
 # define FILE_OVERFLOW		"File is too big\n"
 # define NAME_TOO_LONG		"Program name is too long\n"
 # define COMMENT_TOO_LONG	"Program comment is too long\n"
+
+enum {
+	L_STR_LABEL = 1,
+	L_LABEL_STR,
+	L_DIRECT,
+	L_SEPARATOR,
+	L_REG,
+	L_OP,
+	L_NUM,
+	L_BLANKS
+}
 
 typedef struct		s_lex {
 	int				type;
@@ -55,7 +63,7 @@ typedef struct		s_file {
 }					t_file;
 
 typedef struct		s_asm {
-	t_bool			option;
+	int				option;
 	t_file			*input;
 	header_t		header;
 }					t_asm;
@@ -68,7 +76,8 @@ void				err_free_exit(t_asm *a, const char *err);
 void				ft_puterr(const char *err);
 void				print_usage_exit(void);
 void				add_input_line(t_asm *a, char **line, size_t n);
-t_bool				set_option(int ac, char **av);
+int					set_option(int ac, char **av);
 void				get_file(t_asm *a, char *file);
+void				compile_asm(t_asm *a, char *file);
 
 #endif

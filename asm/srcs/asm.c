@@ -13,6 +13,7 @@
 #include "asm.h"
 #include <stdlib.h>
 
+/*
 void	print_file(t_file *input)
 {
 	t_file	*f;
@@ -29,15 +30,19 @@ void	print_file(t_file *input)
 		f = f->next;
 	}
 }
+*/
 
 int		main(int ac, char **av)
 {
 	t_asm	a;
+//	t_asm	d;
 
 	if (ac <= 1 || ac > 3)
 		print_usage_exit();
 	a.option = set_option(ac, av);
-	get_file(&a, av[a.option + 1]);
-	lexer(&a);
+//	if (a.option == OPTION_D)
+//		decompile
+//	else
+		compile_asm(&a, av[a.option + 1]);
 	return (EXIT_SUCCESS);
 }

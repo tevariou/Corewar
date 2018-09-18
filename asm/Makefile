@@ -23,7 +23,8 @@ SRCS =	asm.c \
 		list.c \
 		name.c \
 		option.c \
-		read.c
+		read.c \
+		compile.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

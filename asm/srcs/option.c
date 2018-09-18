@@ -12,11 +12,17 @@
 
 #include "asm.h"
 
-t_bool	set_option(int ac, char **av)
+int	set_option(int ac, char **av)
 {
-	if (ac == 3 && ft_strequ(av[1], OPTION))
-		return (TRUE);
-	else if (ac == 2 && ft_strequ(av[1], OPTION))
+	if (ac == 3)
+	{
+		if (ft_strequ(av[1], OPTION_STR_A))
+			return (OPTION_A);
+		if (ft_strequ(av[1], OPTION_STR_D))
+			return (OPTION_D);
+	}
+	else if (ac == 2 && (ft_strequ(av[1], OPTION_STR_A)
+		|| ft_strequ(av[1], OPTION_STR_D)))
 		print_usage_exit();
-	return (FALSE);
+	return (0);
 }
