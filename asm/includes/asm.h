@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 23:26:01 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/18 20:36:53 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@
 # define EXT				".s"
 # define HEXA_MAJ			"0123456789ABCDEF"
 # define HEXA_MIN			"0123456789abcdef"
+# define INSTRUCT_NUMBER	16
+# define FT_LEX_NUMBER		9
 
 /* ERROR MESSAGES */
 # define WRONG_EXT			"Wrong filename extension\n"
@@ -36,7 +38,7 @@
 # define NAME_TOO_LONG		"Program name is too long\n"
 # define COMMENT_TOO_LONG	"Program comment is too long\n"
 
-enum {
+enum e_tok {
 	L_STR_LABEL = 1,
 	L_LABEL_STR,
 	L_DIRECT,
@@ -47,9 +49,14 @@ enum {
 	L_BLANKS
 }
 
+typedef struct		s_ft_lex {
+	char			*(*f)(char *);
+	enum token		token;
+}
+
 typedef struct		s_lex {
 	int				type;
-	char			val;
+	char			*val;
 	struct s_lex	*prev;
 	struct s_lex	*next;
 }					t_lex;

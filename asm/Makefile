@@ -6,7 +6,7 @@
 #    By: triou <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/17 18:25:56 by triou            ###   ########.fr        #
+#    Updated: 2018/09/18 19:23:38 by triou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,10 @@ SRCS =	asm.c \
 		name.c \
 		option.c \
 		read.c \
-		compile.c
+		compile.c \
+		lexer.c \
+		ft_lex.c \
+		op.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

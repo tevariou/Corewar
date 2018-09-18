@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 21:34:38 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 23:44:54 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/18 19:36:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,20 @@ char	*ft_number(char *str)
 	return (NULL);
 }
 
+char	*ft_instruct(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < INSTRUCT_NUMBER)
+	{
+		if (strnequ(str, g_op_tab[i][0], ft_strlen(g_op_tab[i][0])))
+			return (str + ft_strlen(g_op_tab[i][0]));
+		i++;
+	}
+	return (NULL);
+}
+
 char	*ft_blanks(char *str)
 {
 	char	*ptr;
@@ -141,3 +155,4 @@ char	*ft_blanks(char *str)
 		return (NULL);
 	return (str);
 }
+
