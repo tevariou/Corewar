@@ -27,25 +27,6 @@ void		print_usage_exit(void)
 	exit(EXIT_FAILURE);
 }
 
-static void	free_input(t_asm *a)
-{
-	t_file	*head;
-	t_file	*tail;
-	t_file	*tmp;
-
-	if (!(head = a->input))
-		return ;
-	tail = a->input->prev;
-	while (head != tail)
-	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
-	}
-	free(head);
-	a->input = NULL;
-}
-
 void		err_free_exit(t_asm *a, const char *err)
 {
 	if (!err)
@@ -57,16 +38,14 @@ void		err_free_exit(t_asm *a, const char *err)
 	exit(EXIT_FAILURE);
 }
 
-void		parse_error(t_asm *a, char *line, size_t n)
+void		lex_error(t_asm *a, t_file *line)
 {
-	if (a)
-		free_input(a);
-	ft_puterr("Error at line ");
-	ft_putnbr(n);
+	ft_puterr("Lexical error at line ");
+	ft_putnbr(line->n);
 	ft_putstr(":\n\t");
-	ft_putstr(line);
+	ft_putstr(line->line);
 	ft_putchar('\n');
-	free(line);
+	free_input(a);
 	exit(EXIT_FAILURE);
 }
 

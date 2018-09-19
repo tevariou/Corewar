@@ -19,12 +19,12 @@ void		add_input_line(t_asm *a, char **line, size_t n)
 	t_file	*new;
 	t_file	*tail;
 
-	head = a->input;
 	if (!(new = ft_memalloc(sizeof(*new))))
 		err_free_exit(a, NULL);
 	new->line = *line;
 	new->n = n;
-	if (!(head))
+	new->tokens = NULL;
+	if (!(head = a->input))
 	{
 		new->prev = new;
 		new->next = new;
@@ -37,4 +37,28 @@ void		add_input_line(t_asm *a, char **line, size_t n)
 	new->next = head;
 	head->prev = new;
 	*line = NULL;
+}
+
+void	add_token(t_asm *a, t_file *line, t_tok token, char *val)
+{
+	t_lex	*new;
+	t_lex	*head;
+	t_lex	*tail;
+
+	if (!(new = ft_memalloc(sizeof(*new))))
+		err_free_exit(a, NULL);	
+	new->token = token;
+	new->val = val;
+	if (!(head = line->tokens))
+	{
+		new->prev = new;
+		new->next = new;
+		line->tokens = new;
+		return ;	
+	}
+	tail = head->prev;
+	tail->next = new;
+	new->prev = tail;
+	new->next = head;
+	head->prev = new;
 }

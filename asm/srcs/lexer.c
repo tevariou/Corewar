@@ -11,43 +11,56 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include <stdlib.h>
 
-char	*(*g_ft_lex[FT_LEX_NUMBER])(char *) =
+t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
 {
 	{&ft_str_label, L_STR_LABEL},
-	{&ft_label_str, 
-	&ft_direct,
-	&ft_separator,
-	&ft_reg,
-	&ft_op,
-	&ft_number,
-	&ft_instruct,
-	&ft_blanks
+	{&ft_label_str, L_LABEL_STR},
+	{&ft_direct, L_DIRECT},
+	{&ft_separator, L_SEPARATOR},
+	{&ft_reg, L_REG},
+	{&ft_op, L_OP},
+	{&ft_number, L_NUM},
+	{&ft_instruct, L_INSTRUCT},
+	{&ft_blanks, L_BLANKS}
 }
 
-void	attribute_tokens(t_file *line)
+static void	attribute_tokens(t_asm *a, t_file *line)
 {
 	char	*str;
 	char	*ptr;
+	int		i;
 
 	str = line->line;
 	while (*str)
 	{
-			
-		str++;
+		i = 0;
+		while (i < FT_LEX_NUMBER)
+		{
+			if ((ptr = g_ft_lex[i][0](str)))
+			{
+				add_token(a, line, g_ft_lex[i][1], ft_strndup(str, ptr - str));
+				str = ptr;
+				break ;
+			}
+			i++;
+		}
+		if (i == FT_LEX_NUMBER)
+			lex_error(a, line);
 	}
 }
 
-void	lexer(t_asm *a)
+void		lexer(t_asm *a)
 {
 	t_file  *line;
 	t_file	*tail;
 
 	line = a->input;
-	tail = head->prev;
+	tail = line->prev;
 	while (line != tail)
 	{
-		attribute_tokens(line);
+		attribute_tokens(a, line);
 		line = line->next;
 	}
 }
