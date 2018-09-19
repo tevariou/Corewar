@@ -63,4 +63,5 @@ void		lexer(t_asm *a)
 		attribute_tokens(a, line);
 		line = line->next;
 	}
+	attribute_tokens(a, line);
 }
