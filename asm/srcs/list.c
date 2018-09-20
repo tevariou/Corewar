@@ -44,7 +44,7 @@ void	add_token(t_asm *a, t_file *line, t_tok token, char *val)
 	t_lex	*head;
 	t_lex	*tail;
 
-	if (!(new = ft_memalloc(sizeof(*new))))
+	if (!val || !(new = ft_memalloc(sizeof(*new))))
 		err_free_exit(a, NULL);	
 	new->token = token;
 	new->val = val;
