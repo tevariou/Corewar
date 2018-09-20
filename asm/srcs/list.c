@@ -36,7 +36,6 @@ void		add_input_line(t_asm *a, char **line, size_t n)
 	new->prev = tail;
 	new->next = head;
 	head->prev = new;
-	*line = NULL;
 }
 
 void	add_token(t_asm *a, t_file *line, t_tok token, char *val)

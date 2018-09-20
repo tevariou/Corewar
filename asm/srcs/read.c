@@ -60,7 +60,8 @@ static void		record_file(t_asm *a, int fd)
 		if (*line)
 			add_input_line(a, &line, n);
 		else
-			ft_strdel(&line);
+			free(line);
+		line = NULL;
 		if (!(++n))
 			err_free_exit(a, FILE_OVERFLOW);
 	}
