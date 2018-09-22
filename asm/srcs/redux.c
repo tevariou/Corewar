@@ -92,5 +92,5 @@ void			redux(t_asm *a)
 		parse_tokens(list);
 		list = list->next;	
 	}
-	args_cat(list);
+	parse_tokens(list);
 }
