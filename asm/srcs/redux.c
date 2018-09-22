@@ -1,27 +1,24 @@
 #include "asm.h"
 
-static void		set_op(t_file *line, t_lex **tokens, int type, int id)
-{
-
-}
-
 static void		set_ind(t_file *line, t_lex **tokens, int type, int id)
 {
 	t_lex	*list;
-	t_lex	*tail;
 
-	if (list->token != L_LABEL_STR && list->token != L_NUM)
-		return ;
-	tail = line->tokens->prev;
 	list = *tokens;
-	if (list->token == L_LABEL_STR)
+	if (list->token == LABEL_STR
+		|| list->token == L_NUM
+		|| (list->token == L_OP
+		&& list->next != line->tokens
+		&& (list->next->token == LABEL_STR
+		|| list->next->token == L_NUM)))
 	{
-		
+		list->arg_type = type;
+		list->arg_id = id;
+		*tokens = list->next;	
 	}
-	else if (list->token == L_NUM)
-	{
-
-	}
+	else
+		return ;
+	set_ind(line, tokens, type, id);
 }
 
 static void		is_dir(t_file *line, t_lex **tokens)
@@ -37,8 +34,7 @@ static void		is_dir(t_file *line, t_lex **tokens)
 		type = T_DIR;
 		list->arg_type = type;
 		list->arg_id = id;
-		if (list->next != line->tokens->prev)
-			*tokens = list->next;
+		*tokens = list->next;
 	}
 	else
 		type = T_IND;
@@ -59,7 +55,10 @@ static void		set_arg(t_file *line, t_lex **tokens)
 		list->arg_type = T_REG;
 		list->arg_id = ++(line->n_args);
 	}
-	else if (list->token == L_DIRECT
+	else if ((list->token == L_DIRECT
+		&& list->next != line->tokens
+		&& (list->next->token == L_LABEL_STR
+		|| list->next->token == L_NUM))
 		|| list->token == L_LABEL_STR
 		|| list->token == L_NUM)
 		is_dir(line, tokens);
