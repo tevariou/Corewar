@@ -39,11 +39,11 @@
 # define COMMENT_TOO_LONG	"Program comment is too long\n"
 
 typedef enum		e_tok {
-	L_STR_LABEL,
+	L_LAB = 1,
+	L_REG,
 	L_LABEL_STR,
 	L_DIRECT,
 	L_SEPARATOR,
-	L_REG,
 	L_OP,
 	L_NUM,
 	L_INSTRUCT,
@@ -57,14 +57,24 @@ typedef struct		s_ft_lex {
 
 typedef struct		s_lex {
 	t_tok			token;
+	int				arg_id;
+	int				arg_type;
 	char			*val;
 	struct s_lex	*prev;
 	struct s_lex	*next;
 }					t_lex;
 
+typedef struct		s_lab {
+	char			*label;
+	struct s_lab	*next;
+}					t_lab;
+
 typedef struct		s_file {
 	size_t			n;
 	char			*line;
+	int				n_args;
+	int				size;
+	t_lab			*labels;
 	t_lex			*tokens;
 	struct s_file	*prev;
 	struct s_file	*next;

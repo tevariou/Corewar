@@ -122,6 +122,8 @@ char	*ft_number(char *str)
 
 	if ((ptr = is_hexa_min(str)) || (ptr = is_hexa_maj(str)))
 		return (ptr);
+	if (*str == '-' || *str == '+')
+		str += 1;
 	ptr = str;
 	while (ft_isdigit(*str))
 		str++;

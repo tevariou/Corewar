@@ -42,7 +42,9 @@ int		main(int ac, char **av)
 	a.option = set_option(ac, av);
 //	if (a.option == OPTION_D)
 //		decompile
-//	else
+//	else {
+//check op.h
 		compile_asm(&a, av[a.option + 1]);
+//}
 	return (EXIT_SUCCESS);
 }

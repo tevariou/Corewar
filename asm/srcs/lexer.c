@@ -13,15 +13,15 @@
 #include "asm.h"
 #include <stdlib.h>
 
-t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
+const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
 {
-	{&ft_str_label, L_STR_LABEL},
+	{&ft_str_label, L_LAB},
+	{&ft_reg, L_REG},
 	{&ft_label_str, L_LABEL_STR},
 	{&ft_direct, L_DIRECT},
 	{&ft_separator, L_SEPARATOR},
-	{&ft_reg, L_REG},
-	{&ft_op, L_OP},
 	{&ft_number, L_NUM},
+	{&ft_op, L_OP},
 	{&ft_instruct, L_INSTRUCT},
 	{&ft_blanks, L_BLANKS}
 }
