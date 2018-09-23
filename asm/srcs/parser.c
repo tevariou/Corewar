@@ -1,8 +1,36 @@
 #include "asm.h"
 
-static t_bool	p_lab(t_lex **list)
+static t_bool	p_instruct(t_lex **token)
 {
+	t_lex	*list;
+
 	
+}
+
+static t_bool	p_blanks(t_lex **token)
+{
+	t_lex	*list;
+
+	list = *token;
+	if (list->token == L_BLANKS)
+	{
+		*token = list->next;
+		return (TRUE);
+	}
+	return (FALSE);
+}
+
+static t_bool	p_lab(t_lex **token)
+{
+	t_lex	*list;
+
+	list = *token;
+	if (list->token == L_LAB)
+	{
+		*token = list->next;
+		return (TRUE);
+	}
+	return (FALSE);
 }
 
 static t_bool	parse_line(t_file *line)
