@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 18:27:13 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/23 22:37:14 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ static void		record_file(t_asm *a, int fd)
 	{
 		if (ret < 0)
 			err_free_exit(a, NULL);
-		remove_whitespaces(a, &line);
 		ft_strclr(ft_strchr(line, COMMENT_CHAR));
+		remove_whitespaces(a, &line);
 		if (*line)
 			add_input_line(a, &line, n);
 		else
