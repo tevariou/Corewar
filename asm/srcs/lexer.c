@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 20:13:42 by triou             #+#    #+#             */
-/*   Updated: 2018/09/18 20:36:55 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/23 18:16:30 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
 	{&ft_op, L_OP},
 	{&ft_instruct, L_INSTRUCT},
 	{&ft_blanks, L_BLANKS}
-}
+};
 
 static void	attribute_tokens(t_asm *a, t_file *line)
 {

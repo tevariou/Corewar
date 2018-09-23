@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/18 20:36:53 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/23 19:37:57 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "op.h"
 # include "libft.h"
 
-# define USAGE				"Usage:\t./asm [-a] <sourcefile.s>\n\t-a : " \
+# define USAGE				"Usage:\t./asm [-a | -d] <sourcefile.s>\n\t-a : " \
 							"Instead of creating a .cor file, outputs a " \
 							"stripped and annotated version of the code " \
 							"to the standard output\n\t-d : Translate a " \
@@ -92,6 +92,11 @@ typedef struct		s_asm {
 	t_file			*input;
 	header_t		header;
 }					t_asm;
+
+typedef				s_parse {
+	char			*instruct[5];
+	t_bool			(*f)(t_file *line, t_lex **token);
+}					t_parse;
 
 void				get_comment(t_asm *a, int fd, size_t *n);
 void				get_name(t_asm *a, int fd, size_t *n);
