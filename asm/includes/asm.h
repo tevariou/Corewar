@@ -69,12 +69,19 @@ typedef struct		s_lab {
 	struct s_lab	*next;
 }					t_lab;
 
+typedef struct		s_arg {
+	int				arg_id;
+	int				arg_type;
+	char			**tab;
+}					t_arg;
+
 typedef struct		s_file {
 	size_t			n;
 	char			*line;
-	int				n_args;
-	int				size;
 	t_lab			*labels;
+	char			*instruct;
+	t_arg			args[3];
+	int				n_args;
 	t_lex			*tokens;
 	struct s_file	*prev;
 	struct s_file	*next;
