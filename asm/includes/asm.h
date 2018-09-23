@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/23 19:37:57 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/23 20:37:51 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ typedef struct		s_ft_lex {
 	char			*(*f)(char *);
 	t_tok			token;
 }					t_ft_lex;
+
+typedef				s_ft_parse {
+	t_bool			(*f)(t_lex **token);
+	
 
 typedef struct		s_lex {
 	t_tok			token;
