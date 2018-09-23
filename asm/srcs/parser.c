@@ -1,14 +1,25 @@
 #include "asm.h"
 
-static t_bool	p_lab(t_asm *a, t_file *line)
+static t_bool	p_lab(t_lex **list)
 {
-
+	
 }
 
-static void		parse_line(t_asm *a, t_file *line)
+static t_bool	parse_line(t_file *line)
 {
-	if (!p_lab(a, line) && !p_instruct(a, line))
-		parse_error(a, line);
+	t_lex	*list;
+
+	list = line->tokens;
+	if (p_lab(&list))
+	{
+		if (list != line->tokens && p_blanks(&list) && p_instruct(&list))
+			return (TRUE);
+		else if (list != line->tokens && p_instruct(&list))
+			return (TRUE);
+	}
+	else if (p_instruct(&list))
+		return (TRUE);
+	return (FALSE);
 }
 
 void			parser(t_asm *a)
@@ -20,8 +31,10 @@ void			parser(t_asm *a)
 	tail = line->prev;
 	while (line != tail)
 	{
-		parse_line(a, line);
+		if (!parse_line(line))
+			parse_error(a, line);
 		line = line->next;
 	}
-	parse_line(a, line);
+	if (!parse_line(line))
+		parse_error(a, line);
 }

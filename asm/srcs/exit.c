@@ -57,3 +57,14 @@ void		header_error(t_asm *a, char *line)
 	free(line);
 	exit(EXIT_FAILURE);
 }
+
+void		parser_error(t_asm *a, t_file *line)
+{
+	ft_puterr("Parsing error at line ");
+	ft_putnbr(line->n);
+	ft_putstr(":\n\t");
+	ft_putstr(line->line);
+	ft_putchar('\n');
+	free_input(a);
+	exit(EXIT_FAILURE);
+}
