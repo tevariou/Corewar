@@ -6,25 +6,24 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 17:36:40 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 19:25:02 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 22:51:32 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-const t_parse	g_parse_tab[9] = {
-	{{"live", "zjmp", "fork", "lfork", {0}}, &ft_parse_0},
-	{{"ld", {0}}, &ft_parse_1},
-	{{"st", {0}}, &ft_parse_2},
-	{{"add", "sub", {0}}, &ft_parse_3},
-	{{"and", "or", "xor", {0}}, &ft_parse_4},
-	{{"ldi", "lldi", {0}}, &ft_parse_5},
-	{{"sti", {0}}, &ft_parse_6},
-	{{"aff", {0}}, &ft_parse_7},
-	{{{0}}, 0}
+t_parse	g_parse_tab[8] = {
+	{{"live", "zjmp", "lfork", "fork", 0}, &ft_parse_0},
+	{{"ld", 0}, &ft_parse_1},
+	{{"st", 0}, &ft_parse_2},
+	{{"add", "sub", 0}, &ft_parse_3},
+	{{"and", "or", "xor", 0}, &ft_parse_4},
+	{{"ldi", "lldi", 0}, &ft_parse_5},
+	{{"sti", 0}, &ft_parse_6},
+	{{"aff", 0}, &ft_parse_7}
 };
 
-static t_bool	ft_tabequ(const char tab[5][6], char *needle)
+static t_bool	ft_tabequ(char *tab[5], char *needle)
 {
 	int	i;
 
@@ -45,7 +44,7 @@ static t_bool	p_instruct(t_file *line, t_lex **token)
 
 	list = *token;
 	i = 0;	
-	while (i < 9)
+	while (i < 8)
 	{
 		if (ft_tabequ(g_parse_tab[i].instruct, list->val))
 		{

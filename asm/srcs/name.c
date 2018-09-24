@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:55 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 17:49:19 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 21:16:46 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
 		ft_strdel(&buff);
 		if (!line)
 			err_free_exit(a, NULL);
-		if (!(++(*n)))
+		if (!(*n += 1))
 			err_free_exit(a, FILE_OVERFLOW);
 	}
 	if (!ret)
@@ -78,11 +78,11 @@ void		get_name(t_asm *a, int fd, size_t *n)
 		tmp = line;
 		while (ft_isspace(*tmp))
 			tmp++;
+		if (!(*n += 1))
+			err_free_exit(a, FILE_OVERFLOW);
 		if (*tmp && *tmp != COMMENT_CHAR)
 			break ;	
 		ft_strdel(&line);
-		if (!(++(*n)))
-			err_free_exit(a, FILE_OVERFLOW);
 	}
 	if (!ft_strnequ(line, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
 		header_error(a, line);

@@ -1,13 +1,11 @@
 .name ""#com
-.comment"
+.comment";ok
+wef"
 
-;okwef"
-ld%5,r5#com2
+l2:	sti r1,%:live,%1
+	and r1,%0,r1
 
+live:	live %1
+		zjmp %:live
 
-
-
-
-zjmp	%:label
-label:
-live			%1
+# comments

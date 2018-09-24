@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2018/09/24 18:58:30 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 22:26:46 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ typedef struct		s_op {
 	int				dir_size;
 }					t_op;
 
-extern t_op			g_op_tab[];
+extern t_op			g_op_tab[17];
 
 #define T_REG					1
 #define T_DIR					2

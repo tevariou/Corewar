@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 20:01:31 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 22:24:49 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 # define EXT				".s"
 # define HEXA_MAJ			"0123456789ABCDEF"
 # define HEXA_MIN			"0123456789abcdef"
-# define INSTRUCT_NUMBER	16
 # define FT_LEX_NUMBER		9
 
 /* ERROR MESSAGES */
@@ -74,7 +73,7 @@ typedef struct		s_file {
 }					t_file;
 
 typedef struct		s_parse {
-	const char		instruct[5][6];
+	char			*instruct[5];
 	t_bool			(*f)(t_file *line, t_lex **token);
 }					t_parse;
 

@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 20:13:42 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 20:10:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 22:07:31 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	attribute_tokens(t_asm *a, t_file *line)
 
 	str = line->line;
 	while (*str)
-	{
+	{		
 		i = 0;
 		while (i < FT_LEX_NUMBER)
 		{
@@ -47,13 +47,7 @@ static void	attribute_tokens(t_asm *a, t_file *line)
 			i++;
 		}
 		if (i == FT_LEX_NUMBER)
-		{
-			ft_putstr(str);
-			ft_putchar('\n');
 			lex_error(a, line);
-		}
-		if (*str)
-			str++;
 	}
 }
 

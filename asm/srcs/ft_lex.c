@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 21:34:38 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 20:08:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 22:07:17 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_separator(char *str)
 {
 	while (ft_isspace(*str))
 		str++;
-	if (*str != SEPARATOR_CHAR)
+	if (*str++ != SEPARATOR_CHAR)
 		return (NULL);
 	while (ft_isspace(*str))
 		str++;
@@ -134,14 +134,14 @@ char	*ft_number(char *str)
 
 char	*ft_instruct(char *str)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (i < INSTRUCT_NUMBER)
+	i = 15;
+	while (i > -1)
 	{
 		if (ft_strnequ(str, g_op_tab[i].instruct, ft_strlen(g_op_tab[i].instruct)))
 			return (str + ft_strlen(g_op_tab[i].instruct));
-		i++;
+		i--;
 	}
 	return (NULL);
 }

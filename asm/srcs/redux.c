@@ -47,6 +47,7 @@ static void		set_arg(t_file *line, t_lex **tokens)
 	{
 		list->arg_type = T_REG;
 		list->arg_id = ++(line->n_args);
+		*tokens = list->next;
 	}
 	else if ((list->token == L_DIRECT
 		&& list->next != line->tokens
@@ -55,7 +56,8 @@ static void		set_arg(t_file *line, t_lex **tokens)
 		|| list->token == L_LABEL_STR
 		|| list->token == L_NUM)
 		is_dir(line, tokens);
-	*tokens = list->next;
+	else
+		*tokens = list->next;
 }
 
 static void		parse_tokens(t_file *line)

@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 20:01:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 23:08:35 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,28 @@ void		header_error(t_asm *a, char *line)
 	exit(EXIT_FAILURE);
 }
 
+static void	display_tokens(t_file *line)
+{
+	t_lex	*list;
+
+	if ((list = line->tokens))
+	{
+		ft_putstr(list->val);
+		ft_putstr(" <");
+		ft_putnbr(list->arg_type);
+		ft_putstr(">\n");
+		list = list->next;
+		while (list != line->tokens)
+		{
+			ft_putstr(list->val);
+			ft_putstr(" <");
+			ft_putnbr(list->arg_type);
+			ft_putstr(">\n");
+			list = list->next;
+		}
+	}
+}
+
 void		parser_error(t_asm *a, t_file *line)
 {
 	ft_putstr_fd("Parsing error at line ", 2);
@@ -59,6 +81,7 @@ void		parser_error(t_asm *a, t_file *line)
 	ft_putstr_fd(":\n", 2);
 	ft_putstr_fd(line->line, 2);
 	ft_putchar_fd('\n', 2);
+	display_tokens(line);
 	free_input(a);
 	exit(EXIT_FAILURE);
 }
