@@ -13,13 +13,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define TRUE 1
-# define FALSE 0
-
 # include <sys/types.h>
 # define BUFF_SIZE 1024
 
-typedef int	t_bool;
+typedef enum	e_bool {
+FALSE,
+TRUE
+}				t_bool;
 
 char	*ft_strdup(const char *s1);
 char	*ft_strndup(const char *s, size_t n);
