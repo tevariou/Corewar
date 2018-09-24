@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 21:31:57 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 17:41:06 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ int		main(int ac, char **av)
 //	else {
 //check op.h
 		compile_asm(&a, av[a.option + 1]);
+		free_input(&a);
+		ft_putstr("OK\n");
+
 //}
 	return (EXIT_SUCCESS);
 }

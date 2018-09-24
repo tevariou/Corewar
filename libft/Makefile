@@ -35,7 +35,10 @@ SRCS =	ft_memset.c \
 		ft_strtrim.c \
 		ft_strclr.c \
 		ft_strncpy.c \
-		get_next_line.c
+		get_next_line.c \
+		ft_putnbr_fd.c \
+		ft_putstr_fd.c \
+		ft_putchar_fd.c
 _INCLUDES = libft.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))
 _OBJ = $(SRCS:.c=.o)

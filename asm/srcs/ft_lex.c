@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 21:34:38 by triou             #+#    #+#             */
-/*   Updated: 2018/09/18 19:36:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 20:08:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,8 +139,8 @@ char	*ft_instruct(char *str)
 	i = 0;
 	while (i < INSTRUCT_NUMBER)
 	{
-		if (strnequ(str, g_op_tab[i][0], ft_strlen(g_op_tab[i][0])))
-			return (str + ft_strlen(g_op_tab[i][0]));
+		if (ft_strnequ(str, g_op_tab[i].instruct, ft_strlen(g_op_tab[i].instruct)))
+			return (str + ft_strlen(g_op_tab[i].instruct));
 		i++;
 	}
 	return (NULL);

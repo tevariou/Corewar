@@ -6,11 +6,11 @@ static void		set_ind(t_file *line, t_lex **tokens, int type, int id)
 
 	if ((list = *tokens) == line->tokens)
 		return ;
-	else if (list->token == LABEL_STR
+	else if (list->token == L_LABEL_STR
 		|| list->token == L_NUM
 		|| (list->token == L_OP
 		&& list->next != line->tokens
-		&& (list->next->token == LABEL_STR
+		&& (list->next->token == L_LABEL_STR
 		|| list->next->token == L_NUM)))
 	{
 		list->arg_type = type;
@@ -30,7 +30,7 @@ static void		is_dir(t_file *line, t_lex **tokens)
 	if (list->token == L_DIRECT)
 		list->arg_type = T_DIR;
 	else
-		list_arg_type = T_IND;
+		list->arg_type = T_IND;
 	list->arg_id = ++(line->n_args);
 	*tokens = list->next;
 	set_ind(line, tokens, list->arg_type, list->arg_id);
@@ -63,7 +63,7 @@ static void		parse_tokens(t_file *line)
 	t_lex	*list;
 
 	list = line->tokens;
-	list->n_args = 0;
+	line->n_args = 0;
 	set_arg(line, &list);
 	while (list != line->tokens)
 		set_arg(line, &list);

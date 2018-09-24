@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:35 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 21:28:23 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 17:48:26 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static void		get_quote_comment(t_asm *a, int fd, size_t *n, char *line)
 	}
 	if (!ret)
 		header_error(a, line);
-	record_comment(a, line, ft_strchr(line, '"') + 1, n);
+	record_comment(a, line, ft_strchr(line, '"') + 1);
 }
 
 void		get_comment(t_asm *a, int fd, size_t *n)

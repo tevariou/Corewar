@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2018/09/17 18:23:00 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 18:58:30 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,19 @@
 */
 
 typedef char	t_arg_type;
+
+typedef struct		s_op {
+	char			*instruct;
+	int				n_args;
+	int				args_type[3];
+	int				op_code;
+	int				n_cycles;
+	char			*comment;
+	int				ocp;
+	int				dir_size;
+}					t_op;
+
+extern t_op			g_op_tab[];
 
 #define T_REG					1
 #define T_DIR					2

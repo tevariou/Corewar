@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/24 19:30:06 by triou             #+#    #+#             */
+/*   Updated: 2018/09/24 19:30:20 by triou            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 #include <stdlib.h>
 
-void	free_tokens(t_lex *l)
+static void	free_tokens(t_file *l)
 {
 	t_lex	*head;
 	t_lex	*tail;
@@ -22,7 +34,7 @@ void	free_tokens(t_lex *l)
 	l->tokens = NULL;
 }
 
-void	free_input(t_asm *a)
+void		free_input(t_asm *a)
 {
 	t_file	*head;
 	t_file	*tail;
@@ -36,10 +48,10 @@ void	free_input(t_asm *a)
 		tmp = head;
 		head = head->next;
 		free(tmp->line);
+		free_tokens(tmp);
 		free(tmp);
 	}
 	free(head->line);
 	free(head);
 	a->input = NULL;
 }
-

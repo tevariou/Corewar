@@ -6,11 +6,12 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 19:40:29 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 00:03:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 19:29:30 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
+#include <stdlib.h>
 
 static t_lex	*traverse_arg(t_file *line, t_lex *list, int type)
 {
@@ -57,7 +58,7 @@ t_bool			ft_parse_0(t_file *line, t_lex **token)
 		|| (list->token == L_BLANKS && (list = list->next) == end))
 		return (FALSE);
 	if (list->arg_type == T_DIR)
-		list = traverse(line, list, T_DIR);
+		list = traverse_arg(line, list, T_DIR);
 	else
 		return (FALSE);
 	*token = list;
@@ -205,7 +206,7 @@ t_bool			ft_parse_7(t_file *line, t_lex **token)
 	end = line->tokens;	
 	if (line->n_args != 1
 		|| (list->token != L_BLANKS || (list = list->next) == end)
-		|| (list->arg_type != T_REG)
+		|| (list->arg_type != T_REG))
 		return (FALSE);
 	*token = list->next;
 	return (TRUE);

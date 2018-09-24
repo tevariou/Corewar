@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/18 21:37:47 by triou             #+#    #+#             */
-/*   Updated: 2018/09/15 15:53:24 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 19:56:45 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,8 @@ char	**ft_strsplit(const char *s, char c);
 char	*ft_strtrim(const char *s);
 int		get_next_line(const int fd, char **line);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

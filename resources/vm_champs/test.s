@@ -1,7 +1,4 @@
-.name"o
-k"#COM
+.name"ok"#COM
 .comment"lo"
-ld%-5,r5#com2
-zjmp	%:label
-label:
-live			%1
+sti r1,%:live,%1
+live: live %1

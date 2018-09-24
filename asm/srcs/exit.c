@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 21:24:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 20:01:46 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,9 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void		ft_puterr(const char *err)
-{
-	if (err)
-		write(2, err, ft_strlen(err));
-}
-
 void		print_usage_exit(void)
 {
-	ft_puterr(USAGE);
+	ft_putstr(USAGE);
 	exit(EXIT_FAILURE);
 }
 
@@ -32,7 +26,7 @@ void		err_free_exit(t_asm *a, const char *err)
 	if (!err)
 		perror(NULL);
 	else
-		ft_puterr(err);
+		ft_putstr_fd(err, 2);
 	if (a)
 		free_input(a);
 	exit(EXIT_FAILURE);
@@ -40,11 +34,11 @@ void		err_free_exit(t_asm *a, const char *err)
 
 void		lex_error(t_asm *a, t_file *line)
 {
-	ft_puterr("Lexical error at line ");
-	ft_putnbr(line->n);
-	ft_putstr(":\n\t");
-	ft_putstr(line->line);
-	ft_putchar('\n');
+	ft_putstr_fd("Lexical error at line ", 2);
+	ft_putnbr_fd(line->n, 2);
+	ft_putstr_fd(":\n", 2);
+	ft_putstr_fd(line->line, 2);
+	ft_putstr_fd("\n", 2);
 	free_input(a);
 	exit(EXIT_FAILURE);
 }
@@ -53,18 +47,18 @@ void		header_error(t_asm *a, char *line)
 {
 	if (a)
 		free_input(a);
-	ft_putstr(WRONG_HEADER);
+	ft_putstr_fd(WRONG_HEADER, 2);
 	free(line);
 	exit(EXIT_FAILURE);
 }
 
 void		parser_error(t_asm *a, t_file *line)
 {
-	ft_puterr("Parsing error at line ");
-	ft_putnbr(line->n);
-	ft_putstr(":\n\t");
-	ft_putstr(line->line);
-	ft_putchar('\n');
+	ft_putstr_fd("Parsing error at line ", 2);
+	ft_putnbr_fd(line->n, 2);
+	ft_putstr_fd(":\n", 2);
+	ft_putstr_fd(line->line, 2);
+	ft_putchar_fd('\n', 2);
 	free_input(a);
 	exit(EXIT_FAILURE);
 }

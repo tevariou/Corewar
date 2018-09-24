@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 18:44:15 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 17:49:05 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	add_token(t_asm *a, t_file *line, t_tok token, char *val)
 	t_lex	*head;
 	t_lex	*tail;
 
+	new = NULL;
 	if (!val || !(new = ft_memalloc(sizeof(*new))))
 		err_free_exit(a, NULL);	
 	new->token = token;

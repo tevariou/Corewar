@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/23 20:44:58 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 20:01:31 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,6 @@ typedef struct		s_ft_lex {
 	t_tok			token;
 }					t_ft_lex;
 
-typedef				s_ft_parse {
-	t_bool			(*f)(t_lex **token);
-	
-
 typedef struct		s_lex {
 	t_tok			token;
 	int				arg_id;
@@ -68,28 +64,19 @@ typedef struct		s_lex {
 	struct s_lex	*next;
 }					t_lex;
 
-typedef struct		s_lab {
-	char			*label;
-	struct s_lab	*next;
-}					t_lab;
-
-typedef struct		s_arg {
-	int				arg_id;
-	int				arg_type;
-	char			**tab;
-}					t_arg;
-
 typedef struct		s_file {
 	size_t			n;
 	char			*line;
-	t_lab			*labels;
-	char			*instruct;
-	t_arg			args[3];
 	int				n_args;
 	t_lex			*tokens;
 	struct s_file	*prev;
 	struct s_file	*next;
 }					t_file;
+
+typedef struct		s_parse {
+	const char		instruct[5][6];
+	t_bool			(*f)(t_file *line, t_lex **token);
+}					t_parse;
 
 typedef struct		s_asm {
 	int				option;
@@ -97,21 +84,40 @@ typedef struct		s_asm {
 	header_t		header;
 }					t_asm;
 
-typedef				s_parse {
-	char			*instruct[5];
-	t_bool			(*f)(t_file *line, t_lex **token);
-}					t_parse;
-
 void				get_comment(t_asm *a, int fd, size_t *n);
 void				get_name(t_asm *a, int fd, size_t *n);
 void				err_free_exit(t_asm *a, const char *err);
-void				ft_puterr(const char *err);
 void				print_usage_exit(void);
 void				add_input_line(t_asm *a, char **line, size_t n);
+void				add_token(t_asm *a, t_file *line, t_tok token, char *val);
 int					set_option(int ac, char **av);
 void				get_file(t_asm *a, char *file);
 void				compile_asm(t_asm *a, char *file);
 void				header_error(t_asm *a, char *line);
 void				lex_error(t_asm *a, t_file *line);
+void				parser_error(t_asm *a, t_file *line);
+void				lexer(t_asm *a);
+void				redux(t_asm *a);
+void				parser(t_asm *a);
+void				free_input(t_asm *a);
+
+char				*ft_str_label(char *str);
+char				*ft_label_str(char *str);
+char				*ft_direct(char *str);
+char				*ft_separator(char *str);
+char				*ft_reg(char *str);
+char				*ft_op(char *str);
+char				*ft_number(char *str);
+char				*ft_instruct(char *str);
+char				*ft_blanks(char *str);
+
+t_bool				ft_parse_0(t_file *line, t_lex **token);
+t_bool				ft_parse_1(t_file *line, t_lex **token);
+t_bool				ft_parse_2(t_file *line, t_lex **token);
+t_bool				ft_parse_3(t_file *line, t_lex **token);
+t_bool				ft_parse_4(t_file *line, t_lex **token);
+t_bool				ft_parse_5(t_file *line, t_lex **token);
+t_bool				ft_parse_6(t_file *line, t_lex **token);
+t_bool				ft_parse_7(t_file *line, t_lex **token);
 
 #endif

@@ -6,31 +6,34 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 17:36:40 by triou             #+#    #+#             */
-/*   Updated: 2018/09/23 20:45:30 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/24 19:25:02 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
 const t_parse	g_parse_tab[9] = {
-	{{"live", "zjmp", "fork", "lfork", 0}, &ft_parse_0},
-	{{"ld", 0}, &ft_parse_1},
-	{{"st", 0}, &ft_parse_2},
-	{{"add", "sub", 0}, &ft_parse_3},
-	{{"and", "or", "xor", 0}, &ft_parse_4},
-	{{"ldi", "lldi", 0}, &ft_parse_5},
-	{{"sti", 0}, &ft_parse_6},
-	{{"aff", 0}, &ft_parse_7},
-	{{0}, 0}
+	{{"live", "zjmp", "fork", "lfork", {0}}, &ft_parse_0},
+	{{"ld", {0}}, &ft_parse_1},
+	{{"st", {0}}, &ft_parse_2},
+	{{"add", "sub", {0}}, &ft_parse_3},
+	{{"and", "or", "xor", {0}}, &ft_parse_4},
+	{{"ldi", "lldi", {0}}, &ft_parse_5},
+	{{"sti", {0}}, &ft_parse_6},
+	{{"aff", {0}}, &ft_parse_7},
+	{{{0}}, 0}
 };
 
-static t_bool	ft_tabequ(char **tab, char *needle)
+static t_bool	ft_tabequ(const char tab[5][6], char *needle)
 {
-	while (*tab)
+	int	i;
+
+	i = 0;
+	while (tab[i])
 	{
-		if (ft_strequ(*tab, needle))
+		if (ft_strequ(tab[i], needle))
 			return (TRUE);
-		tab++;
+		i++;
 	}
 	return (FALSE);	
 }
@@ -44,11 +47,11 @@ static t_bool	p_instruct(t_file *line, t_lex **token)
 	i = 0;	
 	while (i < 9)
 	{
-		if (ft_tabequ(g_parse_tab[i][0], list->val))
+		if (ft_tabequ(g_parse_tab[i].instruct, list->val))
 		{
 			if ((*token = list->next) == line->tokens)
 				return (FALSE);
-			return (g_parse_tab[i][1](line, token));
+			return (g_parse_tab[i].f(line, token));
 		}
 		i++;
 	}
@@ -90,7 +93,7 @@ static t_bool	parse_line(t_file *line)
 	end = list;
 	if (p_lab(&list))
 	{
-		if (list != line->tokens && p_blanks(&list) && p_instruct(&list) && list == end)
+		if (list != line->tokens && p_blanks(&list) && p_instruct(line, &list) && list == end)
 			return (TRUE);
 		else if (list != line->tokens && p_instruct(line, &list) && list == end)
 			return (TRUE);
@@ -110,9 +113,9 @@ void			parser(t_asm *a)
 	while (line != tail)
 	{
 		if (!parse_line(line))
-			parse_error(a, line);
+			parser_error(a, line);
 		line = line->next;
 	}
 	if (!parse_line(line))
-		parse_error(a, line);
+		parser_error(a, line);
 }
