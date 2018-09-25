@@ -71,36 +71,7 @@ char	*ft_reg(char *str)
 	return (str);
 }
 
-char	*ft_op(char *str)
-{
-	while (ft_isspace(*str))
-		str++;
-	if (*str != '+' && *str != '-')
-		return (NULL);
-	str += 1;
-	while (ft_isspace(*str))
-		str++;
-	return (str);
-}
-
-static char	*is_hexa_maj(char *str)
-{
-	char	*ptr;
-
-	if (ft_strnequ(str, "0X", 2))
-	{
-		str += 2;
-		ptr = str;
-		while (ft_strchr(HEXA_MAJ, *str))
-			str++;
-		if (ptr == str)
-			return (NULL);
-		return (str);
-	}
-	return (NULL);
-}
-
-static char	*is_hexa_min(char *str)
+static char	*is_hexa(char *str)
 {
 	char	*ptr;
 
@@ -108,7 +79,7 @@ static char	*is_hexa_min(char *str)
 	{
 		str += 2;
 		ptr = str;
-		while (ft_strchr(HEXA_MIN, *str))
+		while (ft_strchr(HEXA, *str))
 			str++;
 		if (ptr == str)
 			return (NULL);
@@ -121,7 +92,7 @@ char	*ft_number(char *str)
 {
 	char	*ptr;
 
-	if ((ptr = is_hexa_min(str)) || (ptr = is_hexa_maj(str)))
+	if ((ptr = is_hexa(str)))
 		return (ptr);
 	if (*str == '-' || *str == '+')
 		str += 1;

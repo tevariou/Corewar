@@ -96,6 +96,8 @@ static t_bool	parse_line(t_file *line)
 			return (TRUE);
 		else if (list != line->tokens && p_instruct(line, &list) && list == end)
 			return (TRUE);
+		else if (list == end)
+			return (TRUE);
 	}
 	else if (p_instruct(line, &list) && list == end)
 		return (TRUE);

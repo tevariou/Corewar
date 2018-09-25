@@ -21,7 +21,6 @@ const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
 	{&ft_direct, L_DIRECT},
 	{&ft_separator, L_SEPARATOR},
 	{&ft_number, L_NUM},
-	{&ft_op, L_OP},
 	{&ft_instruct, L_INSTRUCT},
 	{&ft_blanks, L_BLANKS}
 };
@@ -56,7 +55,8 @@ void		lexer(t_asm *a)
 	t_file  *line;
 	t_file	*tail;
 
-	line = a->input;
+	if (!(line = a->input))
+		err_free_exit(a, NO_INSTRUCTION);
 	tail = line->prev;
 	while (line != tail)
 	{

@@ -26,9 +26,8 @@
 # define OPTION_A			1
 # define OPTION_D			2
 # define EXT				".s"
-# define HEXA_MAJ			"0123456789ABCDEF"
-# define HEXA_MIN			"0123456789abcdef"
-# define FT_LEX_NUMBER		9
+# define HEXA				"0123456789ABCDEF"
+# define FT_LEX_NUMBER		8
 
 /* ERROR MESSAGES */
 # define WRONG_EXT			"Wrong filename extension\n"
@@ -36,6 +35,7 @@
 # define FILE_OVERFLOW		"File is too big\n"
 # define NAME_TOO_LONG		"Program name is too long\n"
 # define COMMENT_TOO_LONG	"Program comment is too long\n"
+# define NO_INSTRUCTION		"No instruction\n"
 
 typedef enum		e_tok {
 	L_LAB = 1,

@@ -1,5 +1,5 @@
 #!/bin/sh
-for f in ../resources/vm_champs/champs/*.s;
+for f in ../resources/vm_champs/champs/championships/*/*/*.s;
 do
-	./asm $f; echo "\n"
+	echo $f; ./asm $f
 done
