@@ -32,17 +32,6 @@ void		err_free_exit(t_asm *a, const char *err)
 	exit(EXIT_FAILURE);
 }
 
-void		lex_error(t_asm *a, t_file *line)
-{
-	ft_putstr_fd("Lexical error at line ", 2);
-	ft_putnbr_fd(line->n, 2);
-	ft_putstr_fd(":\n", 2);
-	ft_putstr_fd(line->line, 2);
-	ft_putstr_fd("\n", 2);
-	free_input(a);
-	exit(EXIT_FAILURE);
-}
-
 void		header_error(t_asm *a, char *line)
 {
 	if (a)
@@ -66,10 +55,31 @@ static void	output_error(char *line, char *val)
 
 void		parser_error(t_asm *a, t_file *line, char *val)
 {
-	ft_putstr_fd("Parsing error at line ", 2);
+	ft_putstr_fd("Parser error at line ", 2);
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
 	output_error(line->line, val);
+	free_input(a);
+	exit(EXIT_FAILURE);
+}
+
+void		lex_error(t_asm *a, t_file *line, char *val)
+{
+	ft_putstr_fd("Lexical error at line ", 2);
+	ft_putnbr_fd(line->n, 2);
+	ft_putstr_fd(":\n", 2);
+	output_error(line->line, val);
+	free_input(a);
+	exit(EXIT_FAILURE);
+}
+
+void		n_arg_error(t_asm *a, t_file *line)
+{
+	ft_putstr_fd("Wrong number of arguments at line ", 2);
+	ft_putnbr_fd(line->n, 2);
+	ft_putstr_fd(":\n", 2);
+	ft_putstr_fd(line->line, 2);
+	ft_putstr_fd("\n", 2);
 	free_input(a);
 	exit(EXIT_FAILURE);
 }

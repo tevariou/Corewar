@@ -46,7 +46,7 @@ static void	attribute_tokens(t_asm *a, t_file *line)
 			i++;
 		}
 		if (i == FT_LEX_NUMBER)
-			lex_error(a, line);
+			lex_error(a, line, str);
 	}
 }
 

@@ -65,8 +65,7 @@ t_bool			ft_parse_0(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;
-	if (line->n_args != 1
-		|| (list->token == L_BLANKS && (list = list->next) == end))
+	if (list->token == L_BLANKS && (list = list->next) == end)
 		return (FALSE);
 	if (list->arg_type == T_DIR)
 		list = traverse_arg(line, list, T_DIR);
@@ -83,8 +82,7 @@ t_bool			ft_parse_1(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;
-	if (line->n_args != 2
-		|| (list->token == L_BLANKS && (list = list->next) == end))
+	if (list->token == L_BLANKS && (list = list->next) == end)
 		return (FALSE);
 	if (list->arg_type == T_DIR)
 		list = traverse_arg(line, list, T_DIR);
@@ -106,8 +104,7 @@ t_bool			ft_parse_2(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;
-	if (line->n_args != 2
-		|| (list->token != L_BLANKS || (list = list->next) == end)
+	if ((list->token != L_BLANKS || (list = list->next) == end)
 		||  (list->arg_type != T_REG || (list = list->next) == end)
 		|| (list->token != L_SEPARATOR || (list = list->next) == end)
 		|| !(list = is_ind_reg(line, list)))
@@ -123,8 +120,7 @@ t_bool			ft_parse_3(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;	
-	if (line->n_args != 3
-		|| (list->token != L_BLANKS || (list = list->next) == end)
+	if ((list->token != L_BLANKS || (list = list->next) == end)
 		|| (list->arg_type != T_REG || (list = list->next) == end)
 		|| (list->token != L_SEPARATOR || (list = list->next) == end)
 		|| (list->arg_type != T_REG || (list = list->next) == end)
@@ -142,8 +138,7 @@ t_bool			ft_parse_4(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;
-	if (line->n_args != 3
-		|| (list->token == L_BLANKS && (list = list->next) == end))
+	if (list->token == L_BLANKS && (list = list->next) == end)
 		return (FALSE);
 	if (list->arg_type == T_DIR)
 		list = traverse_arg(line, list, T_DIR);
@@ -169,8 +164,7 @@ t_bool			ft_parse_5(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;
-	if (line->n_args != 3
-		|| (list->token == L_BLANKS && (list = list->next) == end))
+	if (list->token == L_BLANKS && (list = list->next) == end)
 		return (FALSE);
 	if (list->arg_type == T_DIR)
 		list = traverse_arg(line, list, T_DIR);
@@ -196,8 +190,7 @@ t_bool			ft_parse_6(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;	
-	if (line->n_args != 3
-		|| (list->token != L_BLANKS || (list = list->next) == end)
+	if ((list->token != L_BLANKS || (list = list->next) == end)
 		|| (list->arg_type != T_REG || (list = list->next) == end)
 		|| (list->token != L_SEPARATOR || (list = list->next) == end)
 		|| !(list = is_dir_ind_reg(line, list))
@@ -215,8 +208,7 @@ t_bool			ft_parse_7(t_file *line, t_lex **token)
 
 	list = *token;
 	end = line->tokens;	
-	if (line->n_args != 1
-		|| (list->token != L_BLANKS || (list = list->next) == end)
+	if ((list->token != L_BLANKS || (list = list->next) == end)
 		|| (list->arg_type != T_REG))
 		return (FALSE);
 	*token = list->next;

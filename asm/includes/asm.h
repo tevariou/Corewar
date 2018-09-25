@@ -75,6 +75,7 @@ typedef struct		s_file {
 typedef struct		s_parse {
 	char			*instruct[5];
 	t_bool			(*f)(t_file *line, t_lex **token);
+	int				n_args;
 }					t_parse;
 
 typedef struct		s_asm {
@@ -93,12 +94,13 @@ int					set_option(int ac, char **av);
 void				get_file(t_asm *a, char *file);
 void				compile_asm(t_asm *a, char *file);
 void				header_error(t_asm *a, char *line);
-void				lex_error(t_asm *a, t_file *line);
+void				lex_error(t_asm *a, t_file *line, char *val);
 void				parser_error(t_asm *a, t_file *line, char *val);
 void				lexer(t_asm *a);
 void				redux(t_asm *a);
 void				parser(t_asm *a);
 void				free_input(t_asm *a);
+void				n_arg_error(t_asm *a, t_file *line);
 
 char				*ft_str_label(char *str);
 char				*ft_label_str(char *str);
