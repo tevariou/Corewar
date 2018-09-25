@@ -52,13 +52,24 @@ void		header_error(t_asm *a, char *line)
 	exit(EXIT_FAILURE);
 }
 
-void		parser_error(t_asm *a, t_file *line)
+static void	output_error(char *line, char *val)
+{
+	char	*p;
+
+	p = ft_strstr(line, val);
+	write(2, line, p - line);
+	ft_putstr_fd("\e[4m\033[1;31m", 2);
+	ft_putstr_fd(val, 2);
+	ft_putstr_fd("\033[0m\e[24m", 2);
+	ft_putendl_fd(p + ft_strlen(val), 2);
+}
+
+void		parser_error(t_asm *a, t_file *line, char *val)
 {
 	ft_putstr_fd("Parsing error at line ", 2);
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
-	ft_putstr_fd(line->line, 2);
-	ft_putchar_fd('\n', 2);
+	output_error(line->line, val);
 	free_input(a);
 	exit(EXIT_FAILURE);
 }

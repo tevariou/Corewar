@@ -83,7 +83,7 @@ static t_bool	p_lab(t_lex **token)
 	return (FALSE);
 }
 
-static t_bool	parse_line(t_file *line)
+static void	parse_line(t_asm *a, t_file *line)
 {
 	t_lex	*list;
 	t_lex	*end;
@@ -92,16 +92,15 @@ static t_bool	parse_line(t_file *line)
 	end = list;
 	if (p_lab(&list))
 	{
-		if (list != line->tokens && p_blanks(&list) && p_instruct(line, &list) && list == end)
-			return (TRUE);
-		else if (list != line->tokens && p_instruct(line, &list) && list == end)
-			return (TRUE);
-		else if (list == end)
-			return (TRUE);
+		if ((list != line->tokens && p_blanks(&list)
+			&& p_instruct(line, &list) && list == end)
+			|| (list != line->tokens && p_instruct(line, &list) && list == end)
+			|| (list == end))
+			return ;
 	}
 	else if (p_instruct(line, &list) && list == end)
-		return (TRUE);
-	return (FALSE);
+		return ;
+	parser_error(a, line, list->val);
 }
 
 void			parser(t_asm *a)
@@ -113,10 +112,8 @@ void			parser(t_asm *a)
 	tail = line->prev;
 	while (line != tail)
 	{
-		if (!parse_line(line))
-			parser_error(a, line);
+		parse_line(a, line);
 		line = line->next;
 	}
-	if (!parse_line(line))
-		parser_error(a, line);
+	parse_line(a, line);
 }

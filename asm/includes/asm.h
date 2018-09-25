@@ -94,7 +94,7 @@ void				get_file(t_asm *a, char *file);
 void				compile_asm(t_asm *a, char *file);
 void				header_error(t_asm *a, char *line);
 void				lex_error(t_asm *a, t_file *line);
-void				parser_error(t_asm *a, t_file *line);
+void				parser_error(t_asm *a, t_file *line, char *val);
 void				lexer(t_asm *a);
 void				redux(t_asm *a);
 void				parser(t_asm *a);
