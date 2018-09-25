@@ -52,6 +52,7 @@ void		free_input(t_asm *a)
 		free(tmp);
 	}
 	free(head->line);
+	free_tokens(head);
 	free(head);
 	a->input = NULL;
 }

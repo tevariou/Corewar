@@ -77,6 +77,7 @@ char	*ft_op(char *str)
 		str++;
 	if (*str != '+' && *str != '-')
 		return (NULL);
+	str += 1;
 	while (ft_isspace(*str))
 		str++;
 	return (str);
