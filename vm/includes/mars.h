@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/26 16:38:34 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/27 18:02:57 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct				s_processus
 	int						player;
 	char					*name;
 	int						pc;
+	unsigned				nbr_of_live;
+	unsigned				last_cycle_live;
 	struct s_processus		*next;
 }							t_processus;
 
@@ -33,6 +35,7 @@ typedef struct				s_mars
 	unsigned				cycle_to_die;
 	unsigned				count_players;
 	unsigned				cycle_current;
+	unsigned				cycle_delta;
 	t_processus				*process_lst;
 }							t_mars;
 
@@ -43,4 +46,6 @@ void						ft_add_processus_to_mars(t_mars *mars, t_processus *process);
 int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(byte *memory, int fd, int start);
 void						ft_exit(t_mars *mars, char *error);
+void						ft_info_processus(t_processus *process);
+void						ft_info_processus(t_processus *process);
 #endif

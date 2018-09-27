@@ -6,7 +6,7 @@
 #    By: abiestro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/26 16:26:12 by abiestro         ###   ########.fr        #
+#    Updated: 2018/09/27 18:00:40 by abiestro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ ITEMS 	= mars.c \
 		  ft_prepare_mars_memory.c \
 		  ft_write_champ_on_memory.c \
 		  ft_errors.c \
+		  ft_debug_display.c \
 
 OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))
 

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_errors.c                                        :+:      :+:    :+:   */
+/*   ft_debug_display.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/26 16:24:17 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/27 17:56:16 by abiestro         ###   ########.fr       */
+/*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
+/*   Updated: 2018/09/27 18:02:34 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "mars.h"
 #include "libft.h"
+#include "mars.h"
 
-void	ft_exit(t_mars *mars, char *error)
+void	ft_info_processus(t_processus *process)
 {
-	write(2, error,ft_strlen(error));
-	if (mars)
-		free(mars);
-	exit(0);
+	if (!process)
+		ft_exit(NULL, "no process");
+	ft_putstr(process->name);
+	ft_putchar('\n');
+	ft_putnbr(process->pc);
+	ft_putchar('\n');
+	ft_putnbr(process->player);
+	ft_putchar('\n');
 }

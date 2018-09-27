@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2018/09/25 18:22:09 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/27 17:44:02 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,10 @@ typedef char	t_arg_type;
 #define T_IND					4
 #define T_LAB					8
 
-/*
- * **
- * */
 
 # define PROG_NAME_LENGTH		(128)
 # define COMMENT_LENGTH			(2048)
+# define SEPARATOR_LINE			(16)
 # define COREWAR_EXEC_MAGIC		0xea83f3
 
 typedef struct		header_s

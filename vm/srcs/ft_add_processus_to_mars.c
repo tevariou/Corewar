@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/27 15:50:56 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/27 17:30:17 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int				ft_add_parameter_to_processus(t_processus *process, char **av)
 			tmp++;
 		if (*tmp)
 			return (-1);
-		process->pc = atoi(av[1]);
+		process->player = atoi(av[1]);
 		return (2);
 	}
 	else if (ft_strequ("-a", *av))
@@ -98,7 +98,9 @@ t_processus		*ft_argv_have_champ(char **av, int *current_index, int ac)
 	if (!process->name)
 		return (NULL);
 	ft_putstr(process->name);
+	ft_putchar('\n');
 	ft_putnbr(process->pc);
+	ft_putchar('\n');
 	*current_index += i;
 	return (process);
 }

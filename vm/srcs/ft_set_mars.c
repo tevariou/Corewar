@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/26 17:29:55 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/27 17:25:55 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ t_mars		*ft_set_mars(int ac, char **av)
 		if  (!(current_champion = ft_argv_have_champ(av, &i, ac)))
 			ft_exit(mars, "bad av");
 		mars->count_players++;
+		if (!current_champion->player)
+			current_champion->player = mars->count_players;
 		ft_add_processus_to_mars(mars, current_champion);
 	}
 	if (mars->count_players < 1 || mars->count_players > MAX_PLAYERS )
