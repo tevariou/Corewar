@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 16:43:21 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 16:53:40 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int				ft_add_parameter_to_processus(t_processus *process, char **av)
 }
 
 /*
- ** loop through av to find champion a champion since next champion.
+ ** loop through av to find champion since last champion saved.
  ** every thing before is checked as an option. if an option is not valid or a 
  ** champion is not found after options, the process exit and the function
  ** return a NULL pointer. Else a new processus is returned..
