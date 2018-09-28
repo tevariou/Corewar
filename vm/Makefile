@@ -6,7 +6,7 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/28 15:09:37 by abiestro         ###   ########.fr        #
+#    Updated: 2018/09/28 18:34:56 by abiestro         ###   ########.fr        #
 
 #                                                                              #
 # **************************************************************************** #
@@ -23,32 +23,33 @@ ODIR	= objs
 OPPDIR  = opp
 LDIR	= libft
 
-ITEMS 	= 	mars.c 						\
-		  	ft_set_mars.c 				\
-		  	ft_add_processus_to_mars.c 	\
+ITEMS 	= 	mars.c 							\
+		  	ft_set_mars.c 					\
+		  	ft_add_processus_to_mars.c	 	\
 		  	ft_prepare_mars_memory.c 		\
-		  	ft_write_champ_on_memory.c 	\
+		  	ft_write_champ_on_memory.c	 	\
 		  	ft_errors.c 					\
-		  	ft_debug_display.c 			\
-		  	ft_route_opp.c				\
-		  	ft_registers.c				\
-			ft_ocp.c				\
+		  	ft_debug_display.c 				\
+		  	ft_registers.c					\
+			ft_ocp.c						\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\
 		  	$(OPPDIR)/direct_load.c 		\
 		  	$(OPPDIR)/direct_store.c 		\
 		  	$(OPPDIR)/fork.c 				\
-		  	$(OPPDIR)/indirect_load.c 	\
-		  	$(OPPDIR)/indirect_store.c 	\
+		  	$(OPPDIR)/indirect_load.c 		\
+		  	$(OPPDIR)/indirect_store.c 		\
 		  	$(OPPDIR)/jump.c 				\
 		  	$(OPPDIR)/live.c 				\
 		  	$(OPPDIR)/long_direct_load.c 	\
-		  	$(OPPDIR)/long_fork.c 		\
-		  	$(OPPDIR)/long_indirect_load.c \
-		  	$(OPPDIR)/or.c 				\
+		  	$(OPPDIR)/long_fork.c 			\
+		  	$(OPPDIR)/long_indirect_load.c	\
+		  	$(OPPDIR)/or.c 					\
 		  	$(OPPDIR)/substraction.c 		\
 		  	$(OPPDIR)/xor.c 				\
+			loop_through_battle.c			\
+			cycle_mars_handler.c			\
 
 
 OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))

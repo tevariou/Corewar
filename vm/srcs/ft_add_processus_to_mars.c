@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 16:53:40 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 17:57:22 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_processus		*ft_new_empty_processus(void)
 	iterator_register = 0;
 	process->player = 0;
 	process->pc = 0;
+	process->next_instruction_cycle = 0;
 	process->name = NULL;
 	process->next = NULL;
 	while (iterator_register < REG_NUMBER * REG_SIZE)

@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/27 17:25:55 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 18:41:30 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ t_mars		*ft_new_mars(void)
 		return (NULL);
 	mars->cycle_to_die = CYCLE_TO_DIE;
 	mars->count_players = 0;
-	mars->cycle_current = 0;
+	mars->cycle_delta = CYCLE_DELTA;
+	mars->cycle_teta = CYCLE_TO_DIE;
+	mars->current_cycle = 0;
 	mars->process_lst = NULL;
 	return (mars);
 }
