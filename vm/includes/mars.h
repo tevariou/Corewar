@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.h                                          :+:      :+:    :+:   */
+/*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 15:53:18 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 17:31:39 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@
 
 typedef char byte;
 typedef char bool;
-#define TRUE 1
-#define FALSE 0
+
+
+# define TRUE 1
+# define FALSE 0
+# define SUCCESS	1
+# define ERROR		-1
+# define OPP_ERROR	-2
+# define NB_OPPS            16
 
 typedef struct				s_processus
 {
@@ -51,4 +57,27 @@ void						ft_info_processus(t_processus *process);
 void						ft_info_processus(t_processus *process);
 int							ft_get_register(t_processus *process, unsigned index);
 int							ft_load_register(t_processus *p, unsigned index, int value);
+
+/*
+** Opertations
+*/
+
+int							addition(t_processus *process);
+int							aff(t_processus *process);
+int							and(t_processus *process);
+int							direct_load(t_processus *process);
+int							direct_store(t_processus *process);
+int							ft_fork(t_processus *process);
+int							indirect_load(t_processus *process);
+int							indirect_store(t_processus *process);
+int							jump(t_processus *process);
+int							live(t_processus *process);
+int							long_direct_load(t_processus *process);
+int							long_fork(t_processus *process);
+int							long_indirect_load(t_processus *process);
+int							or(t_processus *process);
+int							substraction(t_processus *process);
+int							xor(t_processus *process);
+
+
 #endif
