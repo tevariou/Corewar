@@ -3,5 +3,5 @@
 *.o
 corewar
 *.a
-mars.c
 *.json
+vm/srcs/mars.c

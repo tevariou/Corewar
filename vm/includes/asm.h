@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:46:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 00:56:36 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 17:28:15 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,27 @@ typedef struct				s_pf_opp
 	int						(*f)(t_processus *);
 }							t_pf_opp;
 
-void		ft_init_opps(t_pf_opp opps[NB_OPPS]);
+t_pf_opp					g_opps[NB_OPPS] =
+{
+	{LIVE, &live},
+	{DIRECT_LOAD, &direct_load},
+	{DIRECT_STORE, &direct_store},
+	{ADDITION, &addition},
+	{SUBSTRACTION, &substraction},
+	{AND, &and},
+	{OR, &or},
+	{XOR, &xor},
+	{JUMP, &jump},
+	{INDIRECT_LOAD, &indirect_load},
+	{INDIRECT_STORE, &indirect_store},
+	{FORK, &ft_fork},
+	{L_DIRECT_LOAD, &long_direct_load},
+	{L_INDERECT_LOAD, &long_indirect_load},
+	{L_FORK, &long_fork},
+	{AFF, &aff}
+};
+
+int								ft_get_ocp(unsigned ocp);
+
 
 #endif

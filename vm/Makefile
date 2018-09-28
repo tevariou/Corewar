@@ -6,11 +6,8 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-<<<<<<< HEAD
 #    Updated: 2018/09/28 15:09:37 by abiestro         ###   ########.fr        #
-=======
-#    Updated: 2018/09/28 00:32:39 by lmazeaud         ###   ########.fr        #
->>>>>>> add all funcitons and comment operations
+
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +32,7 @@ ITEMS 	= 	mars.c 						\
 		  	ft_debug_display.c 			\
 		  	ft_route_opp.c				\
 		  	ft_registers.c				\
+			ft_ocp.c				\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\
