@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   compile.c                                          :+:      :+:    :+:   */
+/*   labels.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/28 14:57:17 by triou             #+#    #+#             */
-/*   Updated: 2018/09/28 18:06:21 by triou            ###   ########.fr       */
+/*   Created: 2018/09/28 14:57:14 by triou             #+#    #+#             */
+/*   Updated: 2018/09/28 18:49:47 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
-
-void	compile_asm(t_asm *a, char *file)
+void	get_labels(t_asm *a)
 {
-	get_file(a, file);
-	lexer(a);
-	redux(a);
-	parser(a);
-	get_labels(a);
+	t_file	*list;
+	t_file	*tail;
+	char	**tmp;
+
+	list = a->input;
+	tail = list->prev;
+	tmp = NULL;
+	while (list != tail)
+	{
+		if (!(line->args))
+		{
+			
+		}
+		list = list->next;
+	}
 }

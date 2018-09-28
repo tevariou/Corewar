@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 22:24:49 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/28 18:49:45 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,17 @@ typedef struct		s_parse {
 	int				n_args;
 }					t_parse;
 
+typedef struct		s_label {
+	char			*name;
+	size_t			target;
+	struct s_label	*prev;
+	struct s_label	*next;
+}					t_label;
+
 typedef struct		s_asm {
 	int				option;
 	t_file			*input;
+	t_label			*labels;
 	header_t		header;
 }					t_asm;
 
@@ -99,6 +107,7 @@ void				parser_error(t_asm *a, t_file *line, char *val);
 void				lexer(t_asm *a);
 void				redux(t_asm *a);
 void				parser(t_asm *a);
+void				get_labels(t_asm *a);
 void				free_input(t_asm *a);
 void				n_arg_error(t_asm *a, t_file *line);
 
