@@ -32,6 +32,10 @@ ITEMS 	= 	mars.c 							\
 		  	ft_debug_display.c 				\
 		  	ft_registers.c					\
 			ft_ocp.c						\
+		  	ft_debug_display.c 			\
+		  	ft_registers.c				\
+			ft_ocp.c						\
+			$(OPPDIR)/ft_get_opcode.c					\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   addition.c                                         :+:      :+:    :+:   */
+/*   ft_get_opcode.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/27 21:46:20 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
+/*   Created: 2018/09/28 19:43:32 by lmazeaud          #+#    #+#             */
+/*   Updated: 2018/09/28 20:12:13 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
+#include "asm.h"
 
-/*
-** Addition - 0x04
-**
-** OCP: ✅    Add: ❌    Carry: ✅     Cycle: 10
-** @params 1		: REG
-** @params 2 		: REG
-** @params dest		: REG
-**
-** Ajoute le second parametre au premier parametre, et stock le resultat dans
-** le troisieme parametre. Si la valeur resultante est egale a zero,
-** alors le carry passe a l'etat un, sinon a l'etat zero.
-*/
-
-int		addition(t_mars *mars, t_processus *process)
+int		ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode)
 {
-	return (SUCCESS);
+	unsigned	i;
+
+	i = -1;
+	while (++i < NB_OPPS)
+	{
+		if (opcode == g_opps[i].value)
+		{
+			g_opps[i].f(mars, process);
+			return (SUCCESS);
+		}
+	}
+	return (OPP_ERROR);
 }

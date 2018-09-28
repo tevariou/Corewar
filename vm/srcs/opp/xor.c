@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:07:31 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 00:59:03 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 20:09:59 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@
 ** sinon a l'etat zero.
 */
 
-int		xor(t_processus *process)
+int		xor(t_mars *mars, t_processus *process)
 {
-	printf("xor COUCOU\n");
 	return (SUCCESS);
 }

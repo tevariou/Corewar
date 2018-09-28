@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:46:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 17:28:15 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 20:00:28 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@
 typedef struct				s_pf_opp
 {
 	unsigned				value;
-	int						(*f)(t_processus *);
+	int						(*f)(t_mars *, t_processus *);
+
 }							t_pf_opp;
 
 t_pf_opp					g_opps[NB_OPPS] =
@@ -53,10 +54,7 @@ t_pf_opp					g_opps[NB_OPPS] =
 	{L_DIRECT_LOAD, &long_direct_load},
 	{L_INDERECT_LOAD, &long_indirect_load},
 	{L_FORK, &long_fork},
-	{AFF, &aff}
+	{AFF, &aff},
 };
-
-int								ft_get_ocp(unsigned ocp);
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:56:13 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 00:55:43 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 ** l'etat un, sinon a l'etat zero.
 */
 
-int		indirect_load(t_processus *process)
+int		indirect_load(t_mars *mars, t_processus *process)
 {
 	return (SUCCESS);
 }

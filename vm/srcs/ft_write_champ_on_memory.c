@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   write_champ_on_memory.c                            :+:      :+:    :+:   */
+/*   ft_write_champ_on_memory.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/27 17:54:24 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 19:56:18 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "mars.h"
 
 #include <stdio.h>
-int		ft_put_string_on_circular_memory(byte *memory, const char *champion, int size, int start)
+int		ft_put_string_on_circular_memory(t_byte *memory, const char *champion, int size, int start)
 {
 	int i;
 
@@ -28,7 +28,7 @@ int		ft_put_string_on_circular_memory(byte *memory, const char *champion, int si
 	}
 	return (1);
 }
-int		ft_load_champ_from_file_to_memory(byte *memory, int fd, int start)
+int		ft_load_champ_from_file_to_memory(t_byte *memory, int fd, int start)
 {
 	char info[PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE];
 	char buffer[CHAMP_MAX_SIZE + 1];
