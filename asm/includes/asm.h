@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/28 18:49:45 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/28 21:34:05 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,12 @@ typedef struct		s_parse {
 	int				n_args;
 }					t_parse;
 
-typedef struct		s_label {
+typedef struct		s_lab {
 	char			*name;
-	size_t			target;
+	t_file			*target;
 	struct s_label	*prev;
 	struct s_label	*next;
-}					t_label;
+}					t_lab;
 
 typedef struct		s_asm {
 	int				option;
