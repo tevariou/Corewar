@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/27 17:30:17 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 16:43:21 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,18 @@
 t_processus		*ft_new_empty_processus(void)
 {
 	t_processus *process;
+	unsigned	iterator_register;
 
 	process = malloc(sizeof(t_processus));
 	if (!process)
 		return (NULL);
+	iterator_register = 0;
 	process->player = 0;
 	process->pc = 0;
 	process->name = NULL;
 	process->next = NULL;
+	while (iterator_register < REG_NUMBER * REG_SIZE)
+		process->registers[iterator_register++] = 0;
 	return (process);
 }
 
@@ -68,7 +72,7 @@ int				ft_add_parameter_to_processus(t_processus *process, char **av)
 				return (1);
 			}
 		}
-		return (0);
+		return (-1);
 	}
 }
 
@@ -97,10 +101,6 @@ t_processus		*ft_argv_have_champ(char **av, int *current_index, int ac)
 	}
 	if (!process->name)
 		return (NULL);
-	ft_putstr(process->name);
-	ft_putchar('\n');
-	ft_putnbr(process->pc);
-	ft_putchar('\n');
 	*current_index += i;
 	return (process);
 }
