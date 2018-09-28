@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 00:55:40 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 ** votre sortie de aff soit le plus swag possible.
 */
 
-int		aff(t_processus *process)
+int		aff(t_mars *mars, t_processus *process)
 {
 	return (SUCCESS);
 }

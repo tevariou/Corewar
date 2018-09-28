@@ -30,9 +30,9 @@ ITEMS 	= 	mars.c 						\
 		  	ft_write_champ_on_memory.c 	\
 		  	ft_errors.c 					\
 		  	ft_debug_display.c 			\
-		  	ft_route_opp.c				\
 		  	ft_registers.c				\
-			ft_ocp.c				\
+			ft_ocp.c						\
+			$(OPPDIR)/ft_get_opcode.c					\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\

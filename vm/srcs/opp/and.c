@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:08:02 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 00:55:40 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 ** alors le carry passe a l'etat un, sinon a l'etat zero.
 */
 
-int		and(t_processus *process)
+int		and(t_mars *mars, t_processus *process)
 {
 	return (SUCCESS);
 }
