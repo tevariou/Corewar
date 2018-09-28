@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 20:20:48 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 21:19:42 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 /*
 ** Create a new Mars. Malloc what have to. Return a mars if succed, NULL else
 */
+
 t_mars		*ft_new_mars(void)
 {
 	t_mars	*mars;
@@ -38,9 +39,10 @@ t_mars		*ft_new_mars(void)
 }
 
 /*
-** start of parsing functions. Will check if parameters are viable and 
+** start of parsing functions. Will check if parameters are viable and
 ** return an initialized mars if succed or NULL otherwise.
 */
+
 t_mars		*ft_set_mars(int ac, char **av)
 {
 	t_mars			*mars;
@@ -53,14 +55,14 @@ t_mars		*ft_set_mars(int ac, char **av)
 		ft_exit(NULL, E_NO_MARS);
 	while (i < ac)
 	{
-		if  (!(current_champion = ft_argv_have_champ(av, &i, ac)))
+		if (!(current_champion = ft_argv_have_champ(av, &i, ac)))
 			ft_exit(mars, "bad av");
 		mars->count_players++;
 		if (!current_champion->player)
 			current_champion->player = mars->count_players;
 		ft_add_processus_to_mars(mars, current_champion);
 	}
-	if (mars->count_players < 1 || mars->count_players > MAX_PLAYERS )
+	if (mars->count_players < 1 || mars->count_players > MAX_PLAYERS)
 		ft_exit(mars, E_PLAYERS_COUNT);
 	if (!ft_prepare_mars_memory(mars))
 		ft_exit(mars, "yep");

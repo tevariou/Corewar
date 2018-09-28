@@ -6,15 +6,16 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 19:56:18 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/28 21:17:26 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "mars.h"
-
 #include <stdio.h>
-int		ft_put_string_on_circular_memory(t_byte *memory, const char *champion, int size, int start)
+
+int		ft_put_string_on_circular_memory(t_byte *memory,
+		const char *champion, int size, int start)
 {
 	int i;
 
@@ -23,16 +24,17 @@ int		ft_put_string_on_circular_memory(t_byte *memory, const char *champion, int 
 	{
 		if (memory[start + i])
 			return (0);
-		memory[(start +  i) % (MEM_SIZE)] = (char)champion[i];
+		memory[(start + i) % (MEM_SIZE)] = (char)champion[i];
 		i++;
 	}
 	return (1);
 }
+
 int		ft_load_champ_from_file_to_memory(t_byte *memory, int fd, int start)
 {
-	char info[PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE];
-	char buffer[CHAMP_MAX_SIZE + 1];
-	int	buff_size;
+	char	info[PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE];
+	char	buffer[CHAMP_MAX_SIZE + 1];
+	int		buff_size;
 
 	read(fd, info, PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE);
 	buff_size = read(fd, buffer, CHAMP_MAX_SIZE);

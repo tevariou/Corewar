@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 18:09:00 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 21:13:20 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,21 @@ int	ft_read_multiple_champion(t_mars *mars)
 	t_processus	*current_process;
 
 	i = 0;
-	current_process= mars->process_lst;
+	current_process = mars->process_lst;
 	while (current_process && (fd = open(current_process->name, O_RDONLY)))
 	{
 		if (!current_process->pc)
 			current_process->pc = i++ * (MEM_SIZE / mars->count_players);
 		ft_load_register(current_process, 0, current_process->player);
-		if (!ft_load_champ_from_file_to_memory(mars->memory, fd, current_process->pc))
+		if (!ft_load_champ_from_file_to_memory(mars->memory,
+					fd, current_process->pc))
 			ft_exit(mars, "champions are writted one on the other\n");
 		current_process = current_process->next;
 	}
 	return (1);
 }
 
-int ft_prepare_mars_memory(t_mars *mars)
+int	ft_prepare_mars_memory(t_mars *mars)
 {
 	int			i;
 	t_processus	*process;

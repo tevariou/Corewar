@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 18:50:01 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/28 21:16:15 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ void	ft_info_processus(t_processus *process)
 	printf("player    -> %d\n", process->player);
 	while (i < REG_NUMBER)
 	{
-		printf("register %2X = %2X || ",i , ft_get_register(process, i));
+		printf("register %2X = %2X || ", i, ft_get_register(process, i));
 		if (!((i + 1) % (REG_NUMBER / 4)))
 			printf("\n");
 		i++;
 	}
-			printf("\n");
+	printf("\n");
 }
 
-void    ft_info_ram(t_mars *mars)
+void	ft_info_ram(t_mars *mars)
 {
 	int i;
 	int save;
@@ -71,7 +71,7 @@ void	ft_debug_info(t_mars *mars)
 
 	system("@cls||clear");
 	tmp = mars->process_lst;
-	while(tmp)
+	while (tmp)
 	{
 		ft_info_processus(tmp);
 		tmp = tmp->next;
