@@ -1,4 +1,4 @@
 .name"o
 k"#COM
 .comment"lo"
-xor	r3,%-430,r15
+xor	3,%-430, r15

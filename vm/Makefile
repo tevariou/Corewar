@@ -3,12 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
+#    By: triou <triou@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/28 18:34:56 by abiestro         ###   ########.fr        #
-
+#    Updated: 2018/09/29 20:19:53 by lterrail         ###   ########.fr        #
 #                                                                              #
+# **************************************************************************** #
 # **************************************************************************** #
 
 NAME	= corewar
@@ -64,10 +64,10 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@make -C $(LDIR)
-	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft -lftprintf
+	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft
 	@echo "success !!!!!!"
-	
-	
+
+
 $(OBJS) : | $(ODIR)
 
 $(ODIR):

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/29 19:50:12 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/29 20:42:28 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,21 @@ int		ft_save_directs(t_processus *process, t_mars *mars, size_t id, size_t count
 	return (4);
 }
 
+static int		ft_save_indirects(t_processus *process, t_mars *mars, size_t id, size_t count)
+{
+	unsigned int	res;
+	unsigned int	tmp;
+
+	res = 0;
+	tmp = mars->memory[process->pc + count + 2] << 8;
+	res += tmp & 0x0000FF00;
+	tmp = mars->memory[process->pc + count + 3];
+	res += tmp & 0x000000FF;
+	process->params[id] = res;
+	printf("res = %u\n", res);
+	return (2);
+}
+
 int		ft_get_params(t_processus *process, t_mars *mars, size_t direct_size)
 {
 	size_t			i;
@@ -47,6 +62,9 @@ int		ft_get_params(t_processus *process, t_mars *mars, size_t direct_size)
 
 	i = 0;
 	count = 2;
+	printf("define params[1] %d\n", process->define_params[0]);
+	printf("define params[2] %d\n", process->define_params[1]);
+	printf("define params[3] %d\n", process->define_params[2]);
 	while (i < 3)
 	{
 		if (process->define_params[i] == REG_CODE)
@@ -57,13 +75,15 @@ int		ft_get_params(t_processus *process, t_mars *mars, size_t direct_size)
 		}
 		else if (process->define_params[i] == DIR_CODE)
 		{
+			printf("ALLOOOO\n");
 			process->size_params[i] = direct_size;
 			count += ft_save_directs(process, mars, i, count);
 		}
 		else if (process->define_params[i] == IND_CODE)
 		{
+			printf("JDKADJWKLDAJDKLADJWdlk\n");
 			process->size_params[i] = INDEX;
-			// count += ft_save_indirects(mars, process, i, count);
+			count += ft_save_indirects(process, mars, i, count);
 		}
 		i++;
 	}
