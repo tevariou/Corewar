@@ -6,14 +6,14 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 20:20:01 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/29 18:55:22 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
 # include <zaz.h>
-
+#include <sys/types.h>
 typedef char				t_byte;
 
 # define TRUE 				1
@@ -23,6 +23,13 @@ typedef char				t_byte;
 # define OPP_ERROR			-2
 
 # define NB_OPPS            16
+# define PROCESS_WAITING	3
+
+# define REG				1
+# define INDEX				2
+# define DIRECT2			2
+# define DIRECT4			4
+
 
 typedef struct				s_processus
 {
@@ -33,9 +40,9 @@ typedef struct				s_processus
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
-	unsigned				param1;
-	unsigned				param2;
-	unsigned				dest;
+	unsigned				define_params[3];
+	unsigned				size_params[3];
+	unsigned int			params[3];
 	struct s_processus		*next;
 }							t_processus;
 
@@ -108,6 +115,6 @@ int							long_indirect_load(t_mars *mars,
 int							or(t_mars *mars, t_processus *process);
 int							substraction(t_mars *mars, t_processus *process);
 int							xor(t_mars *mars, t_processus *process);
-
+int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size);
 
 #endif
