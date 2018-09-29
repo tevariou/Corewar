@@ -64,7 +64,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@make -C $(LDIR)
-	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft
+	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft -lftprintf
 	@echo "success !!!!!!"
 	
 	
