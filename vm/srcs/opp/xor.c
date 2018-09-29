@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:07:31 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:09:59 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/29 19:17:44 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,15 @@
 
 int		xor(t_mars *mars, t_processus *process)
 {
+	// if (mars->current_cycle == process->last_cycle_live + 6)
+	// 	process->next_instruction_cycle = mars->current_cycle + 6;
+	// if (mars->current_cycle == process->next_instruction_cycle)
+	// {
+		printf("\nBonjour XOR\n");
+		ft_get_ocp(process, mars->memory[process->pc + 1]);
+		ft_get_params(process, mars, 4);
+	// }
+	// else
+	// 	return (PROCESS_WAITING);
 	return (SUCCESS);
 }
