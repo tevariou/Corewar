@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2018/09/29 17:55:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 20:18:36 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,13 @@
 */
 
 typedef char		t_arg_type;
+typedef char		t_byte;
 
 typedef struct		s_op {
-	char			*instruct;
+	char			*name;
 	int				n_args;
 	int				args_type[3];
-	int				op_code;
+	t_byte			op_code;
 	int				n_cycles;
 	char			*comment;
 	int				ocp;

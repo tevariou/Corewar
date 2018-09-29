@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 16:29:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 18:10:38 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		main(int ac, char **av)
 
 	a->input = NULL;
 	a->labels = NULL;
+	a->output = NULL;
 	if (ac <= 1 || ac > 3)
 		print_usage_exit();
 	a.option = set_option(ac, av);

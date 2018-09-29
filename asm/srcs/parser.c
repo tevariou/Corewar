@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 17:36:40 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 22:51:32 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 18:15:45 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static t_bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
 	i = 0;	
 	while (i < 8)
 	{
-		if (ft_tabequ(g_parse_tab[i].instruct, list->val))
+		if (ft_tabequ(g_parse_tab[i].name, list->val))
 		{
 			if ((*token = list->next) == line->tokens)
 				return (FALSE);

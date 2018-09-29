@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 18:05:32 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 20:18:25 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@
 # define NAME_TOO_LONG		"Program name is too long\n"
 # define COMMENT_TOO_LONG	"Program comment is too long\n"
 # define NO_INSTRUCTION		"No instruction\n"
-
-typedef	unsigned char	t_byte;
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -75,7 +73,7 @@ typedef struct			s_file {
 }						t_file;
 
 typedef struct			s_parse {
-	char				*instruct[5];
+	char				*name[5];
 	t_bool				(*f)(t_file *line, t_lex **token);
 	int					n_args;
 }						t_parse;
@@ -90,7 +88,9 @@ typedef struct			s_lab {
 typedef struct			s_code {
 	t_byte				op_code;
 	t_byte				ocp;
-	t_byte				*args[3];	
+	t_byte				args[3][4];	
+	size_t				size;
+	t_file				*orig;
 }						t_code;
 
 typedef struct			s_asm {

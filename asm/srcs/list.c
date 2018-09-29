@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 16:23:55 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 21:02:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,44 @@ void			add_label(t_asm *a, t_file *list)
 	new->target = get_target(a, list);
 	new->name = list->val;
 	if (!(head = a->labels))
+	{
+		new->prev = new;
+		new->next = new;
+		a->labels = new;
+		return ;
+	}
+	tail = head->prev;
+	tail->next = new;
+	new->prev = tail;
+	new->next = head;
+	head->prev = new;
+}
+
+static t_byte	get_ocp(t_lex *list)
+{
+	int		i;
+
+	while (list->token != L_INSTRUCT)
+		list = list->next;
+	i = 0;
+	while (!ft_strequ(g_op_tab[i].name, list->val))
+		i++;
+	return (g_op_tab[i].op_code);
+}
+
+void			add_op(t_asm *a, t_file *list)
+{
+	t_code	*new;
+	t_code	*head;
+	t_code	*tail;
+
+	if (!(new = ft_memalloc(sizeof(*new))))
+		err_free_exit(a, NULL);
+	new->op_code = get_opcode(list);
+	new->ocp = get_ocp(list->tokens);
+	new->size = get_size(list);
+	new->orig = list;
+	if (!(head = a->output))
 	{
 		new->prev = new;
 		new->next = new;
