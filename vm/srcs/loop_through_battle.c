@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   loop_though_battle.c                               :+:      :+:    :+:   */
+/*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:04:44 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/29 19:10:08 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	execute_one_cycle(t_mars *mars)
 	while (current_process)
 	{
 		execut_process_turn(mars, current_process);
+		ft_get_opcode(mars, current_process, mars->memory[current_process->pc]);
 		current_process = current_process->next;
 	}
 	return (1);
