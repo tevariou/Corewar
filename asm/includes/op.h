@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2018/09/24 22:26:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 17:55:46 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@
 **
 */
 
-typedef char	t_arg_type;
+typedef char		t_arg_type;
 
 typedef struct		s_op {
 	char			*instruct;

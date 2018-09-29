@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 23:52:31 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 16:31:11 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,13 @@ void		err_free_exit(t_asm *a, const char *err)
 		perror(NULL);
 	else
 		ft_putstr_fd(err, 2);
-	if (a)
-		free_input(a);
+	free_all(a);
 	exit(EXIT_FAILURE);
 }
 
 void		header_error(t_asm *a, char *line)
 {
-	if (a)
-		free_input(a);
+	free_all(a);
 	ft_putstr_fd(WRONG_HEADER, 2);
 	free(line);
 	exit(EXIT_FAILURE);
@@ -59,7 +57,7 @@ void		parser_error(t_asm *a, t_file *line, char *val)
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
 	output_error(line->line, val);
-	free_input(a);
+	free_all(a);
 	exit(EXIT_FAILURE);
 }
 
@@ -69,7 +67,7 @@ void		lex_error(t_asm *a, t_file *line, char *val)
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
 	output_error(line->line, val);
-	free_input(a);
+	free_all(a);
 	exit(EXIT_FAILURE);
 }
 
@@ -80,6 +78,6 @@ void		n_arg_error(t_asm *a, t_file *line)
 	ft_putstr_fd(":\n", 2);
 	ft_putstr_fd(line->line, 2);
 	ft_putstr_fd("\n", 2);
-	free_input(a);
+	free_all(a);
 	exit(EXIT_FAILURE);
 }

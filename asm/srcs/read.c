@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 21:17:47 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/29 16:25:43 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,6 @@ static void		remove_whitespaces(t_asm *a, char **line)
 	free(tmp);
 }
 
-static void		get_header(t_asm *a, int fd, size_t *n)
-{
-	get_name(a, fd, n);
-	get_comment(a, fd, n);
-}
-
 static void		record_file(t_asm *a, int fd)
 {
 	int		ret;
@@ -50,7 +44,8 @@ static void		record_file(t_asm *a, int fd)
 
 	line = NULL;
 	n = 1;
-	get_header(a, fd, &n);
+	get_name(a, fd, n);
+	get_comment(a, fd, n);
 	while ((ret = get_next_line(fd, &line)))
 	{
 		if (ret < 0)
@@ -58,7 +53,7 @@ static void		record_file(t_asm *a, int fd)
 		ft_strclr(ft_strchr(line, COMMENT_CHAR));
 		remove_whitespaces(a, &line);
 		if (*line)
-			add_input_line(a, &line, n);
+			add_input_line(a, line, n);
 		else
 			free(line);
 		line = NULL;
@@ -71,7 +66,6 @@ void		get_file(t_asm *a, char *file)
 {
 	int		fd;
 
-	a->input = NULL;
 	check_extension(file);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		err_free_exit(a, NULL);

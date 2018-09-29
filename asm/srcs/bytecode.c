@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   compile.c                                          :+:      :+:    :+:   */
+/*   bytecode.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/28 14:57:17 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 17:28:08 by triou            ###   ########.fr       */
+/*   Created: 2018/09/29 17:36:18 by triou             #+#    #+#             */
+/*   Updated: 2018/09/29 18:05:48 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	compile_asm(t_asm *a, char *file)
+void	set_bytecode(t_asm *a)
 {
-	get_file(a, file);
-	lexer(a);
-	redux(a);
-	parser(a);
-	get_labels(a);
-	set_bytecode(a);	
+	
 }
