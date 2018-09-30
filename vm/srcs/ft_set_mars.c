@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:19:42 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:05:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,18 @@
 
 t_mars		*ft_new_mars(void)
 {
+	int		i;
 	t_mars	*mars;
 
 	mars = (t_mars *)malloc(sizeof(t_mars));
 	if (!mars)
 		return (NULL);
-	mars->memory = (t_byte *)malloc(sizeof(t_byte) * MEM_SIZE);
-	if (!mars->memory)
+	i = -1;
+	if (!(mars->memory = (t_byte **)malloc(sizeof(t_byte*) * MEM_SIZE)))
 		return (NULL);
+	while (++i < MEM_SIZE)
+		if (!(mars->memory[i] = (t_byte *)malloc(sizeof(t_byte) * 2)))
+			return (NULL);
 	mars->cycle_to_die = CYCLE_TO_DIE;
 	mars->count_players = 0;
 	mars->cycle_delta = CYCLE_DELTA;

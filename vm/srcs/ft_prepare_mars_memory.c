@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_prepare_mars_memory.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:13:20 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:07:15 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int	ft_read_multiple_champion(t_mars *mars)
 		if (!current_process->pc)
 			current_process->pc = i++ * (MEM_SIZE / mars->count_players);
 		ft_load_register(current_process, 0, current_process->player);
-		if (!ft_load_champ_from_file_to_memory(mars->memory,
-					fd, current_process->pc))
+		if (!ft_load_champ_from_file_to_memory(mars, current_process, fd))
 			ft_exit(mars, "champions are writted one on the other\n");
 		current_process = current_process->next;
 	}
@@ -42,10 +41,13 @@ int	ft_prepare_mars_memory(t_mars *mars)
 	int			i;
 	t_processus	*process;
 
-	i = 0;
+	i = -1;
 	process = mars->process_lst;
-	while (i < MEM_SIZE)
-		mars->memory[i++] = 0;
+	while (++i < MEM_SIZE)
+	{
+		mars->memory[i][0] = 0;
+		mars->memory[i][1] = 0;
+	}
 	if (!ft_read_multiple_champion(mars))
 		return (0);
 	return (1);

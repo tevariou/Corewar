@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   loop_though_battle.c                               :+:      :+:    :+:   */
+/*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:04:44 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:37:24 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 #include "mars.h"
+
 
 static int	execut_process_turn(t_mars * mars, t_processus *process)
 {
@@ -40,6 +42,7 @@ void		loop_through_battle(t_mars *mars)
 	{
 		ft_debug_info(mars);
 		ft_cycles_handler(mars);
-		usleep(80000);
+		usleep(70000);
+		system("clear");
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_debug_display.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:16:15 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:32:25 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,19 @@ void	ft_info_processus(t_processus *process)
 void	ft_info_ram(t_mars *mars)
 {
 	int i;
-	int save;
 
 	if (!mars)
 		return ;
 	i = 0;
 	while (i < MEM_SIZE)
 	{
-		save = mars->memory[i++];
-		save = save & 255;
-		if (save)
-			printf("\33[0;32m%02.2x ", save);
-		else
-			printf("\33[0;0m%02.2x ", save);
+		if (!mars->memory[i][1])
+			printf("%02.2hhx ", mars->memory[i][0]);
+		else if (mars->memory[i][1] == 1)
+			printf("\e[92m%02.2hhx\e[39m ", mars->memory[i][0]);
+		else if (mars->memory[i][1] == 2)
+			printf("\e[91m%02.2hhx\e[39m ", mars->memory[i][0]);
+		i++;
 		if (!(i % 64))
 			printf("\n");
 	}

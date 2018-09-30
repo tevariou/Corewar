@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 20:20:01 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:05:42 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct				s_processus
 
 typedef struct				s_mars
 {
-	t_byte					*memory;
+	t_byte					**memory;
 	unsigned				cycle_to_die;
 	unsigned				count_players;
 	unsigned				current_cycle;
@@ -54,14 +54,14 @@ typedef struct				s_mars
 ** initialisation
 */
 t_mars						*ft_set_mars(int ac, char **av);
-void						ft_dump_mars_memory(t_byte *memory);
+void						ft_dump_mars_memory(t_byte **memory);
 t_processus					*ft_argv_have_champ(char **av, int *current_index,
 	int ac);
 void						ft_add_processus_to_mars(t_mars *mars,
 	t_processus *process);
 int							ft_prepare_mars_memory(t_mars *mars);
-int							ft_load_champ_from_file_to_memory(t_byte *memory,
-	int fd, int start);
+int							ft_load_champ_from_file_to_memory(t_mars *mars,
+	t_processus *process, int fd);
 void						ft_exit(t_mars *mars, char *error);
 int							ft_get_register(t_processus *process, unsigned index);
 int							ft_load_register(t_processus *p, unsigned index, int value);
