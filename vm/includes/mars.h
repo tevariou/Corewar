@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/29 18:55:22 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 19:10:08 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
 # include <zaz.h>
-#include <sys/types.h>
-typedef char				t_byte;
+# include <sys/types.h>
+# include <stdio.h>
+typedef unsigned char		t_byte;
 
 # define TRUE 				1
 # define FALSE 				0
@@ -25,6 +26,7 @@ typedef char				t_byte;
 # define NB_OPPS            16
 # define PROCESS_WAITING	3
 
+# define NO_SIZE			0
 # define REG				1
 # define INDEX				2
 # define DIRECT2			2
@@ -70,16 +72,13 @@ int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(t_byte *memory,
 	int fd, int start);
 void						ft_exit(t_mars *mars, char *error);
-int							ft_get_register(t_processus *process, unsigned index);
-int							ft_load_register(t_processus *p, unsigned index, int value);
 void						ft_info_processus(t_processus *process);
 void						ft_info_processus(t_processus *process);
-int							ft_get_register(t_processus *process,
+unsigned							ft_get_register(t_processus *process,
 	unsigned index);
-int							ft_load_register(t_processus *p, unsigned index,
-	int value);
+unsigned							ft_load_register(t_processus *p, unsigned index,
+	unsigned value);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
-int							ft_get_ocp(t_processus *process, unsigned ocp);
 
 /*
 ** loop during battle
@@ -115,6 +114,6 @@ int							long_indirect_load(t_mars *mars,
 int							or(t_mars *mars, t_processus *process);
 int							substraction(t_mars *mars, t_processus *process);
 int							xor(t_mars *mars, t_processus *process);
-int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size);
+int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp);
 
 #endif
