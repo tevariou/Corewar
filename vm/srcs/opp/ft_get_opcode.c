@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 19:43:32 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:12:13 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 20:36:05 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,9 @@
 
 int		ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode)
 {
-	unsigned	i;
-
-	i = -1;
-	while (++i < NB_OPPS)
-	{
-		if (opcode == g_opps[i].value)
-		{
-			g_opps[i].f(mars, process);
-			return (SUCCESS);
-		}
-	}
-	return (OPP_ERROR);
+	if (opcode < 0 || opcode > 15)
+		return (OPP_ERROR);
+	process->opcode = g_opps[opcode - 1].f;
+	process->next_instruction_cycle = mars->current_cycle + g_opps[opcode - 1].latence;
+	return (SUCCESS);
 }

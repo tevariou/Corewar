@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 20:08:21 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 20:40:30 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef unsigned char		t_byte;
 # define DIRECT2			2
 # define DIRECT4			4
 
-
+typedef struct s_mars t_mars;
 typedef struct				s_processus
 {
 	int						player;
@@ -42,13 +42,14 @@ typedef struct				s_processus
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
+	int						(*opcode)(struct s_mars *,struct s_processus *);
 	unsigned				define_params[3];
 	unsigned				size_params[3];
 	unsigned int			params[3];
 	struct s_processus		*next;
 }							t_processus;
 
-typedef struct				s_mars
+struct						s_mars	
 {
 	t_byte					**memory;
 	unsigned				cycle_to_die;
@@ -57,7 +58,7 @@ typedef struct				s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	t_processus				*process_lst;
-}							t_mars;
+};
 
 /*
 ** initialisation

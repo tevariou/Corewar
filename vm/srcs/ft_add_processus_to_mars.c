@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 18:20:55 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 20:43:20 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ t_processus		*ft_new_empty_processus(void)
 	process->next_instruction_cycle = 0;
 	process->name = NULL;
 	process->next = NULL;
+	process->opcode = 0;
+	process->next_instruction_cycle = 0;
 	while (iterator_register < REG_NUMBER * REG_SIZE)
 		process->registers[iterator_register++] = 0;
 	return (process);
