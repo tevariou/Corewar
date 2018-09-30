@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 20:50:52 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 23:39:40 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,11 @@ static int	execute_one_cycle(t_mars *mars)
 
 void		loop_through_battle(t_mars *mars)
 {
-	mars->process_lst->last_cycle_live = 50000;
+	ft_load_register(mars->process_lst, 0, 2);
 	while (execute_one_cycle(mars) && mars->current_cycle < 2500)
 	{
 		ft_debug_info(mars);
 		ft_cycles_handler(mars);
 		usleep(70000);
-	//	system("clear");
 	}
 }

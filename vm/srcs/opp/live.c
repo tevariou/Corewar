@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 23:11:36 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,33 @@
 ** de votre creativité.
 */
 
+int		ft_live_belong_to_other(t_mars *mars, unsigned i)
+{
+	t_processus *tmp;
+
+	tmp = mars->process_lst;
+	while (tmp)
+	{
+		if (tmp->player == i)
+		{
+			tmp->last_cycle_live = mars->current_cycle;
+			return (1);
+		}
+		tmp = tmp->next;
+	}
+	return (0);
+}
 int		live(t_mars *mars, t_processus *process)
 {
+	int i;
+
+	i = ft_get_mars_value(mars, 1, REG_SIZE);
+	ft_load_register(process, 4, i);
+	if (i == process->player)
+		process->last_cycle_live = mars->current_cycle;
+	else if (ft_live_belong_to_other(mars, i))
+		return (SUCCESS);
+	else
+		return (FALSE);
 	return (SUCCESS);
 }

@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 19:40:20 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/09/30 23:13:45 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,20 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 		value = value / 256;
 	}
 	return (1);
+}
+
+unsigned		ft_get_mars_value(t_mars *mars, unsigned index, unsigned size)
+{
+	int			i;
+	unsigned	value;
+
+	value = 0;
+	i = 0;
+	while (i < size)
+	{
+		value = value * 256 +
+			(t_byte)*mars->memory[index + i];
+		i++;
+	}
+	return (value);
 }

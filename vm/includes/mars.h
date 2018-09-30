@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 20:40:30 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 22:15:43 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,11 @@ int							ft_load_champ_from_file_to_memory(t_mars *mars,
 void						ft_exit(t_mars *mars, char *error);
 void						ft_info_processus(t_processus *process);
 void						ft_info_processus(t_processus *process);
-unsigned							ft_get_register(t_processus *process,
+unsigned					ft_get_register(t_processus *process,
 	unsigned index);
-unsigned							ft_load_register(t_processus *p, unsigned index,
+unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
+unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
 
 /*
