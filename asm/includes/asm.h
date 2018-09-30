@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/30 22:36:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/30 23:42:50 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 # define NAME_TOO_LONG		"Program name is too long\n"
 # define COMMENT_TOO_LONG	"Program comment is too long\n"
 # define NO_INSTRUCTION		"No instruction\n"
+# define WRONG_REG_NUMBER	"Wrong registry number"
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -122,6 +123,7 @@ void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
 void					header_error(t_asm *a, char *line);
 void					lex_error(t_asm *a, t_file *line, char *val);
+void					asm_error(t_asm *a, t_file *line, char *err);
 void					parser_error(t_asm *a, t_file *line, char *val);
 void					lexer(t_asm *a);
 void					redux(t_asm *a);

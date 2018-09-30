@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 16:31:11 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/30 23:44:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,17 @@ void		err_free_exit(t_asm *a, const char *err)
 		perror(NULL);
 	else
 		ft_putstr_fd(err, 2);
+	free_all(a);
+	exit(EXIT_FAILURE);
+}
+
+void		asm_error(t_asm *a, t_file *line, char *err)
+{
+	ft_putstr_fd(err, 2);
+	ft_putstr_fd(" at line ", 2);
+	ft_putnbr_fd(line->n, 2);
+	ft_putstr_fd(":\n", 2);
+	ft_putendl_fd(line->line, 2);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }

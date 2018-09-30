@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/09/30 22:40:35 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/30 22:50:57 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ static void		get_args_type(t_code *new, t_lex *head)
 	list = head;
 	i = 0;
 	ft_bzero(new->args_type, 3 * sizeof(int));
+	ft_bzero(new->values, 3 * sizeof(char *));
 	if (list->arg_type)
 	{
 		if (list->token == L_DIRECT)

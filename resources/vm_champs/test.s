@@ -1,9 +1,4 @@
 .name"ok"#COM
 .comment"lo"
 
-live%3
-l2:sti r1,%:live,%1
-and r1,%0,r1
-live:live%1
-zjmp%:live
-live%2
+and r99,%0,r1
