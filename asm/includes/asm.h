@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 20:18:25 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/30 22:36:29 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@
 # define HEXA				"0123456789ABCDEF"
 # define FT_LEX_NUMBER		8
 
-/* ERROR MESSAGES */
 # define WRONG_EXT			"Wrong filename extension\n"
 # define WRONG_HEADER		"Wrong header format\n"
 # define FILE_OVERFLOW		"File is too big\n"
@@ -56,7 +55,6 @@ typedef struct			s_ft_lex {
 
 typedef struct			s_lex {
 	t_tok				token;
-	int					arg_id;
 	int					arg_type;
 	char				*val;
 	struct s_lex		*prev;
@@ -85,12 +83,22 @@ typedef struct			s_lab {
 	struct s_label		*next;
 }						t_lab;
 
+typedef union			u_arg {
+	int					u32;
+	short				u16;
+	char				u8;
+}						t_arg;
+
 typedef struct			s_code {
 	t_byte				op_code;
 	t_byte				ocp;
-	t_byte				args[3][4];	
+	int					args_type[3];
+	char				*values[3];
+	t_arg				args[3];	
 	size_t				size;
 	t_file				*orig;
+	struct s_code		*prev;
+	struct s_code		*next;
 }						t_code;
 
 typedef struct			s_asm {
@@ -108,6 +116,7 @@ void					print_usage_exit(void);
 void					add_input_line(t_asm *a, char *line, size_t n);
 void					add_token(t_asm *a, t_file *line, t_tok token, char *val);
 void					add_label(t_asm *a, t_file *list);
+void					add_op(t_asm *a, t_file *list);
 int						set_option(int ac, char **av);
 void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
@@ -120,6 +129,7 @@ void					parser(t_asm *a);
 void					get_labels(t_asm *a);
 void					free_all(t_asm *a);
 void					n_arg_error(t_asm *a, t_file *line);
+t_bool					dir_len(t_byte op_code);
 
 char					*ft_str_label(char *str);
 char					*ft_label_str(char *str);

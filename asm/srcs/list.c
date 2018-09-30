@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 21:02:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/30 22:40:35 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void			add_label(t_asm *a, t_file *list)
 	head->prev = new;
 }
 
-static t_byte	get_ocp(t_lex *list)
+static int		get_opcode(t_code *new, t_lex *list)
 {
 	int		i;
 
@@ -108,7 +108,102 @@ static t_byte	get_ocp(t_lex *list)
 	i = 0;
 	while (!ft_strequ(g_op_tab[i].name, list->val))
 		i++;
-	return (g_op_tab[i].op_code);
+	new->op_code = g_op_tab[i].op_code;
+	return (i);
+}
+
+static void		get_args_type(t_code *new, t_lex *head)
+{
+	t_lex	*list;
+	int		i;
+
+	list = head;
+	i = 0;
+	ft_bzero(new->args_type, 3 * sizeof(int));
+	if (list->arg_type)
+	{
+		if (list->token == L_DIRECT)
+			list = list->next;
+		new->args_type[i] = list->arg_type;
+		new->values[i] = list->val;
+		i++;
+	}
+	list = list->next;
+	while (list != head)
+	{
+		if (list->arg_type)
+		{
+			if (list->token == L_DIRECT)
+				list = list->next;
+			new->args_type[i] = list->arg_type;
+			new->values[i] = list->val;
+			i++;
+		}
+		list = list->next;
+	}
+}
+
+static void		add_t_reg(t_code *new, int index, t_bool ocp)
+{
+	new->size += 1;
+	if (ocp)
+	{
+		if (index == 0)
+			new->ocp |= 0x40;
+		else if (index == 1)
+			new->ocp |= 0x10;
+		else if (index == 2)
+			new->ocp |= 0x04;
+	}
+}
+
+static void		add_t_dir(t_code *new, int index, t_bool ocp)
+{
+	new->size = (dir_len(new->op_code)) ? new->size + 2 : new->size + 4;
+	if (ocp)
+	{
+		if (index == 0)
+			new->ocp |= 0x80;
+		else if (index == 1)
+			new->ocp |= 0x20;
+		else if (index == 2)
+			new->ocp |= 0x08;
+	}
+}
+
+static void		add_t_ind(t_code *new, int index, t_bool ocp)
+{
+	new->size += 2;
+	if (ocp)
+	{
+		if (index == 0)
+			new->ocp |= 0xC0;
+		else if (index == 1)
+			new->ocp |= 0x30;
+		else if (index == 2)
+			new->ocp |= 0xC;	
+	}
+}
+
+static void		get_op_ocp_size(t_code *new, t_lex *list)
+{
+	int	i;
+	int	j;
+
+	new->ocp = 0;
+	i = get_opcode(new, list);
+	new->size = (g_op_tab[i].ocp) ? 2 : 1;
+	j = 0;
+	while (j < 3)
+	{
+		if (new->args_type[j] == T_REG)
+			add_t_reg(new, j, g_op_tab[i].ocp);
+		else if (new->args_type[j] == T_DIR)
+			add_t_dir(new, j, g_op_tab[i].ocp);
+		else if (new->args_type[j] == T_IND)
+			add_t_ind(new, j, g_op_tab[i].ocp);
+		j++;
+	}
 }
 
 void			add_op(t_asm *a, t_file *list)
@@ -119,9 +214,8 @@ void			add_op(t_asm *a, t_file *list)
 
 	if (!(new = ft_memalloc(sizeof(*new))))
 		err_free_exit(a, NULL);
-	new->op_code = get_opcode(list);
-	new->ocp = get_ocp(list->tokens);
-	new->size = get_size(list);
+	get_args_type(new, list->tokens);
+	get_op_ocp_size(new, list->tokens);
 	new->orig = list;
 	if (!(head = a->output))
 	{

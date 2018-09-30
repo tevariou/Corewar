@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:02:20 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 18:10:38 by triou            ###   ########.fr       */
+/*   Updated: 2018/09/30 20:51:00 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int		main(int ac, char **av)
 //	if (a.option == OPTION_D)
 //		decompile
 //	else {
-//check op.h
 		compile_asm(&a, av[a.option + 1]);
 		free_all(&a);
 		ft_putstr("OK\n");
