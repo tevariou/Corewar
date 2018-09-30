@@ -6,15 +6,16 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 18:05:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 20:08:21 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
 # include <zaz.h>
-
-typedef char				t_byte;
+# include <sys/types.h>
+# include <stdio.h>
+typedef unsigned char		t_byte;
 
 # define TRUE 				1
 # define FALSE 				0
@@ -23,6 +24,14 @@ typedef char				t_byte;
 # define OPP_ERROR			-2
 
 # define NB_OPPS            16
+# define PROCESS_WAITING	3
+
+# define NO_SIZE			0
+# define REG				1
+# define INDEX				2
+# define DIRECT2			2
+# define DIRECT4			4
+
 
 typedef struct				s_processus
 {
@@ -33,9 +42,9 @@ typedef struct				s_processus
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
-	unsigned				param1;
-	unsigned				param2;
-	unsigned				dest;
+	unsigned				define_params[3];
+	unsigned				size_params[3];
+	unsigned int			params[3];
 	struct s_processus		*next;
 }							t_processus;
 
@@ -63,16 +72,13 @@ int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(t_mars *mars,
 	t_processus *process, int fd);
 void						ft_exit(t_mars *mars, char *error);
-int							ft_get_register(t_processus *process, unsigned index);
-int							ft_load_register(t_processus *p, unsigned index, int value);
 void						ft_info_processus(t_processus *process);
 void						ft_info_processus(t_processus *process);
-int							ft_get_register(t_processus *process,
+unsigned							ft_get_register(t_processus *process,
 	unsigned index);
-int							ft_load_register(t_processus *p, unsigned index,
-	int value);
+unsigned							ft_load_register(t_processus *p, unsigned index,
+	unsigned value);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
-int							ft_get_ocp(t_processus *process, unsigned ocp);
 
 /*
 ** loop during battle
@@ -108,6 +114,6 @@ int							long_indirect_load(t_mars *mars,
 int							or(t_mars *mars, t_processus *process);
 int							substraction(t_mars *mars, t_processus *process);
 int							xor(t_mars *mars, t_processus *process);
-
+int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp);
 
 #endif

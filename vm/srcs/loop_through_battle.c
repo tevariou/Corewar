@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 18:37:24 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 20:08:06 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static int	execute_one_cycle(t_mars *mars)
 	while (current_process)
 	{
 		execut_process_turn(mars, current_process);
+		ft_get_opcode(mars, current_process, *mars->memory[current_process->pc]);
 		current_process = current_process->next;
 	}
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 18:32:25 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/09/30 20:11:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ void	ft_info_ram(t_mars *mars)
 		if (!mars->memory[i][1])
 			printf("%02.2hhx ", mars->memory[i][0]);
 		else if (mars->memory[i][1] == 1)
-			printf("\e[92m%02.2hhx\e[39m ", mars->memory[i][0]);
+			printf("\33[92m%02.2hhx\33[39m ", mars->memory[i][0]);
 		else if (mars->memory[i][1] == 2)
-			printf("\e[91m%02.2hhx\e[39m ", mars->memory[i][0]);
+			printf("\33[91m%02.2hhx\33[39m ", mars->memory[i][0]);
 		i++;
 		if (!(i % 64))
 			printf("\n");

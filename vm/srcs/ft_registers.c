@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_registers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:14:16 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/09/30 19:40:20 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 
-int		ft_get_register(t_processus *process, unsigned index)
+unsigned		ft_get_register(t_processus *process, unsigned index)
 {
-	int value;
+	unsigned value;
 	int i;
 
 	if (index > REG_NUMBER)
@@ -23,27 +23,25 @@ int		ft_get_register(t_processus *process, unsigned index)
 	i = 0;
 	while (i < REG_SIZE)
 	{
-		value = value * 255 +
-			(unsigned char)process->registers[index * REG_SIZE + i];
+		value = value * 256 +
+			(t_byte)process->registers[index * REG_SIZE + i];
 		i++;
 	}
 	return (value);
 }
 
-int		ft_load_register(t_processus *process, unsigned index, int value)
+unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 {
 	int i;
 
 	if (index > REG_NUMBER)
 		return (0);
-	i = 1;
+	i = 0;
 	index++;
-	while (i < REG_SIZE && value > 255)
+	while (++i <= REG_SIZE)
 	{
-		process->registers[index * REG_SIZE - i] = value % 255;
-		value = value / 255;
-		i++;
+		process->registers[index * REG_SIZE - i] = value % 256;
+		value = value / 256;
 	}
-	process->registers[index * REG_SIZE - i] = value;
 	return (1);
 }

@@ -3,12 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
+#    By: triou <triou@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/28 18:34:56 by abiestro         ###   ########.fr        #
-
+#    Updated: 2018/09/30 14:15:13 by lterrail         ###   ########.fr        #
 #                                                                              #
+# **************************************************************************** #
 # **************************************************************************** #
 
 NAME	= corewar
@@ -31,11 +31,10 @@ ITEMS 	= 	mars.c 							\
 		  	ft_errors.c 					\
 		  	ft_debug_display.c 				\
 		  	ft_registers.c					\
-			ft_ocp.c						\
-		  	ft_debug_display.c 			\
-		  	ft_registers.c				\
-			ft_ocp.c						\
-			$(OPPDIR)/ft_get_opcode.c					\
+			ft_get_params.c					\
+		  	ft_debug_display.c	 			\
+		  	ft_registers.c					\
+			$(OPPDIR)/ft_get_opcode.c		\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\
@@ -66,8 +65,8 @@ $(NAME) : $(OBJS)
 	@make -C $(LDIR)
 	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft
 	@echo "success !!!!!!"
-	
-	
+
+
 $(OBJS) : | $(ODIR)
 
 $(ODIR):
