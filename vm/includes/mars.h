@@ -6,13 +6,16 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 18:05:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/01 00:02:45 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
+
+# include <ncurses.h>
 # include <zaz.h>
+
 
 typedef char				t_byte;
 
@@ -48,6 +51,8 @@ typedef struct				s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	t_processus				*process_lst;
+	WINDOW					*left;
+	WINDOW					*right;
 }							t_mars;
 
 /*
@@ -65,8 +70,6 @@ int							ft_load_champ_from_file_to_memory(t_mars *mars,
 void						ft_exit(t_mars *mars, char *error);
 int							ft_get_register(t_processus *process, unsigned index);
 int							ft_load_register(t_processus *p, unsigned index, int value);
-void						ft_info_processus(t_processus *process);
-void						ft_info_processus(t_processus *process);
 int							ft_get_register(t_processus *process,
 	unsigned index);
 int							ft_load_register(t_processus *p, unsigned index,
@@ -83,9 +86,13 @@ void						ft_cycles_handler(t_mars *mars);
 /*
 ** Debug
 */
-void						ft_info_processus(t_processus *process);
-void						ft_info_ram(t_mars *mars);
 void						ft_debug_info(t_mars *mars);
+
+
+/*
+** Ncurses
+*/
+void 						ft_init_ncurses();
 
 /*
 ** Opertations
