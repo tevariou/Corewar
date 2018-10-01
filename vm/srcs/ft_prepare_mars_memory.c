@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 18:07:15 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/01 19:10:47 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	ft_read_multiple_champion(t_mars *mars)
 			ft_exit(mars, "champions are writted one on the other\n");
 		current_process = current_process->next;
 	}
+	if (fd < 0)
+		ft_exit(mars, "could not read a champion");
 	return (1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/01 18:29:14 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 19:20:31 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ int			ft_get_params(
 			address += ft_stock_indirect(process, mars, i, address);
 		i--;
 	}
+	process->bytes_to_jump = address;
 	return (SUCCESS);
 }

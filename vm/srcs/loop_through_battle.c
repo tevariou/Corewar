@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 17:07:57 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 19:13:32 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static int	execut_process_turn(t_mars * mars, t_processus *current_process)
 			current_process->opcode(mars, current_process);
 		ft_get_opcode(mars, current_process, *mars->memory[current_process->pc]);
 	}
+		ft_move_pc(mars, current_process);
 	return (1);
 }
 

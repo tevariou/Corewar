@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 18:33:01 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 19:19:55 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct				s_processus
 	unsigned				next_instruction_cycle;
 	int						(*opcode)(struct s_mars *,struct s_processus *);
 	unsigned int			params[3];
+	unsigned				bytes_to_jump;
 	struct s_processus		*next;
 }							t_processus;
 
@@ -85,6 +86,7 @@ int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
 */
 void						loop_through_battle(t_mars *mars);
 void						ft_cycles_handler(t_mars *mars);
+void						ft_move_pc(t_mars *mars, t_processus *process);
 
 /*
 ** Debug
