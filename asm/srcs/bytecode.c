@@ -6,13 +6,13 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 17:36:18 by triou             #+#    #+#             */
-/*   Updated: 2018/09/30 23:51:31 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/01 21:23:26 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-t_bool			dir_len(t_byte op_code)
+t_bool					dir_len(t_byte op_code)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ t_bool			dir_len(t_byte op_code)
 	return (g_op_tab[i].dir_size);
 }
 
-static void		init_bytecode(t_asm *a)
+static void				init_bytecode(t_asm *a)
 {
 	t_file	*list;
 	t_file	*tail;
@@ -39,32 +39,28 @@ static void		init_bytecode(t_asm *a)
 		add_op(a, list);
 }
 
-static char		convert_reg(t_asm *a, t_code *op, char *str)
+static unsigned short	convert_ind(t_asm *a, t_code *op, char *str)
 {
-	char	reg;
-
-	str += 1;
-	reg = 0;
-	while (ft_isdigit(*str))
-	{
-		reg *= 10;
-		reg += *str++ - '0';
-		if (reg > REG_NUMBER)
-			asm_error(a, op->orig, WRONG_REG_NUMBER); 
-	}
-	if (!reg)
-		asm_error(a, op->orig, WRONG_REG_NUMBER);
-	return (reg);
+	//foutre putain de labels
+	//if (*str == LABEL_CHAR)
+	//	return (convert_label_ind(a, op, str));
+	else if (ft_strnequ(str, "0x", 2))
+		return (atoi_base_short(str + 2, HEXA));
+	else
+		return (atoi_base_short(str, DEC));
 }
 
-static short	convert_ind(t_asm *a, t_code *op, char *str)
+static unsigned int		convert_dir(t_asm *a, t_code *op, char *str)
 {
-	short	ind;
-
-	//
+	//if (*str == LABEL_CHAR)
+	//	return (convert_label_dir(a, op, str));
+	else if (ft_strnequ(str, "0x", 2))
+		return (atoi_base_int(str + 2, HEXA));
+	else
+		return (atoi_base_int(str, DEC));
 }
 
-static void		convert_values(t_asm *a, t_code *op)
+static void				convert_values(t_asm *a, t_code *op)
 {
 	int	i;
 
@@ -72,16 +68,17 @@ static void		convert_values(t_asm *a, t_code *op)
 	while (i < 3)
 	{
 		if (op->args_type[i] == T_REG)
-			op->args[i] = convert_reg(a, op, op->values[i]);			
-		else if (op->args_type[i] == T_IND)
-			op->args[i] = convert_ind(a, op, op->values[i]);
-//		else if
-//		T_DIR
+			op->args[i].u8 = atoi_reg(a, op, op->values[i]);			
+		else if (op->args_type[i] == T_IND
+			|| (op->args_type[i] == T_DIR && dir_len(op->op_code)))
+			op->args[i].u16 = convert_ind(a, op, op->values[i]);
+		else if (op->args_type[i] == T_DIR && !dirlen(op->op_code))
+			op->args[i].u32 = convert_dir(a, op, op->values[i]);
 		i++;
 	}
 }
 
-static void		set_num(t_asm *a)
+static void				set_values(t_asm *a)
 {
 	t_code	*list;
 	t_code	*tail;
@@ -96,8 +93,8 @@ static void		set_num(t_asm *a)
 	convert_values(a, list);
 }
 
-void			set_bytecode(t_asm *a)
+void		set_bytecode(t_asm *a)
 {
 	init_bytecode(a);
-	set_num(a);
+	set_values(a);
 }

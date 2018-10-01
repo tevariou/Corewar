@@ -1,4 +1,4 @@
 .name"ok"#COM
 .comment"lo"
 
-and r99,%0,r1
+ld -1,r1

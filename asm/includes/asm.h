@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/09/30 23:42:50 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/01 20:25:49 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define OPTION_D			2
 # define EXT				".s"
 # define HEXA				"0123456789ABCDEF"
+# define DEC				"0123456789"
 # define FT_LEX_NUMBER		8
 
 # define WRONG_EXT			"Wrong filename extension\n"
@@ -85,9 +86,9 @@ typedef struct			s_lab {
 }						t_lab;
 
 typedef union			u_arg {
-	int					u32;
-	short				u16;
-	char				u8;
+	unsigned int		u32;
+	unsigned short		u16;
+	unsigned char		u8;
 }						t_arg;
 
 typedef struct			s_code {
