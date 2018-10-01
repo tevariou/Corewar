@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 22:32:57 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 18:34:03 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ void	ft_info_processus(t_processus *process)
 		i++;
 	}
 	printf("\n");
+	i = -1;
+	while (++i < 3)
+		printf("|  param [%d] = %u  |", i + 1, process->params[i]);
+	printf("\n");
 }
 
 void	ft_info_ram(t_mars *mars)
@@ -60,7 +64,7 @@ void	ft_info_ram(t_mars *mars)
 
 void	ft_info_mars(t_mars *mars)
 {
-	printf("-- MARS --\n");
+	printf("\n-- MARS --\n");
 	printf("current cycle : %d --- ", mars->current_cycle);
 	printf("cycle delta : %d --- ", mars->cycle_delta);
 	printf("next cycle to die : %d --- ", mars->cycle_to_die);

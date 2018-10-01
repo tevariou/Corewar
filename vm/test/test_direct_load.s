@@ -1,4 +1,4 @@
 .name "load"
 .comment "push"
 
-ld %1, r3
+ld %300, r5

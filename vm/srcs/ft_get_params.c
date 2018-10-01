@@ -6,98 +6,58 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/30 20:11:34 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/01 18:29:14 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 #include <stdio.h>
 
-static int		ft_get_ocp(t_processus *process, unsigned ocp)
+static int	ft_stock_reg(
+		t_processus *process, t_mars *mars, int i, int address)
 {
-	process->define_params[2] = ocp >> 2 & 3;
-	process->define_params[1] = ocp >> 4 & 3;
-	process->define_params[0] = ocp >> 6 & 3;
-	return (SUCCESS);
-}
-
-static int		ft_save_indirects_direct2(t_processus *process, t_mars *mars,
-	size_t id, size_t count)
-{
-	unsigned int	res;
-	unsigned int	tmp;
-
-	res = 0;
-	tmp = mars->memory[process->pc + count][0] << 8;
-	res += tmp & 0x0000FF00;
-	tmp = mars->memory[process->pc + count + 1][0];
-	res += tmp & 0x000000FF;
-	process->params[id] = res;
-	return (2);
-}
-
-static int		ft_save_directs(t_processus *process, t_mars *mars,
-	size_t id, size_t count)
-{
-	unsigned int	res;
-	unsigned int	tmp;
-
-	res = 0;
-	if (process->size_params[id] == 4)
-	{
-		tmp = mars->memory[process->pc + count][0] << 24;
-		res = tmp & 0xFF000000;
-		tmp = mars->memory[process->pc + count + 1][0] << 16;
-		res += tmp & 0x00FF0000;
-		tmp = mars->memory[process->pc + count + 2][0] << 8;
-		res += tmp & 0x0000FF00;
-		tmp = mars->memory[process->pc + count + 3][0];
-		res += tmp & 0x000000FF;
-		process->params[id] = res;
-		return (4);
-	}
+	if (i || (i - 1 &&
+				(process->opcode == &long_direct_load ||
+				process->opcode == &direct_store ||
+				process->opcode == &direct_load)))
+		process->params[2 - i] =
+			ft_get_register(process, ft_get_mars_value(mars, address, REG));
 	else
-		return (ft_save_indirects_direct2(process, mars, id, count));
-
+		process->params[2 - i] = ft_get_mars_value(mars, address, REG);
+	return (REG);
 }
 
-static int		ft_save_registers(t_processus *process, t_mars *mars,
-	size_t id, size_t count)
+static int	ft_stock_indirect(
+		t_processus *process, t_mars *mars, int i, int address)
 {
-	process->params[id] = mars->memory[process->pc + count][0];
-	return (1);
+	process->params[2 - i] = ft_get_mars_value(
+			mars, ft_get_mars_value(mars, address, INDEX) - 1, 1);
+	return (INDEX);
 }
 
-int		ft_get_params(t_processus *process, t_mars *mars, size_t direct_size,
-	unsigned ocp)
+int			ft_get_params(
+		t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp)
 {
-	size_t			i;
-	size_t			count;
+	int i;
+	int code;
+	int address;
 
-	i = -1;
-	count = 2;
-	ft_get_ocp(process, ocp);
-	while (++i < 3)
+	i = 2;
+	address = process->pc + 2;
+	while (i >= 0)
 	{
-		if (process->define_params[i] == REG_CODE)
+		code = (ocp >> ((i + 1) * 2) & 3);
+		if (code == REG_CODE)
+			address += ft_stock_reg(process, mars, i, address);
+		else if (code == DIR_CODE)
 		{
-			process->size_params[i] = REG;
-			count += ft_save_registers(process, mars, i, count);
+			process->params[2 - i] = ft_get_mars_value(mars,
+					address, direct_size);
+			address += direct_size;
 		}
-		else if (process->define_params[i] == DIR_CODE)
-		{
-			process->size_params[i] = direct_size;
-			count += ft_save_directs(process, mars, i, count);
-		}
-		else if (process->define_params[i] == IND_CODE)
-		{
-			process->size_params[i] = INDEX;
-			count += ft_save_indirects_direct2(process, mars, i, count);
-		}
+		else if (code == IND_CODE)
+			address += ft_stock_indirect(process, mars, i, address);
+		i--;
 	}
-	printf("REGISTER == 1 || DIRECT == 2 || INDIRECT == 3\n");
-	printf(" define_param = %d params[0] %u\n", process->define_params[0], process->params[0]);
-	printf(" define_param = %d params[1] %u\n", process->define_params[1], process->params[1]);
-	printf(" define_param = %d params[2] %u\n", process->define_params[2], process->params[2]);
 	return (SUCCESS);
 }

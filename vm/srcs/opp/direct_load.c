@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:10:28 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/30 23:45:34 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 17:13:17 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 int		direct_load(t_mars *mars, t_processus *process)
 {
 	ft_get_params(process, mars, DIRECT4, *mars->memory[process->pc + 1]);
-	ft_load_register(process, process->params[0], process->params[1]);
+	ft_load_register(process, process->params[1], process->params[0]);
 	if (process->params[1])
 		return (0);
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 22:15:43 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 18:33:01 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ typedef struct				s_processus
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
 	int						(*opcode)(struct s_mars *,struct s_processus *);
-	unsigned				define_params[3];
-	unsigned				size_params[3];
 	unsigned int			params[3];
 	struct s_processus		*next;
 }							t_processus;
