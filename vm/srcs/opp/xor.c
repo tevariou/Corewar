@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:07:31 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/30 20:09:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/01 19:53:33 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,11 @@
 #include <limits.h>
 int		xor(t_mars *mars, t_processus *process)
 {
-	// if (mars->current_cycle == process->last_cycle_live + 6)
-	// 	process->next_instruction_cycle = mars->current_cycle + 6;
-	// if (mars->current_cycle == process->next_instruction_cycle)
-	// {
-		printf("\nBonjour XOR\n");
-		ft_get_params(process, mars, DIRECT4, *mars->memory[process->pc + 1]);
-
-		unsigned test = UINT_MAX - 1;
-		ft_load_register(process, 0, test);
-		printf("%zd\n", sizeof(unsigned long long));
-		printf("Resultat de param[0] ^ param[1] = %x\n", test);
-	// }
-	// else
-	// 	return (PROCESS_WAITING);
-	return (SUCCESS);
+	printf("BONJOUR XOR\n");
+	ft_get_params(process, mars, DIRECT4, *mars->memory[process->pc + 1]);
+	ft_load_register(process, process->params[2], process->params[0]
+		^ process->params[1]);
+	if (process->registers[process->params[2] * REG_SIZE] == 0)
+		return (NO_CARRY);
+	return (CARRY);
 }
