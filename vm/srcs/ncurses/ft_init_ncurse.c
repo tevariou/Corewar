@@ -6,19 +6,38 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/01 00:21:27 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/02 21:21:56 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "mars.h"
+#include "libft.h"
+#include "visu.h"
 
-void 	ft_init_ncurses()
+static void		create_windows(int coord[4], char *name,	
+	WINDOW **box, WINDOW **content)
+{
+	size_t len;
+
+	*box = newwin(coord[0], coord[1], coord[2], coord[3]);
+	box(*box, 0, 0);
+	*content = derwin(*box, coord[0] - 2, coord[1] - 4, 1, 2);
+	len = ft_strlen(name);
+	wmove(*box, 0, (coord[1] - len) / 2 - 3);
+	wprintw(*box, " - %s - ", name);
+	wrefresh(*box);
+	wrefresh(*content);
+}
+
+void	ft_init_ncurses(t_visu *visu)
 {
 	initscr();
-	echo();
+	noecho();
+	curs_set(0);
+	refresh();
 	start_color();
-	init_color(COLOR_WHITE, 220, 220, 220);
+	init_color(11, 250, 250, 250);
+	init_pair(15, 11, COLOR_BLACK);
 	init_pair(0, COLOR_YELLOW, COLOR_BLACK);
 	init_pair(1, COLOR_BLUE, COLOR_BLACK);
 	init_pair(2, COLOR_MAGENTA, COLOR_BLACK);
@@ -35,4 +54,17 @@ void 	ft_init_ncurses()
 	init_pair(13, COLOR_BLACK, COLOR_GREEN);
 	init_pair(14, COLOR_GREEN, COLOR_BLACK);
 	curs_set(FALSE);
+	create_windows((int[4]){ARENA_H, ARENA_W, 0, 0}, "Arena",
+		&visu->arena_box, &visu->arena);
+	create_windows((int[4]){INFO_H, INFO_W, 0, ARENA_W}, "Info",
+		&visu->info_box, &visu->info);
+}
+
+void	ft_close_ncurses(t_visu *visu)
+{
+	delwin(visu->arena);
+	delwin(visu->info);
+	delwin(visu->arena_box);
+	delwin(visu->info_box);
+	endwin();
 }
