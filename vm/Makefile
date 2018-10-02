@@ -30,10 +30,8 @@ ITEMS 	= 	mars.c 							\
 		  	ft_prepare_mars_memory.c 		\
 		  	ft_write_champ_on_memory.c	 	\
 		  	ft_errors.c 					\
-		  	ft_debug_display.c 				\
 		  	ft_registers.c					\
 			ft_ocp.c						\
-		  	ft_debug_display.c 			\
 		  	ft_registers.c				\
 			ft_ocp.c						\
 			$(OPPDIR)/ft_get_opcode.c					\
@@ -54,6 +52,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(OPPDIR)/substraction.c 		\
 		  	$(OPPDIR)/xor.c 				\
 		  	$(NCUDIR)/ft_init_ncurse.c		\
+		  	$(NCUDIR)/ft_ncurses_display.c	\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
 
