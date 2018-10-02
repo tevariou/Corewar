@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 18:34:03 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 21:22:12 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	ft_info_processus(t_processus *process)
 	printf("player    -> %d\n", process->player);
 	printf("next_instruction_cycle : %d\n", process->next_instruction_cycle);
 	printf("last alive : %d\n", process->last_cycle_live);
+	printf("jump address: %d\n", process->bytes_to_jump);
 	while (i < REG_NUMBER)
 	{
 		printf("register %2X = %2X || ", i, ft_get_register(process, i));
