@@ -6,12 +6,27 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:23:30 by triou             #+#    #+#             */
-/*   Updated: 2018/10/01 21:08:30 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/02 15:55:23 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <limits.h>
+
+void			reverse_bytes(void *n)
+{
+	size_t			i;
+	unsigned char	tmp;
+
+	i = 0;
+	while (i < sizeof(*n) / 2)
+	{
+		tmp = ((unsigned char *)n)[i];
+		((unsigned char *)n)[i] = ((unsigned char *)n)[sizeof(*n) - i - 1];
+		((unsigned char *)n)[sizeof(*n) - i - 1] = tmp;
+		i++;
+	}
+}
 
 unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)
 {
@@ -52,14 +67,15 @@ unsigned short	atoi_base_short(char *str, char *base)
 			nb = SHRT_MAX;
 			break ;
 		}
-		else if (nb > (SHRT_MIN * -1) && sign < 0)
+		else if ((nb * sign) < SHRT_MIN && sign < 0)
 		{
-			nb = SHRT_MIN * -1;
+			nb = SHRT_MIN * sign;
 			break ;
 		}
 	}
 	ret = (unsigned short)(nb * sign);
-	return (ret >> (8 * sizeof(unsigned short) / 2) | ret << (8 * sizeof(unsigned short) / 2));
+	reverse_bytes(&ret);
+	return (ret);
 }
 
 unsigned int	atoi_base_int(char *str, char *base)
@@ -83,12 +99,13 @@ unsigned int	atoi_base_int(char *str, char *base)
 			nb = INT_MAX;
 			break ;
 		}
-		else if (nb > (INT_MIN * -1) && sign < 0)
+		else if ((nb * sign) < INT_MIN && sign < 0)
 		{
-			nb = INT_MIN * -1;
+			nb = INT_MIN * sign;
 			break ;
 		}
 	}
 	ret = (unsigned int)(nb * sign);
-	return (ret >> (8 * sizeof(unsigned int) / 2) | ret << (8 * sizeof(unsigned int) / 2));
+	reverse_bytes(&ret);
+	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/09/30 23:44:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/02 14:35:13 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,16 @@ void		n_arg_error(t_asm *a, t_file *line)
 	ft_putstr_fd(":\n", 2);
 	ft_putstr_fd(line->line, 2);
 	ft_putstr_fd("\n", 2);
+	free_all(a);
+	exit(EXIT_FAILURE);
+}
+
+void		label_error(t_asm *a, t_file *line, char *label)
+{
+	ft_putstr_fd("Unknown label found at line ", 2);
+	ft_putnbr_fd(line->n, 2);
+	ft_putstr_fd(":\n", 2);
+	output_error(line->line, str);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }

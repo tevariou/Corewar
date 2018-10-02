@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/09/30 22:50:57 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/02 14:22:35 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,9 @@ static t_file	*get_target(t_asm *a, t_file *list)
 
 void			add_label(t_asm *a, t_file *list)
 {
-	t_lab	*new;
-	t_lab	*head;
-	t_lab	*tail;
+	t_label	*new;
+	t_label	*head;
+	t_label	*tail;
 
 	if (!(new = ft_memalloc(sizeof(*new))))
 		err_free_exit(a, NULL);
