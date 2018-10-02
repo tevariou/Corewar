@@ -6,14 +6,14 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/02 21:31:20 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/02 21:35:53 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
 
-# include <ncurses.h>
+# include "visu.h"
 # include <zaz.h>
 # include <sys/types.h>
 # include <stdio.h>
@@ -83,20 +83,15 @@ int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
 /*
 ** loop during battle
 */
-void						loop_through_battle(t_mars *mars);
+void						loop_through_battle(t_mars *mars, t_visu *visu);
 void						ft_cycles_handler(t_mars *mars);
 void						ft_move_pc(t_mars *mars, t_processus *process);
 
 /*
 ** Debug
 */
-void						ft_debug_info(t_mars *mars);
+void						ft_debug_info(t_mars *mars, t_visu *visu);
 
-
-/*
-** Ncurses
-*/
-void 						ft_init_ncurses();
 
 /*
 ** Opertations

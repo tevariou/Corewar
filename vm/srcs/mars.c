@@ -6,22 +6,22 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:31:12 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/02 21:32:53 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/02 21:37:10 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 #include <unistd.h>
-#include <ncurses.h>
 #include <stdio.h>
 
 int		main(int ac, char **av)
 {
 	t_mars		*mars;
+	t_visu		visu;
 
-	ft_init_ncurses();
+	ft_init_ncurses(&visu);
 	mars = ft_set_mars(ac, av);
-	loop_through_battle(mars);
-
+	loop_through_battle(mars, &visu);
+	ft_close_ncurses(&visu);
 	return (SUCCESS);
 }
