@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 21:22:12 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/02 21:32:27 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 #include "libft.h"
 #include "mars.h"
 
-void	ft_info_processus(t_processus *process)
+void	ft_info_processus(t_mars *mars, t_processus *process)
 {
 	unsigned	i;
-
 	i = 0;
 	if (!process)
 		ft_exit(NULL, "no process");
@@ -49,18 +48,23 @@ void	ft_info_ram(t_mars *mars)
 	if (!mars)
 		return ;
 	i = 0;
+	erase();
 	while (i < MEM_SIZE)
 	{
 		if (!mars->memory[i][1])
-			printf("%02.2hhx ", mars->memory[i][0]);
+		{
+			attron(COLOR_PAIR(12));
+			printw("%02.2hhx ", mars->memory[i][0]);
+		}
 		else if (mars->memory[i][1] == 1)
 			printf("\33[92m%02.2hhx\33[39m ", mars->memory[i][0]);
 		else if (mars->memory[i][1] == 2)
 			printf("\33[91m%02.2hhx\33[39m ", mars->memory[i][0]);
 		i++;
 		if (!(i % 64))
-			printf("\n");
+			printw("\n");
 	}
+	refresh();
 }
 
 void	ft_info_mars(t_mars *mars)
@@ -76,11 +80,10 @@ void	ft_debug_info(t_mars *mars)
 {
 	t_processus *tmp;
 
-	system("@cls||clear");
 	tmp = mars->process_lst;
 	while (tmp)
 	{
-		ft_info_processus(tmp);
+		ft_info_processus(mars, tmp);
 		tmp = tmp->next;
 	}
 	ft_info_mars(mars);
