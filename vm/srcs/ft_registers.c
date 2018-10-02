@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/30 23:13:45 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 22:27:14 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,26 @@ unsigned		ft_get_mars_value(t_mars *mars, unsigned index, unsigned size)
 		i++;
 	}
 	return (value);
+}
+
+unsigned 		ft_load_mars_value(t_mars *mars, unsigned index, unsigned value)
+{
+	int			i;
+	unsigned	tmp;
+
+	tmp = value;
+	i = 0;
+
+	while (tmp)
+	{
+		tmp /= 256;
+		i++;
+	}
+	while (i > 0)
+	{
+		*mars->memory[index + i - 1] = value % 256;
+		i--;
+		value = value / 256;
+	}
+	return (SUCCESS);
 }

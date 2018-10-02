@@ -16,22 +16,23 @@
 static int	ft_stock_reg(
 		t_processus *process, t_mars *mars, int i, int address)
 {
-	if (i || (i - 1 &&
-				(process->opcode == &long_direct_load ||
-				process->opcode == &direct_store ||
-				process->opcode == &direct_load)))
-		process->params[2 - i] =
-			ft_get_register(process, ft_get_mars_value(mars, address, REG));
-	else
+	if ((!i || (!(i - 1))) &&
+				(process->opcode == &long_direct_load || process->opcode == &direct_store || process->opcode == &direct_load))
+	{
 		process->params[2 - i] = ft_get_mars_value(mars, address, REG);
+	}
+	else
+		process->params[2 - i] = ft_get_register(process, ft_get_mars_value(mars, address, REG));
 	return (REG);
 }
 
 static int	ft_stock_indirect(
 		t_processus *process, t_mars *mars, int i, int address)
 {
-	process->params[2 - i] = ft_get_mars_value(
-			mars, ft_get_mars_value(mars, address, INDEX) - 1, 1);
+	if ((!i || (!(i - 1))) && process->opcode == &direct_store)
+		process->params[2 - i] = ft_get_mars_value(mars, address, INDEX);
+	else
+		process->params[2 - i] = ft_get_mars_value(mars, ft_get_mars_value(mars, address, INDEX) - 1, 1);
 	return (INDEX);
 }
 

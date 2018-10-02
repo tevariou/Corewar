@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_debug_display.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
 /*   Updated: 2018/10/01 21:22:12 by abiestro         ###   ########.fr       */
@@ -52,11 +52,11 @@ void	ft_info_ram(t_mars *mars)
 	while (i < MEM_SIZE)
 	{
 		if (!mars->memory[i][1])
-			printf("%02.2hhx ", mars->memory[i][0]);
+			printf("%02.2hhX ", mars->memory[i][0]);
 		else if (mars->memory[i][1] == 1)
-			printf("\33[92m%02.2hhx\33[39m ", mars->memory[i][0]);
+			printf("\33[92m%02.2X\33[39m ", mars->memory[i][0]);
 		else if (mars->memory[i][1] == 2)
-			printf("\33[91m%02.2hhx\33[39m ", mars->memory[i][0]);
+			printf("\33[91m%02.2X\33[39m ", mars->memory[i][0]);
 		i++;
 		if (!(i % 64))
 			printf("\n");
