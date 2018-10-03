@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/02 21:38:54 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/03 17:16:02 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(t_mars *mars,
 	t_processus *process, int fd);
 void						ft_exit(t_mars *mars, char *error);
-int							ft_get_register(t_processus *process, unsigned index);
+unsigned					ft_get_register(t_processus *process, unsigned index);
 unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
@@ -90,8 +90,8 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 /*
 ** Debug
 */
-void						ft_debug_info(t_mars *mars, t_visu *visu);
-
+void						ft_debug_info(t_mars *mars);
+void						ft_ncurses_display(t_mars *mars, t_visu *visu);
 
 /*
 ** Opertations
