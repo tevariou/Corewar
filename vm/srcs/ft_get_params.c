@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/03 14:23:44 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/03 14:24:37 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 static int	ft_stock_reg(
 		t_processus *process, t_mars *mars, int i, int address)
 {
-	if (!i || !(i - 1 &&
-				(process->opcode == &long_direct_load || process->opcode == &direct_store || process->opcode == &direct_load)))
+	if ((!i || (!(i - 1))) &&
+				(process->opcode == &long_direct_load || process->opcode == &direct_store || process->opcode == &direct_load))
+	{
 		process->params[2 - i] = ft_get_mars_value(mars, address, REG);
+	}
 	else
 		process->params[2 - i] = ft_get_register(process, ft_get_mars_value(mars, address, REG));
 	return (REG);
@@ -27,7 +29,7 @@ static int	ft_stock_reg(
 static int	ft_stock_indirect(
 		t_processus *process, t_mars *mars, int i, int address)
 {
-	if (!i || !(i - 1 && process->opcode == &direct_store))
+	if ((!i || (!(i - 1))) && process->opcode == &direct_store)
 		process->params[2 - i] = ft_get_mars_value(mars, address, INDEX);
 	else
 		process->params[2 - i] = ft_get_mars_value(mars, ft_get_mars_value(mars, address, INDEX) - 1, 1);

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:59:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/02 14:54:14 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,17 @@
 **
 ** Transfert indirect Registre > RAM. Charge la valeur contenu dans le registre
 ** passé en premier parametre a l'adresse resultante de l'addition
-** des deux derniers paramametres. Si cette valeur est nulle, alors le carry 
+** des deux derniers paramametres. Si cette valeur est nulle, alors le carry
 ** passe a l'etat un, sinon a l'ettat zero.
 */
 
 int		indirect_store(t_mars *mars, t_processus *process)
 {
-	return (SUCCESS);
+	printf("BONJOUR INDIRECT STORE\n");
+	ft_get_params(process, mars, DIRECT2, *mars->memory[process->pc + 1]);
+	ft_load_mars_value(mars, process->params[0], process->params[1]
+		+ process->params[2]);
+	if (process->registers[process->params[0] * REG_SIZE] == 0)
+		return (NO_CARRY);
+	return (CARRY);
 }
