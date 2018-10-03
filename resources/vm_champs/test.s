@@ -1,5 +1,4 @@
-.name"ok"
-.comment"ok"
+.name"name"
+.comment"comment"
 
-live %:label
-label:
+live %1

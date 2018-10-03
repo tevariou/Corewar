@@ -6,33 +6,31 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:23:30 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 18:23:53 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 23:00:36 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <limits.h>
 
-void			reverse_bytes(void *n)
+void			reverse_bytes(void *n, size_t size)
 {
 	size_t			i;
-	size_t			len;
 	unsigned char	*p;
 	unsigned char	tmp;
 
-	len = sizeof(*n);
 	p = (unsigned char *)n;
-	while (len && !(*p))
+	while (size && !(*p))
 	{
 		p++;
-		len--;
+		size--;
 	}
 	i = 0;
-	while (i < len / 2)
+	while (i < size / 2)
 	{
 		tmp = p[i];
-		p[i] = p[len - i - 1];
-		p[len - i - 1] = tmp;
+		p[i] = p[size - i - 1];
+		p[size - i - 1] = tmp;
 		i++;
 	}
 }
@@ -83,7 +81,7 @@ unsigned short	atoi_base_short(char *str, char *base)
 		}
 	}
 	ret = (unsigned short)(nb * sign);
-	reverse_bytes(&ret);
+	reverse_bytes(&ret, sizeof(ret));
 	return (ret);
 }
 
@@ -115,6 +113,6 @@ unsigned int	atoi_base_int(char *str, char *base)
 		}
 	}
 	ret = (unsigned int)(nb * sign);
-	reverse_bytes(&ret);
+	reverse_bytes(&ret, sizeof(ret));
 	return (ret);
 }

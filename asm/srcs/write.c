@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:47:43 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 21:27:15 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 23:13:23 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,24 @@ static void			get_prog_size(t_asm *a)
 		list = list->next;
 	}
 	size += list->size;
-	reverse_bytes(&size);
+	reverse_bytes(&size, sizeof(size));
 	a->header.prog_size = size;
 }
 
 static void			write_header(t_asm *a, int fd)
 {
+	char	line[SEPARATOR_LINE];
+
+	ft_bzero(line, SEPARATOR_LINE);
 	a->header.magic = COREWAR_EXEC_MAGIC;
-	reverse_bytes(&(a->header.magic));
+	reverse_bytes(&(a->header.magic), sizeof(a->header.magic));
 	get_prog_size(a);
 	write(fd, &(a->header.magic), sizeof(a->header.magic));
 	write(fd, a->header.prog_name, PROG_NAME_LENGTH + 1);
+	write(fd, line, SEPARATOR_LINE);
 	write(fd, &(a->header.prog_size), sizeof(a->header.prog_size));
 	write(fd, a->header.comment, COMMENT_LENGTH + 1);
+	write(fd, line, SEPARATOR_LINE);
 }
 
 static void			put_code(t_code *list, int fd)
@@ -97,14 +102,16 @@ void				write_bytecode(t_asm *a, char *file)
 	char	*filename;
 
 	filename = set_extension(a, file);
-	if ((fd = open(filename, O_WRONLY | O_TRUNC | O_APPEND)) < 0)
+	if ((fd = open(filename, O_RDWR | O_TRUNC | O_CREAT | O_APPEND, 0600)) < 0)
 	{
 		free(filename);
 		err_free_exit(a, NULL);
 	}
-	free(filename);
 	write_header(a, fd);
 	write_content(a, fd);
 	if (close(fd) < 0)
 		err_free_exit(a, NULL);
+	ft_putstr("Writing output program to ");
+	ft_putendl(filename);
+	free(filename);
 }

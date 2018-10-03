@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:35 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 21:17:11 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 23:51:29 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,15 @@ static void		get_quote_comment(t_asm *a, int fd, size_t *n, char *line)
 		ft_strdel(&buff);
 		if (!line)
 			err_free_exit(a, NULL);
+		tmp = line;
+		line = ft_strjoin(line, "\n");
+		free(tmp);
+		if (!line)
+			err_free_exit(a, NULL);
 		if (!(*n += 1))
 			err_free_exit(a, FILE_OVERFLOW);
 	}
+	ft_strclr(line + ft_strlen(line) - 1);
 	if (!ret)
 		header_error(a, line);
 	record_comment(a, line, ft_strchr(line, '"') + 1);
@@ -87,7 +93,7 @@ void		get_comment(t_asm *a, int fd, size_t *n)
 	if (!ft_strnequ(line, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
 		header_error(a, line);
 	tmp = line;
-	line = ft_strdup(line + ft_strlen(COMMENT_CMD_STRING));
+	line = ft_strjoin(line + ft_strlen(COMMENT_CMD_STRING), "\n");
 	free(tmp);	
 	if (!line)
 		err_free_exit(a, NULL);

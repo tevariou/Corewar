@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:35:02 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 21:22:35 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 23:25:04 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 		if (tmp == target)
 		{
 			ret = (unsigned int)len;
-			reverse_bytes(&ret);
+			reverse_bytes(&ret, sizeof(ret));
 			return (ret);
 		}
 		if ((len += tmp->size) > INT_MAX)
@@ -38,7 +38,7 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 	if (tmp == target)
 	{
 		ret = (unsigned int)len;
-		reverse_bytes(&ret);
+		reverse_bytes(&ret, sizeof(ret));
 		return (ret);
 	}
 	len = 0;
@@ -49,7 +49,7 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 		if (tmp == target)
 		{
 			ret = (unsigned int)len;
-			reverse_bytes(&ret);
+			reverse_bytes(&ret, sizeof(ret));
 			return (ret);
 		}
 		if ((len -= tmp->size) < INT_MIN)
@@ -59,7 +59,7 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 	if (tmp == target)
 	{
 		ret = (unsigned int)len;
-		reverse_bytes(&ret);
+		reverse_bytes(&ret, sizeof(ret));
 		return (ret);
 	}
 	return (0);
@@ -82,7 +82,7 @@ static unsigned int label_null_int(t_asm *a, t_code *orig)
 	if ((len += orig->size) > INT_MAX)
 		err_free_exit(a, FILE_OVERFLOW);
 	ret = (unsigned int)len;
-	reverse_bytes(&ret);
+	reverse_bytes(&ret, sizeof(ret));
 	return (ret);
 }
 
@@ -117,11 +117,11 @@ unsigned int			convert_label_int(t_asm *a, t_code *op, char *str)
 	tail = label->prev;
 	while (label != tail)
 	{
-		if (ft_strequ(str, label->name))
+		if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
 			return (label_address_int(a, label, op, str));
 		label = label->next;	
 	}
-	if (ft_strequ(str, label->name))
+	if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
 		return (label_address_int(a, label, op, str));
 	label_error(a, op->orig, str);
 	return (0);

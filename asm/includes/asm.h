@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 20:01:45 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 22:58:21 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,7 @@ unsigned int			convert_label_int(t_asm *a, t_code *op, char *str);
 unsigned int			atoi_base_int(char *str, char *base);
 unsigned short			atoi_base_short(char *str, char *base);
 unsigned char			atoi_reg(t_asm *a, t_code *op, char *str);
-void					reverse_bytes(void *n);
+void					reverse_bytes(void *n, size_t size);
 
 char					*ft_str_label(char *str);
 char					*ft_label_str(char *str);

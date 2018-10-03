@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:34:57 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 21:22:45 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 23:25:21 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig, t_code *target)
 		if (tmp == target)
 		{
 			ret = (unsigned short)len;
-			reverse_bytes(&ret);
+			reverse_bytes(&ret, sizeof(ret));
 			return (ret);
 		}
 		if ((len += tmp->size) > SHRT_MAX)
@@ -38,7 +38,7 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig, t_code *target)
 	if (tmp == target)
 	{
 		ret = (unsigned short)len;
-		reverse_bytes(&ret);
+		reverse_bytes(&ret, sizeof(ret));
 		return (ret);
 	}
 	len = 0;
@@ -49,7 +49,7 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig, t_code *target)
 		if (tmp == target)
 		{
 			ret = (unsigned short)len;
-			reverse_bytes(&ret);
+			reverse_bytes(&ret, sizeof(ret));
 			return (ret);
 		}
 		if ((len -= tmp->size) < SHRT_MIN)
@@ -59,7 +59,7 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig, t_code *target)
 	if (tmp == target)
 	{
 		ret = (unsigned short)len;
-		reverse_bytes(&ret);
+		reverse_bytes(&ret, sizeof(ret));
 		return (ret);
 	}
 	return (0);
@@ -82,7 +82,7 @@ static unsigned short label_null_short(t_asm *a, t_code *orig)
 	if ((len += orig->size) > SHRT_MAX)
 			err_free_exit(a, FILE_OVERFLOW);
 	ret = (unsigned short)len;
-	reverse_bytes(&ret);
+	reverse_bytes(&ret, sizeof(ret));
 	return (ret);
 }
 
@@ -117,11 +117,11 @@ unsigned short			convert_label_short(t_asm *a, t_code *op, char *str)
 	tail = label->prev;
 	while (label != tail)
 	{
-		if (ft_strequ(str, label->name))
+		if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
 			return (label_address_short(a, label, op, str));
 		label = label->next;	
 	}
-	if (ft_strequ(str, label->name))
+	if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
 		return (label_address_short(a, label, op, str));
 	label_error(a, op->orig, str);
 	return (0);
