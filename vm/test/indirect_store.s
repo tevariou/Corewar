@@ -1,4 +1,5 @@
 .name "indirectstore"
 .comment "push"
 
-sti r4, %4, r14
+sti r1, %0, r1
+and r1, %0, r1

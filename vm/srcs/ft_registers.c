@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 22:27:14 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/03 16:53:44 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ unsigned		ft_get_mars_value(t_mars *mars, unsigned index, unsigned size)
 	while (i < size)
 	{
 		value = value * 256 +
-			(t_byte)*mars->memory[index + i];
+			(t_byte)*mars->memory[ft_global_restriction(index + i)];
 		i++;
 	}
 	return (value);
@@ -68,16 +68,10 @@ unsigned 		ft_load_mars_value(t_mars *mars, unsigned index, unsigned value)
 	unsigned	tmp;
 
 	tmp = value;
-	i = 0;
-
-	while (tmp)
-	{
-		tmp /= 256;
-		i++;
-	}
+	i = REG_SIZE;
 	while (i > 0)
 	{
-		*mars->memory[index + i - 1] = value % 256;
+		*mars->memory[ft_global_restriction(index + i - 1)] = (t_byte)value % 256;
 		i--;
 		value = value / 256;
 	}

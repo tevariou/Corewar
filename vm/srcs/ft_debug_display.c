@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_debug_display.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/03 14:25:41 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/03 18:23:46 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,7 @@ void	ft_info_ram(t_mars *mars)
 	{
 		if (!mars->memory[i][1])
 			printf("%02.2hhX ", mars->memory[i][0]);
-		else if (mars->memory[i][1] == 1)
-			printf("\33[92m%02.2X\33[39m ", mars->memory[i][0]);
-		else if (mars->memory[i][1] == 2)
+		else
 			printf("\33[91m%02.2X\33[39m ", mars->memory[i][0]);
 		i++;
 		if (!(i % 64))
