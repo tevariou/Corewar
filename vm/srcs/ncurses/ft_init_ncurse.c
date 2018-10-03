@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/02 21:21:56 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/03 17:45:02 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,10 @@ static void		create_windows(int coord[4], char *name,
 	wrefresh(*content);
 }
 
-void	ft_init_ncurses(t_visu *visu)
+void	ft_ncurses_color(void)
 {
-	initscr();
-	noecho();
-	curs_set(0);
-	refresh();
-	start_color();
 	init_color(11, 250, 250, 250);
-	init_pair(15, 11, COLOR_BLACK);
-	init_pair(0, COLOR_YELLOW, COLOR_BLACK);
+	init_pair(0, 11, COLOR_BLACK);
 	init_pair(1, COLOR_BLUE, COLOR_BLACK);
 	init_pair(2, COLOR_MAGENTA, COLOR_BLACK);
 	init_pair(3, COLOR_CYAN, COLOR_BLACK);
@@ -53,7 +47,25 @@ void	ft_init_ncurses(t_visu *visu)
 	init_pair(12, COLOR_WHITE, COLOR_BLACK);
 	init_pair(13, COLOR_BLACK, COLOR_GREEN);
 	init_pair(14, COLOR_GREEN, COLOR_BLACK);
+}
+
+void		ft_ncurses_create_thread(t_visu *visu)
+{
+	pthread_create(&visu->th_input, NULL, &ft_ncurses_get_input, visu);
+}
+
+void	ft_init_ncurses(t_visu *visu)
+{
+	initscr();
+	noecho();
+	curs_set(0);
+	refresh();
+	start_color();
 	curs_set(FALSE);
+	ft_ncurses_color();
+	ft_ncurses_create_thread(visu);
+	visu->sleep = 50000;
+	visu->pause = OFF;
 	create_windows((int[4]){ARENA_H, ARENA_W, 0, 0}, "Arena",
 		&visu->arena_box, &visu->arena);
 	create_windows((int[4]){INFO_H, INFO_W, 0, ARENA_W}, "Info",
