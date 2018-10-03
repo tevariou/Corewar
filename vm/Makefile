@@ -6,7 +6,7 @@
 #    By: triou <triou@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/30 14:15:13 by lterrail         ###   ########.fr        #
+#    Updated: 2018/10/01 19:06:49 by abiestro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 # **************************************************************************** #
@@ -53,6 +53,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(OPPDIR)/xor.c 				\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
+			ft_move_pc.c					\
 
 
 OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))

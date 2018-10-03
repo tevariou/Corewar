@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 21:27:06 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/03 14:25:37 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct				s_processus
 	unsigned				next_instruction_cycle;
 	int						(*opcode)(struct s_mars *,struct s_processus *);
 	unsigned int			params[3];
+	unsigned				bytes_to_jump;
 	struct s_processus		*next;
 }							t_processus;
 
@@ -89,6 +90,7 @@ unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
 */
 void						loop_through_battle(t_mars *mars);
 void						ft_cycles_handler(t_mars *mars);
+void						ft_move_pc(t_mars *mars, t_processus *process);
 
 /*
 ** Debug

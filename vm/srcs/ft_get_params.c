@@ -60,5 +60,6 @@ int			ft_get_params(
 			address += ft_stock_indirect(process, mars, i, address);
 		i--;
 	}
+	process->bytes_to_jump = address;
 	return (SUCCESS);
 }

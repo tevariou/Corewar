@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_debug_display.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 22:16:57 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/03 14:25:41 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	ft_info_processus(t_processus *process)
 	printf("player    -> %d\n", process->player);
 	printf("next_instruction_cycle : %d\n", process->next_instruction_cycle);
 	printf("last alive : %d\n", process->last_cycle_live);
+	printf("jump address: %d\n", process->bytes_to_jump);
 	while (i < REG_NUMBER)
 	{
 		printf("register %2X = %2X || ", i, ft_get_register(process, i));

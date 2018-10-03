@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 17:07:57 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/01 21:31:18 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,22 @@
 #include <stdlib.h>
 #include "mars.h"
 
+static void	ft_idle_turn(t_processus *p, int current_cycle)
+{
+	p->bytes_to_jump = 1;
+	p->opcode = 0;
+	p->next_instruction_cycle = current_cycle + 1;
+}
 
 static int	execut_process_turn(t_mars * mars, t_processus *current_process)
 {
-	if(mars->current_cycle == current_process->next_instruction_cycle)	
+	if (mars->current_cycle == current_process->next_instruction_cycle)	
 	{
 		if (current_process->opcode)
 			current_process->opcode(mars, current_process);
-		ft_get_opcode(mars, current_process, *mars->memory[current_process->pc]);
+		ft_move_pc(mars, current_process);
+		if (ft_get_opcode(mars, current_process, *mars->memory[current_process->pc]) == OPP_ERROR)
+			ft_idle_turn(current_process, mars->current_cycle);
 	}
 	return (1);
 }
@@ -45,6 +53,6 @@ void		loop_through_battle(t_mars *mars)
 	{
 		ft_debug_info(mars);
 		ft_cycles_handler(mars);
-		usleep(70000);
+		usleep(120000);
 	}
 }
