@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 14:57:17 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 17:28:08 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 16:51:10 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	compile_asm(t_asm *a, char *file)
 	redux(a);
 	parser(a);
 	get_labels(a);
-	set_bytecode(a);	
+	set_bytecode(a);
+	write_bytecode(a, file);	
 }

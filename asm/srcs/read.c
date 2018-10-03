@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 16:25:43 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 19:54:52 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ static void		record_file(t_asm *a, int fd)
 
 	line = NULL;
 	n = 1;
-	get_name(a, fd, n);
-	get_comment(a, fd, n);
+	get_name(a, fd, &n);
+	get_comment(a, fd, &n);
 	while ((ret = get_next_line(fd, &line)))
 	{
 		if (ret < 0)

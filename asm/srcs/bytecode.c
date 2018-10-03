@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 17:36:18 by triou             #+#    #+#             */
-/*   Updated: 2018/10/02 15:52:08 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 20:02:12 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,20 @@ static void				init_bytecode(t_asm *a)
 		add_op(a, list);
 }
 
-static unsigned short	convert_ind(t_asm *a, t_code *op, char *str)
+static unsigned short	convert_short(t_asm *a, t_code *op, char *str)
 {
 	if (*str == LABEL_CHAR)
-		return (convert_label_ind(a, op, str));
+		return (convert_label_short(a, op, str));
 	else if (ft_strnequ(str, "0x", 2))
 		return (atoi_base_short(str + 2, HEXA));
 	else
 		return (atoi_base_short(str, DEC));
 }
 
-static unsigned int		convert_dir(t_asm *a, t_code *op, char *str)
+static unsigned int		convert_int(t_asm *a, t_code *op, char *str)
 {
-	if (*str == LABEL_CHAR && !dir_len(op->op_code))
-		return (convert_label_dir(a, op, str));
-	else if (*str == LABEL_CHAR)
-		return (convert_label_ind(a, op, str));
+	if (*str == LABEL_CHAR)
+		return (convert_label_int(a, op, str));
 	else if (ft_strnequ(str, "0x", 2))
 		return (atoi_base_int(str + 2, HEXA));
 	else
@@ -72,9 +70,11 @@ static void				convert_values(t_asm *a, t_code *op)
 			op->args[i].u8 = atoi_reg(a, op, op->values[i]);			
 		else if (op->args_type[i] == T_IND
 			|| (op->args_type[i] == T_DIR && dir_len(op->op_code)))
-			op->args[i].u16 = convert_ind(a, op, op->values[i]);
+			op->args[i].u16 = convert_short(a, op, op->values[i]);
 		else if (op->args_type[i] == T_DIR && !dir_len(op->op_code))
-			op->args[i].u32 = convert_dir(a, op, op->values[i]);
+			op->args[i].u32 = convert_int(a, op, op->values[i]);
+		else
+			op->args[i].u32 = 0;
 		i++;
 	}
 }

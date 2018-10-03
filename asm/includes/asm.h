@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/02 14:32:03 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 20:01:45 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # define OPTION_A			1
 # define OPTION_D			2
 # define EXT				".s"
+# define EXT_COMP			".cor"
 # define HEXA				"0123456789ABCDEF"
 # define DEC				"0123456789"
 # define FT_LEX_NUMBER		8
@@ -137,9 +138,15 @@ void					get_labels(t_asm *a);
 void					free_all(t_asm *a);
 void					n_arg_error(t_asm *a, t_file *line);
 t_bool					dir_len(t_byte op_code);
+void					write_bytecode(t_asm *a, char *file);
+void					set_bytecode(t_asm *a);
+
+unsigned short			convert_label_short(t_asm *a, t_code *op, char *str);
+unsigned int			convert_label_int(t_asm *a, t_code *op, char *str);
 
 unsigned int			atoi_base_int(char *str, char *base);
 unsigned short			atoi_base_short(char *str, char *base);
+unsigned char			atoi_reg(t_asm *a, t_code *op, char *str);
 void					reverse_bytes(void *n);
 
 char					*ft_str_label(char *str);

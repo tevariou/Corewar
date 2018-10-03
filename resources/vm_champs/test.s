@@ -1,4 +1,5 @@
-.name"ok"#COM
-.comment"lo"
+.name"ok"
+.comment"ok"
 
-ld -1,r1
+live %:label
+label:

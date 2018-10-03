@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 20:24:41 by triou             #+#    #+#             */
-/*   Updated: 2018/10/02 14:22:35 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 19:53:51 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void			add_label(t_asm *a, t_file *list)
 	if (!(new = ft_memalloc(sizeof(*new))))
 		err_free_exit(a, NULL);
 	new->target = get_target(a, list);
-	new->name = list->val;
+	new->name = list->tokens->val;
 	if (!(head = a->labels))
 	{
 		new->prev = new;
@@ -222,7 +222,7 @@ void			add_op(t_asm *a, t_file *list)
 	{
 		new->prev = new;
 		new->next = new;
-		a->labels = new;
+		a->output = new;
 		return ;
 	}
 	tail = head->prev;

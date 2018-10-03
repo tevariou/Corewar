@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 19:30:06 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 16:37:55 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 19:58:59 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,25 @@ static void	free_input(t_file *head)
 	free(head);
 }
 
-static void	free_labels(t_lab *head)
+static void	free_labels(t_label *head)
 {
-	t_lab	*tail;
-	t_lab	*tmp;
+	t_label	*tail;
+	t_label	*tmp;
+
+	tail = head->prev;
+	while (head != tail)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
+	free(head);
+}
+
+static void	free_output(t_code *head)
+{
+	t_code	*tail;
+	t_code	*tmp;
 
 	tail = head->prev;
 	while (head != tail)
@@ -71,13 +86,9 @@ static void	free_labels(t_lab *head)
 void		free_all(t_asm *a)
 {
 	if (a->input)
-	{
-		free_input(a);
-		a->input = NULL;
-	}
+		free_input(a->input);
 	if (a->labels)
-	{
-		free_labels(a);
-		a->labels = NULL;
-	}
+		free_labels(a->labels);
+	if (a->output)
+		free_output(a->output);
 }

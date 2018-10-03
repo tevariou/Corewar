@@ -6,103 +6,28 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 14:57:14 by triou             #+#    #+#             */
-/*   Updated: 2018/10/02 15:56:34 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/03 21:26:49 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
-#include <limits.h>
 
-unsigned short	compute_len(t_asm *a, t_code *orig, t_code *target)
+static t_bool	do_label_exist(t_label *list, char *str)
 {
-	ssize_t			len;
-	unsigned short	ret;
-	t_code			*tmp;	
-	t_code			*tail;
-
-	len = 0;
-	tmp = orig;
-	tail = a->output->prev;
-	while (tmp != tail)
-	{
-		if (tmp == target)
-		{
-			ret = (unsigned short)len;
-			reverse_bytes(&ret);
-			return (ret);
-		}
-		if ((len += tmp->size) > SHRT_MAX)
-			err_free_exit(a, FILE_OVERFLOW);
-		tmp = tmp->next;
-	}
-	if (tmp == target)
-	{
-		ret = (unsigned short)len;
-		reverse_bytes(&ret);
-		return (ret);
-	}
-	len = 0;
-	tmp = orig;
-	tail = a->output;
-	while (tmp != tail)
-	{
-		if (tmp == target)
-		{
-			ret = (unsigned short)len;
-			reverse_bytes(&ret);
-			return (ret);
-		}
-		if ((len -= tmp->size) < SHRT_MIN)
-			err_free_exit(a, FILE_OVERFLOW);
-		tmp = tmp->prev;
-	}
-	if (tmp == target)
-	{
-		ret = (unsigned short)len;
-		reverse_bytes(&ret);
-		return (ret);
-	}
-	return (0);
-}
-
-unsigned short	label_address(t_asm *a, t_label *label, t_code *orig, char *str)
-{
-	t_code			*target;
-	t_code			*tail;
-	unsigned short	ret;
-
-	target = a->output;
-	tail = target->prev;
-	while (target != tail)
-	{
-		if (target->orig == label->target)
-			return (compute_len(a, orig, target));
-		target = target->next;
-	}
-	if (target->orig == label->target)
-		return (compute_len(a, orig, target));
-	label_error(a, orig->orig, str);
-	return (0);
-}
-
-unsigned short	convert_label_ind(t_asm *a, t_code *op, char *str)
-{
-	t_label	*label;
 	t_label	*tail;
 
-	if(!(label = a->labels))
-		label_error(a, op->orig, str);
-	tail = label->prev;
-	while (label != tail)
+	if (!list)
+		return (FALSE);
+	tail = list->prev;
+	while (list != tail)
 	{
-		if (ft_strequ(str, label->name))
-			return (label_address(a, label, op, str));
-		label = label->next;	
+		if (ft_strequ(list->name, str))
+			return (TRUE);
+		list = list->next;
 	}
-	if (ft_strequ(str, label->name))
-		return (label_adress(a, label, op, str));
-	label_error(a, op->orig, str);
-	return (0);
+	if (ft_strequ(list->name, str))
+			return (TRUE);
+	return (FALSE);
 }
 
 void			get_labels(t_asm *a)
@@ -114,10 +39,12 @@ void			get_labels(t_asm *a)
 	tail = list->prev;
 	while (list != tail)
 	{
-		if (list->tokens->token == L_LAB)
+		if (list->tokens->token == L_LAB
+			&& !do_label_exist(a->labels, list->tokens->val))
 			add_label(a, list);
 		list = list->next;
 	}
-	if (list->tokens->token == L_LAB)
+	if (list->tokens->token == L_LAB
+		&& !do_label_exist(a->labels, list->tokens->val))
 		add_label(a, list);
 }
