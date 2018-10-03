@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 19:19:55 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/03 14:23:38 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ typedef unsigned char		t_byte;
 
 # define NB_OPPS            16
 # define PROCESS_WAITING	3
+
+# define NO_CARRY			0
+# define CARRY				1
 
 # define NO_SIZE			0
 # define REG				1
@@ -48,7 +51,7 @@ typedef struct				s_processus
 	struct s_processus		*next;
 }							t_processus;
 
-struct						s_mars	
+struct						s_mars
 {
 	t_byte					**memory;
 	unsigned				cycle_to_die;
@@ -80,6 +83,7 @@ unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
+unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
 
 /*
 ** loop during battle
