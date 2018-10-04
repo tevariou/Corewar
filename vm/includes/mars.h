@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:35:04 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 16:59:44 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ struct						s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	t_processus				*process_lst;
+	t_visu					visu;
 };
 
 /*
@@ -88,7 +89,7 @@ unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
 /*
 ** loop during battle
 */
-void						loop_through_battle(t_mars *mars, t_visu *visu);
+void						loop_through_battle(t_mars *marss);
 void						ft_cycles_handler(t_mars *mars);
 void						ft_move_pc(t_mars *mars, t_processus *process);
 
@@ -96,7 +97,7 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 ** Debug
 */
 void						ft_debug_info(t_mars *mars);
-void						ft_ncurses_display(t_mars *mars, t_visu *visu);
+void						ft_ncurses_display(t_mars *mars);
 
 /*
 ** Ncurses
