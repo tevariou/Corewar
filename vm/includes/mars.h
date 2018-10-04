@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:27:22 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 09:29:14 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,12 @@ void 						ft_init_ncurses();
 */
 unsigned					ft_global_restriction(unsigned address);
 
+
+
+/*
+** Ncurses
+*/
+void 						ft_init_ncurses();
 
 /*
 ** Opertations

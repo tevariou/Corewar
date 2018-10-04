@@ -3,13 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: triou <triou@student.42.fr>                +#+  +:+       +#+         #
+#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/03 17:18:38 by lterrail         ###   ########.fr        #
+#    Updated: 2018/10/04 09:28:37 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-# **************************************************************************** #
+
 
 NAME	= corewar
 CC		= gcc
@@ -30,18 +30,10 @@ ITEMS 	= 	mars.c 							\
 		  	ft_prepare_mars_memory.c 		\
 		  	ft_write_champ_on_memory.c	 	\
 		  	ft_errors.c 					\
-		  	ft_registers.c					\
-<<<<<<< HEAD
 			ft_get_params.c					\
 		  	ft_debug_display.c	 			\
 		  	ft_registers.c					\
 			$(OPPDIR)/ft_get_opcode.c		\
-=======
-			ft_ocp.c						\
-		  	ft_registers.c				\
-			ft_ocp.c						\
-			$(OPPDIR)/ft_get_opcode.c					\
->>>>>>> create ncurse display function to print arena and information in real time
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\
