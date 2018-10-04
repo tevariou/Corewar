@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:03:06 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 17:00:16 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,10 @@
 
 int		jump(t_mars *mars, t_processus *process)
 {
+	unsigned dest;
+
+	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
+	process->pc = ft_global_restriction(process->pc + dest);
+	process->bytes_to_jump = process->pc;
 	return (SUCCESS);
 }

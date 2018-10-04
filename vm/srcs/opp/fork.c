@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 16:11:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 
 int		ft_fork(t_mars *mars, t_processus *process)
 {
+	(void) mars;
+	(void) process;
 	return (SUCCESS);
 }
 

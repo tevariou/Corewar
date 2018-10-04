@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/03 16:53:44 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/04 16:11:05 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 
 unsigned		ft_get_mars_value(t_mars *mars, unsigned index, unsigned size)
 {
-	int			i;
+	unsigned	i;
 	unsigned	value;
 
 	value = 0;
