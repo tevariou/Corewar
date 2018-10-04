@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/03 17:46:15 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 15:21:21 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ void	ft_ncurses_print_processus(t_mars *mars, t_processus *process, t_visu *visu
 	wattroff(visu->info, COLOR_PAIR(0));
 	wattron(visu->info, COLOR_PAIR(process->player));
 	wprintw(visu->info, "%s\n", process->name);
+	wattroff(visu->info, COLOR_PAIR(process->player));
+
+	wattron(visu->info, COLOR_PAIR(0));
+	wprintw(visu->info, "PC     -> ");
+	wattroff(visu->info, COLOR_PAIR(0));
+	wattron(visu->info, COLOR_PAIR(process->player));
+	wprintw(visu->info, "%u\n", process->pc);
 	wattroff(visu->info, COLOR_PAIR(process->player));
 
 	wattron(visu->info, COLOR_PAIR(0));
@@ -53,7 +60,7 @@ void	ft_ncurses_print_process_pc(t_mars *mars, t_visu *visu)
 	while (p)
 	{
 		wattron(visu->arena, COLOR_PAIR(p->player + 6));
-		mvwprintw(visu->arena, p->pc / 64, p->pc % 64 * 3, "%2.2X", *mars->memory[p->pc]);
+		mvwprintw(visu->arena, (ft_global_restriction(p->pc) / 64), ((ft_global_restriction(p->pc) % 64) * 3), "%2.2X", *mars->memory[ft_global_restriction(p->pc)]);
 		wattroff(visu->arena, COLOR_PAIR(p->player + 6));
 		p = p->next;
 	}

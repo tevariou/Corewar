@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 09:35:50 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 13:43:15 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void		create_windows(int coord[4], char *name,
 
 void	ft_ncurses_color(void)
 {
+	start_color();
 	init_color(11, 250, 250, 250);
 	init_pair(0, 11, COLOR_BLACK);
 	init_pair(1, COLOR_BLUE, COLOR_BLACK);
@@ -60,7 +61,6 @@ void	ft_init_ncurses(t_visu *visu)
 	noecho();
 	curs_set(0);
 	refresh();
-	start_color();
 	curs_set(FALSE);
 	ft_ncurses_color();
 	ft_ncurses_create_thread(visu);
@@ -70,6 +70,8 @@ void	ft_init_ncurses(t_visu *visu)
 		&visu->arena_box, &visu->arena);
 	create_windows((int[4]){INFO_H, INFO_W, 0, ARENA_W}, "Info",
 		&visu->info_box, &visu->info);
+	create_windows((int[4]){10, ARENA_W + INFO_W, ARENA_H, 0}, "Live",
+		&visu->live_box, &visu->live);
 }
 
 void	ft_close_ncurses(t_visu *visu)
