@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:35:26 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 15:14:06 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "libft.h"
 #include "mars.h"
 
-void	ft_info_processus(t_mars *mars, t_processus *process)
+void	ft_info_processus(t_processus *process)
 {
 	unsigned	i;
 	i = 0;
@@ -75,7 +75,7 @@ void	ft_debug_info(t_mars *mars)
 	tmp = mars->process_lst;
 	while (tmp)
 	{
-		ft_info_processus(mars, tmp);
+		ft_info_processus(tmp);
 		tmp = tmp->next;
 	}
 	ft_info_mars(mars);
