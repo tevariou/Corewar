@@ -110,7 +110,7 @@ void 						ft_init_ncurses();
 ** restriction addressage
 */
 unsigned					ft_global_restriction(unsigned address);
-
+unsigned					ft_local_restriction(unsigned current_pc, unsigned target);
 
 
 /*

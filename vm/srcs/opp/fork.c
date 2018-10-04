@@ -58,7 +58,7 @@ int		ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, 1, IND_SIZE);
-	printf("%d\n", dest);
+	dest = ft_local_restriction(process->pc, dest);
 	ft_copy_process(process, mars, dest);
 	process->bytes_to_jump = process->pc + IND_SIZE;
 	return (SUCCESS);

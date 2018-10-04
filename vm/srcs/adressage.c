@@ -18,3 +18,15 @@ unsigned	ft_global_restriction(unsigned address)
 		address %= MEM_SIZE;
 	return (address);
 }
+
+unsigned	ft_local_restriction(unsigned current_pc, unsigned target)
+{
+	unsigned destination;
+
+	destination = current_pc + target;
+	destination = destination - current_pc;
+	destination = destination %IDX_MOD;
+	destination = destination + current_pc;
+	destination = ft_global_restriction(current_pc);
+	return (destination);
+}
