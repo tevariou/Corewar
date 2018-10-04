@@ -50,16 +50,22 @@ void		header_error(t_asm *a, char *line)
 	exit(EXIT_FAILURE);
 }
 
-static void	output_error(char *line, char *val)
+static void	output_error(t_asm *a, char *line, char *val)
 {
 	char	*p;
+	char	*tmp;
 
+	if (!(tmp = ft_strdup(val)))
+		err_free_exit(a, NULL);
+	ft_strclr(ft_strchr(tmp, ' '));
+	ft_strclr(ft_strchr(tmp, ','));
 	p = ft_strstr(line, val);
 	write(2, line, p - line);
 	ft_putstr_fd("\e[4m\033[1;31m", 2);
-	ft_putstr_fd(val, 2);
+	ft_putstr_fd(tmp, 2);
 	ft_putstr_fd("\033[0m\e[24m", 2);
-	ft_putendl_fd(p + ft_strlen(val), 2);
+	ft_putendl_fd(p + ft_strlen(tmp), 2);
+	free(tmp);
 }
 
 void		parser_error(t_asm *a, t_file *line)
@@ -77,14 +83,14 @@ void		lex_error(t_asm *a, t_file *line, char *val)
 	ft_putstr_fd("Lexical error at line ", 2);
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
-	output_error(line->line, val);
+	output_error(a, line->line, val);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }
 
 void		n_arg_error(t_asm *a, t_file *line)
 {
-	ft_putstr_fd("Wrong number of arguments at line ", 2);
+	ft_putstr_fd("Invalid arguments at line ", 2);
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
 	ft_putstr_fd(line->line, 2);
@@ -98,7 +104,7 @@ void		label_error(t_asm *a, t_file *line, char *label)
 	ft_putstr_fd("Unknown label found at line ", 2);
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
-	output_error(line->line, label);
+	output_error(a, line->line, label);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }
