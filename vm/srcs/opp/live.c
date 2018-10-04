@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 19:22:52 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 22:01:30 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int		ft_live_belong_to_other(t_mars *mars, int i)
 	{
 		if (tmp->player == i)
 		{
+			tmp->nbr_of_live++;
 			tmp->last_cycle_live = mars->current_cycle;
-			return (1);
 		}
 		tmp = tmp->next;
 	}
@@ -55,10 +55,9 @@ int		live(t_mars *mars, t_processus *process)
 	int i;
 
 	i = ft_get_mars_value(mars, process->pc + 1, REG_SIZE);
-	process->bytes_to_jump = process->pc + REG_SIZE + 1;
-	if (i == process->player)
+	ft_live_belong_to_other(mars, i);
+	if (process->player == i)
 		process->last_cycle_live = mars->current_cycle;
-	else
-		ft_live_belong_to_other(mars, i);
+	process->bytes_to_jump = process->pc + REG_SIZE + 1;
 	return (process->carry);
 }

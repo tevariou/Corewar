@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 18:09:29 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 19:31:36 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,12 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 	{
 		mars->ft_display = &ft_ncurses_display;
 		mars->visualisor = 1;
-		return (2);
+		return (1);
 	}
 	else if (ft_strequ("-d", *av))
 	{
 		mars->ft_display = &ft_debug_info;
-		return (2);
+		return (1);
 	}
 	else
 	{

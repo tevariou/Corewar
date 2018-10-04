@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 18:07:16 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 21:36:10 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ void	ft_debug_info(t_mars *mars)
 	}
 	ft_info_mars(mars);
 	ft_info_ram(mars);
+	usleep(80000);
 }
