@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/03 19:27:06 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/04 09:24:11 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void		loop_through_battle(t_mars *mars)
 		ft_debug_info(mars);
 		ft_cycles_handler(mars);
 		usleep(120000);
+		system("clear");
 	}
 }

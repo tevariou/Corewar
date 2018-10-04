@@ -14,13 +14,14 @@
 NAME	= corewar
 CC		= gcc
 # CFLAGS	= -Wall -Werror -Wextra -pedantic $(debug)
-CFLAGS	= -pedantic $(debug)
+CFLAGS	= -pedantic -fsanitize=address -g3
 SDIR	= srcs
 INC 	= ./libft/
 
 IDIR	= includes
 ODIR	= objs
 OPPDIR  = opp
+NCUDIR  = ncurses
 LDIR	= libft
 
 ITEMS 	= 	mars.c 							\
@@ -51,6 +52,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(OPPDIR)/or.c 					\
 		  	$(OPPDIR)/substraction.c 		\
 		  	$(OPPDIR)/xor.c 				\
+		  	$(NCUDIR)/ft_init_ncurse.c		\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
@@ -65,7 +67,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@make -C $(LDIR)
-	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft
+	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft -lncurses
 	@echo "success !!!!!!"
 
 
@@ -77,6 +79,7 @@ $(ODIR):
 
 $(ODIR)/%.o : $(SDIR)/%.c $(INCLUDES)
 	@$(MD) $(ODIR)/opp
+	@$(MD) $(ODIR)/ncurses
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(IDIR) -I $(LDIR)
 	@echo "compiling $<"
 

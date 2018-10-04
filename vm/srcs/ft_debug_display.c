@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:16:11 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 09:23:30 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 #include "libft.h"
 #include "mars.h"
 
-void	ft_info_processus(t_processus *process)
+void	ft_info_processus(t_mars *mars, t_processus *process)
 {
 	unsigned	i;
-
 	i = 0;
 	if (!process)
 		ft_exit(NULL, "no process");
@@ -64,7 +63,6 @@ void	ft_info_ram(t_mars *mars)
 void	ft_info_mars(t_mars *mars)
 {
 	printf("\n-- MARS --\n");
-	printf("current cycle : %d --- ", mars->current_cycle);
 	printf("cycle delta : %d --- ", mars->cycle_delta);
 	printf("next cycle to die : %d --- ", mars->cycle_to_die);
 	printf("cycle to die : %d --- \n\n", mars->cycle_teta);
@@ -74,11 +72,10 @@ void	ft_debug_info(t_mars *mars)
 {
 	t_processus *tmp;
 
-	system("@cls||clear");
 	tmp = mars->process_lst;
 	while (tmp)
 	{
-		ft_info_processus(tmp);
+		ft_info_processus(mars, tmp);
 		tmp = tmp->next;
 	}
 	ft_info_mars(mars);

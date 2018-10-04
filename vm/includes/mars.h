@@ -6,12 +6,13 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:16:12 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 09:20:48 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
+
 # include <zaz.h>
 # include <sys/types.h>
 # include <stdio.h>
@@ -76,8 +77,6 @@ int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(t_mars *mars,
 	t_processus *process, int fd);
 void						ft_exit(t_mars *mars, char *error);
-void						ft_info_processus(t_processus *process);
-void						ft_info_processus(t_processus *process);
 unsigned					ft_get_register(t_processus *process,
 	unsigned index);
 unsigned					ft_load_register(t_processus *p, unsigned index,
@@ -96,9 +95,13 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 /*
 ** Debug
 */
-void						ft_info_processus(t_processus *process);
-void						ft_info_ram(t_mars *mars);
 void						ft_debug_info(t_mars *mars);
+
+
+/*
+** Ncurses
+*/
+void 						ft_init_ncurses();
 
 /*
 ** restriction addressage
