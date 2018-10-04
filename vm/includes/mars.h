@@ -6,13 +6,14 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:20:48 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 09:27:22 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
 
+# include "visu.h"
 # include <zaz.h>
 # include <sys/types.h>
 # include <stdio.h>
@@ -88,14 +89,14 @@ unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
 /*
 ** loop during battle
 */
-void						loop_through_battle(t_mars *mars);
+void						loop_through_battle(t_mars *mars, t_visu *visu);
 void						ft_cycles_handler(t_mars *mars);
 void						ft_move_pc(t_mars *mars, t_processus *process);
 
 /*
 ** Debug
 */
-void						ft_debug_info(t_mars *mars);
+void						ft_debug_info(t_mars *mars, t_visu *visu);
 
 
 /*
