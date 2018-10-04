@@ -26,9 +26,9 @@ void	ft_kill_process(t_mars *mars)
 		free(mars->process_lst);
 		mars->process_lst = tmp;
 	}
-	while (process->next)
+	while (process && process->next)
 	{
-		if (process->next->last_cycle_live < mars->cycle_to_die)
+		if (process->next->next && process->next->last_cycle_live < mars->cycle_to_die)
 		{
 			tmp = process->next;
 			process->next = process->next->next;
@@ -37,8 +37,8 @@ void	ft_kill_process(t_mars *mars)
 		tmp = process;
 		process = process->next;
 	}
-	if (process->last_cycle_live < mars->cycle_to_die && !(tmp->next = NULL))
-		free(process);
+//	if (process && process->last_cycle_live < mars->cycle_to_die && !(tmp->next = NULL))
+//		free(process);
 }
 
 void	ft_cycles_handler(t_mars *mars)
@@ -46,7 +46,7 @@ void	ft_cycles_handler(t_mars *mars)
 	mars->current_cycle++;
 	if (mars->current_cycle == mars->cycle_to_die)
 	{
-		ft_kill_process(mars);
+	//	ft_kill_process(mars);
 		mars->cycle_to_die += mars->cycle_teta;
 		mars->cycle_teta -= mars->cycle_delta;
 	}
