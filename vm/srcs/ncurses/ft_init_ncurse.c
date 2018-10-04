@@ -6,11 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2018/10/04 09:30:27 by lmazeaud         ###   ########.fr       */
-=======
-/*   Updated: 2018/10/02 21:21:56 by lmazeaud         ###   ########.fr       */
->>>>>>> create tow separete windows one for arena and an other for all information
+/*   Updated: 2018/10/04 09:31:40 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
