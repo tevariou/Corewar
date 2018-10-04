@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:46:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/30 20:41:00 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/04 19:18:04 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_pf_opp					g_opps[NB_OPPS] =
 	{JUMP, &jump, 20},
 	{INDIRECT_LOAD, &indirect_load, 25},
 	{INDIRECT_STORE, &indirect_store, 25},
-	{FORK, &ft_fork, 800},
+	{FORK, &ft_fork, 8},
 	{L_DIRECT_LOAD, &long_direct_load, 10},
 	{L_INDERECT_LOAD, &long_indirect_load, 50},
 	{L_FORK, &long_fork, 1000},
