@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 17:04:34 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 18:06:40 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,11 +122,11 @@ void	ft_ncurses_display(t_mars *mars)
 	ft_ncurses_info_ram(mars);
 	wrefresh(v->arena);
 	usleep(v->sleep);
-		if (v->pause == OFF)
-			while (1)
-			{
-				if (v->pause == ON)
-					break;
-				usleep(500);
-			}
+	if (v->pause == OFF)
+		while (1)
+		{
+			if (v->pause == ON)
+				break ;
+			usleep(500);
+		}
 }

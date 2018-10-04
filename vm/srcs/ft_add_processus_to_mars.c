@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 15:23:06 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 18:09:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_processus		*ft_new_empty_processus(void)
 	return (process);
 }
 
-int				ft_add_parameter_to_processus(t_processus *process, char **av)
+int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **av)
 {
 	char *tmp;
 
@@ -67,6 +67,17 @@ int				ft_add_parameter_to_processus(t_processus *process, char **av)
 		process->pc = atoi(av[1]);
 		return (2);
 	}
+	else if (ft_strequ("-i", *av))
+	{
+		mars->ft_display = &ft_ncurses_display;
+		mars->visualisor = 1;
+		return (2);
+	}
+	else if (ft_strequ("-d", *av))
+	{
+		mars->ft_display = &ft_debug_info;
+		return (2);
+	}
 	else
 	{
 		tmp = *av;
@@ -90,7 +101,7 @@ int				ft_add_parameter_to_processus(t_processus *process, char **av)
 ** return a NULL pointer. Else a new processus is returned..
 */
 
-t_processus		*ft_argv_have_champ(char **av, int *current_index, int ac)
+t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, int ac)
 {
 	t_processus *process;
 	int			i;
@@ -103,7 +114,7 @@ t_processus		*ft_argv_have_champ(char **av, int *current_index, int ac)
 		return (NULL);
 	while (!process->name && (*current_index + i) < ac)
 	{
-		if ((k = ft_add_parameter_to_processus(process,
+		if ((k = ft_add_parameter_to_processus(mars, process,
 						&av[*current_index + i])) == -1)
 			return (NULL);
 		i = i + k;

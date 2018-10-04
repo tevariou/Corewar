@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 16:59:44 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 18:05:38 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ struct						s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	t_processus				*process_lst;
+	void					(*ft_display)(t_mars *);
+	int						visualisor;
 	t_visu					visu;
 };
 
@@ -71,7 +73,7 @@ struct						s_mars
 */
 t_mars						*ft_set_mars(int ac, char **av);
 void						ft_dump_mars_memory(t_byte **memory);
-t_processus					*ft_argv_have_champ(char **av, int *current_index,
+t_processus					*ft_argv_have_champ(t_mars *mars, char **av, int *current_index,
 	int ac);
 void						ft_add_processus_to_mars(t_mars *mars,
 	t_processus *process);

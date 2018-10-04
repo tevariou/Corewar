@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/03 18:17:04 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/04 18:06:09 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ t_mars		*ft_new_mars(void)
 	mars->cycle_teta = CYCLE_TO_DIE;
 	mars->current_cycle = 0;
 	mars->process_lst = NULL;
+	mars->ft_display = NULL;
+	mars->visualisor = 0;
 	return (mars);
 }
 
@@ -59,7 +61,7 @@ t_mars		*ft_set_mars(int ac, char **av)
 		ft_exit(NULL, E_NO_MARS);
 	while (i < ac)
 	{
-		if (!(current_champion = ft_argv_have_champ(av, &i, ac)))
+		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
 			ft_exit(mars, "bad av");
 		mars->count_players++;
 		if (!current_champion->player)

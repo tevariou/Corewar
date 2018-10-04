@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 17:43:53 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 17:52:54 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void		loop_through_battle(t_mars *mars)
 {
 	while (execute_one_cycle(mars) && mars->current_cycle < 2500)
 	{
-		ft_ncurses_display(mars);
+		mars->ft_display(mars);
 		ft_cycles_handler(mars);
 	}
 }
