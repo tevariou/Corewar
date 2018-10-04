@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 15:14:06 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 16:20:55 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	ft_info_ram(t_mars *mars)
 void	ft_info_mars(t_mars *mars)
 {
 	printf("\n-- MARS --\n");
+	printf("cycle current: %d --- ", mars->current_cycle);
 	printf("cycle delta : %d --- ", mars->cycle_delta);
 	printf("next cycle to die : %d --- ", mars->cycle_to_die);
 	printf("cycle to die : %d --- \n\n", mars->cycle_teta);
@@ -72,6 +73,7 @@ void	ft_debug_info(t_mars *mars)
 {
 	t_processus *tmp;
 
+	system("@cls||clear");
 	tmp = mars->process_lst;
 	while (tmp)
 	{

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 15:19:49 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 16:52:43 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,20 @@ static int	execute_one_cycle(t_mars *mars)
 
 void		loop_through_battle(t_mars *mars, t_visu *visu)
 {
+	(void)visu;
 	while (execute_one_cycle(mars) && mars->current_cycle < 2500)
 	{
-		ft_ncurses_display(mars, visu);
+	//	mars->ft_display(mars);
 		ft_cycles_handler(mars);
-		usleep(visu->sleep);
-		if (visu->pause == OFF)
-			while (1)
-			{
-				if (visu->pause == ON)
-					break;
-				usleep(500);
-			}
+	//	usleep(visu->sleep);
+	//	if (visu->pause == OFF)
+	//		while (1)
+	//		{
+	//			if (visu->pause == ON)
+	//				break;
+	//			usleep(500);
+	//		}
+		ft_debug_info(mars);
+		usleep(100000);
 	}
 }
