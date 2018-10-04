@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:52:07 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/03 20:41:12 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/04 17:55:24 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		direct_store(t_mars *mars, t_processus *process)
 	else
 		ft_load_mars_value(mars, process->params[1], process->params[0]);
 	if (!(ft_get_register(process, process->params[0])))
-		return (process->carry = 0);
-	return (process->carry = 1);
+		return (process->carry = 1);
+	return (process->carry = 0);
 }
