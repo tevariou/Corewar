@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mars.c                                             :+:      :+:    :+:   */
+/*   ft_ncurses_print_live.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/25 15:31:12 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 17:44:10 by lmazeaud         ###   ########.fr       */
+/*   Created: 2018/10/04 13:43:51 by lmazeaud          #+#    #+#             */
+/*   Updated: 2018/10/04 16:52:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include <unistd.h>
-#include <stdio.h>
 
-int		main(int ac, char **av)
+void	ft_ncurses_print_live(t_visu *visu, t_processus *process)
 {
-	t_mars		*mars;
+	int	i;
 
-	mars = ft_set_mars(ac, av);
-	ft_init_ncurses(&mars->visu);
-	loop_through_battle(mars);
-	ft_close_ncurses(&mars->visu);
-	return (SUCCESS);
+	i = 0;
+	while (i < )
 }
