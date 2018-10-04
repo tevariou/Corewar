@@ -30,12 +30,18 @@ ITEMS 	= 	mars.c 							\
 		  	ft_prepare_mars_memory.c 		\
 		  	ft_write_champ_on_memory.c	 	\
 		  	ft_errors.c 					\
-		  	ft_debug_display.c 				\
 		  	ft_registers.c					\
+<<<<<<< HEAD
 			ft_get_params.c					\
 		  	ft_debug_display.c	 			\
 		  	ft_registers.c					\
 			$(OPPDIR)/ft_get_opcode.c		\
+=======
+			ft_ocp.c						\
+		  	ft_registers.c				\
+			ft_ocp.c						\
+			$(OPPDIR)/ft_get_opcode.c					\
+>>>>>>> create ncurse display function to print arena and information in real time
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
 		  	$(OPPDIR)/and.c 				\
@@ -53,6 +59,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(OPPDIR)/substraction.c 		\
 		  	$(OPPDIR)/xor.c 				\
 		  	$(NCUDIR)/ft_init_ncurse.c		\
+		  	$(NCUDIR)/ft_ncurses_display.c	\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
