@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/01 21:31:18 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/03 19:27:06 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 static void	ft_idle_turn(t_processus *p, int current_cycle)
 {
-	p->bytes_to_jump = 1;
+	p->bytes_to_jump = p->pc + 1;
 	p->opcode = 0;
 	p->next_instruction_cycle = current_cycle + 1;
 }
 
 static int	execut_process_turn(t_mars * mars, t_processus *current_process)
 {
-	if (mars->current_cycle == current_process->next_instruction_cycle)	
+	if (mars->current_cycle == current_process->next_instruction_cycle)
 	{
 		if (current_process->opcode)
 			current_process->opcode(mars, current_process);

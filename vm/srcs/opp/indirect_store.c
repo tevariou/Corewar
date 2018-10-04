@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:59:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/02 14:54:14 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/03 20:41:20 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@
 
 int		indirect_store(t_mars *mars, t_processus *process)
 {
-	printf("BONJOUR INDIRECT STORE\n");
 	ft_get_params(process, mars, DIRECT2, *mars->memory[process->pc + 1]);
-	ft_load_mars_value(mars, process->params[0], process->params[1]
-		+ process->params[2]);
-	if (process->registers[process->params[0] * REG_SIZE] == 0)
-		return (NO_CARRY);
-	return (CARRY);
+	ft_load_mars_value(mars, process->pc + process->params[1] + process->params[2], process->params[0]);
+	if (!process->params[0])
+		return (process->carry = 0);
+	return (process->carry = 1);
 }

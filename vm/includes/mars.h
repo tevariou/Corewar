@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 09:14:02 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/04 09:16:12 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ typedef struct s_mars t_mars;
 typedef struct				s_processus
 {
 	int						player;
+	int						carry;
 	char					*name;
-	int						pc;
+	unsigned				pc;
 	t_byte					registers[REG_SIZE * REG_NUMBER];
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
@@ -98,6 +99,12 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 void						ft_info_processus(t_processus *process);
 void						ft_info_ram(t_mars *mars);
 void						ft_debug_info(t_mars *mars);
+
+/*
+** restriction addressage
+*/
+unsigned					ft_global_restriction(unsigned address);
+
 
 /*
 ** Opertations
