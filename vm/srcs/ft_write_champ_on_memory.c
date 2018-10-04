@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_write_champ_on_memory.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/03 18:11:14 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/04 15:25:47 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_put_string_on_circular_memory(t_mars *mars, t_processus *process,
 	i = 0;
 	while (i < size)
 	{
-		if (mars->memory[process->pc + i][0] % MEM_SIZE)
+		if (mars->memory[(process->pc + i) % MEM_SIZE][0])
 			return (0);
 		mars->memory[(process->pc + i) % (MEM_SIZE)][0] = (char)champion[i];
 		mars->memory[(process->pc + i) % (MEM_SIZE)][1] = process->player;
