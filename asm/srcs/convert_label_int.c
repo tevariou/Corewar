@@ -42,20 +42,22 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 		return (ret);
 	}
 	len = 0;
-	tmp = orig;
+	tmp = orig->prev;
 	tail = a->output;
 	while (tmp != tail)
 	{
+		if ((len -= tmp->size) < INT_MIN)
+			err_free_exit(a, FILE_OVERFLOW);
 		if (tmp == target)
 		{
 			ret = (unsigned int)len;
 			reverse_bytes(&ret, sizeof(ret));
 			return (ret);
 		}
-		if ((len -= tmp->size) < INT_MIN)
-			err_free_exit(a, FILE_OVERFLOW);
 		tmp = tmp->prev;
 	}
+	if ((len -= tmp->size) < INT_MIN)
+		err_free_exit(a, FILE_OVERFLOW);
 	if (tmp == target)
 	{
 		ret = (unsigned int)len;

@@ -50,7 +50,7 @@ static t_bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
 		{
 			if ((*token = list->next) == line->tokens)
 				return (FALSE);
-			if(g_parse_tab[i].n_args != line->n_args)
+			if (g_parse_tab[i].n_args != line->n_args)
 				n_arg_error(a, line);
 			return (g_parse_tab[i].f(line, token));
 		}
@@ -102,7 +102,7 @@ static void	parse_line(t_asm *a, t_file *line)
 	}
 	else if (p_instruct(a, line, &list) && list == end)
 		return ;
-	parser_error(a, line, list->val);
+	parser_error(a, line);
 }
 
 void			parser(t_asm *a)

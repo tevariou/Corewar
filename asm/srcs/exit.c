@@ -62,12 +62,12 @@ static void	output_error(char *line, char *val)
 	ft_putendl_fd(p + ft_strlen(val), 2);
 }
 
-void		parser_error(t_asm *a, t_file *line, char *val)
+void		parser_error(t_asm *a, t_file *line)
 {
 	ft_putstr_fd("Parser error at line ", 2);
 	ft_putnbr_fd(line->n, 2);
 	ft_putstr_fd(":\n", 2);
-	output_error(line->line, val);
+	ft_putendl_fd(line->line, 2);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }

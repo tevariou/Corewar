@@ -128,7 +128,7 @@ void					compile_asm(t_asm *a, char *file);
 void					header_error(t_asm *a, char *line);
 void					lex_error(t_asm *a, t_file *line, char *val);
 void					asm_error(t_asm *a, t_file *line, char *err);
-void					parser_error(t_asm *a, t_file *line, char *val);
+void					parser_error(t_asm *a, t_file *line);
 void					label_error(t_asm *a, t_file *line, char *label);
 
 void					lexer(t_asm *a);
