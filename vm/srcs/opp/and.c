@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:08:02 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/03 20:41:05 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/04 17:54:05 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int		and(t_mars *mars, t_processus *process)
 	ft_load_register(process, process->params[2], process->params[0]
 		& process->params[1]);
 	if (!(ft_get_register(process, process->params[2])))
-		return (process->carry = 0);
-	return (process->carry = 1);
+		return (process->carry = 1);
+	return (process->carry = 0);
 }
