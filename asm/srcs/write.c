@@ -19,9 +19,9 @@ static char			*set_extension(t_asm *a, char *file)
 {
 	char	*ret;
 
-	if (!(ret = ft_memalloc((ft_strlen(file) + 3) * sizeof(*ret))))
+	if (!(ret = ft_memalloc((ft_strlen(file) + (ft_strlen(EXT_COMP) - 1)) * sizeof(*ret))))
 		err_free_exit(a, NULL);
-	ft_strncpy(ret, file, ft_strlen(file) - 2);
+	ft_strncpy(ret, file, ft_strlen(file) - ft_strlen(EXT));
 	ft_strcat(ret, EXT_COMP);
 	return (ret);
 }
@@ -54,10 +54,10 @@ static void			write_header(t_asm *a, int fd)
 	reverse_bytes(&(a->header.magic), sizeof(a->header.magic));
 	get_prog_size(a);
 	write(fd, &(a->header.magic), sizeof(a->header.magic));
-	write(fd, a->header.prog_name, PROG_NAME_LENGTH + 1);
+	write(fd, a->header.prog_name, PROG_NAME_LENGTH);
 	write(fd, line, SEPARATOR_LINE);
 	write(fd, &(a->header.prog_size), sizeof(a->header.prog_size));
-	write(fd, a->header.comment, COMMENT_LENGTH + 1);
+	write(fd, a->header.comment, COMMENT_LENGTH);
 	write(fd, line, SEPARATOR_LINE);
 }
 

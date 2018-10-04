@@ -16,11 +16,12 @@
 # include "op.h"
 # include "libft.h"
 
-# define USAGE				"Usage:\t./asm [-a | -d] <sourcefile.s>\n\t-a : " \
-							"Instead of creating a .cor file, outputs a " \
+# define USAGE				"Usage:\t./asm [[[-a] <sourcefile.s>]" \
+							" | [[-d] <binaryfile.cor>]]\n" \
+							"Options:\t-a : Instead of creating a .cor file, outputs a " \
 							"stripped and annotated version of the code " \
-							"to the standard output\n\t-d : Translate a " \
-							"binary file into assembly\n"
+							"to the standard output\n" \
+							"\t\t-d : Translate a binary file into assembly"
 # define OPTION_STR_A		"-a"
 # define OPTION_STR_D		"-d"
 # define OPTION_A			1
@@ -31,14 +32,17 @@
 # define DEC				"0123456789"
 # define FT_LEX_NUMBER		8
 
-# define WRONG_EXT			"Wrong filename extension\n"
-# define WRONG_HEADER		"Wrong header format\n"
-# define FILE_OVERFLOW		"File is too big\n"
-# define NAME_TOO_LONG		"Program name is too long\n"
-# define COMMENT_TOO_LONG	"Program comment is too long\n"
-# define NO_INSTRUCTION		"No instruction\n"
-# define WRONG_REG_NUMBER	"Wrong registry number"
-# define NO_LABEL			"Label non existant.\n"
+# define WRONG_EXT			"Wrong filename extension"
+# define WRONG_HEADER		"Wrong header format"
+# define FILE_OVERFLOW		"File is too big"
+# define NAME_TOO_LONG		"Program name is too long"
+# define COMMENT_TOO_LONG	"Program comment is too long"
+# define NO_INSTRUCTION		"No instruction"
+# define WRONG_REG_NUMBER	"Wrong registry number at line "
+# define UNKNOWN_LABEL		"Unknown label found at line "
+# define INVALID_ARGS		"Invalid arguments at line "
+# define LEXER_ERROR		"Lexical error at line "
+# define PARSER_ERROR		"Parser error at line "
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -115,7 +119,6 @@ typedef struct			s_asm {
 
 void					get_comment(t_asm *a, int fd, size_t *n);
 void					get_name(t_asm *a, int fd, size_t *n);
-void					err_free_exit(t_asm *a, const char *err);
 void					print_usage_exit(void);
 void					add_input_line(t_asm *a, char *line, size_t n);
 void					add_token(t_asm *a, t_file *line, t_tok token, char *val);
@@ -126,17 +129,15 @@ void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
 
 void					header_error(t_asm *a, char *line);
-void					lex_error(t_asm *a, t_file *line, char *val);
-void					asm_error(t_asm *a, t_file *line, char *err);
-void					parser_error(t_asm *a, t_file *line);
-void					label_error(t_asm *a, t_file *line, char *label);
+void					asm_error(t_asm *a, t_file *line, char *str, const char *err);
+void					parser_error(t_asm *a, t_file *line, const char *err);
+void					err_free_exit(t_asm *a, const char *err);
 
 void					lexer(t_asm *a);
 void					redux(t_asm *a);
 void					parser(t_asm *a);
 void					get_labels(t_asm *a);
 void					free_all(t_asm *a);
-void					n_arg_error(t_asm *a, t_file *line);
 t_bool					dir_len(t_byte op_code);
 void					write_bytecode(t_asm *a, char *file);
 void					set_bytecode(t_asm *a);

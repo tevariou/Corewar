@@ -58,13 +58,9 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig, t_code *target)
 	}
 	if ((len -= tmp->size) < SHRT_MIN)
 		err_free_exit(a, FILE_OVERFLOW);
-	if (tmp == target)
-	{
-		ret = (unsigned short)len;
-		reverse_bytes(&ret, sizeof(ret));
-		return (ret);
-	}
-	return (0);
+	ret = (unsigned short)len;
+	reverse_bytes(&ret, sizeof(ret));
+	return (ret);
 }
 
 static unsigned short label_null_short(t_asm *a, t_code *orig)
@@ -88,7 +84,7 @@ static unsigned short label_null_short(t_asm *a, t_code *orig)
 	return (ret);
 }
 
-static unsigned short	label_address_short(t_asm *a, t_label *label, t_code *orig, char *str)
+static unsigned short	label_address_short(t_asm *a, t_label *label, t_code *orig)
 {
 	t_code			*target;
 	t_code			*tail;
@@ -103,10 +99,7 @@ static unsigned short	label_address_short(t_asm *a, t_label *label, t_code *orig
 			return (compute_len_short(a, orig, target));
 		target = target->next;
 	}
-	if (target->orig == label->target)
-		return (compute_len_short(a, orig, target));
-	label_error(a, orig->orig, str);
-	return (0);
+	return (compute_len_short(a, orig, target));
 }
 
 unsigned short			convert_label_short(t_asm *a, t_code *op, char *str)
@@ -115,16 +108,16 @@ unsigned short			convert_label_short(t_asm *a, t_code *op, char *str)
 	t_label	*tail;
 
 	if(!(label = a->labels))
-		label_error(a, op->orig, str);
+		asm_error(a, op->orig, str, UNKNOWN_LABEL);
 	tail = label->prev;
 	while (label != tail)
 	{
 		if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
-			return (label_address_short(a, label, op, str));
+			return (label_address_short(a, label, op));
 		label = label->next;	
 	}
 	if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
-		return (label_address_short(a, label, op, str));
-	label_error(a, op->orig, str);
+		return (label_address_short(a, label, op));
+	asm_error(a, op->orig, str, UNKNOWN_LABEL);
 	return (0);
 }

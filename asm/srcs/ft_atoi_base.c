@@ -38,18 +38,19 @@ void			reverse_bytes(void *n, size_t size)
 unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)
 {
 	unsigned char	reg;
+	char			*tmp;
 
-	str += 1;
+	tmp = str++;
 	reg = 0;
 	while (ft_isdigit(*str))
 	{
 		reg *= 10;
 		reg += *str++ - '0';
 		if (reg > REG_NUMBER)
-			asm_error(a, op->orig, WRONG_REG_NUMBER); 
+			asm_error(a, op->orig, tmp, WRONG_REG_NUMBER); 
 	}
 	if (!reg)
-		asm_error(a, op->orig, WRONG_REG_NUMBER);
+		asm_error(a, op->orig, tmp, WRONG_REG_NUMBER);
 	return (reg);
 }
 

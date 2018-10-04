@@ -69,7 +69,7 @@ extern t_op				g_op_tab[17];
 
 # define PROG_NAME_LENGTH		(128)
 # define COMMENT_LENGTH			(2048)
-# define SEPARATOR_LINE			(3)
+# define SEPARATOR_LINE			(4)
 # define COREWAR_EXEC_MAGIC		0xea83f3
 
 typedef struct			header_s

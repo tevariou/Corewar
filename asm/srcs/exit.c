@@ -17,7 +17,7 @@
 
 void		print_usage_exit(void)
 {
-	ft_putstr(USAGE);
+	ft_putendl_fd(USAGE, 2);
 	exit(EXIT_FAILURE);
 }
 
@@ -26,18 +26,7 @@ void		err_free_exit(t_asm *a, const char *err)
 	if (!err)
 		perror(NULL);
 	else
-		ft_putstr_fd(err, 2);
-	free_all(a);
-	exit(EXIT_FAILURE);
-}
-
-void		asm_error(t_asm *a, t_file *line, char *err)
-{
-	ft_putstr_fd(err, 2);
-	ft_putstr_fd(" at line ", 2);
-	ft_putnbr_fd(line->n, 2);
-	ft_putstr_fd(":\n", 2);
-	ft_putendl_fd(line->line, 2);
+		ft_putendl_fd(err, 2);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }
@@ -68,43 +57,22 @@ static void	output_error(t_asm *a, char *line, char *val)
 	free(tmp);
 }
 
-void		parser_error(t_asm *a, t_file *line)
+void		parser_error(t_asm *a, t_file *line, const char *err)
 {
-	ft_putstr_fd("Parser error at line ", 2);
+	ft_putstr_fd(err, 2);
 	ft_putnbr_fd(line->n, 2);
-	ft_putstr_fd(":\n", 2);
+	ft_putendl_fd(":", 2);
 	ft_putendl_fd(line->line, 2);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }
 
-void		lex_error(t_asm *a, t_file *line, char *val)
+void		asm_error(t_asm *a, t_file *line, char *str, const char *err)
 {
-	ft_putstr_fd("Lexical error at line ", 2);
+	ft_putstr_fd(err, 2);
 	ft_putnbr_fd(line->n, 2);
-	ft_putstr_fd(":\n", 2);
-	output_error(a, line->line, val);
-	free_all(a);
-	exit(EXIT_FAILURE);
-}
-
-void		n_arg_error(t_asm *a, t_file *line)
-{
-	ft_putstr_fd("Invalid arguments at line ", 2);
-	ft_putnbr_fd(line->n, 2);
-	ft_putstr_fd(":\n", 2);
-	ft_putstr_fd(line->line, 2);
-	ft_putstr_fd("\n", 2);
-	free_all(a);
-	exit(EXIT_FAILURE);
-}
-
-void		label_error(t_asm *a, t_file *line, char *label)
-{
-	ft_putstr_fd("Unknown label found at line ", 2);
-	ft_putnbr_fd(line->n, 2);
-	ft_putstr_fd(":\n", 2);
-	output_error(a, line->line, label);
+	ft_putendl_fd(":", 2);
+	output_error(a, line->line, str);
 	free_all(a);
 	exit(EXIT_FAILURE);
 }
