@@ -6,7 +6,7 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/04 09:31:30 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/04 09:32:56 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,6 @@ ITEMS 	= 	mars.c 							\
 		  	ft_registers.c					\
 			ft_get_params.c					\
 		  	ft_debug_display.c	 			\
-			ft_ocp.c						\
 			$(OPPDIR)/ft_get_opcode.c		\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
@@ -53,6 +52,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(OPPDIR)/xor.c 				\
 		  	$(NCUDIR)/ft_init_ncurse.c		\
 		  	$(NCUDIR)/ft_ncurses_display.c	\
+		  	$(NCUDIR)/ft_ncurses_get_input.c\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
