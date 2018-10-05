@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 21:36:10 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/05 10:39:35 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,18 @@ void	ft_info_ram(t_mars *mars)
 	if (!mars)
 		return ;
 	i = 0;
+	printf("Current_cycle : %d \n", mars->current_cycle);
 	while (i < MEM_SIZE)
 	{
 		if (!mars->memory[i][1])
 			printf("%02.2hhX ", mars->memory[i][0]);
 		else
-			printf("\33[91m%02.2X\33[39m ", mars->memory[i][0]);
+			printf("\33[9%dm%02.2X\33[39m ", mars->memory[i][1], mars->memory[i][0]);
 		i++;
 		if (!(i % 64))
 			printf("\n");
 	}
+	printf("\n\n");
 }
 
 void	ft_info_mars(t_mars *mars)

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 19:31:36 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/05 10:00:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,17 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 	tmp = NULL;
 	if (!*av)
 		return (0);
+	else if (ft_strequ("-dump", *av))
+	{
+		tmp = av[1];
+		while (ft_isdigit(*tmp))
+			tmp++;
+		if (*tmp)
+			return (-1);
+		mars->dump = atoi(av[1]);
+		printf("dump: %d\n", mars->dump);
+		return (2);
+	}
 	else if (ft_strequ("-n", *av))
 	{
 		tmp = av[1];
@@ -76,6 +87,7 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 	else if (ft_strequ("-d", *av))
 	{
 		mars->ft_display = &ft_debug_info;
+		mars->visualisor = 2;
 		return (1);
 	}
 	else

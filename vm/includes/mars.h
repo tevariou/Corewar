@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 18:05:38 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 09:56:28 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ struct						s_mars
 	t_processus				*process_lst;
 	void					(*ft_display)(t_mars *);
 	int						visualisor;
+	int						dump;
 	t_visu					visu;
 };
 
@@ -100,6 +101,7 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 */
 void						ft_debug_info(t_mars *mars);
 void						ft_ncurses_display(t_mars *mars);
+void						ft_info_ram(t_mars *mars);
 
 /*
 ** Ncurses
