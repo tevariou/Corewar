@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/05 16:15:03 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 18:53:52 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 
 	i = 2;
 	address = process->pc + 2;
+	process->pc = ft_global_restriction(process->pc);
 	while (i >= 0)
 	{
 		code = (ocp >> ((i + 1) * 2) & 3);
