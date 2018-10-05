@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 10:58:59 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 13:26:58 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,15 @@ typedef struct				s_processus
 	unsigned				bytes_to_jump;
 	struct s_processus		*next;
 }							t_processus;
+
+typedef struct				s_champion
+{
+	int						id;
+	int						id_color;
+	char					*name;
+	unsigned				nbr_of_live;
+	unsigned				last_cycle_live;
+}							t_champion;
 
 struct						s_mars
 {
