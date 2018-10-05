@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/05 13:53:09 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/05 19:18:17 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_stock_reg(t_processus *process, t_mars *mars, int i, int address)
 	else if (!(i - 1) && (process->opcode == &direct_load || process->opcode == &direct_store || process->opcode == &long_direct_load))
 		process->params[2 - i] = ft_get_mars_value(mars, address, REG);
 	else
-		process->params[2 - i] = ft_get_register(process, ft_get_mars_value(mars, address, REG) - 1);
+		process->params[2 - i] = ft_get_register(process, ft_get_mars_value(mars, address, REG));
 	return (REG);
 }
 
