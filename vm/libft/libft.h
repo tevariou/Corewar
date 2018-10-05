@@ -28,7 +28,7 @@ void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
 void	ft_strclr(char *s);
 t_bool	ft_strequ(const char *s1, const char *s2);
-
+int		ft_strhas_str(const char *str, const char *find);
 int		ft_printf(const char *format, ...);
 
 #endif
