@@ -96,7 +96,7 @@ unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
-unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
+unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsigned color);
 
 /*
 ** loop during battle
@@ -123,7 +123,7 @@ void 						ft_init_ncurses();
 */
 unsigned					ft_global_restriction(unsigned address);
 unsigned					ft_local_restriction(unsigned current_pc, unsigned target);
-
+int							ft_op_need_restriction(int (*op)(t_mars *, t_processus *));
 
 /*
 ** Opertations
@@ -147,5 +147,6 @@ int							or(t_mars *mars, t_processus *process);
 int							substraction(t_mars *mars, t_processus *process);
 int							xor(t_mars *mars, t_processus *process);
 int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp);
+t_processus					*ft_copy_process(t_processus *process, t_mars *mars, unsigned dest);
 
 #endif

@@ -19,14 +19,31 @@ unsigned	ft_global_restriction(unsigned address)
 	return (address);
 }
 
-unsigned	ft_local_restriction(unsigned current_pc, unsigned target)
+unsigned	ft_local_restriction(unsigned pc, unsigned target)
 {
-	unsigned destination;
+	/*
+	unsigned dest;
+	if (target < IDX_MOD / 2)
+		return (pc + target);
+	dest = target;
+	dest -= IDX_MOD / 2;
+	dest = dest % IDX_MOD;
+	return (dest + pc);
+*/
+	int dest;
 
-	destination = current_pc + target;
-	destination = destination - current_pc;
-	destination = destination %IDX_MOD;
-	destination = destination + current_pc;
-	destination = ft_global_restriction(current_pc);
-	return (destination);
+	dest = 0;
+	dest += target;
+	dest %= IDX_MOD;
+	if (target % IDX_MOD >  IDX_MOD / 2)
+		dest -= IDX_MOD;
+	return (dest + pc);
+}
+
+int	ft_op_need_restriction(int (*op)(t_mars *, t_processus *))
+{
+	if (op == &long_direct_load || op == &long_indirect_load || 
+		op == &long_fork || op == &jump)
+		return (0);
+	return (1);
 }

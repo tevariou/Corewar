@@ -13,7 +13,7 @@
 
 NAME	= corewar
 CC		= gcc
-CFLAGS	= -Wall  -Wextra -pedantic $(debug)
+CFLAGS	= -Wall  -Wextra -pedantic $(debug) -g
 # CFLAGS	+= -pedantic -fsanitize=address -g3
 SDIR	= srcs
 INC 	= ./libft/
@@ -59,7 +59,7 @@ ITEMS 	= 	mars.c 							\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
 			adressage.c						\
-
+			get_and_load_mars_values.c		\
 
 OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))
 

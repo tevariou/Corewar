@@ -29,7 +29,7 @@
 int		indirect_store(t_mars *mars, t_processus *process)
 {
 	ft_get_params(process, mars, DIRECT2, *mars->memory[process->pc + 1]);
-	ft_load_mars_value(mars, process->pc + process->params[1] + process->params[2], process->params[0]);
+	ft_load_mars_value(mars, process->pc + process->params[1] + process->params[2], process->params[0], process->player);
 	if (!process->params[0])
 		return (process->carry = 1);
 	return (process->carry = 0);

@@ -37,18 +37,17 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, unsigned dest)
 	i = 0;
 	while (i < REG_NUMBER * REG_SIZE)
 	{
-		copy->registers[i] = copy->registers[i];
+		copy->registers[i] = process->registers[i];
 		i++;
 	}
 	copy->player = process->player;
-	copy->next_instruction_cycle = process->next_instruction_cycle;
+	copy->next_instruction_cycle = process->next_instruction_cycle + 1;
 	copy->name = process->name;
 	copy->next = process->next;
 	copy->nbr_of_live = process->nbr_of_live;
 	copy->opcode = 0;
 	copy->carry = process->carry;
 	copy->last_cycle_live = process->last_cycle_live;
-	copy->next_instruction_cycle = process->next_instruction_cycle;
 	process->next = copy;
 	return(copy);
 }
@@ -57,9 +56,8 @@ int		ft_fork(t_mars *mars, t_processus *process)
 {
 	unsigned	dest;
 
-	dest = ft_get_mars_value(mars, 1, IND_SIZE);
-	dest = ft_local_restriction(process->pc, dest);
-	ft_copy_process(process, mars, dest);
+	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
+	ft_copy_process(process, mars, ft_global_restriction(process->pc + dest % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE;
 	return (SUCCESS);
 }

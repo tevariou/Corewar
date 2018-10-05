@@ -50,7 +50,7 @@ static int	execute_one_cycle(t_mars *mars)
 
 void		loop_through_battle(t_mars *mars)
 {
-	while (execute_one_cycle(mars) && mars->current_cycle < 2500)
+	while (execute_one_cycle(mars))
 	{
 		if (mars->visualisor > 0)
 			mars->ft_display(mars);
