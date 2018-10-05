@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 22:43:39 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/06 22:45:03 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 		if (*tmp)
 			return (-1);
 		mars->verbose = atoi(av[1]);
+		mars->visualisor = VERBOSE;
 		mars->ft_display = &ft_verbose;
 		return (2);
 	}

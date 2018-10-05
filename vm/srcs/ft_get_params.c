@@ -6,7 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2018/10/06 14:32:34 by lterrail         ###   ########.fr       */
+=======
+/*   Updated: 2018/10/05 16:15:03 by lmazeaud         ###   ########.fr       */
+>>>>>>> Update verbose with 1 - 2  and for options
 /*                                                                            */
 /* ************************************************************************** */
 

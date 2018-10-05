@@ -64,6 +64,5 @@ void		loop_through_battle(t_mars *mars)
 				ft_exit(mars, "");
 			}
 		ft_cycles_handler(mars);
-		ft_verbose(mars, NULL);
 	}
 }
