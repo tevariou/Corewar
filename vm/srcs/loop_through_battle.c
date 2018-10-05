@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 10:43:11 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:38:30 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static int	execut_process_turn(t_mars * mars, t_processus *current_process)
 		if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
 			ft_idle_turn(current_process, mars->current_cycle);
 	}
+	if (mars->visualisor > 0)
+			mars->ft_display(mars, current_process);
 	return (1);
 }
 
@@ -52,11 +54,12 @@ void		loop_through_battle(t_mars *mars)
 {
 	while (execute_one_cycle(mars) && mars->current_cycle < 2500)
 	{
-		if (mars->visualisor > 0)
-			mars->ft_display(mars);
+		// if (mars->visualisor > 0)
+		// 	mars->ft_display(mars);
 		if (!mars->visualisor && mars->dump > 0)
 			if ((mars->current_cycle % mars->dump) == 0)
 				ft_info_ram(mars);
 		ft_cycles_handler(mars);
+		ft_verbose(mars, NULL);
 	}
 }
