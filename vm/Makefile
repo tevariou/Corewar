@@ -6,7 +6,7 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/05 09:24:10 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/05 11:01:00 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ IDIR	= includes
 ODIR	= objs
 OPPDIR  = opp
 NCUDIR  = ncurses
+UTIDIR	= utils
 LDIR	= libft
 
 ITEMS 	= 	mars.c 							\
@@ -53,6 +54,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(NCUDIR)/ft_init_ncurse.c		\
 		  	$(NCUDIR)/ft_ncurses_display.c	\
 		  	$(NCUDIR)/ft_ncurses_get_input.c\
+			$(UTIDIR)/ft_print_usage.c		\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
@@ -76,10 +78,12 @@ $(OBJS) : | $(ODIR)
 $(ODIR):
 	$(MD) $(ODIR)
 	$(MD) $(ODIR)/opp
+	
 
 $(ODIR)/%.o : $(SDIR)/%.c $(INCLUDES)
-	@$(MD) $(ODIR)/opp
-	@$(MD) $(ODIR)/ncurses
+	@$(MD) $(ODIR)/$(OPPDIR)
+	@$(MD) $(ODIR)/$(NCUDIR)
+	@$(MD) $(ODIR)/$(UTIDIR)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(IDIR) -I $(LDIR)
 	@echo "compiling $<"
 

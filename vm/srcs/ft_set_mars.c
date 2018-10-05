@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 09:35:11 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 11:05:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ t_mars		*ft_set_mars(int ac, char **av)
 	mars = ft_new_mars();
 	if (!mars)
 		ft_exit(NULL, E_NO_MARS);
+	if (ac == 1)
+		ft_exit(mars, "bad av");
 	while (i < ac)
 	{
 		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
