@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:46:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 19:18:04 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:54:32 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,26 +35,27 @@ typedef struct				s_pf_opp
 	unsigned				value;
 	int						(*f)(t_mars *, t_processus *);
 	unsigned				latence;
+	char					*name;
 }							t_pf_opp;
 
 t_pf_opp					g_opps[NB_OPPS] =
 {
-	{LIVE, &live, 10},
-	{DIRECT_LOAD, &direct_load, 5},
-	{DIRECT_STORE, &direct_store, 5},
-	{ADDITION, &addition, 10},
-	{SUBSTRACTION, &substraction, 10},
-	{AND, &and, 6},
-	{OR, &or, 6},
-	{XOR, &xor, 6},
-	{JUMP, &jump, 20},
-	{INDIRECT_LOAD, &indirect_load, 25},
-	{INDIRECT_STORE, &indirect_store, 25},
-	{FORK, &ft_fork, 800},
-	{L_DIRECT_LOAD, &long_direct_load, 10},
-	{L_INDERECT_LOAD, &long_indirect_load, 50},
-	{L_FORK, &long_fork, 1000},
-	{AFF, &aff, 2},
+	{LIVE, &live, 10, "live"},
+	{DIRECT_LOAD, &direct_load, 5, "ld"},
+	{DIRECT_STORE, &direct_store, 5, "st"},
+	{ADDITION, &addition, 10, "add"},
+	{SUBSTRACTION, &substraction, 10, "sub"},
+	{AND, &and, 6, "and"},
+	{OR, &or, 6, "or"},
+	{XOR, &xor, 6, "xor"},
+	{JUMP, &jump, 20, "zjump"},
+	{INDIRECT_LOAD, &indirect_load, 25, "ldi"},
+	{INDIRECT_STORE, &indirect_store, 25, "sti"},
+	{FORK, &ft_fork, 800, "fork"},
+	{L_DIRECT_LOAD, &long_direct_load, 10, "lld"},
+	{L_INDERECT_LOAD, &long_indirect_load, 50, "lldi"},
+	{L_FORK, &long_fork, 1000, "lfork"},
+	{AFF, &aff, 2, "affs"},
 };
 
 #endif
