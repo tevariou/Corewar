@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 15:38:30 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 16:41:24 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,5 @@ void		loop_through_battle(t_mars *mars)
 			if ((mars->current_cycle % mars->dump) == 0)
 				ft_info_ram(mars);
 		ft_cycles_handler(mars);
-		ft_verbose(mars, NULL);
 	}
 }

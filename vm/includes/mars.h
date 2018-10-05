@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 16:09:04 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 17:17:26 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
+char						*ft_get_opcode_name(t_mars *mars, t_processus *process);
 unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
 
 /*
