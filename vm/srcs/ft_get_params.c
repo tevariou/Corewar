@@ -6,11 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2018/10/06 14:32:34 by lterrail         ###   ########.fr       */
-=======
-/*   Updated: 2018/10/05 16:15:03 by lmazeaud         ###   ########.fr       */
->>>>>>> Update verbose with 1 - 2  and for options
+/*   Updated: 2018/10/06 22:47:40 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +65,8 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 	i = 2;
 	process->pc = ft_global_restriction(process->pc);
 	address = process->pc + 2;
-	while (i >= 3 - ft_params_needed(process->opcode))
+	process->pc = ft_global_restriction(process->pc);
+	while (i >= 0)
 	{
 		code = (ocp >> ((i + 1) * 2) & 3);
 		if (code == REG_CODE)
