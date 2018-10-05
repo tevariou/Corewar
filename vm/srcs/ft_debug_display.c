@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 10:39:35 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:15:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,11 @@ void	ft_info_mars(t_mars *mars)
 	printf("cycle to die : %d --- \n\n", mars->cycle_teta);
 }
 
-void	ft_debug_info(t_mars *mars)
+void	ft_debug_info(t_mars *mars, t_processus *process)
 {
 	t_processus *tmp;
 
+	(void)process;
 	system("@cls||clear");
 	tmp = mars->process_lst;
 	while (tmp)

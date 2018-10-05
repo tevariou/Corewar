@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 11:05:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 13:45:34 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ t_mars		*ft_new_mars(void)
 	mars->process_lst = NULL;
 	mars->ft_display = NULL;
 	mars->visualisor = 0;
+	mars->verbose = -1;
 	mars->dump = -1;
 	return (mars);
 }

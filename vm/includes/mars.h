@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 10:58:59 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:16:27 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef unsigned char		t_byte;
 # define DIRECT2			2
 # define DIRECT4			4
 
+# define NO_VERBOSE			0
+
 typedef struct s_mars t_mars;
 typedef struct				s_processus
 {
@@ -63,9 +65,10 @@ struct						s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	t_processus				*process_lst;
-	void					(*ft_display)(t_mars *);
+	void					(*ft_display)(t_mars *, t_processus *);
 	int						visualisor;
 	int						dump;
+	int						verbose;
 	t_visu					visu;
 };
 
@@ -92,15 +95,16 @@ unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
 /*
 ** loop during battle
 */
-void						loop_through_battle(t_mars *marss);
+void						loop_through_battle(t_mars *mars);
 void						ft_cycles_handler(t_mars *mars);
 void						ft_move_pc(t_mars *mars, t_processus *process);
 
 /*
 ** Debug
 */
-void						ft_debug_info(t_mars *mars);
-void						ft_ncurses_display(t_mars *mars);
+void						ft_debug_info(t_mars *mars, t_processus *process);
+void						ft_ncurses_display(t_mars *mars, t_processus *process);
+int							ft_verbose(t_mars *mars, t_processus *process);
 void						ft_info_ram(t_mars *mars);
 void						ft_print_usage(void);
 

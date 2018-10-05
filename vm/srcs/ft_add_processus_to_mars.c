@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 10:00:29 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:40:44 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,17 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 		if (*tmp)
 			return (-1);
 		process->player = atoi(av[1]);
+		return (2);
+	}
+	else if (ft_strequ("-v", *av))
+	{
+		tmp = av[1];
+		while (ft_isdigit(*tmp))
+			tmp++;
+		if (*tmp)
+			return (-1);
+		mars->verbose = atoi(av[1]);
+		mars->ft_display = &ft_verbose;
 		return (2);
 	}
 	else if (ft_strequ("-a", *av))
