@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 11:05:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 14:03:01 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,11 @@ t_mars		*ft_set_mars(int ac, char **av)
 		ft_exit(NULL, E_NO_MARS);
 	if (ac == 1)
 		ft_exit(mars, "bad av");
-	while (i < ac)
+	while (i < ac && mars->count_players < 4)
 	{
 		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
 			ft_exit(mars, "bad av");
+		// ft_add_champ_to_mars(mars->players, current_champion);
 		mars->count_players++;
 		if (!current_champion->player)
 			current_champion->player = mars->count_players;

@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 13:26:58 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/05 13:51:31 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ typedef struct				s_champion
 	char					*name;
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
+	struct s_champion		*next;
 }							t_champion;
 
 struct						s_mars
@@ -72,6 +73,7 @@ struct						s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	t_processus				*process_lst;
+	t_champion				*champion_lst;
 	void					(*ft_display)(t_mars *);
 	int						visualisor;
 	int						dump;

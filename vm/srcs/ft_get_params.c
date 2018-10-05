@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 21:58:47 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/05 13:53:09 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,3 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 	process->bytes_to_jump = address;
 	return (SUCCESS);
 }
-
