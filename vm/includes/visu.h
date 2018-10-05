@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 13:56:19 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 14:44:16 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/05 14:06:12 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 
 # define ON			1
 # define OFF		0
+# define NCURSE		1
+# define DEBUG		2
 
 
 # include <ncurses.h>
