@@ -27,6 +27,7 @@ void	ft_info_processus(t_processus *process)
 	printf("next_instruction_cycle : %d\n", process->next_instruction_cycle);
 	printf("last alive : %d\n", process->last_cycle_live);
 	printf("jump address: %d\n", process->bytes_to_jump);
+	printf("carry: %d\n", process->carry);
 	while (i <= REG_NUMBER)
 	{
 		printf("register %2X = %2X || ", i, ft_get_register(process, i));

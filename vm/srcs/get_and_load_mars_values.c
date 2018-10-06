@@ -68,6 +68,7 @@ unsigned 		ft_load_mars_restricted_value(t_mars *mars, unsigned index, unsigned 
 
 	tmp = value;
 	i = REG_SIZE;
+	printf("i = %d", (short)index);
 	while (i > 0)
 	{
 		*mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)] = (t_byte)value % 256;

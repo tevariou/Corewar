@@ -40,7 +40,7 @@ static int	ft_stock_reg(t_processus *process, t_mars *mars, int i, int address)
 static int	ft_stock_indirect(t_processus *process, t_mars *mars, int i, int address)
 {
 	if (!i)
-			process->params[2 - i] = ft_get_mars_value(mars, address, INDEX);
+		process->params[2 - i] = ft_get_mars_value(mars, address, INDEX);
 	else
 		process->params[2 - i] = ft_get_mars_value(mars, ft_get_mars_value(mars, address, 1) + process->pc - 1, INDEX);
 	return (INDEX);
@@ -60,6 +60,7 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 	int i;
 	int code;
 	int address;
+
 
 	i = 2;
 	process->pc = ft_global_restriction(process->pc);

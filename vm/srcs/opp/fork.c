@@ -20,8 +20,8 @@
 ** @params dest	: DIRECT2 Address RAM
 **
 ** Genere un nouveau processus a l'adresse passée en parametre par copie 
-** du processus appelant. Le nouveau processus garde donc l'etat de tout 
-** les registres et du carry, seul le PC differe 
+** du processus appelant. Le nouveau processus garde donc l'etat de tout
+** les registres et du carry, seul le PC differe
 ** ( sauf dans le cas d'un fork %0 ).
 */
 
@@ -48,6 +48,9 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, unsigned dest)
 	copy->opcode = 0;
 	copy->carry = process->carry;
 	copy->last_cycle_live = process->last_cycle_live;
+	copy->params[0] = 0;
+	copy->params[1] = 0;
+	copy->params[2] = 0;
 	process->next = copy;
 	return(copy);
 }
@@ -57,7 +60,7 @@ int		ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
-	ft_copy_process(process, mars, ft_global_restriction(process->pc + dest % IDX_MOD));
+	ft_copy_process(process, mars, ft_global_restriction((short)(process->pc + dest) % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE;
 	return (SUCCESS);
 }
