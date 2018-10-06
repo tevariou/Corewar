@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 19:39:01 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:12:17 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,11 @@ void	ft_ncurses_info_mars(t_mars *mars)
 	wrefresh(v->info);
 }
 
-void	ft_ncurses_display(t_mars *mars)
+void	ft_ncurses_display(t_mars *mars, t_processus *process)
 {
 	t_visu	*v;
 
+	(void)process;
 	v = &mars->visu;
 	ft_ncurses_info_mars(mars);
 	ft_ncurses_info_ram(mars);

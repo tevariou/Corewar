@@ -33,6 +33,8 @@ static int	execut_process_turn(t_mars * mars, t_processus *current_process)
 		if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
 			ft_idle_turn(current_process, mars->current_cycle);
 	}
+	if (mars->visualisor > 0)
+			mars->ft_display(mars, current_process);
 	return (1);
 }
 
@@ -53,8 +55,8 @@ void		loop_through_battle(t_mars *mars)
 {
 	while (execute_one_cycle(mars))
 	{
-		if (mars->visualisor > 0)
-			mars->ft_display(mars);
+		// if (mars->visualisor > 0)
+		// 	mars->ft_display(mars);
 		if (!mars->visualisor && mars->dump > 0)
 			if (mars->current_cycle == mars->dump)
 			{
@@ -62,5 +64,6 @@ void		loop_through_battle(t_mars *mars)
 				ft_exit(mars, "");
 			}
 		ft_cycles_handler(mars);
+		ft_verbose(mars, NULL);
 	}
 }
