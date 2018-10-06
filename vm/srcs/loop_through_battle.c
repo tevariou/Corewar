@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 10:43:11 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/06 22:11:26 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,11 @@ void		loop_through_battle(t_mars *mars)
 		if (mars->visualisor > 0)
 			mars->ft_display(mars);
 		if (!mars->visualisor && mars->dump > 0)
-			if ((mars->current_cycle % mars->dump) == 0)
+			if (mars->current_cycle == mars->dump)
+			{
 				ft_info_ram(mars);
+				ft_exit(mars, "");
+			}
 		ft_cycles_handler(mars);
 	}
 }
