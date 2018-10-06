@@ -6,7 +6,7 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/05 14:08:35 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/06 23:38:34 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ ITEMS 	= 	mars.c 							\
 		  	$(NCUDIR)/ft_ncurses_get_input.c\
 			$(UTIDIR)/ft_print_usage.c		\
 			$(UTIDIR)/ft_verbose.c		\
+			$(UTIDIR)/ft_get_mars_options.c		\
 			loop_through_battle.c			\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\

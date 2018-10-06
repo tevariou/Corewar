@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 23:04:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/06 23:38:06 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef unsigned char		t_byte;
 typedef struct s_mars t_mars;
 typedef struct				s_processus
 {
+	int						id;
 	int						player;
 	int						carry;
 	char					*name;
@@ -61,6 +62,7 @@ typedef struct				s_champion
 	int						id_color;
 	char					*name;
 	unsigned				nbr_of_live;
+	unsigned				nb_process;
 	unsigned				last_cycle_live;
 	struct s_champion		*next;
 }							t_champion;
@@ -105,6 +107,8 @@ unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
 char						*ft_get_opcode_name(t_mars *mars, t_processus *process);
 unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsigned color);
+int							ft_is_visualisator(t_mars *mars, char **av);
+int							ft_is_dump_option(t_mars *mars, char **av);
 
 /*
 ** loop during battle
@@ -120,7 +124,7 @@ void						ft_debug_info(t_mars *mars, t_processus *process);
 void						ft_ncurses_display(t_mars *mars, t_processus *process);
 void						ft_verbose(t_mars *mars, t_processus *process);
 void						ft_info_ram(t_mars *mars);
-void						ft_print_usage(void);
+void						ft_print_usage(t_mars *mars);
 
 /*
 ** Ncurses

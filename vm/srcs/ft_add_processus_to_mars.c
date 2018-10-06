@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 23:04:15 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/06 23:49:45 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_processus		*ft_new_empty_processus(void)
 	if (!process)
 		return (NULL);
 	iterator_register = 0;
+	process->id = 0;
 	process->player = 0;
 	process->pc = 0;
 	process->next_instruction_cycle = 0;
@@ -42,22 +43,12 @@ t_processus		*ft_new_empty_processus(void)
 
 int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **av)
 {
+
 	char *tmp;
 
 	tmp = NULL;
 	if (!*av)
 		return (0);
-	else if (ft_strequ("-dump", *av))
-	{
-		tmp = av[1];
-		while (ft_isdigit(*tmp))
-			tmp++;
-		if (*tmp)
-			return (-1);
-		mars->dump = atoi(av[1]);
-		printf("dump: %d\n", mars->dump);
-		return (2);
-	}
 	else if (ft_strequ("-n", *av))
 	{
 		tmp = av[1];
@@ -66,18 +57,6 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 		if (*tmp)
 			return (-1);
 		process->player = atoi(av[1]);
-		return (2);
-	}
-	else if (ft_strequ("-v", *av))
-	{
-		tmp = av[1];
-		while (ft_isdigit(*tmp))
-			tmp++;
-		if (*tmp)
-			return (-1);
-		mars->verbose = atoi(av[1]);
-		mars->visualisor = VERBOSE;
-		mars->ft_display = &ft_verbose;
 		return (2);
 	}
 	else if (ft_strequ("-a", *av))
@@ -89,18 +68,6 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 			return (-1);
 		process->pc = atoi(av[1]);
 		return (2);
-	}
-	else if (ft_strequ("-i", *av))
-	{
-		mars->ft_display = &ft_ncurses_display;
-		mars->visualisor = NCURSE;
-		return (1);
-	}
-	else if (ft_strequ("-d", *av))
-	{
-		mars->ft_display = &ft_debug_info;
-		mars->visualisor = DEBUG;
-		return (1);
 	}
 	else
 	{
@@ -136,6 +103,8 @@ t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, in
 	process = ft_new_empty_processus();
 	if (!process)
 		return (NULL);
+	i += ft_is_dump_option(mars, &av[*current_index]);
+	i += ft_is_visualisator(mars, &av[*current_index]);
 	while (!process->name && (*current_index + i) < ac)
 	{
 		if ((k = ft_add_parameter_to_processus(mars, process,
@@ -158,6 +127,7 @@ void		ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *proc
 	champion->name = process->name;
 	champion->nbr_of_live = 0;
 	champion->last_cycle_live = 0;
+	champion->nb_process = 0;
 	champion->next = mars->champion_lst;
 	mars->champion_lst = champion;
 }
