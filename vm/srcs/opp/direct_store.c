@@ -27,10 +27,20 @@
 
 int direct_store(t_mars *mars, t_processus *process)
 {
-	ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]);
-	if ((*mars->memory[process->pc + 1] << 4 & 3) == REG_CODE && ft_is_register(process->params[1]))
+	if (*mars->memory[ft_global_restriction(process->pc + 1)] == 0x50)
+	{
+		process->params[0] = ft_get_register(process, *mars->memory[process->pc + 2]);
+		process->params[1] = ft_get_mars_value(mars, process->pc + 3, 1);
 		ft_load_register(process, process->params[1], process->params[0]);
-	else if (ft_memory_is_register(mars, process->pc + 2))
-		ft_load_mars_value(mars, (short)(process->pc + process->params[1]) % IDX_MOD, process->params[0], process->player);
+		process->bytes_to_jump = process->pc + 4;
+	}
+	else
+	{
+		ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]);
+		if ((*mars->memory[process->pc + 1] << 4 & 3) == REG_CODE && ft_is_register(process->params[1]))
+			ft_load_register(process, process->params[1], process->params[0]);
+		else if (ft_memory_is_register(mars, process->pc + 2))
+			ft_load_mars_value(mars, (short)(process->pc + process->params[1]) % IDX_MOD, process->params[0], process->player);
+	}
 	return (process->carry);
 }

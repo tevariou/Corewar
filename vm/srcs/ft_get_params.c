@@ -60,8 +60,9 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 	int i;
 	int code;
 	int address;
+	int modifier;
 
-
+	modifier = ft_params_needed(process->pc);
 	i = 2;
 	process->pc = ft_global_restriction(process->pc);
 	address = process->pc + 2;
