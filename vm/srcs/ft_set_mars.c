@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 14:03:01 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/05 20:18:08 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ t_mars		*ft_new_mars(void)
 	mars->cycle_teta = CYCLE_TO_DIE;
 	mars->current_cycle = 0;
 	mars->process_lst = NULL;
+	mars->champion_lst = NULL;
 	mars->ft_display = NULL;
 	mars->visualisor = 0;
 	mars->dump = -1;
@@ -62,14 +63,14 @@ t_mars		*ft_set_mars(int ac, char **av)
 		ft_exit(NULL, E_NO_MARS);
 	if (ac == 1)
 		ft_exit(mars, "bad av");
-	while (i < ac && mars->count_players < 4)
+	while (i < ac && mars->count_players < 5)
 	{
 		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
 			ft_exit(mars, "bad av");
-		// ft_add_champ_to_mars(mars->players, current_champion);
 		mars->count_players++;
 		if (!current_champion->player)
 			current_champion->player = mars->count_players;
+		ft_add_champ_to_mars(mars, mars->champion_lst, current_champion);
 		ft_add_processus_to_mars(mars, current_champion);
 	}
 	if (mars->count_players < 1 || mars->count_players > MAX_PLAYERS)

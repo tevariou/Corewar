@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 13:51:31 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/05 16:38:34 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ t_processus					*ft_argv_have_champ(t_mars *mars, char **av, int *current_index,
 	int ac);
 void						ft_add_processus_to_mars(t_mars *mars,
 	t_processus *process);
+void						ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *process);
 int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(t_mars *mars,
 	t_processus *process, int fd);
@@ -96,9 +97,11 @@ void						ft_exit(t_mars *mars, char *error);
 unsigned					ft_get_register(t_processus *process, unsigned index);
 unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
+int							ft_is_register(int index);
+int							ft_memory_is_register(t_mars *mars, int address);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
-unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value);
+unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsigned color);
 
 /*
 ** loop during battle
@@ -125,7 +128,7 @@ void 						ft_init_ncurses();
 */
 unsigned					ft_global_restriction(unsigned address);
 unsigned					ft_local_restriction(unsigned current_pc, unsigned target);
-
+int							ft_op_need_restriction(int (*op)(t_mars *, t_processus *));
 
 /*
 ** Opertations
@@ -149,5 +152,6 @@ int							or(t_mars *mars, t_processus *process);
 int							substraction(t_mars *mars, t_processus *process);
 int							xor(t_mars *mars, t_processus *process);
 int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp);
+t_processus					*ft_copy_process(t_processus *process, t_mars *mars, unsigned dest);
 
 #endif

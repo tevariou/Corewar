@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 14:28:42 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/05 16:40:36 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,19 @@ t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, in
 		return (NULL);
 	*current_index += i;
 	return (process);
+}
+
+void		ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *process)
+{
+	if (!(champion = (t_champion *)malloc(sizeof(t_champion))))
+		ft_exit(mars, "malloc error");
+	champion->id = process->player;
+	champion->id_color = mars->count_players;
+	champion->name = process->name;
+	champion->nbr_of_live = 0;
+	champion->last_cycle_live = 0;
+	champion->next = mars->champion_lst;
+	mars->champion_lst = champion;
 }
 
 /*

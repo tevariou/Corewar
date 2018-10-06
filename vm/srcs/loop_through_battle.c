@@ -5,6 +5,7 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
 /*   Updated: 2018/10/06 22:11:26 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
@@ -50,7 +51,7 @@ static int	execute_one_cycle(t_mars *mars)
 
 void		loop_through_battle(t_mars *mars)
 {
-	while (execute_one_cycle(mars) && mars->current_cycle < 2500)
+	while (execute_one_cycle(mars))
 	{
 		if (mars->visualisor > 0)
 			mars->ft_display(mars);

@@ -6,17 +6,21 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 16:11:05 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/06 14:52:49 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
+#include "libft.h"
 
 unsigned		ft_get_register(t_processus *process, unsigned index)
 {
 	unsigned value;
 	int i;
 
+	if (!index)
+		return (0);
+	index--;
 	if (index > REG_NUMBER)
 		return (0);
 	value = 0;
@@ -34,10 +38,11 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 {
 	int i;
 
+	if (!index)
+		return (0);
 	if (index > REG_NUMBER)
 		return (0);
 	i = 0;
-	index++;
 	while (++i <= REG_SIZE)
 	{
 		process->registers[index * REG_SIZE - i] = value % 256;
@@ -46,34 +51,16 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 	return (1);
 }
 
-unsigned		ft_get_mars_value(t_mars *mars, unsigned index, unsigned size)
+t_bool		ft_is_register(int index)
 {
-	unsigned	i;
-	unsigned	value;
-
-	value = 0;
-	i = 0;
-	while (i < size)
-	{
-		value = value * 256 +
-			(t_byte)*mars->memory[ft_global_restriction(index + i)];
-		i++;
-	}
-	return (value);
+	if (index < 1 || index > 16)
+		return (0);
+	return (1);
 }
 
-unsigned 		ft_load_mars_value(t_mars *mars, unsigned index, unsigned value)
+t_bool		ft_memory_is_register(t_mars *mars, int address)
 {
-	int			i;
-	unsigned	tmp;
-
-	tmp = value;
-	i = REG_SIZE;
-	while (i > 0)
-	{
-		*mars->memory[ft_global_restriction(index + i - 1)] = (t_byte)value % 256;
-		i--;
-		value = value / 256;
-	}
-	return (SUCCESS);
+	if (!*mars->memory[ft_global_restriction(address)] || *mars->memory[ft_global_restriction(address)] > 16)
+		return (0);
+	return (1);
 }

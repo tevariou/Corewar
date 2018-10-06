@@ -14,5 +14,5 @@
 
 void	ft_move_pc(t_mars *mars, t_processus *process)
 {
-	process->pc = process->bytes_to_jump;
+	process->pc = ft_global_restriction(process->bytes_to_jump);
 }
