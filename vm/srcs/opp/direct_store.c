@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:52:07 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 17:55:24 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/06 10:45:15 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 ** passe a l'etat un, sinon a l'etat zero.
 */
 
-int		direct_store(t_mars *mars, t_processus *process)
+int direct_store(t_mars *mars, t_processus *process)
 {
 	ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]);
 	if ((*mars->memory[process->pc + 1] << 4 & 3) == REG_CODE)

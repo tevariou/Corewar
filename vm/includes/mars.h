@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 13:51:31 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/05 16:38:34 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ t_processus					*ft_argv_have_champ(t_mars *mars, char **av, int *current_index,
 	int ac);
 void						ft_add_processus_to_mars(t_mars *mars,
 	t_processus *process);
+void						ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *process);
 int							ft_prepare_mars_memory(t_mars *mars);
 int							ft_load_champ_from_file_to_memory(t_mars *mars,
 	t_processus *process, int fd);
