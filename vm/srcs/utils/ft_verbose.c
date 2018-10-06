@@ -6,17 +6,17 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 12:42:46 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/05 18:35:44 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/06 23:05:48 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 
-int		ft_verbose(t_mars *mars, t_processus *process)
+void		ft_verbose(t_mars *mars, t_processus *process)
 {
 	// printf("%d\n", process->player);
 	if (mars->verbose == -1)
-		return (NO_VERBOSE);
+		return ;
 	if (mars->verbose & 0x01)
 	{
 		if (mars->current_cycle == process->last_cycle_live)
@@ -41,5 +41,4 @@ int		ft_verbose(t_mars *mars, t_processus *process)
 		printf("Death\n");
 	if ((mars->verbose >> 4) & 0x01)
 		printf("PC\n");
-	return (1);
 }

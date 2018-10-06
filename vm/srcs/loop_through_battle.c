@@ -58,7 +58,7 @@ void		loop_through_battle(t_mars *mars)
 		// if (mars->visualisor > 0)
 		// 	mars->ft_display(mars);
 		if (!mars->visualisor && mars->dump > 0)
-			if (mars->current_cycle == mars->dump)
+			if (mars->current_cycle == (unsigned)mars->dump)
 			{
 				ft_info_ram(mars);
 				ft_exit(mars, "");
