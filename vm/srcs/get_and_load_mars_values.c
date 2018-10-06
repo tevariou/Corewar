@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 16:11:05 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/06 14:06:54 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ unsigned 		ft_load_mars_restricted_value(t_mars *mars, unsigned index, unsigned 
 	i = REG_SIZE;
 	while (i > 0)
 	{
+		sleep(50);
 		*mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)] = (t_byte)value % 256;
 		mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)][1] = color;
 		i--;

@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 16:11:05 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/06 14:52:49 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ unsigned		ft_get_register(t_processus *process, unsigned index)
 	unsigned value;
 	int i;
 
+	if (!index)
+		return (0);
 	index--;
 	if (index > REG_NUMBER)
 		return (0);
@@ -35,7 +37,8 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 {
 	int i;
 
-
+	if (!index)
+		return (0);
 	if (index > REG_NUMBER)
 		return (0);
 	i = 0;

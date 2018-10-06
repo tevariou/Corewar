@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:14:56 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/05 19:18:17 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/06 14:32:34 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_stock_reg(t_processus *process, t_mars *mars, int i, int address)
 static int	ft_stock_indirect(t_processus *process, t_mars *mars, int i, int address)
 {
 	if (!i)
-			process->params[2 - i] = ft_get_mars_value(mars, address, INDEX);
+		process->params[2 - i] = ft_get_mars_value(mars, address, INDEX);
 	else
 		process->params[2 - i] = ft_get_mars_value(mars, ft_get_mars_value(mars, address, 1) + process->pc - 1, INDEX);
 	return (INDEX);
