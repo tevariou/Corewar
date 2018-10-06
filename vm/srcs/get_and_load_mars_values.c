@@ -38,7 +38,7 @@ unsigned 		ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsi
 	while (i > 0)
 	{
 		*mars->memory[ft_global_restriction(index + i - 1)] = (t_byte)value % 256;
-		mars->memory[ft_global_restriction(index + i - 1)][1] = color;
+		mars->memory[ft_global_restriction(index + i - 1)][1] = color + 1;
 		i--;
 		value = value / 256;
 	}
@@ -71,7 +71,7 @@ unsigned 		ft_load_mars_restricted_value(t_mars *mars, unsigned index, unsigned 
 	while (i > 0)
 	{
 		*mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)] = (t_byte)value % 256;
-		mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)][1] = color;
+		mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)][1] = color + 1;
 		i--;
 		value = value / 256;
 	}

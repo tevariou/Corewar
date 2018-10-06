@@ -97,6 +97,8 @@ void						ft_exit(t_mars *mars, char *error);
 unsigned					ft_get_register(t_processus *process, unsigned index);
 unsigned					ft_load_register(t_processus *p, unsigned index,
 	unsigned value);
+int							ft_is_register(int index);
+int							ft_memory_is_register(t_mars *mars, int address);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
 unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsigned color);

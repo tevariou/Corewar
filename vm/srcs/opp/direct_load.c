@@ -27,7 +27,8 @@
 int		direct_load(t_mars *mars, t_processus *process)
 {
 	ft_get_params(process, mars, DIRECT4, *mars->memory[process->pc + 1]);
-	ft_load_register(process, process->params[1], process->params[0]);
+ 	if (ft_is_register(process->params[1]))
+		ft_load_register(process, process->params[1], process->params[0]);
 	if (!process->params[0])
 		return (process->carry = 1);
 	return (process->carry = 0);
