@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 23:38:06 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 00:25:48 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ void						ft_print_usage(t_mars *mars);
 ** Ncurses
 */
 void 						ft_init_ncurses();
+void						ft_ncurses_print_live(t_mars *mars);
 
 /*
 ** restriction addressage

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 15:12:17 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 00:27:10 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,8 @@ void	ft_ncurses_display(t_mars *mars, t_processus *process)
 	v = &mars->visu;
 	ft_ncurses_info_mars(mars);
 	ft_ncurses_info_ram(mars);
+	ft_ncurses_print_live(mars);
+	wrefresh(v->live);
 	wrefresh(v->arena);
 	usleep(v->sleep);
 	if (v->pause == OFF)
