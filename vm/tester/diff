@@ -1,0 +1,2062 @@
+2c2
+< 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 add") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc add") !
+10c10
+< 0x0240 : 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0240 : 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 aff") !
+0a1
+> * Player 1, weighing 10 bytes, "tester" ("test ocp 0x0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc aff") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 and") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc and") !
+8c8
+< 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 00 00 00 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+4c4
+< 0x00c0 : 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 06 f4 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+---
+> 0x00c0 : 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+8,9c8,9
+< 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 02 d0 02 00 00 00 
+< 0x0200 : 02 02 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+---
+> 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0200 : 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+12c12
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+16,17c16,17
+< 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0400 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 
+> 0x0400 : 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 ld") !
+2c2
+< 0x0040 : 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 03 03 03 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 ld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc ld") !
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 02 d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+9,10c9,10
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d0 02 00 00 00 00 00 00 00 00 00 00 03 e8 00 00 00 00 
+< 0x0240 : 00 00 00 00 00 00 03 e8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 68 03 01 fe 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+57c57
+< 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 00 00 00 01 02 00 00 00 00 00 00 00 00 00 00 ff ff ff e6 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 00 d0 00 01 05 00 00 00 00 00 00 00 00 00 00 ff ff ff e6 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 ldi") !
+2c2
+< 0x0040 : 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 70 03 00 39 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c ldi") !
+2c2
+< 0x0040 : 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 03 70 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc ldi") !
+2c2
+< 0x0040 : 00 00 01 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 ldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc ldi") !
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0a e4 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+11c11
+< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a e4 01 8c 00 00 00 00 00 00 00 00 00 00 00 
+1c1
+< 0x0000 : 0a e4 00 03 00 00 03 ea a4 ff fa 00 02 03 0a 00 00 03 ef 02 03 0a a4 03 e8 00 02 00 00 ff d4 03 e8 0a 64 03 00 05 03 03 70 03 03 e8 0a a4 ff d4 00 00 03 03 70 03 03 e8 0a e4 00 03 00 05 00 02 
+---
+> 0x0000 : 0a e4 00 03 00 04 03 0a a4 ff fa 00 02 03 0a a4 01 f4 00 02 03 0a a4 03 e8 00 02 03 03 70 03 03 e8 0a 64 03 00 05 03 03 70 03 03 e8 0a a4 ff d4 00 00 03 03 70 03 03 e8 0a e4 00 03 00 05 00 02 
+9c9
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 70 03 00 00 00 00 00 00 00 00 0a e4 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+57c57
+< 0x0e00 : 00 00 00 00 00 00 00 00 03 fe 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+57c57
+< 0x0e00 : 00 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0e00 : 00 00 00 00 00 00 ff ff d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 lld") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc lld") !
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+57c57
+< 0x0e00 : 00 00 00 00 00 00 00 00 00 00 0b 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a e4 04 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 lldi") !
+2c2
+< 0x0040 : 00 00 00 72 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 lldi") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc lldi") !
+4c4
+< 0x00c0 : 02 00 02 02 d0 02 00 02 02 00 01 0e da 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+---
+> 0x00c0 : 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+8c8
+< 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 d0 02 00 00 00 02 02 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+12c12
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x02c0 : 00 00 00 00 00 00 00 00 00 03 70 03 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+16c16
+< 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 or") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc or") !
+1,2c1,2
+< 0x0000 : 02 90 00 00 00 64 03 03 50 03 04 00 00 00 64 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0000 : 02 90 00 00 00 64 03 03 50 03 04 03 70 04 00 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 st") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc st") !
+1c1
+< 0x0000 : 0b 78 01 00 0f 03 e8 02 90 00 00 00 08 02 0b 68 02 ff f2 03 e8 0b 58 01 02 03 ea 0b 74 02 00 01 01 0b 54 00 00 00 08 58 00 01 00 00 0b 54 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0000 : 0b 78 01 00 0f 03 e8 02 90 00 00 00 08 02 0b 68 02 ff f2 03 e8 0b 58 01 02 03 ea 00 00 00 08 00 00 00 08 02 01 01 0b 58 00 01 00 00 0b 54 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+8,9c8,9
+< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0200 : 00 00 00 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+16,17c16,17
+< 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 
+< 0x0400 : 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0400 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+41c41
+< 0x0a00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0a00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 sti") !
+3c4
+< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+6c6
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0140 : 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+22c22
+< 0x0540 : 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0540 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 10 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 14 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 18 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 1c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c2
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+14c14
+< 0x0340 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0340 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 20 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 24 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 28 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 2c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 sti") !
+3c4
+< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 50 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 54 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 58 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 5c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 60 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 64 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 68 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 6c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 sti") !
+2c3
+< 0x0040 : 00 00 00 0b 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 70 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 sti") !
+2c3
+< 0x0040 : 00 00 00 0b 74 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 74 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 sti") !
+2c3
+< 0x0040 : 00 00 00 0b 78 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 78 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c sti") !
+2c3
+< 0x0040 : 00 00 00 0b 7c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 7c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 sti") !
+3c4
+< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c sti") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 90 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 94 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 98 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 9c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b a0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b a4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b a8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b ac 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 sti") !
+2c3
+< 0x0040 : 00 00 00 0b b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b b0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 sti") !
+2c3
+< 0x0040 : 00 00 00 0b b4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b b4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 sti") !
+2c3
+< 0x0040 : 00 00 00 0b b8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b b8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc sti") !
+2c3
+< 0x0040 : 00 00 00 0b bc 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b bc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc sti") !
+3c4
+< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 sti") !
+3,12c4,13
+< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 sti") !
+3,12c4,13
+< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 sti") !
+3,12c4,13
+< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc sti") !
+3,12c4,13
+< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
+< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b d0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b d4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b d8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b dc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b e0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b e4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b e8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b ec 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 sti") !
+2,7c3,8
+< 0x0040 : 00 00 00 0b f0 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b f0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 sti") !
+2,7c3,8
+< 0x0040 : 00 00 00 0b f4 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b f4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 sti") !
+2,7c3,8
+< 0x0040 : 00 00 00 0b f8 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b f8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc sti") !
+2,7c3,8
+< 0x0040 : 00 00 00 0b fc 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
+< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
+< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
+< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b fc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+1c1
+< 0x0000 : 02 90 00 00 00 64 02 0b 68 02 00 00 80 07 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0000 : 02 90 00 00 00 64 02 0b 68 02 00 00 80 07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+57c57
+< 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+6c6
+< 0x0140 : 00 03 03 70 01 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0140 : 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c2
+< 0x0040 : 00 00 00 00 01 00 00 00 00 03 70 03 0b 03 03 70 01 01 00 0b 0b 00 06 a4 00 00 00 00 00 00 00 00 0a 02 90 00 00 00 00 0a 0b 68 04 ff e9 ff fd 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 00 01 00 00 00 00 03 70 03 0b 03 70 03 01 01 00 0b 0b 00 06 a4 00 00 00 00 00 00 00 00 0a 02 90 00 00 00 00 0a 0b 68 04 ff e9 ff fd 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+6c6
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c2
+< 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc sub") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 xor") !
+0a1
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc xor") !
+3c3
+< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+---
+> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
