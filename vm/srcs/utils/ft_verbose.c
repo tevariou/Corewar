@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 12:42:46 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/06 23:05:48 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 21:14:32 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void		ft_verbose(t_mars *mars, t_processus *process)
 	{
 		if (ft_get_opcode_name(mars, process) != NULL)
 		{
-			printf("Player %d | %s", process->player, ft_get_opcode_name(mars, process));
+			printf("Proc %d | %s", process->id, ft_get_opcode_name(mars, process));
 			printf(" - %d %d %d\n", process->params[0], process->params[1], process->params[2]);
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 23:49:45 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 21:03:16 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 	char *tmp;
 
 	tmp = NULL;
+	process->id = mars->nb_process;
 	if (!*av)
 		return (0);
 	else if (ft_strequ("-n", *av))
@@ -107,6 +108,7 @@ t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, in
 	i += ft_is_visualisator(mars, &av[*current_index]);
 	while (!process->name && (*current_index + i) < ac)
 	{
+		mars->nb_process++;
 		if ((k = ft_add_parameter_to_processus(mars, process,
 						&av[*current_index + i])) == -1)
 			return (NULL);
@@ -127,7 +129,7 @@ void		ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *proc
 	champion->name = process->name;
 	champion->nbr_of_live = 0;
 	champion->last_cycle_live = 0;
-	champion->nb_process = 0;
+	champion->nb_process = 1;
 	champion->next = mars->champion_lst;
 	mars->champion_lst = champion;
 }

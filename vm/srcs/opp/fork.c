@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 19:13:24 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/07 21:12:24 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, unsigned dest)
 		copy->registers[i] = process->registers[i];
 		i++;
 	}
+	copy->id = mars->nb_process;
 	copy->player = process->player;
 	copy->next_instruction_cycle = process->next_instruction_cycle + 1;
 	copy->name = process->name;
@@ -60,6 +61,7 @@ int		ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
+	mars->nb_process++;
 	ft_copy_process(process, mars, ft_global_restriction((short)(process->pc + dest) % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE;
 	return (SUCCESS);

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 00:25:48 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 21:01:03 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ struct						s_mars
 	unsigned				current_cycle;
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
+	unsigned				nb_process;
 	t_processus				*process_lst;
 	t_champion				*champion_lst;
 	void					(*ft_display)(t_mars *, t_processus *);

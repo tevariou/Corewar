@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 16:21:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 21:27:22 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	ft_ncurses_info_mars(t_mars *mars)
 	wprintw(v->info, "cycle delta : %d --- \n\n", mars->cycle_delta);
 	wprintw(v->info, "next cycle to die : %d --- \n\n", mars->cycle_to_die);
 	wprintw(v->info, "cycle to die : %d --- \n\n", mars->cycle_teta);
-	wprintw(v->info, "pause : %d --- \n\n", v->pause);
+	wprintw(v->info, "nb process %d --- \n\n", mars->nb_process);
 	champ = mars->champion_lst;
 	while (champ)
 	{
