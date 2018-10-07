@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/04 13:43:51 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/07 00:41:44 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/07 16:32:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ void	ft_ncurses_print_live(t_mars *mars)
 	while (champ)
 	{
 		i = -1;
+		wattron(v->live, COLOR_PAIR(champ->id_color));
 		wprintw(v->live, "%s : %-5d ", champ->name, champ->nbr_of_live);
 		while (++i < champ->nbr_of_live)
-			wprintw(v->live,"%lc", '+');
+			wprintw(v->live,"%C", L'▓');
 		wprintw(v->live, "\n");
+		wattroff(v->live, COLOR_PAIR(champ->id_color));
 		champ = champ->next;
 	}
 }
