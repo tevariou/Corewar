@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 21:27:22 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/08 15:54:42 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,27 @@
 void	ft_ncurses_print_champs(t_mars *mars, t_champion *champ)
 {
 	t_visu		*v;
-	unsigned	i;
 
 	v = &mars->visu;
-	i = 0;
 	if (!champ)
 		ft_exit(NULL, "no process");
-	wattron(v->info, COLOR_PAIR(0));
+	wattron(v->info, COLOR_PAIR(12));
 	wprintw(v->info, "\nChampion : ");
-	wattroff(v->info, COLOR_PAIR(0));
+	wattroff(v->info, COLOR_PAIR(12));
 	wattron(v->info, COLOR_PAIR(champ->id_color));
 	wprintw(v->info, "%s\n", champ->name);
 	wattroff(v->info, COLOR_PAIR(champ->id_color));
 
-	wattron(v->info, COLOR_PAIR(0));
+	wattron(v->info, COLOR_PAIR(12));
 	wprintw(v->info, "Nb process : ");
 	wattroff(v->info, COLOR_PAIR(0));
 	wattron(v->info, COLOR_PAIR(champ->id_color));
 	wprintw(v->info, "%u\n", champ->nb_process);
 	wattroff(v->info, COLOR_PAIR(champ->id_color));
 
-	wattron(v->info, COLOR_PAIR(0));
+	wattron(v->info, COLOR_PAIR(12));
 	wprintw(v->info, "Last Cycle Live : ");
-	wattroff(v->info, COLOR_PAIR(0));
+	wattroff(v->info, COLOR_PAIR(12));
 	wattron(v->info, COLOR_PAIR(champ->id_color));
 	wprintw(v->info, "%u\n", champ->last_cycle_live);
 	wattroff(v->info, COLOR_PAIR(champ->id_color));
@@ -103,6 +101,7 @@ void	ft_ncurses_info_mars(t_mars *mars)
 		ft_ncurses_print_champs(mars, champ);
 		champ = champ->next;
 	}
+	ft_ncurses_print_controlers(v);
 	wrefresh(v->info);
 }
 
@@ -115,14 +114,9 @@ void	ft_ncurses_display(t_mars *mars, t_processus *process)
 	ft_ncurses_info_mars(mars);
 	ft_ncurses_info_ram(mars);
 	ft_ncurses_print_live(mars);
+	ft_ncurses_handle_pause(v);
+	wrefresh(v->info);
 	wrefresh(v->live);
 	wrefresh(v->arena);
 	usleep(v->sleep);
-	if (v->pause == OFF)
-		while (1)
-		{
-			if (v->pause == ON)
-				break ;
-			usleep(500);
-		}
 }
