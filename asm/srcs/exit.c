@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 19:48:14 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 20:26:01 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void		err_free_exit(t_asm *a, const char *err)
 		perror(NULL);
 	else
 		ft_putendl_fd(err, 2);
-	free_all(a);
+	if (a)
+		free_all(a);
 	exit(EXIT_FAILURE);
 }
 

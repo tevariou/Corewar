@@ -6,14 +6,14 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:55 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 23:50:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 23:32:22 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
 
-static void		record_prog_name(t_asm *a, char *line, char *s)
+static void		record_name(t_asm *a, char *line, char *s)
 {
 	size_t	len;
 	
@@ -32,7 +32,7 @@ static void		record_prog_name(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
+char		*get_quote(t_asm *a, int fd, size_t *n, char *line)
 {
 	char	*s;
 	char	*buff;
@@ -51,24 +51,29 @@ static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
 	{
 		if (ret < 0)
 			err_free_exit(a, NULL);
-		tmp = line;
-		line = ft_strjoin(line, buff);
-		free(tmp);
+		if (!(tmp = ft_strjoin(line, buff)))
+		{
+			free(line);
+			ft_strdel(&buff);
+			err_free_exit(a, NULL);
+		}
+		free(line);
+		line = tmp;
 		ft_strdel(&buff);
-		if (!line)
+		if (!(tmp = ft_strjoin(line, "\n")))
+		{
+			free(line);
 			err_free_exit(a, NULL);
-		tmp = line;
-		line = ft_strjoin(line, "\n");
-		free(tmp);
-		if (!line)
-			err_free_exit(a, NULL);
+		}
+		free(line);
+		line = tmp;
 		if (!(*n += 1))
 			err_free_exit(a, FILE_OVERFLOW);
 	}
 	ft_strclr(line + ft_strlen(line) - 1);
 	if (!ret)
 		header_error(a, line);
-	record_prog_name(a, line, ft_strchr(line, '"') + 1);
+	return (line);
 }
 
 void		get_name(t_asm *a, int fd, size_t *n)
@@ -85,17 +90,22 @@ void		get_name(t_asm *a, int fd, size_t *n)
 		while (ft_isspace(*tmp))
 			tmp++;
 		if (!(*n += 1))
+		{
+			free(line);
 			err_free_exit(a, FILE_OVERFLOW);
+		}
 		if (*tmp && *tmp != COMMENT_CHAR)
 			break ;	
 		ft_strdel(&line);
 	}
-	if (!ft_strnequ(line, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
+	if (!ft_strnequ(tmp, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
 		header_error(a, line);
-	tmp = line;
-	line = ft_strjoin(line + ft_strlen(NAME_CMD_STRING), "\n");
-	free(tmp);	
-	if (!line)
+	if (!(tmp = ft_strjoin(tmp + ft_strlen(NAME_CMD_STRING), "\n")))
+	{
+		free(line);
 		err_free_exit(a, NULL);
-	get_quote_name(a, fd, n, line);
+	}
+	free(line);
+	line = get_quote(a, fd, n, tmp);
+	record_name(a, line, ft_strchr(line, '"') + 1);
 }

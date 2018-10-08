@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2018/10/03 23:13:59 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 21:12:23 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ extern t_op				g_op_tab[17];
 #define T_IND					4
 #define T_LAB					8
 
-# define PROG_NAME_LENGTH		(128)
-# define COMMENT_LENGTH			(2048)
-# define SEPARATOR_LINE			(4)
+# define PROG_NAME_LENGTH		128
+# define COMMENT_LENGTH			2048
+# define SEPARATOR_LINE			4
 # define COREWAR_EXEC_MAGIC		0xea83f3
 
 typedef struct			header_s

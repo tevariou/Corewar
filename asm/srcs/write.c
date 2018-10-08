@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:47:43 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 16:15:44 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 21:29:26 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-static char			*set_extension(t_asm *a, char *file)
+char			*set_extension(t_asm *a, char *file, const char *dest, const char *src)
 {
 	char	*ret;
 
-	if (!(ret = ft_memalloc((ft_strlen(file) + (ft_strlen(EXT_COMP) - 1)) * sizeof(*ret))))
+	if (!(ret = ft_memalloc((ft_strlen(file) + 1 + (ft_strlen(dest) - ft_strlen(src))) * sizeof(*ret))))
 		err_free_exit(a, NULL);
-	ft_strncpy(ret, file, ft_strlen(file) - ft_strlen(EXT));
-	ft_strcat(ret, EXT_COMP);
+	ft_strncpy(ret, file, ft_strlen(file) - ft_strlen(src));
+	ft_strcat(ret, dest);
 	return (ret);
 }
 
@@ -101,7 +101,7 @@ void				write_bytecode(t_asm *a, char *file)
 	int		fd;
 	char	*filename;
 
-	filename = set_extension(a, file);
+	filename = set_extension(a, file, EXT_COMP, EXT);
 	if ((fd = open(filename, O_RDWR | O_TRUNC | O_CREAT | O_APPEND, 0600)) < 0)
 	{
 		free(filename);

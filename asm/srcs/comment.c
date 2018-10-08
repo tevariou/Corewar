@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:35 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 23:51:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 23:31:11 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,45 +32,6 @@ static void		record_comment(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-static void		get_quote_comment(t_asm *a, int fd, size_t *n, char *line)
-{
-	char	*s;
-	char	*buff;
-	char	*tmp;
-	int		ret;
-
-	s = line;
-	while (ft_isspace(*s))
-		s++;
-	if (*s == '"')
-		s++;
-	else
-		header_error(a, line);
-	buff = NULL;
-	while (!ft_strchr(ft_strchr(line, '"') + 1, '"') && (ret = get_next_line(fd, &buff)) > 0)
-	{
-		if (ret < 0)
-			err_free_exit(a, NULL);
-		tmp = line;
-		line = ft_strjoin(line, buff);
-		free(tmp);
-		ft_strdel(&buff);
-		if (!line)
-			err_free_exit(a, NULL);
-		tmp = line;
-		line = ft_strjoin(line, "\n");
-		free(tmp);
-		if (!line)
-			err_free_exit(a, NULL);
-		if (!(*n += 1))
-			err_free_exit(a, FILE_OVERFLOW);
-	}
-	ft_strclr(line + ft_strlen(line) - 1);
-	if (!ret)
-		header_error(a, line);
-	record_comment(a, line, ft_strchr(line, '"') + 1);
-}
-
 void		get_comment(t_asm *a, int fd, size_t *n)
 {
 	int		ret;
@@ -85,17 +46,22 @@ void		get_comment(t_asm *a, int fd, size_t *n)
 		while (ft_isspace(*tmp))
 			tmp++;
 		if (!(*n += 1))
+		{
+			free(line);
 			err_free_exit(a, FILE_OVERFLOW);
+		}
 		if (*tmp && *tmp != COMMENT_CHAR)
 			break ;	
 		ft_strdel(&line);
 	}
-	if (!ft_strnequ(line, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
+	if (!ft_strnequ(tmp, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
 		header_error(a, line);
-	tmp = line;
-	line = ft_strjoin(line + ft_strlen(COMMENT_CMD_STRING), "\n");
-	free(tmp);	
-	if (!line)
+	if (!(tmp = ft_strjoin(tmp + ft_strlen(COMMENT_CMD_STRING), "\n")))
+	{
+		free(line);
 		err_free_exit(a, NULL);
-	get_quote_comment(a, fd, n, line);
+	}
+	free(line);	
+	line = get_quote(a, fd, n, tmp);
+	record_comment(a, line, ft_strchr(line, '"') + 1);
 }

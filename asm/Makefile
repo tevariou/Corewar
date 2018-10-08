@@ -6,7 +6,7 @@
 #    By: triou <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/08 19:08:54 by triou            ###   ########.fr        #
+#    Updated: 2018/10/08 23:50:23 by triou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRCS =	asm.c \
 		convert_label_int.c \
 		convert_label_short.c \
 		verbose.c
+#		decompile.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

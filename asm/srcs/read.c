@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 19:54:52 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 23:41:08 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 #include <stdlib.h>
 #include "asm.h"
 
-static void		check_extension(char *file)
+void		check_extension(char *file, const char *ext)
 {
 	size_t	len;
 
-	if ((len = ft_strlen(file)) <= 2 || !ft_strequ(file + len - 2, EXT))
+	if ((len = ft_strlen(file)) <= ft_strlen(ext)
+		|| !ft_strequ(file + len - ft_strlen(ext), ext))
 		err_free_exit(NULL, WRONG_EXT);
 }
 
@@ -27,13 +28,12 @@ static void		remove_whitespaces(t_asm *a, char **line)
 {
 	char	*tmp;
 
-	tmp = *line;
-	if (!(*line = ft_strtrim(*line)))
+	if (!(tmp = ft_strtrim(*line)))
 	{
-		free(tmp);
+		free(*line);
 		err_free_exit(a, NULL);
 	}
-	free(tmp);
+	*line = tmp;
 }
 
 static void		record_file(t_asm *a, int fd)
@@ -66,7 +66,7 @@ void		get_file(t_asm *a, char *file)
 {
 	int		fd;
 
-	check_extension(file);
+	check_extension(file, EXT);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		err_free_exit(a, NULL);
 	record_file(a, fd);

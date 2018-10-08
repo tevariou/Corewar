@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 19:08:40 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 23:52:25 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include					"op.h"
 # include					"libft.h"
 
-# define USAGE				"Usage:\t./asm [[[-a] <sourcefile.s>]" \
-							" | [[-d] <binaryfile.cor>]]\n" \
+# define USAGE				"Usage:\t./asm [-a] <sourcefile.s>" \
+							" | -d <binaryfile.cor>\n" \
 							"Options:\t-a : Instead of creating a .cor file, outputs a " \
 							"stripped and annotated version of the code " \
 							"to the standard output\n" \
@@ -34,7 +34,7 @@
 # define DEC				"0123456789"
 # define FT_LEX_NUMBER		8
 
-# define WRONG_EXT			"Wrong filename extension"
+# define WRONG_EXT			"Invalid filename"
 # define WRONG_HEADER		"Wrong header format"
 # define FILE_OVERFLOW		"File is too big"
 # define NAME_TOO_LONG		"Program name is too long"
@@ -45,6 +45,8 @@
 # define INVALID_ARGS		"Invalid arguments at line "
 # define LEXER_ERROR		"Lexical error at line "
 # define PARSER_ERROR		"Parser error at line "
+
+#define WRONG_MAGIC			"Wrong file type"
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -130,6 +132,8 @@ int						set_option(int ac, char **av);
 void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
 
+char					*get_quote(t_asm *a, int fd, size_t *n, char *line);
+
 void					header_error(t_asm *a, char *line);
 void					asm_error(t_asm *a, t_file *line, char *str, const char *err);
 void					parser_error(t_asm *a, t_file *line, const char *err);
@@ -152,7 +156,11 @@ unsigned short			atoi_base_short(char *str, char *base);
 unsigned char			atoi_reg(t_asm *a, t_code *op, char *str);
 void					reverse_bytes(void *n, size_t size);
 
+void					check_extension(char *file, const char *ext);
+char					*set_extension(t_asm *a, char *file, const char *dest, const char *src);
+
 void					verbose_output(t_asm *a);
+void					decompile_bin(char *file);	
 
 char					*ft_str_label(char *str);
 char					*ft_label_str(char *str);
