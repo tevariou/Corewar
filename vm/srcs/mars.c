@@ -17,7 +17,6 @@
 int		main(int ac, char **av)
 {
 	t_mars		*mars;
-
 	mars = ft_set_mars(ac, av);
 	if (mars->visualisor == NCURSE)
 		ft_init_ncurses(&mars->visu);

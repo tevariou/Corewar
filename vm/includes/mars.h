@@ -154,4 +154,11 @@ int							xor(t_mars *mars, t_processus *process);
 int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp);
 t_processus					*ft_copy_process(t_processus *process, t_mars *mars, unsigned dest);
 
+/*
+** gestion des parametres des instructions.
+*/
+int							ft_get_param_type(int opc, int num_arg);
+unsigned					ft_get_srcs(t_mars *mars, t_processus *process, int code, int param_number);
+unsigned					ft_get_dest(t_mars *mars, t_processus *process, int code, int dir_size);
+
 #endif

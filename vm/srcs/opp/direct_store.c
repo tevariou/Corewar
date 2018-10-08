@@ -27,20 +27,19 @@
 
 int direct_store(t_mars *mars, t_processus *process)
 {
-	if (*mars->memory[ft_global_restriction(process->pc + 1)] == 0x50)
-	{
-		process->params[0] = ft_get_register(process, *mars->memory[process->pc + 2]);
-		process->params[1] = ft_get_mars_value(mars, process->pc + 3, 1);
-		ft_load_register(process, process->params[1], process->params[0]);
-		process->bytes_to_jump = process->pc + 4;
-	}
-	else
-	{
-		ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]);
-		if ((*mars->memory[process->pc + 1] << 4 & 3) == REG_CODE && ft_is_register(process->params[1]))
-			ft_load_register(process, process->params[1], process->params[0]);
-		else if (ft_memory_is_register(mars, process->pc + 2))
-			ft_load_mars_value(mars, (short)(process->pc + process->params[1]) % IDX_MOD, process->params[0], process->player);
-	}
+	int srcs;
+	int dest;
+	int ocp;
+	int dest_type;
+
+	process->bytes_to_jump = process->pc + 2;
+	ocp = ft_get_mars_value(mars, process->pc + 1, 1);
+	dest_type = ft_get_param_type(ocp, 2);
+	srcs = ft_get_srcs(mars, process, ft_get_param_type(ocp, 1), 4);
+	dest = ft_get_dest(mars, process, dest_type, 4);
+	if (dest_type == REG_CODE)
+		ft_load_register(process, dest, srcs);
+	else if (dest_type == IND_CODE)
+		ft_load_mars_value(mars, dest + process->pc, srcs, process->player);
 	return (process->carry);
 }

@@ -27,7 +27,8 @@
 
 int		substraction(t_mars *mars, t_processus *process)
 {
-	ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]);
+	if (!ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]))
+		return (process->carry);
 	ft_load_register(process, process->params[2], process->params[0]
 		- process->params[1]);
 	if (!(ft_get_register(process, process->params[2])))

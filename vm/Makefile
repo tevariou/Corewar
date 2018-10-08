@@ -21,6 +21,7 @@ INC 	= ./libft/
 IDIR	= includes
 ODIR	= objs
 OPPDIR  = opp
+S_G_DIR	= get_and_set
 NCUDIR  = ncurses
 UTIDIR	= utils
 LDIR	= libft
@@ -31,9 +32,12 @@ ITEMS 	= 	mars.c 							\
 		  	ft_prepare_mars_memory.c 		\
 		  	ft_write_champ_on_memory.c	 	\
 		  	ft_errors.c 					\
-		  	ft_registers.c					\
 			ft_get_params.c					\
 		  	ft_debug_display.c	 			\
+			$(S_G_DIR)/ft_registers.c		\
+			$(S_G_DIR)/get_and_load_mars_values.c \
+			$(S_G_DIR)/ft_parse_opc.c		\
+			$(S_G_DIR)/get_srcs.c \
 			$(OPPDIR)/ft_get_opcode.c		\
 		  	$(OPPDIR)/addition.c			\
 		  	$(OPPDIR)/aff.c 				\
@@ -59,7 +63,6 @@ ITEMS 	= 	mars.c 							\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
 			adressage.c						\
-			get_and_load_mars_values.c		\
 
 OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))
 
@@ -78,12 +81,14 @@ $(OBJS) : | $(ODIR)
 $(ODIR):
 	$(MD) $(ODIR)
 	$(MD) $(ODIR)/opp
-	
+	$(MD) $(ODIR)/get_and_set	
+
 
 $(ODIR)/%.o : $(SDIR)/%.c $(INCLUDES)
 	@$(MD) $(ODIR)/$(OPPDIR)
 	@$(MD) $(ODIR)/$(NCUDIR)
 	@$(MD) $(ODIR)/$(UTIDIR)
+	@$(MD) $(ODIR)/$(S_G_DIR)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(IDIR) -I $(LDIR)
 	@echo "compiling $<"
 

@@ -4,7 +4,7 @@ for f in champions/unitests/*.cor #path champ1
 do
     for m in champions/unitests/*.cor #path champ2
     do
-        let "count=1000"
+        let "count=10"
         for n in `seq 1 3`
         do
            	let "nb=$count*$n"

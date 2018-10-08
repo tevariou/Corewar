@@ -28,8 +28,18 @@
 
 int		indirect_store(t_mars *mars, t_processus *process)
 {
-	ft_get_params(process, mars, DIRECT2, *mars->memory[process->pc + 1]);
-	ft_load_mars_value(mars, process->pc + process->params[1] + process->params[2], process->params[0], process->player);
-	if (!process->params[0])
-	return (process->carry);
+	int srcs1;
+	int srcs2;
+	int srcs3;
+	int dest;
+	int opc;
+
+	opc = ft_get_mars_value(mars, process->pc + 1, 1);
+	process->bytes_to_jump = process->pc + 2;
+
+	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT2);
+	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT2);
+	srcs3 = ft_get_srcs(mars, process, ft_get_param_type(opc, 3), DIRECT2);
+	dest = process->pc + (short)(srcs2 + srcs3);
+	ft_load_mars_value(mars, dest, srcs1, process->player);
 }

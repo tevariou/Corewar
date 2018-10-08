@@ -27,12 +27,15 @@ static int	execut_process_turn(t_mars * mars, t_processus *current_process)
 {
 	if (mars->current_cycle == current_process->next_instruction_cycle)
 	{
+
+		current_process->params[0] = 0;
+		current_process->params[1] = 0;
+		current_process->params[2] = 0;
 		if (current_process->opcode)
 			current_process->opcode(mars, current_process);
 		ft_move_pc(mars, current_process);
 		if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
-			ft_idle_turn(current_process, mars->current_cycle);
-	}
+			ft_idle_turn(current_process, mars->current_cycle);	}
 	return (1);
 }
 

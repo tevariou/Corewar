@@ -60,17 +60,21 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 	int i;
 	int code;
 	int address;
-	int modifier;
+	int good;
 
-	modifier = ft_params_needed(process->pc);
 	i = 2;
+	good = TRUE;
 	process->pc = ft_global_restriction(process->pc);
 	address = process->pc + 2;
 	while (i >= 3 - ft_params_needed(process->opcode))
 	{
 		code = (ocp >> ((i + 1) * 2) & 3);
 		if (code == REG_CODE)
+		{
+			if (!ft_is_register(*mars->memory[ft_global_restriction(address)]))
+				good = FALSE;
 			address += ft_stock_reg(process, mars, i, address);
+		}
 		else if (code == DIR_CODE)
 		{
 			process->params[2 - i] = ft_get_mars_value(mars, address, direct_size);
@@ -86,5 +90,5 @@ int			ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsi
 		i--;
 	}
 	process->bytes_to_jump = address;
-	return (SUCCESS);
+	return (good);
 }

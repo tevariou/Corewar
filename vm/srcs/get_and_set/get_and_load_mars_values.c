@@ -71,7 +71,6 @@ unsigned 		ft_load_mars_restricted_value(t_mars *mars, unsigned index, unsigned 
 	printf("i = %d", (short)index);
 	while (i > 0)
 	{
-		sleep(50);
 		*mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)] = (t_byte)value % 256;
 		mars->memory[ft_global_restriction((index + i - 1) % IDX_MOD)][1] = color + 1;
 		i--;

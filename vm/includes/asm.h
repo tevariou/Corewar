@@ -30,31 +30,35 @@
 # define L_FORK             0x0F
 # define AFF                0x10
 
+# define DIRECT_2			2
+# define DIRECT_4			4
+# define NO_DIRECT			0
 typedef struct				s_pf_opp
 {
 	unsigned				value;
 	int						(*f)(t_mars *, t_processus *);
 	unsigned				latence;
+	int						direct_size;
 }							t_pf_opp;
 
 t_pf_opp					g_opps[NB_OPPS] =
 {
-	{LIVE, &live, 10},
-	{DIRECT_LOAD, &direct_load, 5},
-	{DIRECT_STORE, &direct_store, 5},
-	{ADDITION, &addition, 10},
-	{SUBSTRACTION, &substraction, 10},
-	{AND, &and, 6},
-	{OR, &or, 6},
-	{XOR, &xor, 6},
-	{JUMP, &jump, 20},
-	{INDIRECT_LOAD, &indirect_load, 25},
-	{INDIRECT_STORE, &indirect_store, 25},
-	{FORK, &ft_fork, 800},
-	{L_DIRECT_LOAD, &long_direct_load, 10},
-	{L_INDERECT_LOAD, &long_indirect_load, 50},
-	{L_FORK, &long_fork, 1000},
-	{AFF, &aff, 2},
+	{LIVE, &live, 10, DIRECT_4, },
+	{DIRECT_LOAD, &direct_load, 5, DIRECT_4},
+	{DIRECT_STORE, &direct_store, 5, NO_DIRECT},
+	{ADDITION, &addition, 10, NO_DIRECT},
+	{SUBSTRACTION, &substraction, 10, NO_DIRECT},
+	{AND, &and, 6, DIRECT_4},
+	{OR, &or, 6, DIRECT_4},
+	{XOR, &xor, 6, DIRECT_4},
+	{JUMP, &jump, 20, DIRECT_2},
+	{INDIRECT_LOAD, &indirect_load, 25, DIRECT_2},
+	{INDIRECT_STORE, &indirect_store, 25, DIRECT_2},
+	{FORK, &ft_fork, 800, DIRECT_2},
+	{L_DIRECT_LOAD, &long_direct_load, 10, DIRECT_4},
+	{L_INDERECT_LOAD, &long_indirect_load, 50, DIRECT_2},
+	{L_FORK, &long_fork, 1000, DIRECT_2},
+	{AFF, &aff, 2, NO_DIRECT},
 };
 
 #endif

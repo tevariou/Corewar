@@ -1,403 +1,1003 @@
+
+
+champions/unitests/add.cor
 2c2
 < 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/add_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 add") !
+
+
+champions/unitests/add_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 add") !
+
+
+champions/unitests/add_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 add") !
+
+
+champions/unitests/add_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 add") !
+
+
+champions/unitests/add_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c add") !
+
+
+champions/unitests/add_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 add") !
+
+
+champions/unitests/add_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 add") !
+
+
+champions/unitests/add_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 add") !
+
+
+champions/unitests/add_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c add") !
+
+
+champions/unitests/add_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 add") !
+
+
+champions/unitests/add_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 add") !
+
+
+champions/unitests/add_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 add") !
+
+
+champions/unitests/add_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c add") !
+
+
+champions/unitests/add_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 add") !
+
+
+champions/unitests/add_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 add") !
+
+
+champions/unitests/add_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 add") !
+
+
+champions/unitests/add_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 add") !
+
+
+champions/unitests/add_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c add") !
+
+
+champions/unitests/add_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 add") !
+
+
+champions/unitests/add_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 add") !
+
+
+champions/unitests/add_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 add") !
+
+
+champions/unitests/add_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c add") !
+
+
+champions/unitests/add_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 add") !
+
+
+champions/unitests/add_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 add") !
+
+
+champions/unitests/add_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 add") !
+
+
+champions/unitests/add_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c add") !
+
+
+champions/unitests/add_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 add") !
+
+
+champions/unitests/add_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 add") !
+
+
+champions/unitests/add_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 add") !
+
+
+champions/unitests/add_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c add") !
+
+
+champions/unitests/add_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 add") !
+
+
+champions/unitests/add_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 add") !
+
+
+champions/unitests/add_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 add") !
+
+
+champions/unitests/add_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 add") !
+
+
+champions/unitests/add_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c add") !
+
+
+champions/unitests/add_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 add") !
+
+
+champions/unitests/add_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 add") !
+
+
+champions/unitests/add_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 add") !
+
+
+champions/unitests/add_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c add") !
+
+
+champions/unitests/add_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 add") !
+
+
+champions/unitests/add_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 add") !
+
+
+champions/unitests/add_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 add") !
+
+
+champions/unitests/add_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac add") !
+
+
+champions/unitests/add_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 add") !
+
+
+champions/unitests/add_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 add") !
+
+
+champions/unitests/add_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 add") !
+
+
+champions/unitests/add_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc add") !
+
+
+champions/unitests/add_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc add") !
+
+
+champions/unitests/add_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 add") !
+
+
+champions/unitests/add_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 add") !
+
+
+champions/unitests/add_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 add") !
+
+
+champions/unitests/add_carry.cor
+
+
+champions/unitests/add_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc add") !
+
+
+champions/unitests/add_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 add") !
+
+
+champions/unitests/add_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 add") !
+
+
+champions/unitests/add_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 add") !
+
+
+champions/unitests/add_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc add") !
+
+
+champions/unitests/add_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 add") !
+
+
+champions/unitests/add_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 add") !
+
+
+champions/unitests/add_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 add") !
+
+
+champions/unitests/add_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec add") !
+
+
+champions/unitests/add_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 add") !
+
+
+champions/unitests/add_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 add") !
+
+
+champions/unitests/add_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 add") !
+
+
+champions/unitests/add_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc add") !
+
+
+champions/unitests/add_sub.cor
 10c10
 < 0x0240 : 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0240 : 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/aff.cor
+
+
+champions/unitests/aff_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 aff") !
+
+
+champions/unitests/aff_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 aff") !
+
+
+champions/unitests/aff_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 aff") !
+
+
+champions/unitests/aff_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 aff") !
+
+
+champions/unitests/aff_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c aff") !
+
+
+champions/unitests/aff_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 aff") !
+
+
+champions/unitests/aff_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 aff") !
+
+
+champions/unitests/aff_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 aff") !
+
+
+champions/unitests/aff_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c aff") !
+
+
+champions/unitests/aff_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 aff") !
+
+
+champions/unitests/aff_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 aff") !
+
+
+champions/unitests/aff_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 aff") !
+
+
+champions/unitests/aff_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c aff") !
+
+
+champions/unitests/aff_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 aff") !
+
+
+champions/unitests/aff_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 aff") !
+
+
+champions/unitests/aff_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 aff") !
+
+
+champions/unitests/aff_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 aff") !
+
+
+champions/unitests/aff_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c aff") !
+
+
+champions/unitests/aff_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 aff") !
+
+
+champions/unitests/aff_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 aff") !
+
+
+champions/unitests/aff_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 aff") !
+
+
+champions/unitests/aff_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c aff") !
+
+
+champions/unitests/aff_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 aff") !
+
+
+champions/unitests/aff_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 aff") !
+
+
+champions/unitests/aff_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 aff") !
+
+
+champions/unitests/aff_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c aff") !
+
+
+champions/unitests/aff_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 aff") !
+
+
+champions/unitests/aff_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 aff") !
+
+
+champions/unitests/aff_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 aff") !
+
+
+champions/unitests/aff_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c aff") !
+
+
+champions/unitests/aff_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 aff") !
+
+
+champions/unitests/aff_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 aff") !
+
+
+champions/unitests/aff_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 aff") !
+
+
+champions/unitests/aff_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 aff") !
+
+
+champions/unitests/aff_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c aff") !
+
+
+champions/unitests/aff_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 aff") !
+
+
+champions/unitests/aff_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 aff") !
+
+
+champions/unitests/aff_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 aff") !
+
+
+champions/unitests/aff_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c aff") !
+
+
+champions/unitests/aff_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 aff") !
+
+
+champions/unitests/aff_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 aff") !
+
+
+champions/unitests/aff_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 aff") !
+
+
+champions/unitests/aff_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac aff") !
+
+
+champions/unitests/aff_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 aff") !
+
+
+champions/unitests/aff_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 aff") !
+
+
+champions/unitests/aff_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 aff") !
+
+
+champions/unitests/aff_basic.cor
 0a1
 > * Player 1, weighing 10 bytes, "tester" ("test ocp 0x0 aff") !
+
+
+champions/unitests/aff_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc aff") !
+
+
+champions/unitests/aff_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc aff") !
+
+
+champions/unitests/aff_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 aff") !
+
+
+champions/unitests/aff_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 aff") !
+
+
+champions/unitests/aff_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 aff") !
+
+
+champions/unitests/aff_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc aff") !
+
+
+champions/unitests/aff_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 aff") !
+
+
+champions/unitests/aff_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 aff") !
+
+
+champions/unitests/aff_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 aff") !
+
+
+champions/unitests/aff_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc aff") !
+
+
+champions/unitests/aff_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 aff") !
+
+
+champions/unitests/aff_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 aff") !
+
+
+champions/unitests/aff_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 aff") !
+
+
+champions/unitests/aff_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec aff") !
+
+
+champions/unitests/aff_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 aff") !
+
+
+champions/unitests/aff_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 aff") !
+
+
+champions/unitests/aff_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 aff") !
+
+
+champions/unitests/aff_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc aff") !
+
+
+champions/unitests/aff_no_OCP.cor
+
+
+champions/unitests/and.cor
+
+
+champions/unitests/and_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 and") !
+
+
+champions/unitests/and_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 and") !
+
+
+champions/unitests/and_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 and") !
+
+
+champions/unitests/and_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 and") !
+
+
+champions/unitests/and_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c and") !
+
+
+champions/unitests/and_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 and") !
+
+
+champions/unitests/and_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 and") !
+
+
+champions/unitests/and_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 and") !
+
+
+champions/unitests/and_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c and") !
+
+
+champions/unitests/and_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 and") !
+
+
+champions/unitests/and_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 and") !
+
+
+champions/unitests/and_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 and") !
+
+
+champions/unitests/and_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c and") !
+
+
+champions/unitests/and_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 and") !
+
+
+champions/unitests/and_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 and") !
+
+
+champions/unitests/and_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 and") !
+
+
+champions/unitests/and_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 and") !
+
+
+champions/unitests/and_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c and") !
+
+
+champions/unitests/and_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 and") !
+
+
+champions/unitests/and_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 and") !
+
+
+champions/unitests/and_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 and") !
+
+
+champions/unitests/and_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c and") !
+
+
+champions/unitests/and_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 and") !
+
+
+champions/unitests/and_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 and") !
+
+
+champions/unitests/and_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 and") !
+
+
+champions/unitests/and_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c and") !
+
+
+champions/unitests/and_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 and") !
+
+
+champions/unitests/and_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 and") !
+
+
+champions/unitests/and_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 and") !
+
+
+champions/unitests/and_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c and") !
+
+
+champions/unitests/and_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 and") !
+
+
+champions/unitests/and_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 and") !
+
+
+champions/unitests/and_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 and") !
+
+
+champions/unitests/and_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 and") !
+
+
+champions/unitests/and_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c and") !
+
+
+champions/unitests/and_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 and") !
+
+
+champions/unitests/and_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 and") !
+
+
+champions/unitests/and_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 and") !
+
+
+champions/unitests/and_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c and") !
+
+
+champions/unitests/and_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 and") !
+
+
+champions/unitests/and_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 and") !
+
+
+champions/unitests/and_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 and") !
+
+
+champions/unitests/and_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac and") !
+
+
+champions/unitests/and_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 and") !
+
+
+champions/unitests/and_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 and") !
+
+
+champions/unitests/and_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 and") !
+
+
+champions/unitests/and_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc and") !
+
+
+champions/unitests/and_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc and") !
+
+
+champions/unitests/and_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 and") !
+
+
+champions/unitests/and_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 and") !
+
+
+champions/unitests/and_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 and") !
+
+
+champions/unitests/and_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc and") !
+
+
+champions/unitests/and_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 and") !
+
+
+champions/unitests/and_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 and") !
+
+
+champions/unitests/and_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 and") !
+
+
+champions/unitests/and_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc and") !
+
+
+champions/unitests/and_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 and") !
+
+
+champions/unitests/and_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 and") !
+
+
+champions/unitests/and_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 and") !
+
+
+champions/unitests/and_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec and") !
+
+
+champions/unitests/and_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 and") !
+
+
+champions/unitests/and_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 and") !
+
+
+champions/unitests/and_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 and") !
+
+
+champions/unitests/and_fc.cor
 0a1
-> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc and") ! 
-8,9c8,9
-< 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 02 d0 02 00 00 00 
-< 0x0200 : 02 02 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
----
-> 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
-> 0x0200 : 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
+> * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc and") !
+
+
+champions/unitests/and_or_xor.cor
+
+
+champions/unitests/and_or_xor_overflow.cor
+
+
+champions/unitests/and_or_xor_read_overflow.cor
 12c12
 < 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
@@ -408,884 +1008,2157 @@
 ---
 > 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 
 > 0x0400 : 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+24,25c24,25
+< 0x05c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 
+< 0x0600 : 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x05c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0600 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/fork.cor
+
+
+champions/unitests/fork2.cor
+
+
+champions/unitests/fork_backflow.cor
+
+
+champions/unitests/fork_neg_overflow.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/fork_overflow.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/fork_overflow_with_live.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/ld_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 ld") !
+
+
+champions/unitests/ld_1.cor
 2c2
-< 0x0040 : 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 03 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 03 03 03 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/ld_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 ld") !
+
+
+champions/unitests/ld_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 ld") !
+
+
+champions/unitests/ld_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 ld") !
+
+
+champions/unitests/ld_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c ld") !
+
+
+champions/unitests/ld_2.cor
+
+
+champions/unitests/ld_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 ld") !
+
+
+champions/unitests/ld_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 ld") !
+
+
+champions/unitests/ld_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 ld") !
+
+
+champions/unitests/ld_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c ld") !
+
+
+champions/unitests/ld_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 ld") !
+
+
+champions/unitests/ld_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 ld") !
+
+
+champions/unitests/ld_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 ld") !
+
+
+champions/unitests/ld_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c ld") !
+
+
+champions/unitests/ld_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 ld") !
+
+
+champions/unitests/ld_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 ld") !
+
+
+champions/unitests/ld_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 ld") !
+
+
+champions/unitests/ld_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 ld") !
+
+
+champions/unitests/ld_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c ld") !
+
+
+champions/unitests/ld_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 ld") !
+
+
+champions/unitests/ld_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 ld") !
+
+
+champions/unitests/ld_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 ld") !
+
+
+champions/unitests/ld_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c ld") !
+
+
+champions/unitests/ld_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 ld") !
+
+
+champions/unitests/ld_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 ld") !
+
+
+champions/unitests/ld_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 ld") !
+
+
+champions/unitests/ld_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c ld") !
+
+
+champions/unitests/ld_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 ld") !
+
+
+champions/unitests/ld_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 ld") !
+
+
+champions/unitests/ld_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 ld") !
+
+
+champions/unitests/ld_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c ld") !
+
+
+champions/unitests/ld_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 ld") !
+
+
+champions/unitests/ld_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 ld") !
+
+
+champions/unitests/ld_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 ld") !
+
+
+champions/unitests/ld_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 ld") !
+
+
+champions/unitests/ld_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c ld") !
+
+
+champions/unitests/ld_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 ld") !
+
+
+champions/unitests/ld_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 ld") !
+
+
+champions/unitests/ld_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 ld") !
+
+
+champions/unitests/ld_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c ld") !
+
+
+champions/unitests/ld_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 ld") !
+
+
+champions/unitests/ld_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 ld") !
+
+
+champions/unitests/ld_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 ld") !
+
+
+champions/unitests/ld_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac ld") !
+
+
+champions/unitests/ld_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 ld") !
+
+
+champions/unitests/ld_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 ld") !
+
+
+champions/unitests/ld_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 ld") !
+
+
+champions/unitests/ld_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc ld") !
+
+
+champions/unitests/ld_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc ld") !
+
+
+champions/unitests/ld_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 ld") !
+
+
+champions/unitests/ld_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 ld") !
+
+
+champions/unitests/ld_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 ld") !
+
+
+champions/unitests/ld_carry.cor
+
+
+champions/unitests/ld_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc ld") !
+
+
+champions/unitests/ld_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 ld") !
+
+
+champions/unitests/ld_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 ld") !
+
+
+champions/unitests/ld_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 ld") !
+
+
+champions/unitests/ld_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc ld") !
+
+
+champions/unitests/ld_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 ld") !
+
+
+champions/unitests/ld_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 ld") !
+
+
+champions/unitests/ld_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 ld") !
+
+
+champions/unitests/ld_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec ld") !
+
+
+champions/unitests/ld_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 ld") !
+
+
+champions/unitests/ld_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 ld") !
+
+
+champions/unitests/ld_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 ld") !
+
+
+champions/unitests/ld_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc ld") !
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 02 d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+
+
+champions/unitests/ld_st_overflow.cor
+
+
+champions/unitests/ld_test.cor
+10c10
+< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
-9,10c9,10
-< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d0 02 00 00 00 00 00 00 00 00 00 00 03 e8 00 00 00 00 
-< 0x0240 : 00 00 00 00 00 00 03 e8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 > 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 68 03 01 fe 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-57c57
-< 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 00 00 00 01 02 00 00 00 00 00 00 00 00 00 00 ff ff ff e6 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00 00 d0 00 01 05 00 00 00 00 00 00 00 00 00 00 ff ff ff e6 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/ldi_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 ldi") !
-2c2
-< 0x0040 : 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 70 03 00 39 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/ldi_1.cor
+
+
+champions/unitests/ldi_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 ldi") !
+
+
+champions/unitests/ldi_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 ldi") !
+
+
+champions/unitests/ldi_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 ldi") !
+
+
+champions/unitests/ldi_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c ldi") !
+
+
+champions/unitests/ldi_2.cor
 2c2
-< 0x0040 : 00 00 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 03 70 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/ldi_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 ldi") !
+
+
+champions/unitests/ldi_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 ldi") !
+
+
+champions/unitests/ldi_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 ldi") !
+
+
+champions/unitests/ldi_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c ldi") !
+
+
+champions/unitests/ldi_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 ldi") !
+
+
+champions/unitests/ldi_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 ldi") !
+
+
+champions/unitests/ldi_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 ldi") !
+
+
+champions/unitests/ldi_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c ldi") !
+
+
+champions/unitests/ldi_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 ldi") !
+
+
+champions/unitests/ldi_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 ldi") !
+
+
+champions/unitests/ldi_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 ldi") !
+
+
+champions/unitests/ldi_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 ldi") !
+
+
+champions/unitests/ldi_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c ldi") !
+
+
+champions/unitests/ldi_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 ldi") !
+
+
+champions/unitests/ldi_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 ldi") !
+
+
+champions/unitests/ldi_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 ldi") !
+
+
+champions/unitests/ldi_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c ldi") !
+
+
+champions/unitests/ldi_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 ldi") !
+
+
+champions/unitests/ldi_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 ldi") !
+
+
+champions/unitests/ldi_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 ldi") !
+
+
+champions/unitests/ldi_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c ldi") !
+
+
+champions/unitests/ldi_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 ldi") !
+
+
+champions/unitests/ldi_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 ldi") !
+
+
+champions/unitests/ldi_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 ldi") !
+
+
+champions/unitests/ldi_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c ldi") !
+
+
+champions/unitests/ldi_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 ldi") !
+
+
+champions/unitests/ldi_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 ldi") !
+
+
+champions/unitests/ldi_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 ldi") !
+
+
+champions/unitests/ldi_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 ldi") !
+
+
+champions/unitests/ldi_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c ldi") !
+
+
+champions/unitests/ldi_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 ldi") !
+
+
+champions/unitests/ldi_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 ldi") !
+
+
+champions/unitests/ldi_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 ldi") !
+
+
+champions/unitests/ldi_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c ldi") !
+
+
+champions/unitests/ldi_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 ldi") !
+
+
+champions/unitests/ldi_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 ldi") !
+
+
+champions/unitests/ldi_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 ldi") !
+
+
+champions/unitests/ldi_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac ldi") !
+
+
+champions/unitests/ldi_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 ldi") !
+
+
+champions/unitests/ldi_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 ldi") !
+
+
+champions/unitests/ldi_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 ldi") !
+
+
+champions/unitests/ldi_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc ldi") !
-2c2
-< 0x0040 : 00 00 01 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/ldi_bug_in_zaz_corewar.cor
+
+
+champions/unitests/ldi_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc ldi") !
+
+
+champions/unitests/ldi_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 ldi") !
+
+
+champions/unitests/ldi_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 ldi") !
+
+
+champions/unitests/ldi_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 ldi") !
+
+
+champions/unitests/ldi_carry.cor
+
+
+champions/unitests/ldi_carryX.cor
+
+
+champions/unitests/ldi_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc ldi") !
+
+
+champions/unitests/ldi_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 ldi") !
+
+
+champions/unitests/ldi_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 ldi") !
+
+
+champions/unitests/ldi_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 ldi") !
+
+
+champions/unitests/ldi_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc ldi") !
+
+
+champions/unitests/ldi_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 ldi") !
+
+
+champions/unitests/ldi_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 ldi") !
+
+
+champions/unitests/ldi_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 ldi") !
+
+
+champions/unitests/ldi_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec ldi") !
+
+
+champions/unitests/ldi_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 ldi") !
+
+
+champions/unitests/ldi_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 ldi") !
+
+
+champions/unitests/ldi_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 ldi") !
+
+
+champions/unitests/ldi_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc ldi") !
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0a e4 d0 02 00 02 02 d0 02 00 02 02 d0 
----
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+
+
+champions/unitests/ldi_overflow.cor
 11c11
 < 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a e4 01 8c 00 00 00 00 00 00 00 00 00 00 00 
-1c1
-< 0x0000 : 0a e4 00 03 00 00 03 ea a4 ff fa 00 02 03 0a 00 00 03 ef 02 03 0a a4 03 e8 00 02 00 00 ff d4 03 e8 0a 64 03 00 05 03 03 70 03 03 e8 0a a4 ff d4 00 00 03 03 70 03 03 e8 0a e4 00 03 00 05 00 02 
----
-> 0x0000 : 0a e4 00 03 00 04 03 0a a4 ff fa 00 02 03 0a a4 01 f4 00 02 03 0a a4 03 e8 00 02 03 03 70 03 03 e8 0a 64 03 00 05 03 03 70 03 03 e8 0a a4 ff d4 00 00 03 03 70 03 03 e8 0a e4 00 03 00 05 00 02 
+
+
+champions/unitests/ldi_test.cor
 9c9
 < 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 70 03 00 00 00 00 00 00 00 00 0a e4 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+17c17
+< 0x0400 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 03 70 03 00 00 00 00 00 00 00 00 0a e4 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0400 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lfork.cor
+
+
+champions/unitests/lfork_overflow.1.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lfork_overflow.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/live.cor
+
+
+champions/unitests/lld.cor
 57c57
-< 0x0e00 : 00 00 00 00 00 00 00 00 03 fe 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0e00 : 00 00 00 00 00 00 00 00 03 fe 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 02 d0 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lld2.cor
 57c57
 < 0x0e00 : 00 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0e00 : 00 00 00 00 00 00 ff ff d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lld_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 lld") !
+
+
+champions/unitests/lld_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 lld") !
+
+
+champions/unitests/lld_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 lld") !
+
+
+champions/unitests/lld_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 lld") !
+
+
+champions/unitests/lld_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c lld") !
+
+
+champions/unitests/lld_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 lld") !
+
+
+champions/unitests/lld_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 lld") !
+
+
+champions/unitests/lld_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 lld") !
+
+
+champions/unitests/lld_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c lld") !
+
+
+champions/unitests/lld_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 lld") !
+
+
+champions/unitests/lld_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 lld") !
+
+
+champions/unitests/lld_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 lld") !
+
+
+champions/unitests/lld_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c lld") !
+
+
+champions/unitests/lld_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 lld") !
+
+
+champions/unitests/lld_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 lld") !
+
+
+champions/unitests/lld_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 lld") !
+
+
+champions/unitests/lld_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 lld") !
+
+
+champions/unitests/lld_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c lld") !
+
+
+champions/unitests/lld_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 lld") !
+
+
+champions/unitests/lld_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 lld") !
+
+
+champions/unitests/lld_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 lld") !
+
+
+champions/unitests/lld_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c lld") !
+
+
+champions/unitests/lld_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 lld") !
+
+
+champions/unitests/lld_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 lld") !
+
+
+champions/unitests/lld_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 lld") !
+
+
+champions/unitests/lld_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c lld") !
+
+
+champions/unitests/lld_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 lld") !
+
+
+champions/unitests/lld_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 lld") !
+
+
+champions/unitests/lld_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 lld") !
+
+
+champions/unitests/lld_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c lld") !
+
+
+champions/unitests/lld_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 lld") !
+
+
+champions/unitests/lld_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 lld") !
+
+
+champions/unitests/lld_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 lld") !
+
+
+champions/unitests/lld_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 lld") !
+
+
+champions/unitests/lld_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c lld") !
+
+
+champions/unitests/lld_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 lld") !
+
+
+champions/unitests/lld_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 lld") !
+
+
+champions/unitests/lld_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 lld") !
+
+
+champions/unitests/lld_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c lld") !
+
+
+champions/unitests/lld_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 lld") !
+
+
+champions/unitests/lld_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 lld") !
+
+
+champions/unitests/lld_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 lld") !
+
+
+champions/unitests/lld_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac lld") !
+
+
+champions/unitests/lld_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 lld") !
+
+
+champions/unitests/lld_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 lld") !
+
+
+champions/unitests/lld_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 lld") !
+
+
+champions/unitests/lld_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc lld") !
+
+
+champions/unitests/lld_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc lld") !
+
+
+champions/unitests/lld_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 lld") !
+
+
+champions/unitests/lld_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 lld") !
+
+
+champions/unitests/lld_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 lld") !
+
+
+champions/unitests/lld_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc lld") !
+
+
+champions/unitests/lld_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 lld") !
+
+
+champions/unitests/lld_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 lld") !
+
+
+champions/unitests/lld_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 lld") !
+
+
+champions/unitests/lld_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc lld") !
+
+
+champions/unitests/lld_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 lld") !
+
+
+champions/unitests/lld_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 lld") !
+
+
+champions/unitests/lld_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 lld") !
+
+
+champions/unitests/lld_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec lld") !
+
+
+champions/unitests/lld_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 lld") !
+
+
+champions/unitests/lld_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 lld") !
+
+
+champions/unitests/lld_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 lld") !
+
+
+champions/unitests/lld_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc lld") !
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+
+
+champions/unitests/lld_overflow.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lldi.cor
 57c57
-< 0x0e00 : 00 00 00 00 00 00 00 00 00 00 0b 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0e00 : 00 00 00 00 00 00 00 00 00 00 0b 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 0a e4 04 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a e4 04 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lldi_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 lldi") !
+
+
+champions/unitests/lldi_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 lldi") !
+
+
+champions/unitests/lldi_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 lldi") !
+
+
+champions/unitests/lldi_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 lldi") !
+
+
+champions/unitests/lldi_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c lldi") !
+
+
+champions/unitests/lldi_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 lldi") !
+
+
+champions/unitests/lldi_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 lldi") !
+
+
+champions/unitests/lldi_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 lldi") !
+
+
+champions/unitests/lldi_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c lldi") !
+
+
+champions/unitests/lldi_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 lldi") !
+
+
+champions/unitests/lldi_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 lldi") !
+
+
+champions/unitests/lldi_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 lldi") !
+
+
+champions/unitests/lldi_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c lldi") !
+
+
+champions/unitests/lldi_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 lldi") !
+
+
+champions/unitests/lldi_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 lldi") !
+
+
+champions/unitests/lldi_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 lldi") !
+
+
+champions/unitests/lldi_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 lldi") !
+
+
+champions/unitests/lldi_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c lldi") !
+
+
+champions/unitests/lldi_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 lldi") !
+
+
+champions/unitests/lldi_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 lldi") !
+
+
+champions/unitests/lldi_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 lldi") !
+
+
+champions/unitests/lldi_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c lldi") !
+
+
+champions/unitests/lldi_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 lldi") !
+
+
+champions/unitests/lldi_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 lldi") !
+
+
+champions/unitests/lldi_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 lldi") !
+
+
+champions/unitests/lldi_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c lldi") !
+
+
+champions/unitests/lldi_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 lldi") !
+
+
+champions/unitests/lldi_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 lldi") !
+
+
+champions/unitests/lldi_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 lldi") !
+
+
+champions/unitests/lldi_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c lldi") !
+
+
+champions/unitests/lldi_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 lldi") !
+
+
+champions/unitests/lldi_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 lldi") !
+
+
+champions/unitests/lldi_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 lldi") !
+
+
+champions/unitests/lldi_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 lldi") !
+
+
+champions/unitests/lldi_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c lldi") !
+
+
+champions/unitests/lldi_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 lldi") !
+
+
+champions/unitests/lldi_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 lldi") !
+
+
+champions/unitests/lldi_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 lldi") !
+
+
+champions/unitests/lldi_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c lldi") !
+
+
+champions/unitests/lldi_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 lldi") !
+
+
+champions/unitests/lldi_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 lldi") !
+
+
+champions/unitests/lldi_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 lldi") !
+
+
+champions/unitests/lldi_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac lldi") !
+
+
+champions/unitests/lldi_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 lldi") !
+
+
+champions/unitests/lldi_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 lldi") !
+
+
+champions/unitests/lldi_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 lldi") !
+
+
+champions/unitests/lldi_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc lldi") !
+
+
+champions/unitests/lldi_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc lldi") !
+
+
+champions/unitests/lldi_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 lldi") !
+
+
+champions/unitests/lldi_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 lldi") !
+
+
+champions/unitests/lldi_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 lldi") !
+
+
+champions/unitests/lldi_carry.cor
 2c2
 < 0x0040 : 00 00 00 72 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/lldi_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc lldi") !
+
+
+champions/unitests/lldi_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 lldi") !
+
+
+champions/unitests/lldi_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 lldi") !
+
+
+champions/unitests/lldi_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 lldi") !
+
+
+champions/unitests/lldi_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc lldi") !
+
+
+champions/unitests/lldi_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 lldi") !
+
+
+champions/unitests/lldi_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 lldi") !
+
+
+champions/unitests/lldi_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 lldi") !
+
+
+champions/unitests/lldi_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec lldi") !
+
+
+champions/unitests/lldi_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 lldi") !
+
+
+champions/unitests/lldi_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 lldi") !
+
+
+champions/unitests/lldi_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 lldi") !
+
+
+champions/unitests/lldi_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc lldi") !
-4c4
-< 0x00c0 : 02 00 02 02 d0 02 00 02 02 00 01 0e da 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
----
-> 0x00c0 : 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 
-8c8
-< 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 d0 02 00 00 00 02 02 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
----
-> 0x01c0 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+
+
+champions/unitests/lldi_overflow.cor
 12c12
-< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 01 0e da 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x02c0 : 00 00 00 00 00 00 00 00 00 03 70 03 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 16c16
 < 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+24c24
+< 0x05c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 d0 02 00 00 00 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x05c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/or.cor
+1,2c1,2
+< 0x0000 : 02 90 00 00 01 a5 01 02 90 00 00 02 4a 02 02 90 00 00 02 54 03 02 90 00 00 02 0e 04 02 90 00 00 02 04 05 03 70 00 00 0a 03 70 01 00 0a 00 00 00 00 0a 00 00 01 a5 0a 03 70 04 00 0a 03 70 05 00 
+< 0x0040 : 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0000 : 02 90 00 00 01 a5 01 02 90 00 00 02 4a 02 02 90 00 00 02 54 03 02 90 00 00 02 0e 04 02 90 00 00 02 04 05 03 70 00 00 0a 03 70 01 00 0a 03 70 02 00 0a 00 00 01 a5 0a 00 00 02 4a 0a 03 70 05 00 
+> 0x0040 : 0a 00 00 00 00 00 00 00 02 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/or_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 or") !
+
+
+champions/unitests/or_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 or") !
+
+
+champions/unitests/or_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 or") !
+
+
+champions/unitests/or_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 or") !
+
+
+champions/unitests/or_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c or") !
+
+
+champions/unitests/or_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 or") !
+
+
+champions/unitests/or_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 or") !
+
+
+champions/unitests/or_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 or") !
+
+
+champions/unitests/or_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c or") !
+
+
+champions/unitests/or_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 or") !
+
+
+champions/unitests/or_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 or") !
+
+
+champions/unitests/or_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 or") !
+
+
+champions/unitests/or_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c or") !
+
+
+champions/unitests/or_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 or") !
+
+
+champions/unitests/or_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 or") !
+
+
+champions/unitests/or_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 or") !
+
+
+champions/unitests/or_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 or") !
+
+
+champions/unitests/or_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c or") !
+
+
+champions/unitests/or_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 or") !
+
+
+champions/unitests/or_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 or") !
+
+
+champions/unitests/or_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 or") !
+
+
+champions/unitests/or_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c or") !
+
+
+champions/unitests/or_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 or") !
+
+
+champions/unitests/or_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 or") !
+
+
+champions/unitests/or_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 or") !
+
+
+champions/unitests/or_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c or") !
+
+
+champions/unitests/or_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 or") !
+
+
+champions/unitests/or_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 or") !
+
+
+champions/unitests/or_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 or") !
+
+
+champions/unitests/or_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c or") !
+
+
+champions/unitests/or_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 or") !
+
+
+champions/unitests/or_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 or") !
+
+
+champions/unitests/or_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 or") !
+
+
+champions/unitests/or_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 or") !
+
+
+champions/unitests/or_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c or") !
+
+
+champions/unitests/or_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 or") !
+
+
+champions/unitests/or_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 or") !
+
+
+champions/unitests/or_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 or") !
+
+
+champions/unitests/or_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c or") !
+
+
+champions/unitests/or_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 or") !
+
+
+champions/unitests/or_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 or") !
+
+
+champions/unitests/or_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 or") !
+
+
+champions/unitests/or_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac or") !
+
+
+champions/unitests/or_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 or") !
+
+
+champions/unitests/or_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 or") !
+
+
+champions/unitests/or_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 or") !
+
+
+champions/unitests/or_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc or") !
+
+
+champions/unitests/or_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc or") !
+
+
+champions/unitests/or_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 or") !
+
+
+champions/unitests/or_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 or") !
+
+
+champions/unitests/or_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 or") !
+
+
+champions/unitests/or_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc or") !
+
+
+champions/unitests/or_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 or") !
+
+
+champions/unitests/or_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 or") !
+
+
+champions/unitests/or_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 or") !
+
+
+champions/unitests/or_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc or") !
+
+
+champions/unitests/or_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 or") !
+
+
+champions/unitests/or_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 or") !
+
+
+champions/unitests/or_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 or") !
+
+
+champions/unitests/or_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec or") !
+
+
+champions/unitests/or_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 or") !
+
+
+champions/unitests/or_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 or") !
+
+
+champions/unitests/or_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 or") !
+
+
+champions/unitests/or_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc or") !
-1,2c1,2
-< 0x0000 : 02 90 00 00 00 64 03 03 50 03 04 00 00 00 64 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0000 : 02 90 00 00 00 64 03 03 50 03 04 03 70 04 00 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st.cor
+
+
+champions/unitests/st_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 st") !
+
+
+champions/unitests/st_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 st") !
+
+
+champions/unitests/st_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 st") !
+
+
+champions/unitests/st_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 st") !
+
+
+champions/unitests/st_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c st") !
+
+
+champions/unitests/st_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 st") !
+
+
+champions/unitests/st_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 st") !
+
+
+champions/unitests/st_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 st") !
+
+
+champions/unitests/st_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c st") !
+
+
+champions/unitests/st_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 30 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 34 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 38 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 3c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 st") !
+
+
+champions/unitests/st_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 st") !
+
+
+champions/unitests/st_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 st") !
+
+
+champions/unitests/st_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 st") !
+
+
+champions/unitests/st_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c st") !
+
+
+champions/unitests/st_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 st") !
+
+
+champions/unitests/st_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 st") !
+
+
+champions/unitests/st_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 st") !
+
+
+champions/unitests/st_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c st") !
+
+
+champions/unitests/st_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 st") !
+
+
+champions/unitests/st_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 st") !
+
+
+champions/unitests/st_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 st") !
+
+
+champions/unitests/st_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c st") !
+
+
+champions/unitests/st_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 70 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 74 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 78 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 7c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 st") !
+
+
+champions/unitests/st_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 st") !
+
+
+champions/unitests/st_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 st") !
+
+
+champions/unitests/st_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 st") !
+
+
+champions/unitests/st_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c st") !
+
+
+champions/unitests/st_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 st") !
+
+
+champions/unitests/st_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 st") !
+
+
+champions/unitests/st_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 st") !
+
+
+champions/unitests/st_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c st") !
+
+
+champions/unitests/st_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 st") !
+
+
+champions/unitests/st_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 st") !
+
+
+champions/unitests/st_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 st") !
+
+
+champions/unitests/st_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac st") !
+
+
+champions/unitests/st_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 b0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 b4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 b8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc st") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 03 bc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/st_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc st") !
+
+
+champions/unitests/st_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 st") !
+
+
+champions/unitests/st_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 st") !
+
+
+champions/unitests/st_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 st") !
+
+
+champions/unitests/st_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc st") !
+
+
+champions/unitests/st_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 st") !
+
+
+champions/unitests/st_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 st") !
+
+
+champions/unitests/st_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 st") !
+
+
+champions/unitests/st_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc st") !
+
+
+champions/unitests/st_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 st") !
+
+
+champions/unitests/st_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 st") !
+
+
+champions/unitests/st_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 st") !
+
+
+champions/unitests/st_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec st") !
+
+
+champions/unitests/st_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 st") !
+
+
+champions/unitests/st_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 st") !
+
+
+champions/unitests/st_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 st") !
+
+
+champions/unitests/st_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc st") !
+
+
+champions/unitests/sti.cor
 1c1
-< 0x0000 : 0b 78 01 00 0f 03 e8 02 90 00 00 00 08 02 0b 68 02 ff f2 03 e8 0b 58 01 02 03 ea 0b 74 02 00 01 01 0b 54 00 00 00 08 58 00 01 00 00 0b 54 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0000 : 0b 78 01 00 0f 03 e8 02 90 00 00 00 08 02 0b 68 02 ff f2 03 e8 0b 58 01 02 03 ea 0b 74 00 00 00 08 0b 54 00 00 00 08 58 00 01 00 00 0b 54 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0000 : 0b 78 01 00 0f 03 e8 02 90 00 00 00 08 02 0b 68 02 ff f2 03 e8 0b 58 01 02 03 ea 00 00 00 08 00 00 00 08 02 01 01 0b 58 00 01 00 00 0b 54 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 8,9c8,9
@@ -1295,21 +3168,23 @@
 > 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 > 0x0200 : 00 00 00 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 16,17c16,17
-< 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 
+< 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 < 0x0400 : 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x03c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 > 0x0400 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-41c41
-< 0x0a00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0a00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 sti") !
-3c4
-< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0040 : 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_1.cor
 6c6
 < 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
@@ -1318,456 +3193,515 @@
 < 0x0540 : 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0540 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 10 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 14 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 18 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 1c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-2c2
-< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-14c14
-< 0x0340 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0340 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_2.cor
+
+
+champions/unitests/sti_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 20 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 24 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 28 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c sti") !
 2c3
-< 0x0040 : 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 2c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 30 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 34 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 38 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 3c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 sti") !
-3c4
-< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0040 : 00 00 00 0b 04 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 40 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 44 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 48 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 4c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 50 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 54 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 58 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 5c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 60 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 64 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 68 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 6c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 sti") !
 2c3
-< 0x0040 : 00 00 00 0b 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 70 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 sti") !
 2c3
-< 0x0040 : 00 00 00 0b 74 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 74 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 sti") !
 2c3
-< 0x0040 : 00 00 00 0b 78 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 78 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c sti") !
 2c3
-< 0x0040 : 00 00 00 0b 7c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 7c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 sti") !
-3c4
-< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0040 : 00 00 00 0b 08 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 80 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 84 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 88 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c sti") !
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0040 : 00 00 00 0b 8c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 90 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 94 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 98 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b 9c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b a0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b a4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b a8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac sti") !
 2c3
 < 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b ac 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 sti") !
 2c3
-< 0x0040 : 00 00 00 0b b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b b0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 sti") !
 2c3
-< 0x0040 : 00 00 00 0b b4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b b4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 sti") !
 2c3
-< 0x0040 : 00 00 00 0b b8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b b8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc sti") !
 2c3
-< 0x0040 : 00 00 00 0b bc 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 0b bc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc sti") !
-3c4
-< 0x0080 : 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+2c3
+< 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0040 : 00 00 00 0b 0c 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 sti") !
-3,12c4,13
-< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
-< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 sti") !
-3,12c4,13
-< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
-< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 sti") !
-3,12c4,13
-< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
-< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc sti") !
-3,12c4,13
-< 0x0080 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 
-< 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b d0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b d4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b d8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b dc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b e0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b e4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b e8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec sti") !
-2c3
-< 0x0040 : 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b ec 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 sti") !
-2,7c3,8
-< 0x0040 : 00 00 00 0b f0 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b f0 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 sti") !
-2,7c3,8
-< 0x0040 : 00 00 00 0b f4 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b f4 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 sti") !
-2,7c3,8
-< 0x0040 : 00 00 00 0b f8 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b f8 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc sti") !
-2,7c3,8
-< 0x0040 : 00 00 00 0b fc 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 
-< 0x0080 : 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 
-< 0x00c0 : 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 
-< 0x0100 : 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 
-< 0x0180 : 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
----
-> 0x0040 : 00 00 00 0b fc 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-> 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sti_negative.cor
 1c1
 < 0x0000 : 02 90 00 00 00 64 02 0b 68 02 00 00 80 07 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
@@ -1776,279 +3710,694 @@
 < 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/strange.cor
 6c6
-< 0x0140 : 00 03 03 70 01 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0140 : 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+46c46
+< 0x0b40 : 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+> 0x0b40 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/strange2.cor
 2c2
 < 0x0040 : 00 00 00 00 01 00 00 00 00 03 70 03 0b 03 03 70 01 01 00 0b 0b 00 06 a4 00 00 00 00 00 00 00 00 0a 02 90 00 00 00 00 0a 0b 68 04 ff e9 ff fd 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0040 : 00 00 00 00 01 00 00 00 00 03 70 03 0b 03 70 03 01 01 00 0b 0b 00 06 a4 00 00 00 00 00 00 00 00 0a 02 90 00 00 00 00 0a 0b 68 04 ff e9 ff fd 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 6c6
-< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 03 03 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+< 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
 > 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-2c2
-< 0x0040 : 00 00 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+46c46
+< 0x0b40 : 00 00 00 00 00 00 00 00 00 00 00 00 03 03 70 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+> 0x0b40 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/sub.cor
+
+
+champions/unitests/sub_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 sub") !
+
+
+champions/unitests/sub_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 sub") !
+
+
+champions/unitests/sub_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 sub") !
+
+
+champions/unitests/sub_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 sub") !
+
+
+champions/unitests/sub_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c sub") !
+
+
+champions/unitests/sub_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 sub") !
+
+
+champions/unitests/sub_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 sub") !
+
+
+champions/unitests/sub_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 sub") !
+
+
+champions/unitests/sub_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c sub") !
+
+
+champions/unitests/sub_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 sub") !
+
+
+champions/unitests/sub_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 sub") !
+
+
+champions/unitests/sub_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 sub") !
+
+
+champions/unitests/sub_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c sub") !
+
+
+champions/unitests/sub_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 sub") !
+
+
+champions/unitests/sub_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 sub") !
+
+
+champions/unitests/sub_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 sub") !
+
+
+champions/unitests/sub_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 sub") !
+
+
+champions/unitests/sub_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c sub") !
+
+
+champions/unitests/sub_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 sub") !
+
+
+champions/unitests/sub_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 sub") !
+
+
+champions/unitests/sub_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 sub") !
+
+
+champions/unitests/sub_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c sub") !
+
+
+champions/unitests/sub_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 sub") !
+
+
+champions/unitests/sub_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 sub") !
+
+
+champions/unitests/sub_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 sub") !
+
+
+champions/unitests/sub_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c sub") !
+
+
+champions/unitests/sub_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 sub") !
+
+
+champions/unitests/sub_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 sub") !
+
+
+champions/unitests/sub_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 sub") !
+
+
+champions/unitests/sub_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c sub") !
+
+
+champions/unitests/sub_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 sub") !
+
+
+champions/unitests/sub_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 sub") !
+
+
+champions/unitests/sub_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 sub") !
+
+
+champions/unitests/sub_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 sub") !
+
+
+champions/unitests/sub_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c sub") !
+
+
+champions/unitests/sub_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 sub") !
+
+
+champions/unitests/sub_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 sub") !
+
+
+champions/unitests/sub_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 sub") !
+
+
+champions/unitests/sub_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c sub") !
+
+
+champions/unitests/sub_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 sub") !
+
+
+champions/unitests/sub_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 sub") !
+
+
+champions/unitests/sub_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 sub") !
+
+
+champions/unitests/sub_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac sub") !
+
+
+champions/unitests/sub_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 sub") !
+
+
+champions/unitests/sub_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 sub") !
+
+
+champions/unitests/sub_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 sub") !
+
+
+champions/unitests/sub_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc sub") !
+
+
+champions/unitests/sub_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc sub") !
+
+
+champions/unitests/sub_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 sub") !
+
+
+champions/unitests/sub_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 sub") !
+
+
+champions/unitests/sub_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 sub") !
+
+
+champions/unitests/sub_carry.cor
+
+
+champions/unitests/sub_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc sub") !
+
+
+champions/unitests/sub_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 sub") !
+
+
+champions/unitests/sub_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 sub") !
+
+
+champions/unitests/sub_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 sub") !
+
+
+champions/unitests/sub_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc sub") !
+
+
+champions/unitests/sub_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 sub") !
+
+
+champions/unitests/sub_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 sub") !
+
+
+champions/unitests/sub_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 sub") !
+
+
+champions/unitests/sub_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec sub") !
+
+
+champions/unitests/sub_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 sub") !
+
+
+champions/unitests/sub_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 sub") !
+
+
+champions/unitests/sub_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 sub") !
+
+
+champions/unitests/sub_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc sub") !
+
+
+champions/unitests/xor.cor
+
+
+champions/unitests/xor_0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x0 xor") !
+
+
+champions/unitests/xor_10.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x10 xor") !
+
+
+champions/unitests/xor_14.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x14 xor") !
+
+
+champions/unitests/xor_18.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x18 xor") !
+
+
+champions/unitests/xor_1c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x1c xor") !
+
+
+champions/unitests/xor_20.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x20 xor") !
+
+
+champions/unitests/xor_24.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x24 xor") !
+
+
+champions/unitests/xor_28.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x28 xor") !
+
+
+champions/unitests/xor_2c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x2c xor") !
+
+
+champions/unitests/xor_30.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x30 xor") !
+
+
+champions/unitests/xor_34.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x34 xor") !
+
+
+champions/unitests/xor_38.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x38 xor") !
+
+
+champions/unitests/xor_3c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x3c xor") !
+
+
+champions/unitests/xor_4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4 xor") !
+
+
+champions/unitests/xor_40.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x40 xor") !
+
+
+champions/unitests/xor_44.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x44 xor") !
+
+
+champions/unitests/xor_48.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x48 xor") !
+
+
+champions/unitests/xor_4c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x4c xor") !
+
+
+champions/unitests/xor_50.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x50 xor") !
+
+
+champions/unitests/xor_54.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x54 xor") !
+
+
+champions/unitests/xor_58.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x58 xor") !
+
+
+champions/unitests/xor_5c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x5c xor") !
+
+
+champions/unitests/xor_60.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x60 xor") !
+
+
+champions/unitests/xor_64.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x64 xor") !
+
+
+champions/unitests/xor_68.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x68 xor") !
+
+
+champions/unitests/xor_6c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x6c xor") !
+
+
+champions/unitests/xor_70.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x70 xor") !
+
+
+champions/unitests/xor_74.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x74 xor") !
+
+
+champions/unitests/xor_78.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x78 xor") !
+
+
+champions/unitests/xor_7c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x7c xor") !
+
+
+champions/unitests/xor_8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8 xor") !
+
+
+champions/unitests/xor_80.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x80 xor") !
+
+
+champions/unitests/xor_84.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x84 xor") !
+
+
+champions/unitests/xor_88.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x88 xor") !
+
+
+champions/unitests/xor_8c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x8c xor") !
+
+
+champions/unitests/xor_90.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x90 xor") !
+
+
+champions/unitests/xor_94.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x94 xor") !
+
+
+champions/unitests/xor_98.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x98 xor") !
+
+
+champions/unitests/xor_9c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0x9c xor") !
+
+
+champions/unitests/xor_a0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa0 xor") !
+
+
+champions/unitests/xor_a4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa4 xor") !
+
+
+champions/unitests/xor_a8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xa8 xor") !
+
+
+champions/unitests/xor_ac.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xac xor") !
+
+
+champions/unitests/xor_b0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb0 xor") !
+
+
+champions/unitests/xor_b4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb4 xor") !
+
+
+champions/unitests/xor_b8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xb8 xor") !
+
+
+champions/unitests/xor_bc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xbc xor") !
+
+
+champions/unitests/xor_c.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc xor") !
+
+
+champions/unitests/xor_c0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc0 xor") !
+
+
+champions/unitests/xor_c4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc4 xor") !
+
+
+champions/unitests/xor_c8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xc8 xor") !
+
+
+champions/unitests/xor_cc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xcc xor") !
+
+
+champions/unitests/xor_d0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd0 xor") !
+
+
+champions/unitests/xor_d4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd4 xor") !
+
+
+champions/unitests/xor_d8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xd8 xor") !
+
+
+champions/unitests/xor_dc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xdc xor") !
+
+
+champions/unitests/xor_e0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe0 xor") !
+
+
+champions/unitests/xor_e4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe4 xor") !
+
+
+champions/unitests/xor_e8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xe8 xor") !
+
+
+champions/unitests/xor_ec.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xec xor") !
+
+
+champions/unitests/xor_f0.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf0 xor") !
+
+
+champions/unitests/xor_f4.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf4 xor") !
+
+
+champions/unitests/xor_f8.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xf8 xor") !
+
+
+champions/unitests/xor_fc.cor
 0a1
 > * Player 1, weighing 24 bytes, "tester" ("test ocp 0xfc xor") !
-3c3
-< 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 00 00 0d d0 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+
+
+champions/unitests/zjmp_carry_with_fork.cor
+
+
+champions/unitests/zjmp_neg_overflow.cor
+
+
+champions/unitests/zjmp_neg_overflow_fail.cor
+19c19
+< 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0d d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ---
-> 0x0080 : 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 02 00 02 02 d0 
+> 0x0480 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+champions/unitests/zjmp_overflow.cor

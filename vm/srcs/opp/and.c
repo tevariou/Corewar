@@ -28,10 +28,20 @@
 
 int		and(t_mars *mars, t_processus *process)
 {
-	ft_get_params(process, mars, DIRECT4, *mars->memory[process->pc + 1]);
-	ft_load_register(process, process->params[2], process->params[0]
-		& process->params[1]);
-	if (!(ft_get_register(process, process->params[2])))
-		return (process->carry = 1);
-	return (process->carry = 0);
+	int srcs1;
+	int srcs2;
+	int desti;
+	int opc;
+
+	process->bytes_to_jump = process->pc + 2;
+	opc = ft_get_mars_value(mars, process->pc + 1, 1);
+	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
+	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT4);
+	desti = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT4);
+	ft_load_register(process, desti, srcs1 & srcs2);
+	if (srcs1 & srcs2)
+		process->carry = 0;
+	else
+		process->carry = 1;
+	return (SUCCESS);
 }
