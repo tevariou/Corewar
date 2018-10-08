@@ -6,15 +6,15 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 22:58:21 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 19:08:40 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ASM_H
 # define ASM_H
 
-# include "op.h"
-# include "libft.h"
+# include					"op.h"
+# include					"libft.h"
 
 # define USAGE				"Usage:\t./asm [[[-a] <sourcefile.s>]" \
 							" | [[-d] <binaryfile.cor>]]\n" \
@@ -22,6 +22,8 @@
 							"stripped and annotated version of the code " \
 							"to the standard output\n" \
 							"\t\t-d : Translate a binary file into assembly"
+# define WRITING_FILE		"Writing output program to "
+# define DUMPING_A			"Dumping annotated program on standard output"
 # define OPTION_STR_A		"-a"
 # define OPTION_STR_D		"-d"
 # define OPTION_A			1
@@ -149,6 +151,8 @@ unsigned int			atoi_base_int(char *str, char *base);
 unsigned short			atoi_base_short(char *str, char *base);
 unsigned char			atoi_reg(t_asm *a, t_code *op, char *str);
 void					reverse_bytes(void *n, size_t size);
+
+void					verbose_output(t_asm *a);
 
 char					*ft_str_label(char *str);
 char					*ft_label_str(char *str);

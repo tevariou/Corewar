@@ -6,14 +6,14 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:47:43 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 23:13:23 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/08 16:15:44 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
+#include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 static char			*set_extension(t_asm *a, char *file)
 {
@@ -111,7 +111,7 @@ void				write_bytecode(t_asm *a, char *file)
 	write_content(a, fd);
 	if (close(fd) < 0)
 		err_free_exit(a, NULL);
-	ft_putstr("Writing output program to ");
+	ft_putstr(WRITING_FILE);
 	ft_putendl(filename);
 	free(filename);
 }
