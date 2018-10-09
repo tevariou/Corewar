@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 10:10:24 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/08 16:16:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/09 12:29:23 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,23 @@ void	*ft_ncurses_get_input(void *data)
 	visu = (t_visu*)data;
 	while (1)
 	{
-		if ((input = getch()) != -1 && !visu->abort)
+		if ((input = getch()) != -1)
 		{
 			if (input == KEY_LEFT && visu->sleep < 200000)
 				visu->sleep *= 2;
 			if (input == KEY_RIGHT && visu->sleep > 2500)
 				visu->sleep /= 2;
 			if (input == 'q')
+			{
 				visu->abort = 1;
+				pthread_exit(0);
+			}
 			if (input == KEY_DOWN && visu->frame > 1)
 				visu->frame /= 2;
 			if (input == KEY_UP && visu->frame < 63)
 				visu->frame *= 2;
 			if (input == ' ')
 				visu->pause = (visu->pause == OFF) ? ON : OFF;
-		}
-		else
-		{
-			pthread_exit(0);
-			ft_exit(NULL, "");
 		}
 	}
 	pthread_exit(0);
