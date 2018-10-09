@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 17:37:49 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 20:56:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include "asm.h"
 
-static void	add_input_line(t_asm *a, char *line, size_t n)
+static void	add_input_line(t_asm *a, char *line, int n)
 {
 	t_file	*head;
 	t_file	*new;
@@ -57,7 +57,7 @@ static void	record_file(t_asm *a, int fd)
 {
 	int		ret;
 	char	*line;
-	size_t	n;
+	int		n;
 
 	line = NULL;
 	n = 1;

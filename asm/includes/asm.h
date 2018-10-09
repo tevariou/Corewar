@@ -6,15 +6,15 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 18:52:18 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 21:09:43 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ASM_H
 # define ASM_H
 
-# include					"op.h"
-# include					"libft.h"
+# include "op.h"
+# include "libft.h"
 
 # define USAGE				"Usage:\t./asm [-a] <sourcefile.s>" \
 							" | -d <binaryfile.cor>\n" \
@@ -34,7 +34,6 @@
 # define HEXA				"0123456789ABCDEF"
 # define DEC				"0123456789"
 # define FT_LEX_NUMBER		8
-
 # define WRONG_EXT			"Invalid filename"
 # define WRONG_HEADER		"Wrong header format"
 # define NAME_TOO_LONG		"Program name is too long"
@@ -73,7 +72,7 @@ typedef struct			s_lex {
 }						t_lex;
 
 typedef struct			s_file {
-	size_t				n;
+	int					n;
 	char				*line;
 	int					n_args;
 	t_lex				*tokens;
@@ -105,8 +104,8 @@ typedef struct			s_code {
 	t_byte				ocp;
 	int					args_type[3];
 	char				*values[3];
-	t_arg				args[3];	
-	size_t				size;
+	t_arg				args[3];
+	int					size;
 	t_file				*orig;
 	struct s_code		*prev;
 	struct s_code		*next;
@@ -117,18 +116,18 @@ typedef struct			s_asm {
 	t_file				*input;
 	t_label				*labels;
 	t_code				*output;
-	header_t			header;
+	t_header			header;
 }						t_asm;
 
-void					get_comment(t_asm *a, int fd, size_t *n);
-void					get_name(t_asm *a, int fd, size_t *n);
+void					get_comment(t_asm *a, int fd, int *n);
+void					get_name(t_asm *a, int fd, int *n);
 void					print_usage_exit(void);
 void					init_bytecode(t_asm *a);
 int						set_option(int ac, char **av);
 void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
 
-char					*get_quote(t_asm *a, int fd, size_t *n, char *line);
+char					*get_quote(t_asm *a, int fd, int *n, char *line);
 
 void					header_error(t_asm *a, char *line);
 void					asm_error(t_asm *a, t_file *line, char *str, const char *err);
@@ -156,7 +155,7 @@ void					check_extension(char *file, const char *ext);
 char					*set_extension(t_asm *a, char *file, const char *dest, const char *src);
 
 void					verbose_output(t_asm *a);
-void					decompile_bin(char *file);	
+void					decompile_bin(char *file);
 void					decompile_error(char **out);
 
 void					add_t_reg(t_code *new, int index, t_bool ocp);

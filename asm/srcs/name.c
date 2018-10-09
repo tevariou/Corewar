@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:55 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 17:24:34 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 20:54:14 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	record_name(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-void		get_name(t_asm *a, int fd, size_t *n)
+void		get_name(t_asm *a, int fd, int *n)
 {
 	int		ret;
 	char	*line;

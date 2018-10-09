@@ -6,14 +6,14 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:34:57 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 20:16:01 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 20:52:54 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include "asm.h"
 
-static unsigned short	return_short_value(ssize_t len)
+static unsigned short	return_short_value(int len)
 {
 	unsigned short	ret;
 
@@ -25,15 +25,13 @@ static unsigned short	return_short_value(ssize_t len)
 static unsigned short	compute_len_short(t_asm *a, t_code *orig,
 											t_code *target)
 {
-	ssize_t	len;
+	int		len;
 	t_code	*tmp;
 
 	len = 0;
 	tmp = orig;
-	while (tmp != a->output->prev)
+	while (tmp != a->output->prev && tmp != target)
 	{
-		if (tmp == target)
-			return (return_short_value(len));
 		if ((len += tmp->size) > SHRT_MAX)
 			err_free_exit(a, FILE_OVERFLOW);
 		tmp = tmp->next;
@@ -42,10 +40,9 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig,
 		return (return_short_value(len));
 	len = 0;
 	tmp = orig->prev;
-	while (tmp != a->output)
+	while (tmp != a->output && (len - tmp->size) >= (int)SHRT_MIN)
 	{
-		if ((len -= tmp->size) < SHRT_MIN)
-			err_free_exit(a, FILE_OVERFLOW);
+		len -= tmp->size;
 		if (tmp == target)
 			return (return_short_value(len));
 		tmp = tmp->prev;
@@ -57,7 +54,7 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig,
 
 static unsigned short	label_null_short(t_asm *a, t_code *orig)
 {
-	ssize_t	len;
+	int		len;
 	t_code	*tail;
 
 	len = 0;

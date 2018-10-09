@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:35:02 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 20:05:41 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 20:47:28 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 
 	len = 0;
 	tmp = orig;
-	while (tmp != a->output->prev)
+	while (tmp != a->output->prev && tmp != target)
 	{
-		if (tmp == target)
-			return (return_int_value(len));
 		if ((len += tmp->size) > INT_MAX)
 			err_free_exit(a, FILE_OVERFLOW);
 		tmp = tmp->next;
@@ -41,10 +39,9 @@ static unsigned int	compute_len_int(t_asm *a, t_code *orig, t_code *target)
 		return (return_int_value(len));
 	len = 0;
 	tmp = orig->prev;
-	while (tmp != a->output)
+	while (tmp != a->output && (len - tmp->size) >= (long)INT_MIN)
 	{
-		if ((len -= tmp->size) < INT_MIN)
-			err_free_exit(a, FILE_OVERFLOW);
+		len -= tmp->size;
 		if (tmp == target)
 			return (return_int_value(len));
 		tmp = tmp->prev;

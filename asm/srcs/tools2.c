@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 16:43:31 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 17:39:07 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 20:56:45 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static char	*get_line(t_asm *a, char *line, char **buff)
 	return (tmp);
 }
 
-char		*get_quote(t_asm *a, int fd, size_t *n, char *line)
+char		*get_quote(t_asm *a, int fd, int *n, char *line)
 {
 	char	*s;
 	char	*buff;
