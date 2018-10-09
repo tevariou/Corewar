@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 16:43:31 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 20:56:45 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 22:28:15 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,6 @@ void		reverse_bytes(void *n, size_t size)
 	unsigned char	tmp;
 
 	p = (unsigned char *)n;
-	while (size && !(*p))
-	{
-		p++;
-		size--;
-	}
 	i = 0;
 	while (i < size / 2)
 	{

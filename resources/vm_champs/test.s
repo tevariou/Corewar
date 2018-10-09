@@ -1,4 +1,4 @@
 .name"name"
 .comment"comment"
 
-live %1
+and r-1, r0, r0
