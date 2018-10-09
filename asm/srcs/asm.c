@@ -23,12 +23,12 @@ int		main(int ac, char **av)
 	if (ac <= 1 || ac > 3)
 		print_usage_exit();
 	a.option = set_option(ac, av);
-	//if (a.option == OPTION_D)
-	//	decompile_bin(av[2]);
-	//else
-	//{
+	if (a.option == OPTION_D)
+		decompile_bin(av[2]);
+	else
+	{
 		compile_asm(&a, av[a.option + 1]);
 		free_all(&a);
-	//}
+	}
 	return (EXIT_SUCCESS);
 }

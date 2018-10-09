@@ -32,6 +32,14 @@ void		err_free_exit(t_asm *a, const char *err)
 	exit(EXIT_FAILURE);
 }
 
+void		decompile_error(char **out)
+{
+	ft_putendl_fd("ERROR", 2);
+	if (out && *out)
+		free(*out);
+	exit(EXIT_FAILURE);
+}
+
 void		header_error(t_asm *a, char *line)
 {
 	free_all(a);

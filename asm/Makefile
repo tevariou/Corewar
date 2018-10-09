@@ -38,8 +38,8 @@ SRCS =	asm.c \
 		write.c \
 		convert_label_int.c \
 		convert_label_short.c \
-		verbose.c
-#		decompile.c
+		verbose.c \
+		decompile.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

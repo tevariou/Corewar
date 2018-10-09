@@ -24,6 +24,7 @@
 							"\t\t-d : Translate a binary file into assembly"
 # define WRITING_FILE		"Writing output program to "
 # define DUMPING_A			"Dumping annotated program on standard output"
+# define DUMPING_D			"Writing output source file to "
 # define OPTION_STR_A		"-a"
 # define OPTION_STR_D		"-d"
 # define OPTION_A			1
@@ -45,8 +46,6 @@
 # define INVALID_ARGS		"Invalid arguments at line "
 # define LEXER_ERROR		"Lexical error at line "
 # define PARSER_ERROR		"Parser error at line "
-
-#define WRONG_MAGIC			"Wrong file type"
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -161,6 +160,7 @@ char					*set_extension(t_asm *a, char *file, const char *dest, const char *src)
 
 void					verbose_output(t_asm *a);
 void					decompile_bin(char *file);	
+void					decompile_error(char **out);
 
 char					*ft_str_label(char *str);
 char					*ft_label_str(char *str);

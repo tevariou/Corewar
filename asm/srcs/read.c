@@ -33,6 +33,7 @@ static void		remove_whitespaces(t_asm *a, char **line)
 		free(*line);
 		err_free_exit(a, NULL);
 	}
+	free(*line);
 	*line = tmp;
 }
 
