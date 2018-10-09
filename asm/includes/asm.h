@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 21:09:43 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 21:38:31 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 # include "op.h"
 # include "libft.h"
 
-# define USAGE				"Usage:\t./asm [-a] <sourcefile.s>" \
-							" | -d <binaryfile.cor>\n" \
-							"Options:\t-a : Instead of creating a .cor file, outputs a " \
-							"stripped and annotated version of the code " \
-							"to the standard output\n" \
-							"\t\t-d : Translate a binary file into assembly"
 # define WRITING_FILE		"Writing output program to "
 # define DUMPING_A			"Dumping annotated program on standard output"
 # define DUMPING_D			"Writing output source file to "
@@ -130,7 +124,8 @@ void					compile_asm(t_asm *a, char *file);
 char					*get_quote(t_asm *a, int fd, int *n, char *line);
 
 void					header_error(t_asm *a, char *line);
-void					asm_error(t_asm *a, t_file *line, char *str, const char *err);
+void					asm_error(t_asm *a, t_file *line,
+									char *str, const char *err);
 void					parser_error(t_asm *a, t_file *line, const char *err);
 void					err_free_exit(t_asm *a, const char *err);
 
@@ -152,7 +147,8 @@ unsigned char			atoi_reg(t_asm *a, t_code *op, char *str);
 void					reverse_bytes(void *n, size_t size);
 
 void					check_extension(char *file, const char *ext);
-char					*set_extension(t_asm *a, char *file, const char *dest, const char *src);
+char					*set_extension(t_asm *a, char *file,
+										const char *dest, const char *src);
 
 void					verbose_output(t_asm *a);
 void					decompile_bin(char *file);
