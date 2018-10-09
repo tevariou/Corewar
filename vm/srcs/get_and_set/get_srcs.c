@@ -19,9 +19,11 @@ unsigned    ft_get_srcs(t_mars *mars, t_processus *process, int code, int dir_si
 
     if (code == REG_CODE)
     {
-       source = ft_get_mars_value(mars, process->bytes_to_jump, 1);
+       source = ft_get_mars_value(mars, process->bytes_to_jump, REG);
+       if (!ft_is_register(source))
+        process->opcode = 0;
        source = ft_get_register(process, source);
-       process->bytes_to_jump += 1;
+       process->bytes_to_jump += REG;
     }
     else if (code == DIR_CODE)
     {
@@ -48,6 +50,8 @@ unsigned    ft_get_dest(t_mars *mars, t_processus *process, int code, int dir_si
     if (code == REG_CODE)
     {
        dest = ft_get_mars_value(mars, process->bytes_to_jump, REG);
+       if (!ft_is_register(dest))
+        process->opcode = 0;
        process->bytes_to_jump += REG;
     }
     else if (code == DIR_CODE)

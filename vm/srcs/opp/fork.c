@@ -60,7 +60,7 @@ int		ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
-	ft_copy_process(process, mars, ft_global_restriction((short)(process->pc + dest) % IDX_MOD));
+	ft_copy_process(process, mars, ft_global_restriction(process->pc + (short)dest % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE;
 	return (SUCCESS);
 }

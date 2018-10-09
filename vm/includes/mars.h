@@ -160,5 +160,7 @@ t_processus					*ft_copy_process(t_processus *process, t_mars *mars, unsigned de
 int							ft_get_param_type(int opc, int num_arg);
 unsigned					ft_get_srcs(t_mars *mars, t_processus *process, int code, int param_number);
 unsigned					ft_get_dest(t_mars *mars, t_processus *process, int code, int dir_size);
+int							check_register(int ocp, int index, int value);
+
 
 #endif

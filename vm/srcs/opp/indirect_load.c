@@ -26,6 +26,23 @@
 ** l'etat un, sinon a l'etat zero.
 */
 
+
+static int	check_ocp(int ocp)
+{
+	int param_type1;
+	int param_type2;
+	int param_type3;
+
+	param_type1 = ft_get_param_type(ocp, 1);
+	param_type2 = ft_get_param_type(ocp, 2);
+	param_type3 = ft_get_param_type(ocp, 3);
+	if (!param_type1 || !param_type2 || !param_type3 || ft_get_param_type(ocp, 4))
+		return (0);
+//	if(param_type1 != IND_CODE && param_type2 != IND_CODE &&  param_type3 == REG_CODE) 
+		return (1);
+	return (0);
+}
+
 int		indirect_load(t_mars *mars, t_processus *process)
 {
 	int srcs1;
@@ -35,10 +52,13 @@ int		indirect_load(t_mars *mars, t_processus *process)
 	int address;
 
 	opc = ft_get_mars_value(mars, process->pc + 1, 1);
-	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
-	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT4);
+	process->bytes_to_jump = process->pc + 2;
+	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT2);
+	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT2);
 	dest = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT2);
-	address = ft_get_mars_value(mars, process->pc + srcs1 + srcs2, 4);
+	if(!check_ocp(opc) || !process->opcode)
+		return (0);
+	address = ft_get_mars_value(mars, process->pc + ((short)(srcs1 + srcs2)) % IDX_MOD, REG_SIZE);
 	ft_load_register(process, dest, address);
 	if (srcs1 + srcs2)
 		process->carry = 0;

@@ -23,12 +23,43 @@
 ** Identique a Indirect Load mais sans restriction de l'adressage.
 */
 
+
+static int	check_ocp(int ocp)
+{
+	int param_type1;
+	int param_type2;
+	int param_type3;
+
+	param_type1 = ft_get_param_type(ocp, 1);
+	param_type2 = ft_get_param_type(ocp, 2);
+	param_type3 = ft_get_param_type(ocp, 3);
+	if (!param_type1 || !param_type2 || !param_type3)
+		return (0);
+	if(param_type3 == REG_CODE && !(param_type3 != DIR_CODE) && !(param_type1 != DIR_CODE))
+		return (1);
+	return (0);
+}
+
 int		long_indirect_load(t_mars *mars, t_processus *process)
 {
-	ft_get_params(process, mars, DIRECT2, *mars->memory[process->pc + 1]);
-	ft_load_register(process, process->params[2], process->params[0]
-		+ process->params[1]);
-	if (!(ft_get_register(process, process->params[2])))
-		return (process->carry = 1);
-	return (process->carry = 0);
+	int srcs1;
+	int srcs2;
+	int dest;
+	int opc;
+	int address;
+
+	opc = ft_get_mars_value(mars, process->pc + 1, 1);
+	process->bytes_to_jump = process->pc + 2;
+	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT2);
+	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT2);
+	dest = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT2);
+	if(!check_ocp(opc))
+		return (0);
+	address = ft_get_mars_value(mars, process->pc + ((short)(srcs1 + srcs2)), 2);
+	ft_load_register(process, dest, address);
+	if (srcs1 + srcs2)
+		process->carry = 0;
+	else
+		process->carry = 1;
+	return (SUCCESS);
 }

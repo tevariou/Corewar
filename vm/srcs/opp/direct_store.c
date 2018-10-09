@@ -25,7 +25,23 @@
 ** passe a l'etat un, sinon a l'etat zero.
 */
 
-int direct_store(t_mars *mars, t_processus *process)
+static int	check_ocp(int ocp)
+{
+	int param_type1;
+	int param_type2;
+	int param_type3;
+
+	param_type1 = ft_get_param_type(ocp, 1);
+	param_type2 = ft_get_param_type(ocp, 2);
+	param_type3 = ft_get_param_type(ocp, 3);
+	if (!param_type1 || !param_type2)
+		return (0);
+	if(param_type1 == REG_CODE && (param_type2 == REG_CODE || param_type2 == IND_CODE) && !param_type3)
+		return (1);
+	return (0);
+}
+
+int			direct_store(t_mars *mars, t_processus *process)
 {
 	int srcs;
 	int dest;
@@ -34,12 +50,15 @@ int direct_store(t_mars *mars, t_processus *process)
 
 	process->bytes_to_jump = process->pc + 2;
 	ocp = ft_get_mars_value(mars, process->pc + 1, 1);
+	
 	dest_type = ft_get_param_type(ocp, 2);
 	srcs = ft_get_srcs(mars, process, ft_get_param_type(ocp, 1), 4);
 	dest = ft_get_dest(mars, process, dest_type, 4);
-	if (dest_type == REG_CODE)
+	if (!check_ocp(ocp) || !ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1)))
+		return (process->carry);
+	if (dest_type == REG_CODE && ft_is_register(dest))
 		ft_load_register(process, dest, srcs);
 	else if (dest_type == IND_CODE)
-		ft_load_mars_value(mars, dest + process->pc, srcs, process->player);
+		ft_load_mars_value(mars, process->pc + (short)dest % IDX_MOD, srcs, process->player);
 	return (process->carry);
 }

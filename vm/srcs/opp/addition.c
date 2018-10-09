@@ -32,7 +32,6 @@ int		addition(t_mars *mars, t_processus *process)
 	int desti;
 	int opc;
 
-
 	process->bytes_to_jump = process->pc + 2;
 	opc = ft_get_mars_value(mars, process->pc + 1, 1);
 	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
