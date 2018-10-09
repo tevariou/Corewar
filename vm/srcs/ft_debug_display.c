@@ -75,10 +75,11 @@ void	ft_info_mars(t_mars *mars)
 	printf("cycle to die : %d --- \n\n", mars->cycle_teta);
 }
 
-void	ft_debug_info(t_mars *mars)
+void	ft_debug_info(t_mars *mars, t_processus *process)
 {
 	t_processus *tmp;
 
+	(void)process;
 	system("@cls||clear");
 	tmp = mars->process_lst;
 	while (tmp)

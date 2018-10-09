@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 20:18:08 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/07 21:01:18 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,12 @@ t_mars		*ft_new_mars(void)
 	mars->cycle_delta = CYCLE_DELTA;
 	mars->cycle_teta = CYCLE_TO_DIE;
 	mars->current_cycle = 0;
+	mars->nb_process = 0;
 	mars->process_lst = NULL;
 	mars->champion_lst = NULL;
 	mars->ft_display = NULL;
 	mars->visualisor = 0;
+	mars->verbose = -1;
 	mars->dump = -1;
 	return (mars);
 }

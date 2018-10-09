@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/05 16:38:34 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/09 11:38:09 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <zaz.h>
 # include <sys/types.h>
 # include <stdio.h>
+
 typedef unsigned char		t_byte;
 
 # define TRUE 				1
@@ -36,10 +37,12 @@ typedef unsigned char		t_byte;
 # define INDEX				2
 # define DIRECT2			2
 # define DIRECT4			4
+# define NO_VERBOSE			0
 
-typedef struct s_mars t_mars;
+typedef struct s_mars		t_mars;
 typedef struct				s_processus
 {
+	int						id;
 	int						player;
 	int						carry;
 	char					*name;
@@ -48,7 +51,7 @@ typedef struct				s_processus
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
-	int						(*opcode)(struct s_mars *,struct s_processus *);
+	int						(*opcode)(struct s_mars *, struct s_processus *);
 	unsigned int			params[3];
 	unsigned				bytes_to_jump;
 	struct s_processus		*next;
@@ -60,6 +63,7 @@ typedef struct				s_champion
 	int						id_color;
 	char					*name;
 	unsigned				nbr_of_live;
+	unsigned				nb_process;
 	unsigned				last_cycle_live;
 	struct s_champion		*next;
 }							t_champion;
@@ -72,11 +76,13 @@ struct						s_mars
 	unsigned				current_cycle;
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
+	unsigned				nb_process;
 	t_processus				*process_lst;
 	t_champion				*champion_lst;
-	void					(*ft_display)(t_mars *);
+	void					(*ft_display)(t_mars *, t_processus *);
 	int						visualisor;
 	int						dump;
+	int						verbose;
 	t_visu					visu;
 };
 
@@ -101,7 +107,10 @@ int							ft_is_register(int index);
 int							ft_memory_is_register(t_mars *mars, int address);
 unsigned					ft_get_mars_value(t_mars *mars, unsigned index, unsigned size);
 int							ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode);
+char						*ft_get_opcode_name(t_mars *mars, t_processus *process);
 unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsigned color);
+int							ft_is_visualisator(t_mars *mars, char **av);
+int							ft_is_dump_option(t_mars *mars, char **av);
 
 /*
 ** loop during battle
@@ -113,15 +122,19 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 /*
 ** Debug
 */
-void						ft_debug_info(t_mars *mars);
-void						ft_ncurses_display(t_mars *mars);
+void						ft_debug_info(t_mars *mars, t_processus *process);
+void						ft_ncurses_display(t_mars *mars, t_processus *process);
+void						ft_verbose(t_mars *mars, t_processus *process);
 void						ft_info_ram(t_mars *mars);
-void						ft_print_usage(void);
+void						ft_print_usage(t_mars *mars);
+void						ft_free_mars(t_mars *mars);
+void						*ft_free_current_process(t_processus *process);
 
 /*
 ** Ncurses
 */
 void 						ft_init_ncurses();
+void						ft_ncurses_print_live(t_mars *mars);
 
 /*
 ** restriction addressage
@@ -164,3 +177,4 @@ int							check_register(int ocp, int index, int value);
 
 
 #endif
+

@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mars.c                                             :+:      :+:    :+:   */
+/*   ft_strhas_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/25 15:31:12 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 16:29:05 by lmazeaud         ###   ########.fr       */
+/*   Created: 2018/07/18 19:23:29 by lmazeaud          #+#    #+#             */
+/*   Updated: 2018/08/02 08:03:02 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mars.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <locale.h>
+#include "libft.h"
 
-int		main(int ac, char **av)
+int		ft_strhas_str(const char *str, const char *find)
 {
-	t_mars		*mars;
+	char	*src;
+	int		i;
+	int		j;
+	int		f_len;
 
-	setlocale(LC_ALL, "");
-	mars = ft_set_mars(ac, av);
-	if (mars->visualisor == NCURSE)
-		ft_init_ncurses(&mars->visu);
-	loop_through_battle(mars);
-	if (mars->visualisor == NCURSE)
-		ft_close_ncurses(&mars->visu);
-	return (SUCCESS);
+	i = 0;
+	j = 0;
+	f_len = 0;
+	src = (char *)str;
+	if (!(f_len = ft_strlen(find)))
+		return (0);
+	while (src[i] != '\0')
+	{
+		if (src[i] == find[j])
+			j++;
+		else
+		{
+			i -= j;
+			j = 0;
+		}
+		if (j == f_len)
+			return (1);
+		i++;
+	}
+	return (0);
 }

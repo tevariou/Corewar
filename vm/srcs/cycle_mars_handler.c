@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cycle_mars_handler.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/09/28 21:12:18 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/07 16:54:00 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,18 @@ void	ft_kill_process(t_mars *mars)
 //		free(process);
 }
 
+void	ft_init_champs_life(t_champion *champion)
+{
+	t_champion *champ;
+
+	champ = champion;
+	while (champ)
+	{
+		champ->nbr_of_live = 0;	
+		champ = champ->next;
+	}
+}
+
 void	ft_cycles_handler(t_mars *mars)
 {
 	mars->current_cycle++;
@@ -49,5 +61,6 @@ void	ft_cycles_handler(t_mars *mars)
 	//	ft_kill_process(mars);
 		mars->cycle_to_die += mars->cycle_teta;
 		mars->cycle_teta -= mars->cycle_delta;
+		ft_init_champs_life(mars->champion_lst);
 	}
 }

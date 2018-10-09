@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 19:39:01 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/08 15:54:42 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,42 +15,33 @@
 #include "libft.h"
 #include "mars.h"
 
-void	ft_ncurses_print_processus(t_mars *mars, t_processus *process)
+void	ft_ncurses_print_champs(t_mars *mars, t_champion *champ)
 {
 	t_visu		*v;
-	unsigned	i;
 
 	v = &mars->visu;
-	i = 0;
-	if (!process)
+	if (!champ)
 		ft_exit(NULL, "no process");
-	wattron(v->info, COLOR_PAIR(0));
-	wprintw(v->info, "\nprocessus -> ");
-	wattroff(v->info, COLOR_PAIR(0));
-	wattron(v->info, COLOR_PAIR(process->player));
-	wprintw(v->info, "%s\n", process->name);
-	wattroff(v->info, COLOR_PAIR(process->player));
+	wattron(v->info, COLOR_PAIR(12));
+	wprintw(v->info, "\nChampion : ");
+	wattroff(v->info, COLOR_PAIR(12));
+	wattron(v->info, COLOR_PAIR(champ->id_color));
+	wprintw(v->info, "%s\n", champ->name);
+	wattroff(v->info, COLOR_PAIR(champ->id_color));
 
-	wattron(v->info, COLOR_PAIR(0));
-	wprintw(v->info, "PC     -> ");
+	wattron(v->info, COLOR_PAIR(12));
+	wprintw(v->info, "Nb process : ");
 	wattroff(v->info, COLOR_PAIR(0));
-	wattron(v->info, COLOR_PAIR(process->player));
-	wprintw(v->info, "%u\n", process->pc);
-	wattroff(v->info, COLOR_PAIR(process->player));
+	wattron(v->info, COLOR_PAIR(champ->id_color));
+	wprintw(v->info, "%u\n", champ->nb_process);
+	wattroff(v->info, COLOR_PAIR(champ->id_color));
 
-	wattron(v->info, COLOR_PAIR(0));
-	wprintw(v->info, "Last Cycle Live     -> ");
-	wattroff(v->info, COLOR_PAIR(0));
-	wattron(v->info, COLOR_PAIR(process->player));
-	wprintw(v->info, "%u\n", process->last_cycle_live);
-	wattroff(v->info, COLOR_PAIR(process->player));
-
-	wattron(v->info, COLOR_PAIR(0));
-	wprintw(v->info, "Nbr of Live   -> ");
-	wattroff(v->info, COLOR_PAIR(0));
-	wattron(v->info, COLOR_PAIR(process->player));
-	wprintw(v->info, "%u\n", process->nbr_of_live);
-	wattroff(v->info, COLOR_PAIR(process->player));
+	wattron(v->info, COLOR_PAIR(12));
+	wprintw(v->info, "Last Cycle Live : ");
+	wattroff(v->info, COLOR_PAIR(12));
+	wattron(v->info, COLOR_PAIR(champ->id_color));
+	wprintw(v->info, "%u\n", champ->last_cycle_live);
+	wattroff(v->info, COLOR_PAIR(champ->id_color));
 }
 
 void	ft_ncurses_print_process_pc(t_mars *mars)
@@ -91,7 +82,7 @@ void	ft_ncurses_info_ram(t_mars *mars)
 void	ft_ncurses_info_mars(t_mars *mars)
 {
 	int			i;
-	t_processus *p;
+	t_champion	*champ;
 	t_visu		*v;
 
 	i = -1;
@@ -103,30 +94,29 @@ void	ft_ncurses_info_mars(t_mars *mars)
 	wprintw(v->info, "cycle delta : %d --- \n\n", mars->cycle_delta);
 	wprintw(v->info, "next cycle to die : %d --- \n\n", mars->cycle_to_die);
 	wprintw(v->info, "cycle to die : %d --- \n\n", mars->cycle_teta);
-	wprintw(v->info, "pause : %d --- \n\n", v->pause);
-	p = mars->process_lst;
-	while (++i < (int)mars->count_players)
+	wprintw(v->info, "nb process %d --- \n\n", mars->nb_process);
+	champ = mars->champion_lst;
+	while (champ)
 	{
-		ft_ncurses_print_processus(mars, p);
-		p = p->next;
+		ft_ncurses_print_champs(mars, champ);
+		champ = champ->next;
 	}
+	ft_ncurses_print_controlers(v);
 	wrefresh(v->info);
 }
 
-void	ft_ncurses_display(t_mars *mars)
+void	ft_ncurses_display(t_mars *mars, t_processus *process)
 {
 	t_visu	*v;
 
+	(void)process;
 	v = &mars->visu;
 	ft_ncurses_info_mars(mars);
 	ft_ncurses_info_ram(mars);
+	ft_ncurses_print_live(mars);
+	ft_ncurses_handle_pause(v);
+	wrefresh(v->info);
+	wrefresh(v->live);
 	wrefresh(v->arena);
 	usleep(v->sleep);
-	if (v->pause == OFF)
-		while (1)
-		{
-			if (v->pause == ON)
-				break ;
-			usleep(500);
-		}
 }

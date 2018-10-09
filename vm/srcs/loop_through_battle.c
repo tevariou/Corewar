@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 22:11:26 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/08 15:44:20 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include "mars.h"
-#include "visu.h"
 
 static void	ft_idle_turn(t_processus *p, int current_cycle)
 {
@@ -23,19 +21,31 @@ static void	ft_idle_turn(t_processus *p, int current_cycle)
 	p->next_instruction_cycle = current_cycle + 1;
 }
 
-static int	execut_process_turn(t_mars * mars, t_processus *current_process)
+static int	execut_process_turn(t_mars *mars, t_processus *current_process)
 {
+	t_visu *v;
+
+	v = &mars->visu;
 	if (mars->current_cycle == current_process->next_instruction_cycle)
 	{
-
-		current_process->params[0] = 0;
-		current_process->params[1] = 0;
-		current_process->params[2] = 0;
 		if (current_process->opcode)
 			current_process->opcode(mars, current_process);
 		ft_move_pc(mars, current_process);
-		if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
-			ft_idle_turn(current_process, mars->current_cycle);	}
+		if (ft_get_opcode(mars, current_process,
+		*mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
+			ft_idle_turn(current_process, mars->current_cycle);
+	}
+	v->current_frame++;
+	if (mars->visualisor > 0 && v->current_frame == v->frame)
+	{
+		mars->ft_display(mars, current_process);
+		v->current_frame = 0;
+	}
+	if (v->abort)
+	{
+		ft_close_ncurses(v);
+		ft_exit(mars, "");
+	}
 	return (1);
 }
 
@@ -56,10 +66,8 @@ void		loop_through_battle(t_mars *mars)
 {
 	while (execute_one_cycle(mars))
 	{
-		if (mars->visualisor > 0)
-			mars->ft_display(mars);
 		if (!mars->visualisor && mars->dump > 0)
-			if (mars->current_cycle == mars->dump)
+			if (mars->current_cycle == (unsigned)mars->dump)
 			{
 				ft_info_ram(mars);
 				ft_exit(mars, "");

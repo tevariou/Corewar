@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abiestro <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/14 13:26:12 by abiestro          #+#    #+#              #
-#    Updated: 2018/09/14 13:26:33 by abiestro         ###   ########.fr        #
+#    Updated: 2018/10/05 14:33:25 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS =	ft_memset.c \
 		ft_strequ.c \
 		ft_strsub.c \
 		ft_strjoin.c \
+		ft_strhas_str.c \
 		ft_isdigit.c \
 		ft_isspace.c \
 		ft_memset.c \

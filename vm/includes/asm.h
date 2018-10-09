@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:46:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 19:18:04 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/05 15:54:32 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,26 +39,27 @@ typedef struct				s_pf_opp
 	int						(*f)(t_mars *, t_processus *);
 	unsigned				latence;
 	int						direct_size;
+	char					*name;
 }							t_pf_opp;
 
 t_pf_opp					g_opps[NB_OPPS] =
 {
-	{LIVE, &live, 10, DIRECT_4, },
-	{DIRECT_LOAD, &direct_load, 5, DIRECT_4},
-	{DIRECT_STORE, &direct_store, 5, NO_DIRECT},
-	{ADDITION, &addition, 10, NO_DIRECT},
-	{SUBSTRACTION, &substraction, 10, NO_DIRECT},
-	{AND, &and, 6, DIRECT_4},
-	{OR, &or, 6, DIRECT_4},
-	{XOR, &xor, 6, DIRECT_4},
-	{JUMP, &jump, 20, DIRECT_2},
-	{INDIRECT_LOAD, &indirect_load, 25, DIRECT_2},
-	{INDIRECT_STORE, &indirect_store, 25, DIRECT_2},
-	{FORK, &ft_fork, 800, DIRECT_2},
-	{L_DIRECT_LOAD, &long_direct_load, 10, DIRECT_4},
-	{L_INDERECT_LOAD, &long_indirect_load, 50, DIRECT_2},
-	{L_FORK, &long_fork, 1000, DIRECT_2},
-	{AFF, &aff, 2, NO_DIRECT},
+	{LIVE, &live, 10, DIRECT_4, "live"},
+	{DIRECT_LOAD, &direct_load, 5, DIRECT_4, "ld"},
+	{DIRECT_STORE, &direct_store, 5, NO_DIRECT, "st"},
+	{ADDITION, &addition, 10, NO_DIRECT, "add"},
+	{SUBSTRACTION, &substraction, 10, NO_DIRECT, "sub"},
+	{AND, &and, 6, DIRECT_4, "and"},
+	{OR, &or, 6, DIRECT_4, "or"},
+	{XOR, &xor, 6, DIRECT_4, "xor"},
+	{JUMP, &jump, 20, DIRECT_2, "zjump"},
+	{INDIRECT_LOAD, &indirect_load, 25, DIRECT_2, "ldi"},
+	{INDIRECT_STORE, &indirect_store, 25, DIRECT_2, "sti"},
+	{FORK, &ft_fork, 800, DIRECT_2, "fork"},
+	{L_DIRECT_LOAD, &long_direct_load, 10, DIRECT_4, "lld"},
+	{L_INDERECT_LOAD, &long_indirect_load, 50, DIRECT_2, "lldi"},
+	{L_FORK, &long_fork, 1000, DIRECT_2, "lfork"},
+	{AFF, &aff, 2, NO_DIRECT, "affs"}
 };
 
 #endif
