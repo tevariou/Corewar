@@ -6,31 +6,13 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 20:26:01 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 18:55:04 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdio.h>
-
-void		print_usage_exit(void)
-{
-	ft_putendl_fd(USAGE, 2);
-	exit(EXIT_FAILURE);
-}
-
-void		err_free_exit(t_asm *a, const char *err)
-{
-	if (!err)
-		perror(NULL);
-	else
-		ft_putendl_fd(err, 2);
-	if (a)
-		free_all(a);
-	exit(EXIT_FAILURE);
-}
 
 void		decompile_error(char **out)
 {

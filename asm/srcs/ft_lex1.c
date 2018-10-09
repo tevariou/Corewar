@@ -6,70 +6,12 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 21:34:38 by triou             #+#    #+#             */
-/*   Updated: 2018/10/03 19:55:51 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 17:45:11 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
-
-char	*ft_str_label(char *str)
-{
-	char	*ptr;
-
-	ptr = str;
-	while (ft_strchr(LABEL_CHARS, *ptr))
-		ptr++;
-	if (ptr == str || *ptr++ != LABEL_CHAR)
-		return (NULL);
-	return (ptr);
-}
-
-char	*ft_label_str(char *str)
-{
-	char	*ptr;
-
-	if (*str++ != LABEL_CHAR)
-		return (NULL);
-	ptr = str;
-	while (ft_strchr(LABEL_CHARS, *ptr))
-		ptr++;
-	if (ptr == str)
-		return (NULL);
-	return (ptr);
-}
-
-char	*ft_direct(char *str)
-{
-	if (*str++ != DIRECT_CHAR)
-		return (NULL);
-	return (str);
-}
-
-char	*ft_separator(char *str)
-{
-	while (ft_isspace(*str))
-		str++;
-	if (*str++ != SEPARATOR_CHAR)
-		return (NULL);
-	while (ft_isspace(*str))
-		str++;
-	return (str);
-}
-
-char	*ft_reg(char *str)
-{
-	char	*ptr;
-
-	if (*str++ != 'r')
-		return (NULL);
-	ptr = str;
-	while (ft_isdigit(*str))
-		str++;
-	if (ptr == str)
-		return (NULL);
-	return (str);
-}
 
 static char	*is_hexa(char *str)
 {
@@ -88,7 +30,7 @@ static char	*is_hexa(char *str)
 	return (NULL);
 }
 
-char	*ft_number(char *str)
+char		*ft_number(char *str)
 {
 	char	*ptr;
 
@@ -104,7 +46,7 @@ char	*ft_number(char *str)
 	return (NULL);
 }
 
-char	*ft_instruct(char *str)
+char		*ft_instruct(char *str)
 {
 	int	i;
 
@@ -118,7 +60,7 @@ char	*ft_instruct(char *str)
 	return (NULL);
 }
 
-char	*ft_blanks(char *str)
+char		*ft_blanks(char *str)
 {
 	char	*ptr;
 
@@ -129,4 +71,3 @@ char	*ft_blanks(char *str)
 		return (NULL);
 	return (str);
 }
-

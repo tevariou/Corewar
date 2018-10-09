@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   redux.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/10/09 16:51:15 by triou             #+#    #+#             */
+/*   Updated: 2018/10/09 16:51:51 by triou            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 static void		is_dir_ind(t_file *line, t_lex **tokens)
@@ -14,7 +26,7 @@ static void		is_dir_ind(t_file *line, t_lex **tokens)
 		return ;
 	}
 	list->arg_type = T_IND;
-	*tokens = list->next;	
+	*tokens = list->next;
 }
 
 static void		set_arg(t_file *line, t_lex **tokens)
@@ -61,7 +73,7 @@ void			redux(t_asm *a)
 	while (list != tail)
 	{
 		parse_tokens(list);
-		list = list->next;	
+		list = list->next;
 	}
 	parse_tokens(list);
 }

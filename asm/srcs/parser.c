@@ -6,13 +6,13 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 17:36:40 by triou             #+#    #+#             */
-/*   Updated: 2018/09/29 18:15:45 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 16:23:17 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-t_parse	g_parse_tab[8] = {
+t_parse			g_parse_tab[8] = {
 	{{"live", "zjmp", "lfork", "fork", 0}, &ft_parse_0, 1},
 	{{"ld", 0}, &ft_parse_1, 2},
 	{{"st", 0}, &ft_parse_2, 2},
@@ -23,27 +23,13 @@ t_parse	g_parse_tab[8] = {
 	{{"aff", 0}, &ft_parse_7, 1}
 };
 
-static t_bool	ft_tabequ(char *tab[5], char *needle)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		if (ft_strequ(tab[i], needle))
-			return (TRUE);
-		i++;
-	}
-	return (FALSE);	
-}
-
 static t_bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
 {
 	t_lex	*list;
 	int		i;
 
 	list = *token;
-	i = 0;	
+	i = 0;
 	while (i < 8)
 	{
 		if (ft_tabequ(g_parse_tab[i].name, list->val))
@@ -85,7 +71,7 @@ static t_bool	p_lab(t_lex **token)
 	return (FALSE);
 }
 
-static void	parse_line(t_asm *a, t_file *line)
+static void		parse_line(t_asm *a, t_file *line)
 {
 	t_lex	*list;
 	t_lex	*end;
@@ -96,8 +82,8 @@ static void	parse_line(t_asm *a, t_file *line)
 	{
 		if ((list != line->tokens && p_blanks(&list)
 			&& p_instruct(a, line, &list) && list == end)
-			|| (list != line->tokens && p_instruct(a, line, &list) && list == end)
-			|| (list == end))
+			|| (list != line->tokens && p_instruct(a, line, &list)
+			&& list == end) || (list == end))
 			return ;
 	}
 	else if (p_instruct(a, line, &list) && list == end)

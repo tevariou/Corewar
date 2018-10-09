@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 20:13:42 by triou             #+#    #+#             */
-/*   Updated: 2018/09/24 22:07:31 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 16:08:05 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,48 @@ const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
 	{&ft_blanks, L_BLANKS}
 };
 
+static void	add_token(t_asm *a, t_file *line, t_tok token, char *val)
+{
+	t_lex	*new;
+	t_lex	*head;
+	t_lex	*tail;
+
+	new = NULL;
+	if (!val || !(new = ft_memalloc(sizeof(*new))))
+		err_free_exit(a, NULL);
+	new->token = token;
+	new->val = val;
+	if (!(head = line->tokens))
+	{
+		new->prev = new;
+		new->next = new;
+		line->tokens = new;
+		return ;
+	}
+	tail = head->prev;
+	tail->next = new;
+	new->prev = tail;
+	new->next = head;
+	head->prev = new;
+}
+
 static void	attribute_tokens(t_asm *a, t_file *line)
 {
 	char	*str;
 	char	*ptr;
+	size_t	size;
 	int		i;
 
 	str = line->line;
 	while (*str)
-	{		
+	{
 		i = 0;
 		while (i < FT_LEX_NUMBER)
 		{
 			if ((ptr = g_ft_lex[i].f(str)))
 			{
-				add_token(a, line, g_ft_lex[i].token, ft_strndup(str, ptr - str));
+				size = ptr - str;
+				add_token(a, line, g_ft_lex[i].token, ft_strndup(str, size));
 				str = ptr;
 				break ;
 			}
@@ -52,7 +79,7 @@ static void	attribute_tokens(t_asm *a, t_file *line)
 
 void		lexer(t_asm *a)
 {
-	t_file  *line;
+	t_file	*line;
 	t_file	*tail;
 
 	if (!(line = a->input))

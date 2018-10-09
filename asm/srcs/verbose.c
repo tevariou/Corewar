@@ -6,46 +6,13 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/08 16:15:15 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 19:58:53 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 16:48:52 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-static void			ft_put_uint(unsigned int nb)
-{
-	if (nb >= 10)
-		ft_putnbr(nb / 10);
-	ft_putchar('0' + nb % 10);
-}
-
-static void			ft_put_hex(unsigned char nb)
-{
-	const char	*tab;
-
-	tab = HEXA;
-	if (nb >= 16)
-		ft_put_hex(nb / 16);
-	ft_putchar(tab[nb % 16]);
-}
-
-static void			ft_put_byte(void *n, size_t len)
-{
-	unsigned char	*p;
-
-	p = (unsigned char *)n;
-	while (len)
-	{
-		ft_putstr("0x");
-		if (*p < 16)
-			ft_putchar('0');
-		ft_put_hex(*p++);
-		if ((--len))
-			ft_putchar(' ');
-	}
-}
-
-static void			write_prog_size(t_asm *a)
+static void	write_prog_size(t_asm *a)
 {
 	t_code			*list;
 	t_code			*tail;
@@ -65,18 +32,7 @@ static void			write_prog_size(t_asm *a)
 	ft_putendl(" bytes");
 }
 
-static void			write_header(t_asm *a)
-{
-	write_prog_size(a);
-	ft_putstr("Name : \"");
-	ft_putstr(a->header.prog_name);
-	ft_putendl("\"");
-	ft_putstr("Comment : \"");
-	ft_putstr(a->header.comment);
-	ft_putendl("\"\n");
-}
-
-static void			put_code(t_code *list)
+static void	put_code(t_code *list)
 {
 	int	i;
 
@@ -103,10 +59,9 @@ static void			put_code(t_code *list)
 		if ((++i) < 3 && list->args_type[i])
 			ft_putstr("\t");
 	}
-	ft_putchar('\n');
 }
 
-static void			put_file(t_code *list)
+static void	put_file(t_code *list)
 {
 	t_lex	*tok;
 	int		i;
@@ -135,7 +90,7 @@ static void			put_file(t_code *list)
 	ft_putchar('\n');
 }
 
-static void			write_content(t_asm *a)
+static void	write_content(t_asm *a)
 {
 	t_code	*list;
 	t_code	*tail;
@@ -146,16 +101,23 @@ static void			write_content(t_asm *a)
 	{
 		put_file(list);
 		put_code(list);
+		ft_putstr("\n\n");
 		list = list->next;
-		ft_putchar('\n');
 	}
 	put_file(list);
 	put_code(list);
+	ft_putchar('\n');
 }
 
-void	verbose_output(t_asm *a)
+void		verbose_output(t_asm *a)
 {
 	ft_putendl(DUMPING_A);
-	write_header(a);
+	write_prog_size(a);
+	ft_putstr("Name : \"");
+	ft_putstr(a->header.prog_name);
+	ft_putendl("\"");
+	ft_putstr("Comment : \"");
+	ft_putstr(a->header.comment);
+	ft_putendl("\"\n");
 	write_content(a);
 }

@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 23:52:25 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 18:52:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@
 
 # define WRONG_EXT			"Invalid filename"
 # define WRONG_HEADER		"Wrong header format"
-# define FILE_OVERFLOW		"File is too big"
 # define NAME_TOO_LONG		"Program name is too long"
 # define COMMENT_TOO_LONG	"Program comment is too long"
 # define NO_INSTRUCTION		"No instruction"
@@ -46,6 +45,7 @@
 # define INVALID_ARGS		"Invalid arguments at line "
 # define LEXER_ERROR		"Lexical error at line "
 # define PARSER_ERROR		"Parser error at line "
+# define FILE_OVERFLOW		"File is too big"
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -123,10 +123,7 @@ typedef struct			s_asm {
 void					get_comment(t_asm *a, int fd, size_t *n);
 void					get_name(t_asm *a, int fd, size_t *n);
 void					print_usage_exit(void);
-void					add_input_line(t_asm *a, char *line, size_t n);
-void					add_token(t_asm *a, t_file *line, t_tok token, char *val);
-void					add_label(t_asm *a, t_file *list);
-void					add_op(t_asm *a, t_file *list);
+void					init_bytecode(t_asm *a);
 int						set_option(int ac, char **av);
 void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
@@ -161,6 +158,31 @@ char					*set_extension(t_asm *a, char *file, const char *dest, const char *src)
 void					verbose_output(t_asm *a);
 void					decompile_bin(char *file);	
 void					decompile_error(char **out);
+
+void					add_t_reg(t_code *new, int index, t_bool ocp);
+void					add_t_dir(t_code *new, int index, t_bool ocp);
+void					add_t_ind(t_code *new, int index, t_bool ocp);
+
+t_bool					ft_tabequ(char *tab[5], char *needle);
+void					ft_put_byte(void *n, size_t len);
+void					ft_put_uint(unsigned int nb);
+char					*skip_space(char *line);
+
+void					ft_buffer(char **out, char *new);
+void					put_reg(int n, char **out, t_bool end);
+void					put_ind(int n, char **out, t_bool end);
+void					put_dir(int n, char **out, t_bool end, t_bool len);
+void					reverse_read(void *n, size_t size);
+
+void					read_magic(int in);
+void					read_name(int in, char **out);
+void					read_comment(int in, char **out);
+void					read_content(int in, char **out);
+
+t_lex					*traverse_arg(t_file *line, t_lex *list, int type);
+t_lex					*is_dir_ind_reg(t_file *line, t_lex *list);
+t_lex					*is_dir_reg(t_file *line, t_lex *list);
+t_lex					*is_ind_reg(t_file *line, t_lex *list);
 
 char					*ft_str_label(char *str);
 char					*ft_label_str(char *str);

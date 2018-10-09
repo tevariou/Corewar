@@ -6,17 +6,17 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:35 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 23:31:11 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 17:24:41 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
 
-static void		record_comment(t_asm *a, char *line, char *s)
+static void	record_comment(t_asm *a, char *line, char *s)
 {
 	size_t	len;
-	
+
 	if ((len = ft_strchr(s, '"') - s) > COMMENT_LENGTH)
 	{
 		free(line);
@@ -42,16 +42,11 @@ void		get_comment(t_asm *a, int fd, size_t *n)
 	{
 		if (ret < 0)
 			err_free_exit(a, NULL);
-		tmp = line;
-		while (ft_isspace(*tmp))
-			tmp++;
+		tmp = skip_space(line);
 		if (!(*n += 1))
-		{
-			free(line);
-			err_free_exit(a, FILE_OVERFLOW);
-		}
+			header_error(a, line);
 		if (*tmp && *tmp != COMMENT_CHAR)
-			break ;	
+			break ;
 		ft_strdel(&line);
 	}
 	if (!ft_strnequ(tmp, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
@@ -61,7 +56,7 @@ void		get_comment(t_asm *a, int fd, size_t *n)
 		free(line);
 		err_free_exit(a, NULL);
 	}
-	free(line);	
+	free(line);
 	line = get_quote(a, fd, n, tmp);
 	record_comment(a, line, ft_strchr(line, '"') + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 23:41:08 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 17:37:49 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,32 @@
 #include <stdlib.h>
 #include "asm.h"
 
-void		check_extension(char *file, const char *ext)
+static void	add_input_line(t_asm *a, char *line, size_t n)
 {
-	size_t	len;
+	t_file	*head;
+	t_file	*new;
+	t_file	*tail;
 
-	if ((len = ft_strlen(file)) <= ft_strlen(ext)
-		|| !ft_strequ(file + len - ft_strlen(ext), ext))
-		err_free_exit(NULL, WRONG_EXT);
+	if (!(new = ft_memalloc(sizeof(*new))))
+		err_free_exit(a, NULL);
+	new->line = line;
+	new->n = n;
+	new->tokens = NULL;
+	if (!(head = a->input))
+	{
+		new->prev = new;
+		new->next = new;
+		a->input = new;
+		return ;
+	}
+	tail = head->prev;
+	tail->next = new;
+	new->prev = tail;
+	new->next = head;
+	head->prev = new;
 }
 
-static void		remove_whitespaces(t_asm *a, char **line)
+static void	remove_whitespaces(t_asm *a, char **line)
 {
 	char	*tmp;
 
@@ -37,7 +53,7 @@ static void		remove_whitespaces(t_asm *a, char **line)
 	*line = tmp;
 }
 
-static void		record_file(t_asm *a, int fd)
+static void	record_file(t_asm *a, int fd)
 {
 	int		ret;
 	char	*line;

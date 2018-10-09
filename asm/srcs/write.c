@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:47:43 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 21:29:26 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 16:50:29 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-char			*set_extension(t_asm *a, char *file, const char *dest, const char *src)
-{
-	char	*ret;
-
-	if (!(ret = ft_memalloc((ft_strlen(file) + 1 + (ft_strlen(dest) - ft_strlen(src))) * sizeof(*ret))))
-		err_free_exit(a, NULL);
-	ft_strncpy(ret, file, ft_strlen(file) - ft_strlen(src));
-	ft_strcat(ret, dest);
-	return (ret);
-}
-
-static void			get_prog_size(t_asm *a)
+static void	get_prog_size(t_asm *a)
 {
 	t_code			*list;
 	t_code			*tail;
@@ -45,7 +34,7 @@ static void			get_prog_size(t_asm *a)
 	a->header.prog_size = size;
 }
 
-static void			write_header(t_asm *a, int fd)
+static void	write_header(t_asm *a, int fd)
 {
 	char	line[SEPARATOR_LINE];
 
@@ -61,7 +50,7 @@ static void			write_header(t_asm *a, int fd)
 	write(fd, line, SEPARATOR_LINE);
 }
 
-static void			put_code(t_code *list, int fd)
+static void	put_code(t_code *list, int fd)
 {
 	int	i;
 
@@ -81,7 +70,7 @@ static void			put_code(t_code *list, int fd)
 	}
 }
 
-static void			write_content(t_asm *a, int fd)
+static void	write_content(t_asm *a, int fd)
 {
 	t_code	*list;
 	t_code	*tail;
@@ -96,7 +85,7 @@ static void			write_content(t_asm *a, int fd)
 	put_code(list, fd);
 }
 
-void				write_bytecode(t_asm *a, char *file)
+void		write_bytecode(t_asm *a, char *file)
 {
 	int		fd;
 	char	*filename;
