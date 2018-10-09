@@ -214,7 +214,7 @@ void	decompile_bin(char *file)
 	ft_putstr_fd(out, fd);
 	free(out);
 	if (close(fd) < 0)
-		decompile_error(&out);
+		decompile_error(NULL);
 	ft_putstr(DUMPING_D);
 	ft_putendl(filename);
 	free(filename);
