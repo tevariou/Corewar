@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 21:03:16 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/09 11:41:37 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,11 +111,11 @@ t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, in
 		mars->nb_process++;
 		if ((k = ft_add_parameter_to_processus(mars, process,
 						&av[*current_index + i])) == -1)
-			return (NULL);
+			return (ft_free_current_process(process));
 		i = i + k;
 	}
 	if (!process->name)
-		return (NULL);
+		return (ft_free_current_process(process));
 	*current_index += i;
 	return (process);
 }
