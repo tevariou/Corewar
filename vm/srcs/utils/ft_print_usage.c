@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 10:48:08 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/06 23:40:45 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/09 11:43:45 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ void	ft_print_usage(t_mars *mars)
 	printf("-d : Display debug interface\n");
 	printf("## Others options : \n");
 	printf("-dump X : Display RAM every X cycles\n");
+	ft_free_mars(mars);
 	free(mars);
+	exit(0);
 }

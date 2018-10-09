@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 21:01:03 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/09 11:38:09 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <zaz.h>
 # include <sys/types.h>
 # include <stdio.h>
+
 typedef unsigned char		t_byte;
 
 # define TRUE 				1
@@ -36,9 +37,9 @@ typedef unsigned char		t_byte;
 # define INDEX				2
 # define DIRECT2			2
 # define DIRECT4			4
-
 # define NO_VERBOSE			0
-typedef struct s_mars t_mars;
+
+typedef struct s_mars		t_mars;
 typedef struct				s_processus
 {
 	int						id;
@@ -50,7 +51,7 @@ typedef struct				s_processus
 	unsigned				nbr_of_live;
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
-	int						(*opcode)(struct s_mars *,struct s_processus *);
+	int						(*opcode)(struct s_mars *, struct s_processus *);
 	unsigned int			params[3];
 	unsigned				bytes_to_jump;
 	struct s_processus		*next;
@@ -126,6 +127,8 @@ void						ft_ncurses_display(t_mars *mars, t_processus *process);
 void						ft_verbose(t_mars *mars, t_processus *process);
 void						ft_info_ram(t_mars *mars);
 void						ft_print_usage(t_mars *mars);
+void						ft_free_mars(t_mars *mars);
+void						*ft_free_current_process(t_processus *process);
 
 /*
 ** Ncurses
