@@ -43,7 +43,7 @@ void		decompile_error(char **out)
 void		header_error(t_asm *a, char *line)
 {
 	free_all(a);
-	ft_putstr_fd(WRONG_HEADER, 2);
+	ft_putendl_fd(WRONG_HEADER, 2);
 	free(line);
 	exit(EXIT_FAILURE);
 }

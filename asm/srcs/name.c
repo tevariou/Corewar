@@ -47,6 +47,7 @@ char		*get_quote(t_asm *a, int fd, size_t *n, char *line)
 	else
 		header_error(a, line);
 	buff = NULL;
+	ret = -1;
 	while (!ft_strchr(ft_strchr(line, '"') + 1, '"') && (ret = get_next_line(fd, &buff)) > 0)
 	{
 		if (ret < 0)
