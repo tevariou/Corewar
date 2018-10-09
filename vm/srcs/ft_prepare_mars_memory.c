@@ -6,13 +6,12 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 18:06:56 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/09 11:54:47 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include "mars.h"
-
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
