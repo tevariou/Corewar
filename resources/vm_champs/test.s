@@ -1,4 +1,4 @@
 .name"name"
 .comment"comment"
 
-and r-1, r0, r0
+zjmp %-2147483648

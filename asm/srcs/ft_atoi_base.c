@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:23:30 by triou             #+#    #+#             */
-/*   Updated: 2018/10/10 11:45:01 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 13:43:04 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,50 +32,36 @@ unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)
 
 unsigned short	atoi_base_short(char *str, char *base)
 {
-	unsigned int	nb;
 	unsigned short	ret;
 	int				sign;
 
 	sign = (*str == '-') ? -1 : 1;
 	str = (*str == '-' || *str == '+') ? str + 1 : str;
-	nb = 0;
+	ret = 0;
 	while (ft_strchr(base, *str))
 	{
-		nb *= ft_strlen(base);
-		nb += ft_strchr(base, *str++) - base;
-		if ((nb > USHRT_MAX && sign > 0)
-			|| (((int)nb * sign) < SHRT_MIN && sign < 0))
-		{
-			nb = USHRT_MAX;
-			break ;
-		}
+		ret *= ft_strlen(base);
+		ret += ft_strchr(base, *str++) - base;
 	}
-	ret = (unsigned short)(nb * sign);
+	ret *= sign;
 	reverse_bytes(&ret, sizeof(ret));
 	return (ret);
 }
 
 unsigned int	atoi_base_int(char *str, char *base)
 {
-	unsigned long	nb;
-	unsigned int	ret;
-	int				sign;
+	int	ret;
+	int	sign;
 
 	sign = (*str == '-') ? -1 : 1;
 	str = (*str == '-' || *str == '+') ? str + 1 : str;
-	nb = 0;
+	ret = 0;
 	while (ft_strchr(base, *str))
 	{
-		nb *= ft_strlen(base);
-		nb += ft_strchr(base, *str++) - base;
-		if ((nb > UINT_MAX && sign > 0)
-		|| (((long)nb * sign) < INT_MIN && sign < 0))
-		{
-			nb = UINT_MAX;
-			break ;
-		}
+		ret *= ft_strlen(base);
+		ret += ft_strchr(base, *str++) - base;
 	}
-	ret = (unsigned int)(nb * sign);
+	ret *= sign;
 	reverse_bytes(&ret, sizeof(ret));
 	return (ret);
 }

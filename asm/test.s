@@ -1,6 +1,4 @@
 .name ".comment hello"
 .comment ".name"
 
-live	%1
-ld	%12, r6
-live	%45
+zjmp	%-2147483648
