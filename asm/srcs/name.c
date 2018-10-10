@@ -32,7 +32,7 @@ static void	record_name(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-void		get_name(t_asm *a, int fd, int *n)
+void		get_name(t_asm *a, int fd, unsigned int *n)
 {
 	int		ret;
 	char	*line;

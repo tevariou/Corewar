@@ -69,7 +69,7 @@ static char	*get_line(t_asm *a, char *line, char **buff)
 	return (tmp);
 }
 
-char		*get_quote(t_asm *a, int fd, int *n, char *line)
+char		*get_quote(t_asm *a, int fd, unsigned int *n, char *line)
 {
 	char	*s;
 	char	*buff;

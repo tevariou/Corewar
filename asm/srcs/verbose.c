@@ -90,20 +90,46 @@ static void	put_file(t_code *list)
 	ft_putchar('\n');
 }
 
+static void	ft_ntostr(unsigned int nb, size_t len, const char *base)
+{
+	if (nb >= ft_strlen(base))
+		ft_ntostr(nb / ft_strlen(base), len - 1, base);
+	ft_putchar(base[nb % ft_strlen(base)]);
+}
+
+static void	ft_putnbr_base(unsigned int n, const char *base)
+{
+	size_t			len;
+	int				cpy;
+
+	len = 1;
+	cpy = n;
+	while ((cpy /= 10))
+		len++;
+	ft_ntostr(n, len - 1, base);
+	ft_putchar('\n');
+}
 static void	write_content(t_asm *a)
 {
-	t_code	*list;
-	t_code	*tail;
+	t_code			*list;
+	t_code			*tail;
+	unsigned int	n;
 
 	list = a->output;
 	tail = list->prev;
+	n = 0;
 	while (list != tail)
 	{
+		ft_putstr("Address : 0x");
+		ft_putnbr_base(n, HEXA);
 		put_file(list);
 		put_code(list);
 		ft_putstr("\n\n");
+		n += list->size;
 		list = list->next;
 	}
+	ft_putstr("Address : 0x");
+	ft_putnbr_base(n, HEXA);
 	put_file(list);
 	put_code(list);
 	ft_putchar('\n');

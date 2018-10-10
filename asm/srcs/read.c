@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include "asm.h"
 
-static void	add_input_line(t_asm *a, char *line, int n)
+static void	add_input_line(t_asm *a, char *line, unsigned int n)
 {
 	t_file	*head;
 	t_file	*new;
@@ -55,9 +55,9 @@ static void	remove_whitespaces(t_asm *a, char **line)
 
 static void	record_file(t_asm *a, int fd)
 {
-	int		ret;
-	char	*line;
-	int		n;
+	int				ret;
+	char			*line;
+	unsigned int	n;
 
 	line = NULL;
 	n = 1;

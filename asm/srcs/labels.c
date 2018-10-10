@@ -35,6 +35,7 @@ static void		add_label(t_asm *a, t_file *list)
 		err_free_exit(a, NULL);
 	new->target = get_target(a, list);
 	new->name = list->tokens->val;
+	ft_strclr(ft_strchr(new->name, LABEL_CHAR));
 	if (!(head = a->labels))
 	{
 		new->prev = new;

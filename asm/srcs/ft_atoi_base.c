@@ -32,7 +32,7 @@ unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)
 
 unsigned short	atoi_base_short(char *str, char *base)
 {
-	int				nb;
+	unsigned int	nb;
 	unsigned short	ret;
 	int				sign;
 
@@ -43,14 +43,10 @@ unsigned short	atoi_base_short(char *str, char *base)
 	{
 		nb *= ft_strlen(base);
 		nb += ft_strchr(base, *str++) - base;
-		if (nb > SHRT_MAX && sign > 0)
+		if ((nb > USHRT_MAX && sign > 0)
+			 || (((int)nb * sign) < SHRT_MIN && sign < 0))
 		{
-			nb = SHRT_MAX;
-			break ;
-		}
-		else if ((nb * sign) < SHRT_MIN && sign < 0)
-		{
-			nb = SHRT_MIN * sign;
+			nb = USHRT_MAX;
 			break ;
 		}
 	}
@@ -61,7 +57,7 @@ unsigned short	atoi_base_short(char *str, char *base)
 
 unsigned int	atoi_base_int(char *str, char *base)
 {
-	long			nb;
+	unsigned long	nb;
 	unsigned int	ret;
 	int				sign;
 
@@ -72,14 +68,10 @@ unsigned int	atoi_base_int(char *str, char *base)
 	{
 		nb *= ft_strlen(base);
 		nb += ft_strchr(base, *str++) - base;
-		if (nb > INT_MAX && sign > 0)
+		if ((nb > UINT_MAX && sign > 0)
+		|| (((long)nb * sign) < INT_MIN && sign < 0))
 		{
-			nb = INT_MAX;
-			break ;
-		}
-		else if ((nb * sign) < INT_MIN && sign < 0)
-		{
-			nb = INT_MIN * sign;
+			nb = UINT_MAX;
 			break ;
 		}
 	}

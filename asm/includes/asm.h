@@ -66,7 +66,7 @@ typedef struct			s_lex {
 }						t_lex;
 
 typedef struct			s_file {
-	int					n;
+	unsigned int		n;
 	char				*line;
 	int					n_args;
 	t_lex				*tokens;
@@ -99,7 +99,7 @@ typedef struct			s_code {
 	int					args_type[3];
 	char				*values[3];
 	t_arg				args[3];
-	int					size;
+	unsigned int		size;
 	t_file				*orig;
 	struct s_code		*prev;
 	struct s_code		*next;
@@ -113,15 +113,15 @@ typedef struct			s_asm {
 	t_header			header;
 }						t_asm;
 
-void					get_comment(t_asm *a, int fd, int *n);
-void					get_name(t_asm *a, int fd, int *n);
+char					*get_quote(t_asm *a, int fd, unsigned int *n, char *line);
+void					get_comment(t_asm *a, int fd, unsigned int *n);
+void					get_name(t_asm *a, int fd, unsigned int *n);
+
 void					print_usage_exit(void);
 void					init_bytecode(t_asm *a);
 int						set_option(int ac, char **av);
 void					get_file(t_asm *a, char *file);
 void					compile_asm(t_asm *a, char *file);
-
-char					*get_quote(t_asm *a, int fd, int *n, char *line);
 
 void					header_error(t_asm *a, char *line);
 void					asm_error(t_asm *a, t_file *line,

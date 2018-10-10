@@ -40,7 +40,7 @@ static unsigned short	compute_len_short(t_asm *a, t_code *orig,
 		return (return_short_value(len));
 	len = 0;
 	tmp = orig->prev;
-	while (tmp != a->output && (len - tmp->size) >= (int)SHRT_MIN)
+	while (tmp != a->output && (len - (int)tmp->size) >= SHRT_MIN)
 	{
 		len -= tmp->size;
 		if (tmp == target)
@@ -99,11 +99,11 @@ unsigned short			convert_label_short(t_asm *a, t_code *op, char *str)
 	tail = label->prev;
 	while (label != tail)
 	{
-		if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
+		if (ft_strequ(str + 1, label->name))
 			return (label_address_short(a, label, op));
 		label = label->next;
 	}
-	if (ft_strnequ(str + 1, label->name, ft_strlen(label->name) - 1))
+	if (ft_strequ(str + 1, label->name))
 		return (label_address_short(a, label, op));
 	asm_error(a, op->orig, str, UNKNOWN_LABEL);
 	return (0);
