@@ -35,17 +35,8 @@ static int	execut_process_turn(t_mars *mars, t_processus *current_process)
 		*mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
 			ft_idle_turn(current_process, mars->current_cycle);
 	}
-	v->current_frame++;
-	if (mars->visualisor > 0 && v->current_frame == v->frame)
-	{
+	if (mars->visualisor == VERBOSE)
 		mars->ft_display(mars, current_process);
-		v->current_frame = 0;
-	}
-	if (v->abort)
-	{
-		ft_close_ncurses(v);
-		ft_exit(mars, "");
-	}
 	return (1);
 }
 
@@ -64,8 +55,27 @@ static int	execute_one_cycle(t_mars *mars)
 
 void		loop_through_battle(t_mars *mars)
 {
+	t_visu *v;
+
+	v = &mars->visu;
 	while (execute_one_cycle(mars))
 	{
+		if (mars->current_cycle == 12500)
+		{
+			printf("%d", mars->nb_process);
+			exit(0);
+		}
+		v->current_frame++;
+		if ( mars->visualisor > 0 && mars->visualisor != VERBOSE && v->current_frame == v->frame)
+		{
+			mars->ft_display(mars, NULL);
+			v->current_frame = 0;
+		}
+		if (v->abort)
+		{
+			ft_close_ncurses(v);
+			ft_exit(mars, "");
+		}
 		if (!mars->visualisor && mars->dump > 0)
 			if (mars->current_cycle == (unsigned)mars->dump)
 			{
