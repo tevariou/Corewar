@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 16:54:00 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 16:51:52 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	ft_kill_process(t_mars *mars)
 {
 	t_processus *process;
 	t_processus *tmp;
-
-	process = mars->process_lst;
-	while (mars->process_lst &&
-			mars->process_lst->last_cycle_live < mars->cycle_to_die)
+// have to do an iteration instead ofceck for zero
+	process = mars->process_lst[0];
+	while (mars->process_lst[0] &&
+			mars->process_lst[0]->last_cycle_live < mars->cycle_to_die)
 	{
-		tmp = mars->process_lst->next;
+		tmp = mars->process_lst[0]->next;
 		free(mars->process_lst);
-		mars->process_lst = tmp;
+		mars->process_lst[0] = tmp;
 	}
 	while (process && process->next)
 	{
@@ -37,8 +37,6 @@ void	ft_kill_process(t_mars *mars)
 		tmp = process;
 		process = process->next;
 	}
-//	if (process && process->last_cycle_live < mars->cycle_to_die && !(tmp->next = NULL))
-//		free(process);
 }
 
 void	ft_init_champs_life(t_champion *champion)

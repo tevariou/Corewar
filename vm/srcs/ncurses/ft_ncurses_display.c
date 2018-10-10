@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/08 15:54:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 16:38:08 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,22 @@ void	ft_ncurses_print_process_pc(t_mars *mars)
 {
 	t_processus *p;
 	t_visu		*v;
+	int			i;
 
-	p = mars->process_lst;
+	i = 0;
 	v = &mars->visu;
-	// while (p)
-	// {
-	// 	wattron(v->arena, COLOR_PAIR(p->player + 6));
-	// 	mvwprintw(v->arena, (ft_global_restriction(p->pc) / 64), ((ft_global_restriction(p->pc) % 64) * 3), "%2.2X", *mars->memory[ft_global_restriction(p->pc)]);
-	// 	wattroff(v->arena, COLOR_PAIR(p->player + 6));
-	// 	p = p->next;
-	// }
+	while (i < PT_SIZE)
+	{
+		p = tab_see_process(mars, i);
+		while (p)
+		{
+			wattron(v->arena, COLOR_PAIR(p->player + 6));
+			mvwprintw(v->arena, (ft_global_restriction(p->pc) / 64), ((ft_global_restriction(p->pc) % 64) * 3), "%2.2X", *mars->memory[ft_global_restriction(p->pc)]);
+			wattroff(v->arena, COLOR_PAIR(p->player + 6));
+			p = p->next;
+		}
+		i++;
+	}
 }
 
 void	ft_ncurses_info_ram(t_mars *mars)

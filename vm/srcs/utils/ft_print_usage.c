@@ -6,10 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 10:48:08 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/09 11:43:45 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 16:40:01 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "mars.h"
 
 void	ft_print_usage(t_mars *mars)

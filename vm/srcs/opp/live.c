@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   live.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/05 20:23:05 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/10 18:15:28 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		ft_live_belong_to_other(t_mars *mars, int i)
 {
 	t_processus *tmp;
 
-	tmp = mars->process_lst;
+	tmp = tab_see_process(mars, mars->current_cycle);
 	while (tmp)
 	{
 		if (tmp->player == i)
@@ -72,8 +72,8 @@ int		live(t_mars *mars, t_processus *process)
 	int i;
 
 	i = ft_get_mars_value(mars, process->pc + 1, REG_SIZE);
-	ft_live_belong_to_other(mars, i);
-	ft_live_belong_to_other2(mars, i);
+	//ft_live_belong_to_other(mars, i);
+	//ft_live_belong_to_other2(mars, i);
 	if (process->player == i)
 		process->last_cycle_live = mars->current_cycle;
 	process->bytes_to_jump = process->pc + REG_SIZE + 1;

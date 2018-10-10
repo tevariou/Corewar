@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fork.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/07 21:12:24 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 18:13:21 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 ** ( sauf dans le cas d'un fork %0 ).
 */
 
-t_processus *ft_copy_process(t_processus *process, t_mars *mars, unsigned dest)
+t_processus *ft_copy_process(t_processus *process, t_mars *mars, short dest)
 {
 	t_processus	*copy;
 	int			i;
@@ -49,10 +49,8 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, unsigned dest)
 	copy->opcode = 0;
 	copy->carry = process->carry;
 	copy->last_cycle_live = process->last_cycle_live;
-	copy->params[0] = 0;
-	copy->params[1] = 0;
-	copy->params[2] = 0;
-	process->next = copy;
+	copy->next = NULL;
+	tab_set_process(mars, copy, mars->current_cycle + 2);
 	return(copy);
 }
 

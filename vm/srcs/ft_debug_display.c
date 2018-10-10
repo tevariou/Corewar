@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/06 23:09:01 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/10 16:26:27 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,6 @@ void	ft_info_ram(t_mars *mars)
 		if (i == 0)
 			printf("0x0000 : ");
 		printf("%02.2hhx ", mars->memory[i][0]);
-		// if (!mars->memory[i][1])
-		// 	printf("%02.2hhX ", mars->memory[i][0]);
-		// else
-		// 	printf("\33[9%dm%02.2X\33[39m ", mars->memory[i][1], mars->memory[i][0]);
 		i++;
 		if (!(i % 64) && i != 4096)
 			printf("\n%#.4x : ", i);
@@ -78,14 +74,19 @@ void	ft_info_mars(t_mars *mars)
 void	ft_debug_info(t_mars *mars, t_processus *process)
 {
 	t_processus *tmp;
+	int i;
 
 	(void)process;
 	system("@cls||clear");
-	tmp = mars->process_lst;
-	while (tmp)
+	i = 0;
+	while (i < PT_SIZE)
 	{
-		ft_info_processus(tmp);
-		tmp = tmp->next;
+		tmp = mars->process_lst[i];
+		while (tmp)
+		{
+			ft_info_processus(tmp);
+			tmp = tmp->next;
+		}
 	}
 	ft_info_mars(mars);
 	ft_info_ram(mars);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/08 15:44:20 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 18:22:05 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,12 @@ static int	execut_process_turn(t_mars *mars, t_processus *current_process)
 	t_visu *v;
 
 	v = &mars->visu;
-	if (mars->current_cycle == current_process->next_instruction_cycle)
-	{
 		if (current_process->opcode)
 			current_process->opcode(mars, current_process);
 		ft_move_pc(mars, current_process);
 		if (ft_get_opcode(mars, current_process,
 		*mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
 			ft_idle_turn(current_process, mars->current_cycle);
-	}
 	if (mars->visualisor == VERBOSE)
 		mars->ft_display(mars, current_process);
 	return (1);
@@ -44,11 +41,10 @@ static int	execute_one_cycle(t_mars *mars)
 {
 	t_processus	*current_process;
 
-	current_process = mars->process_lst;
-	while (current_process)
+	while ((current_process = tab_get_next_process(mars, mars->current_cycle)))
 	{
 		execut_process_turn(mars, current_process);
-		current_process = current_process->next;
+		tab_set_process(mars, current_process, current_process->next_instruction_cycle);
 	}
 	return (1);
 }
@@ -60,11 +56,7 @@ void		loop_through_battle(t_mars *mars)
 	v = &mars->visu;
 	while (execute_one_cycle(mars))
 	{
-		if (mars->current_cycle == 12500)
-		{
-			printf("%d", mars->nb_process);
-			exit(0);
-		}
+		
 		v->current_frame++;
 		if ( mars->visualisor > 0 && mars->visualisor != VERBOSE && v->current_frame == v->frame)
 		{

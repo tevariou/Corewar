@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/07 21:01:18 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 17:54:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_mars		*ft_new_mars(void)
 	mars->cycle_teta = CYCLE_TO_DIE;
 	mars->current_cycle = 0;
 	mars->nb_process = 0;
-	mars->process_lst = NULL;
+	init_tab_of_process(mars);
 	mars->champion_lst = NULL;
 	mars->ft_display = NULL;
 	mars->visualisor = 0;
@@ -73,7 +73,7 @@ t_mars		*ft_set_mars(int ac, char **av)
 		if (!current_champion->player)
 			current_champion->player = mars->count_players;
 		ft_add_champ_to_mars(mars, mars->champion_lst, current_champion);
-		ft_add_processus_to_mars(mars, current_champion);
+		tab_set_process(mars, current_champion, 0);
 	}
 	if (mars->count_players < 1 || mars->count_players > MAX_PLAYERS)
 		ft_exit(mars, E_PLAYERS_COUNT);

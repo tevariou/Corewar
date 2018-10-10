@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_add_processus_to_mars.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/09 11:41:37 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 17:53:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ t_processus		*ft_new_empty_processus(void)
 	process->carry = 0;
 	process->last_cycle_live = 0;
 	process->bytes_to_jump = 0;
-	process->next_instruction_cycle = 0;
 	while (iterator_register < REG_NUMBER * REG_SIZE)
 		process->registers[iterator_register++] = 0;
 	return (process);
@@ -137,9 +136,9 @@ void		ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *proc
 /*
 ** add a processus at the begining of the lst of mars processus.
 */
-
+/*
 void			ft_add_processus_to_mars(t_mars *mars, t_processus *process)
 {
 	process->next = mars->process_lst;
 	mars->process_lst = process;
-}
+}*/

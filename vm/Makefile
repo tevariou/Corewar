@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
+#    By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/09 10:50:42 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/10 16:17:39 by abiestro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ ITEMS 	= 	mars.c 							\
 			cycle_mars_handler.c			\
 			ft_move_pc.c					\
 			adressage.c						\
+			tab_of_process_lst.c			\
 
 OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))
 

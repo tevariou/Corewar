@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/09 11:38:09 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 18:06:08 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef unsigned char		t_byte;
 # define DIRECT4			4
 # define NO_VERBOSE			0
 
+# define PT_SIZE			1001
 typedef struct s_mars		t_mars;
 typedef struct				s_processus
 {
@@ -77,7 +78,7 @@ struct						s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	unsigned				nb_process;
-	t_processus				*process_lst;
+	t_processus				*process_lst[PT_SIZE];
 	t_champion				*champion_lst;
 	void					(*ft_display)(t_mars *, t_processus *);
 	int						visualisor;
@@ -165,7 +166,7 @@ int							or(t_mars *mars, t_processus *process);
 int							substraction(t_mars *mars, t_processus *process);
 int							xor(t_mars *mars, t_processus *process);
 int							ft_get_params(t_processus *process, t_mars *mars, size_t direct_size, unsigned ocp);
-t_processus					*ft_copy_process(t_processus *process, t_mars *mars, unsigned dest);
+t_processus					*ft_copy_process(t_processus *process, t_mars *mars, short dest);
 
 /*
 ** gestion des parametres des instructions.
@@ -176,5 +177,13 @@ unsigned					ft_get_dest(t_mars *mars, t_processus *process, int code, int dir_s
 int							check_register(int ocp, int index, int value);
 
 
+/*
+** gestion deu tableau de lsite chainee
+*/
+t_processus   **init_tab_of_process(t_mars *mars);
+t_processus     *tab_set_process(t_mars *mars, t_processus *new_process, int dest);
+t_processus     *tab_get_next_process(t_mars *mars, int dest);
+t_processus    *move_process(t_mars *mars, int current_index, int dest);
+t_processus     *tab_see_process(t_mars *mars, int dest);
 #endif
 

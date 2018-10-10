@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_prepare_mars_memory.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/09 11:54:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 17:29:36 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_read_multiple_champion(t_mars *mars)
 	t_processus	*current_process;
 
 	i = 0;
-	current_process = mars->process_lst;
+	current_process = tab_see_process(mars, 0);
 	while (current_process && (fd = open(current_process->name, O_RDONLY)))
 	{
 		if (!current_process->pc)
@@ -33,6 +33,7 @@ int	ft_read_multiple_champion(t_mars *mars)
 		if (!ft_load_champ_from_file_to_memory(mars, current_process, fd))
 			ft_exit(mars, "champions are writted one on the other\n");
 		current_process = current_process->next;
+		close(fd);
 	}
 	if (fd < 0)
 		ft_exit(mars, "could not read a champion");

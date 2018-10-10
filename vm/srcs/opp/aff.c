@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/09/28 20:00:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 16:28:28 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@
 
 int		aff(t_mars *mars, t_processus *process)
 {
+	(void)mars;
+	(void) process;
 	return (SUCCESS);
 }

@@ -6,10 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 10:10:24 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/08 16:16:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/10 16:39:37 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 #include "visu.h"
 #include "../../includes/mars.h"
