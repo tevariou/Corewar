@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:23:30 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 22:26:33 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 11:45:01 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ unsigned short	atoi_base_short(char *str, char *base)
 		nb *= ft_strlen(base);
 		nb += ft_strchr(base, *str++) - base;
 		if ((nb > USHRT_MAX && sign > 0)
-			 || (((int)nb * sign) < SHRT_MIN && sign < 0))
+			|| (((int)nb * sign) < SHRT_MIN && sign < 0))
 		{
 			nb = USHRT_MAX;
 			break ;

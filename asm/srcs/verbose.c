@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/08 16:15:15 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 16:48:52 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 11:47:47 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,25 +90,6 @@ static void	put_file(t_code *list)
 	ft_putchar('\n');
 }
 
-static void	ft_ntostr(unsigned int nb, size_t len, const char *base)
-{
-	if (nb >= ft_strlen(base))
-		ft_ntostr(nb / ft_strlen(base), len - 1, base);
-	ft_putchar(base[nb % ft_strlen(base)]);
-}
-
-static void	ft_putnbr_base(unsigned int n, const char *base)
-{
-	size_t			len;
-	int				cpy;
-
-	len = 1;
-	cpy = n;
-	while ((cpy /= 10))
-		len++;
-	ft_ntostr(n, len - 1, base);
-	ft_putchar('\n');
-}
 static void	write_content(t_asm *a)
 {
 	t_code			*list;
@@ -122,6 +103,7 @@ static void	write_content(t_asm *a)
 	{
 		ft_putstr("Address : 0x");
 		ft_putnbr_base(n, HEXA);
+		ft_putchar('\n');
 		put_file(list);
 		put_code(list);
 		ft_putstr("\n\n");
@@ -130,6 +112,7 @@ static void	write_content(t_asm *a)
 	}
 	ft_putstr("Address : 0x");
 	ft_putnbr_base(n, HEXA);
+	ft_putchar('\n');
 	put_file(list);
 	put_code(list);
 	ft_putchar('\n');

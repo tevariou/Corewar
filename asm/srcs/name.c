@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:55 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 20:54:14 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 12:42:34 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,23 +32,34 @@ static void	record_name(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-void		get_name(t_asm *a, int fd, unsigned int *n)
+static char	*start_read(t_asm *a, int fd, char **line, unsigned int *n)
 {
 	int		ret;
-	char	*line;
 	char	*tmp;
 
-	while ((ret = get_next_line(fd, &line)))
+	tmp = NULL;
+	while ((ret = get_next_line(fd, line)))
 	{
 		if (ret < 0)
 			err_free_exit(a, NULL);
-		tmp = skip_space(line);
+		tmp = skip_space(*line);
 		if (!(*n += 1))
-			header_error(a, line);
+			header_error(a, *line);
 		if (*tmp && *tmp != COMMENT_CHAR)
 			break ;
-		ft_strdel(&line);
+		ft_strdel(line);
 	}
+	if (!tmp)
+		err_free_exit(a, EMPTY_FILE);
+	return (tmp);
+}
+
+void		get_name(t_asm *a, int fd, unsigned int *n)
+{
+	char	*line;
+	char	*tmp;
+
+	tmp = start_read(a, fd, &line, n);
 	if (!ft_strnequ(tmp, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
 		header_error(a, line);
 	if (!(tmp = ft_strjoin(tmp + ft_strlen(NAME_CMD_STRING), "\n")))

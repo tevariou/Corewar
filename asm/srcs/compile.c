@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 14:57:17 by triou             #+#    #+#             */
-/*   Updated: 2018/10/08 16:33:50 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 13:02:44 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	compile_asm(t_asm *a, char *file)
 	parser(a);
 	get_labels(a);
 	set_bytecode(a);
+	if (a->header.prog_size > CHAMP_MAX_SIZE)
+		err_free_exit(a, FILE_OVERFLOW);
 	if (!(a->option))
 		write_bytecode(a, file);
 	else

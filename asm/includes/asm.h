@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 21:38:31 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 12:29:47 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 # define LEXER_ERROR		"Lexical error at line "
 # define PARSER_ERROR		"Parser error at line "
 # define FILE_OVERFLOW		"File is too big"
+# define EMPTY_FILE			"File is empty"
 
 typedef enum			e_tok {
 	L_LAB = 1,
@@ -162,6 +163,7 @@ t_bool					ft_tabequ(char *tab[5], char *needle);
 void					ft_put_byte(void *n, size_t len);
 void					ft_put_uint(unsigned int nb);
 char					*skip_space(char *line);
+void					ft_putnbr_base(unsigned int n, const char *base);
 
 void					ft_buffer(char **out, char *new);
 void					put_reg(int n, char **out, t_bool end);

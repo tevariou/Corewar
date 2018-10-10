@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 14:57:14 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 16:09:46 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 11:43:06 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static void		add_label(t_asm *a, t_file *list)
 		err_free_exit(a, NULL);
 	new->target = get_target(a, list);
 	new->name = list->tokens->val;
-	ft_strclr(ft_strchr(new->name, LABEL_CHAR));
 	if (!(head = a->labels))
 	{
 		new->prev = new;
@@ -54,6 +53,7 @@ static t_bool	do_label_exist(t_label *list, char *str)
 {
 	t_label	*tail;
 
+	ft_strclr(ft_strchr(str, LABEL_CHAR));
 	if (!list)
 		return (FALSE);
 	tail = list->prev;

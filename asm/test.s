@@ -1,9 +1,6 @@
-.name "llo@"
-.comment ";ok
-wef"
+.name ".comment hello"
+.comment ".name"
 
-#sti	r1, %15, %1
-#and	r1, %0, r1
-#live	%-1
-#zjmp	%-5
-ld %4262136318,r11
+live	%1
+ld	%12, r6
+live	%45
