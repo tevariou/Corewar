@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/10 12:29:47 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 14:23:52 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,8 @@ typedef struct			s_asm {
 	t_header			header;
 }						t_asm;
 
-char					*get_quote(t_asm *a, int fd, unsigned int *n, char *line);
+char					*get_quote(t_asm *a, int fd,
+									unsigned int *n, char *line);
 void					get_comment(t_asm *a, int fd, unsigned int *n);
 void					get_name(t_asm *a, int fd, unsigned int *n);
 
