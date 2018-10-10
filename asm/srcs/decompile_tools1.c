@@ -16,23 +16,6 @@
 #include <sys/uio.h>
 #include <unistd.h>
 
-void	reverse_read(void *n, size_t size)
-{
-	size_t			i;
-	unsigned char	*p;
-	unsigned char	tmp;
-
-	p = (unsigned char *)n;
-	i = 0;
-	while (i < size / 2)
-	{
-		tmp = p[i];
-		p[i] = p[size - i - 1];
-		p[size - i - 1] = tmp;
-		i++;
-	}
-}
-
 void	ft_buffer(char **out, char *new)
 {
 	char	*tmp;
@@ -66,7 +49,7 @@ void	put_ind(int in, char **out, t_bool end)
 
 	if (read(in, &buff, sizeof(buff)) <= 0)
 		decompile_error(out);
-	reverse_read(&buff, sizeof(buff));
+	reverse_bytes(&buff, sizeof(buff));
 	if (!(n = ft_itoa(buff)))
 		decompile_error(out);
 	ft_buffer(out, n);
@@ -88,7 +71,7 @@ void	put_dir(int in, char **out, t_bool end, t_bool len)
 	}
 	if (read(in, &buff, sizeof(buff)) <= 0)
 		decompile_error(out);
-	reverse_read(&buff, sizeof(buff));
+	reverse_bytes(&buff, sizeof(buff));
 	if (!(n = ft_itoa(buff)))
 		decompile_error(out);
 	ft_buffer(out, n);

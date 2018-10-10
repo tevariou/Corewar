@@ -167,7 +167,6 @@ void					ft_buffer(char **out, char *new);
 void					put_reg(int n, char **out, t_bool end);
 void					put_ind(int n, char **out, t_bool end);
 void					put_dir(int n, char **out, t_bool end, t_bool len);
-void					reverse_read(void *n, size_t size);
 
 void					read_magic(int in);
 void					read_name(int in, char **out);

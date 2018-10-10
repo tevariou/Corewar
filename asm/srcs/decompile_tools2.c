@@ -22,7 +22,7 @@ void		read_magic(int in)
 
 	if (read(in, &buff, sizeof(buff)) <= 0)
 		decompile_error(NULL);
-	reverse_read(&buff, sizeof(buff));
+	reverse_bytes(&buff, sizeof(buff));
 	if (buff != COREWAR_EXEC_MAGIC)
 		decompile_error(NULL);
 }
