@@ -27,7 +27,7 @@ static void	record_comment(t_asm *a, char *line, char *s)
 	s = ft_strchr(s, '"') + 1;
 	while (ft_isspace(*s))
 		s++;
-	if (*s && *s != '#')
+	if (*s && *s != COMMENT_CHAR)
 		header_error(a, line);
 	free(line);
 }
