@@ -32,7 +32,7 @@ t_bool		dir_len(t_byte op_code)
 	return (g_op_tab[i].dir_size);
 }
 
-t_bool		ft_tabequ(char *tab[5], char *needle)
+t_bool		ft_tabequ(const char * const *tab, char *needle)
 {
 	int	i;
 

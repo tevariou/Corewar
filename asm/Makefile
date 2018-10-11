@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -g -fsanitize=address -Wall -Werror -Wextra
 NAME = asm
 SDIR = srcs
 IDIR = includes

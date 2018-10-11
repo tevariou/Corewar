@@ -58,7 +58,7 @@ typedef struct			s_op {
 	int					dir_size;
 }						t_op;
 
-extern t_op				g_op_tab[17];
+extern const t_op		g_op_tab[17];
 
 # define T_REG					1
 # define T_DIR					2

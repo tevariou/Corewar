@@ -76,7 +76,7 @@ typedef struct			s_file {
 }						t_file;
 
 typedef struct			s_parse {
-	char				*name[5];
+	const char			*name[5];
 	t_bool				(*f)(t_file *line, t_lex **token);
 	int					n_args;
 }						t_parse;
@@ -160,7 +160,7 @@ void					add_t_reg(t_code *new, int index, t_bool ocp);
 void					add_t_dir(t_code *new, int index, t_bool ocp);
 void					add_t_ind(t_code *new, int index, t_bool ocp);
 
-t_bool					ft_tabequ(char *tab[5], char *needle);
+t_bool					ft_tabequ(const char * const *tab, char *needle);
 void					ft_put_byte(void *n, size_t len);
 void					ft_put_uint(unsigned int nb);
 char					*skip_space(char *line);
