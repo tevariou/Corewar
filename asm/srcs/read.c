@@ -68,6 +68,7 @@ static void	record_file(t_asm *a, int fd)
 		if (ret < 0)
 			err_free_exit(a, NULL);
 		ft_strclr(ft_strchr(line, COMMENT_CHAR));
+		ft_strclr(ft_strchr(line, ';'));
 		remove_whitespaces(a, &line);
 		if (*line)
 			add_input_line(a, line, n);

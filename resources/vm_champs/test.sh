@@ -1,5 +1,5 @@
 #!/bin/sh
 for f in champs/*.s;
 do
-	echo $f; ./zaz $f
+	echo $f; ./tev $f
 done

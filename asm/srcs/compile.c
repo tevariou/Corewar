@@ -20,8 +20,6 @@ void	compile_asm(t_asm *a, char *file)
 	parser(a);
 	get_labels(a);
 	set_bytecode(a);
-	if (a->header.prog_size > CHAMP_MAX_SIZE)
-		err_free_exit(a, FILE_OVERFLOW);
 	if (!(a->option))
 		write_bytecode(a, file);
 	else

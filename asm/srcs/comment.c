@@ -45,7 +45,7 @@ void		get_comment(t_asm *a, int fd, unsigned int *n)
 		tmp = skip_space(line);
 		if (!(*n += 1))
 			header_error(a, line);
-		if (*tmp && *tmp != COMMENT_CHAR)
+		if (*tmp && *tmp != COMMENT_CHAR && *tmp != ';')
 			break ;
 		ft_strdel(&line);
 	}
