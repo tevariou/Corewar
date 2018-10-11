@@ -82,7 +82,7 @@ typedef struct			s_lex {
 }						t_lex;
 
 typedef struct			s_file {
-	unsigned int		n;
+	unsigned short		n;
 	char				*line;
 	int					n_args;
 	t_lex				*tokens;
@@ -130,9 +130,9 @@ typedef struct			s_asm {
 }						t_asm;
 
 char					*get_quote(t_asm *a, int fd,
-									unsigned int *n, char *line);
-void					get_comment(t_asm *a, int fd, unsigned int *n);
-void					get_name(t_asm *a, int fd, unsigned int *n);
+									unsigned short *n, char *line);
+void					get_comment(t_asm *a, int fd, unsigned short *n);
+void					get_name(t_asm *a, int fd, unsigned short *n);
 
 void					print_usage_exit(void);
 void					init_bytecode(t_asm *a);

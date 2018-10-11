@@ -32,7 +32,7 @@ static void	record_comment(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-void		get_comment(t_asm *a, int fd, unsigned int *n)
+void		get_comment(t_asm *a, int fd, unsigned short *n)
 {
 	int		ret;
 	char	*line;

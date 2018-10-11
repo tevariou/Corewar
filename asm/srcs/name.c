@@ -32,7 +32,7 @@ static void	record_name(t_asm *a, char *line, char *s)
 	free(line);
 }
 
-static char	*start_read(t_asm *a, int fd, char **line, unsigned int *n)
+static char	*start_read(t_asm *a, int fd, char **line, unsigned short *n)
 {
 	int		ret;
 	char	*tmp;
@@ -54,7 +54,7 @@ static char	*start_read(t_asm *a, int fd, char **line, unsigned int *n)
 	return (tmp);
 }
 
-void		get_name(t_asm *a, int fd, unsigned int *n)
+void		get_name(t_asm *a, int fd, unsigned short *n)
 {
 	char	*line;
 	char	*tmp;

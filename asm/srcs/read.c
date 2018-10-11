@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include "asm.h"
 
-static void	add_input_line(t_asm *a, char *line, unsigned int n)
+static void	add_input_line(t_asm *a, char *line, unsigned short n)
 {
 	t_file	*head;
 	t_file	*new;
@@ -57,7 +57,7 @@ static void	record_file(t_asm *a, int fd)
 {
 	int				ret;
 	char			*line;
-	unsigned int	n;
+	unsigned short	n;
 
 	line = NULL;
 	n = 1;
