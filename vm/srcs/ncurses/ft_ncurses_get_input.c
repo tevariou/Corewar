@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ncurses_get_input.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 10:10:24 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/10 16:39:37 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 14:32:24 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,22 @@ void	*ft_ncurses_get_input(void *data)
 			if (input == 'q')
 				visu->abort = 1;
 			if (input == KEY_DOWN && visu->frame > 1)
+			{
 				visu->frame /= 2;
+				visu->current_frame = 0;
+			}
 			if (input == KEY_UP && visu->frame < 63)
+			{
 				visu->frame *= 2;
+				visu->current_frame = 0;
+			}
 			if (input == ' ')
 				visu->pause = (visu->pause == OFF) ? ON : OFF;
 		}
 		else
 		{
 			pthread_exit(0);
-			ft_exit(NULL, "");
+			ft_exit(NULL, "coucou");
 		}
 	}
 	pthread_exit(0);
