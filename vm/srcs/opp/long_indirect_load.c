@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   long_indirect_load.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:03:22 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 17:59:24 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 21:54:27 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	check_ocp(int ocp)
 	param_type3 = ft_get_param_type(ocp, 3);
 	if (!param_type1 || !param_type2 || !param_type3)
 		return (0);
-	if(param_type3 == REG_CODE && !(param_type3 != DIR_CODE) && !(param_type1 != DIR_CODE))
+//	if(param_type3 == REG_CODE && !(param_type3 != DIR_CODE) && !(param_type1 != DIR_CODE))
 		return (1);
 	return (0);
 }
@@ -55,9 +55,9 @@ int		long_indirect_load(t_mars *mars, t_processus *process)
 	dest = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT2);
 	if(!check_ocp(opc))
 		return (0);
-	address = ft_get_mars_value(mars, process->pc + ((short)(srcs1 + srcs2)), 2);
+	address = ft_get_mars_value(mars, process->pc + ((short)srcs1 + (short)srcs2), 4);
 	ft_load_register(process, dest, address);
-	if (srcs1 + srcs2)
+	if (address)
 		process->carry = 0;
 	else
 		process->carry = 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   indirect_load.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:56:13 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 17:57:20 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 21:38:50 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int		indirect_load(t_mars *mars, t_processus *process)
 		return (0);
 	address = ft_get_mars_value(mars, process->pc + ((short)(srcs1 + srcs2)) % IDX_MOD, REG_SIZE);
 	ft_load_register(process, dest, address);
-	if (srcs1 + srcs2)
+	if (address)
 		process->carry = 0;
 	else
 		process->carry = 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   substraction.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:08:35 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 18:00:11 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 20:30:41 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,26 @@
 
 int		substraction(t_mars *mars, t_processus *process)
 {
-	if (!ft_get_params(process, mars, NO_SIZE, *mars->memory[process->pc + 1]))
-		return (process->carry);
-	ft_load_register(process, process->params[2], process->params[0]
-		- process->params[1]);
-	if (!(ft_get_register(process, process->params[2])))
-		return (process->carry = 1);
-	return (process->carry = 0);
+		int srcs1;
+	int srcs2;
+	int desti;
+	int opc;
+
+	process->bytes_to_jump = process->pc + 2;
+	opc = ft_get_mars_value(mars, process->pc + 1, 1);
+	if (opc != 0x54)
+		return(0);
+	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
+	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT4);
+	desti = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT4);
+	if (!ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1))
+		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 3, 1))
+		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 4, 1)))
+		return (0);
+		ft_load_register(process, desti, srcs1 - srcs2);
+	if (srcs1 - srcs2)
+		process->carry = 0;
+	else
+		process->carry = 1;
+	return (SUCCESS);
 }

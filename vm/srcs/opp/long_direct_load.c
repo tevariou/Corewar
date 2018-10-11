@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   long_direct_load.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:59:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 17:58:17 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 21:32:17 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ int		long_direct_load(t_mars *mars, t_processus *process)
 	srcs = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
 	dest = ft_get_dest(mars, process, ft_get_param_type(opc, 2), DIRECT4);
 	if(!process->opcode || !check_ocp(opc))
-		ft_load_register(process, dest, srcs);
+		return (process->carry);
+	ft_load_register(process, dest, srcs);
 	if (srcs)
 		process->carry = 0;
 	else

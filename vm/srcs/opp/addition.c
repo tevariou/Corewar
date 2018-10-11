@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   addition.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 21:46:20 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/04 17:54:33 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 20:27:33 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ int		addition(t_mars *mars, t_processus *process)
 	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
 	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT4);
 	desti = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT4);
+	if (opc != 0x54)
+		return(0);
+	if (!ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1))
+		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 3, 1))
+		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 4, 1)))
+		return (0);
 	ft_load_register(process, desti, srcs1 + srcs2);
 	if (srcs1 + srcs2)
 		process->carry = 0;
