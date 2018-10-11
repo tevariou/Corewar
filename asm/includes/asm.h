@@ -41,6 +41,21 @@
 # define FILE_OVERFLOW		"File is too big"
 # define EMPTY_FILE			"File is empty"
 
+typedef unsigned char	t_byte;
+
+typedef struct			s_op {
+	char				*name;
+	int					n_args;
+	int					args_type[3];
+	t_byte				op_code;
+	int					n_cycles;
+	char				*comment;
+	t_bool				ocp;
+	t_bool				dir_size;
+}						t_op;
+
+extern const t_op		g_op_tab[17];
+
 typedef enum			e_tok {
 	L_LAB = 1,
 	L_REG,

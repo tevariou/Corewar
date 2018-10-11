@@ -45,20 +45,6 @@
 # define MAX_CHECKS				10
 
 typedef char			t_arg_type;
-typedef unsigned char	t_byte;
-
-typedef struct			s_op {
-	char				*name;
-	int					n_args;
-	int					args_type[3];
-	t_byte				op_code;
-	int					n_cycles;
-	char				*comment;
-	int					ocp;
-	int					dir_size;
-}						t_op;
-
-extern const t_op		g_op_tab[17];
 
 # define T_REG					1
 # define T_DIR					2
