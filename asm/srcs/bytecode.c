@@ -16,7 +16,7 @@ static unsigned short	convert_short(t_asm *a, t_code *op, char *str)
 {
 	if (*str == LABEL_CHAR)
 		return (convert_label_short(a, op, str));
-	else if (ft_strnequ(str, "0x", 2))
+	else if (ft_strnequ(str, "0x", 2) || ft_strnequ(str, "0X", 2))
 		return (atoi_base_short(str + 2, HEXA));
 	else
 		return (atoi_base_short(str, DEC));
@@ -26,7 +26,7 @@ static unsigned int		convert_int(t_asm *a, t_code *op, char *str)
 {
 	if (*str == LABEL_CHAR)
 		return (convert_label_int(a, op, str));
-	else if (ft_strnequ(str, "0x", 2))
+	else if (ft_strnequ(str, "0x", 2) || ft_strnequ(str, "0X", 2))
 		return (atoi_base_int(str + 2, HEXA));
 	else
 		return (atoi_base_int(str, DEC));

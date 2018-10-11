@@ -38,10 +38,10 @@ unsigned short	atoi_base_short(char *str, char *base)
 	sign = (*str == '-') ? -1 : 1;
 	str = (*str == '-' || *str == '+') ? str + 1 : str;
 	ret = 0;
-	while (ft_strchr(base, *str))
+	while (ft_strchr(base, ft_toupper(*str)))
 	{
 		ret *= ft_strlen(base);
-		ret += ft_strchr(base, *str++) - base;
+		ret += ft_strchr(base, ft_toupper(*str++)) - base;
 	}
 	ret *= sign;
 	reverse_bytes(&ret, sizeof(ret));
@@ -56,10 +56,10 @@ unsigned int	atoi_base_int(char *str, char *base)
 	sign = (*str == '-') ? -1 : 1;
 	str = (*str == '-' || *str == '+') ? str + 1 : str;
 	ret = 0;
-	while (ft_strchr(base, *str))
+	while (ft_strchr(base, ft_toupper(*str)))
 	{
 		ret *= ft_strlen(base);
-		ret += ft_strchr(base, *str++) - base;
+		ret += ft_strchr(base, ft_toupper(*str++)) - base;
 	}
 	ret *= sign;
 	reverse_bytes(&ret, sizeof(ret));

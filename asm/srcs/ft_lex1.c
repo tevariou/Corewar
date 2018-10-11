@@ -17,11 +17,11 @@ static char	*is_hexa(char *str)
 {
 	char	*ptr;
 
-	if (ft_strnequ(str, "0x", 2))
+	if (ft_strnequ(str, "0x", 2) || ft_strnequ(str, "0X", 2))
 	{
 		str += 2;
 		ptr = str;
-		while (ft_strchr(HEXA, *str))
+		while (ft_strchr(HEXA, ft_toupper(*str)))
 			str++;
 		if (ptr == str)
 			return (NULL);

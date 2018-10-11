@@ -58,5 +58,7 @@ char			*ft_strnstr(const char *s, const char *find, size_t slen);
 char			*ft_strstr(const char *s, const char *find);
 void			ft_putendl_fd(char const *s, int fd);
 char			*ft_itoa(int n);
+int				ft_tolower(int c);
+int				ft_toupper(int c);
 
 #endif
