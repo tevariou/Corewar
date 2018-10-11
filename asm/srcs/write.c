@@ -98,9 +98,9 @@ void		write_bytecode(t_asm *a, char *file)
 	}
 	write_header(a, fd);
 	write_content(a, fd);
-	if (close(fd) < 0)
-		err_free_exit(a, NULL);
 	ft_putstr(WRITING_FILE);
 	ft_putendl(filename);
 	free(filename);
+	if (close(fd) < 0)
+		err_free_exit(a, NULL);
 }
