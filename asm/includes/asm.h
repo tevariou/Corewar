@@ -160,7 +160,7 @@ void					add_t_reg(t_code *new, int index, t_bool ocp);
 void					add_t_dir(t_code *new, int index, t_bool ocp);
 void					add_t_ind(t_code *new, int index, t_bool ocp);
 
-t_bool					ft_tabequ(const char * const *tab, char *needle);
+t_bool					ft_tabequ(const char *const *tab, char *needle);
 void					ft_put_byte(void *n, size_t len);
 void					ft_put_uint(unsigned int nb);
 char					*skip_space(char *line);
