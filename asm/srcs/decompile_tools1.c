@@ -30,7 +30,11 @@ void	put_reg(int in, char **out, t_bool end)
 {
 	t_byte	buff;
 	char	*n;
+	char	sep[3];
 
+	sep[0] = SEPARATOR_CHAR;
+	sep[1] = ' ';
+	sep[2] = '\0';
 	if (read(in, &buff, sizeof(buff)) <= 0)
 		decompile_error(out);
 	ft_buffer(out, "r");
@@ -39,14 +43,18 @@ void	put_reg(int in, char **out, t_bool end)
 	ft_buffer(out, n);
 	free(n);
 	if (!end)
-		ft_buffer(out, ", ");
+		ft_buffer(out, sep);
 }
 
 void	put_ind(int in, char **out, t_bool end)
 {
 	short	buff;
 	char	*n;
+	char	sep[3];
 
+	sep[0] = SEPARATOR_CHAR;
+	sep[1] = ' ';
+	sep[2] = '\0';
 	if (read(in, &buff, sizeof(buff)) <= 0)
 		decompile_error(out);
 	reverse_bytes(&buff, sizeof(buff));
@@ -55,15 +63,22 @@ void	put_ind(int in, char **out, t_bool end)
 	ft_buffer(out, n);
 	free(n);
 	if (!end)
-		ft_buffer(out, ", ");
+		ft_buffer(out, sep);
 }
 
 void	put_dir(int in, char **out, t_bool end, t_bool len)
 {
 	int		buff;
 	char	*n;
+	char	dir[2];
+	char	sep[3];
 
-	ft_buffer(out, "%");
+	sep[0] = SEPARATOR_CHAR;
+	sep[1] = ' ';
+	sep[2] = '\0';
+	dir[0] = DIRECT_CHAR;
+	dir[1] = '\0';
+	ft_buffer(out, dir);
 	if (len)
 	{
 		put_ind(in, out, end);
@@ -77,5 +92,5 @@ void	put_dir(int in, char **out, t_bool end, t_bool len)
 	ft_buffer(out, n);
 	free(n);
 	if (!end)
-		ft_buffer(out, ", ");
+		ft_buffer(out, sep);
 }
