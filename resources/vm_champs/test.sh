@@ -11,7 +11,7 @@ do
 		hexdump -C $(echo $f | rev | cut -c2- | rev)$cor > $dir/zaz
 		rm -f $(echo $f | rev | cut -c2- | rev)$cor
 	fi
-	./tev $f &>/dev/null
+	./tev $f >/dev/null
 	if [ -f "$(echo $f | rev | cut -c2- | rev)$cor" ]
 	then
 		hexdump -C $(echo $f | rev | cut -c2- | rev)$cor > $dir/tev

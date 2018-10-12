@@ -6,18 +6,18 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 16:43:31 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 22:28:15 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/12 20:06:26 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
 
-void		ft_put_uint(unsigned int nb)
+void		ft_put_uint(unsigned int nb, int fd)
 {
 	if (nb >= 10)
-		ft_putnbr(nb / 10);
-	ft_putchar('0' + nb % 10);
+		ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd('0' + nb % 10, fd);
 }
 
 char		*set_extension(t_asm *a, char *file,

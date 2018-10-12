@@ -6,13 +6,29 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 18:54:01 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 21:37:21 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/12 20:19:27 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+void	decompile_error(char **out)
+{
+	ft_putendl_fd("ERROR", 2);
+	if (out && *out)
+		free(*out);
+	exit(EXIT_FAILURE);
+}
+
+void	header_error(t_asm *a, char *line)
+{
+	free_all(a);
+	ft_putendl_fd(WRONG_HEADER, 2);
+	free(line);
+	exit(EXIT_FAILURE);
+}
 
 void	print_usage_exit(void)
 {

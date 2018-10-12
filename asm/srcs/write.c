@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:47:43 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 16:50:29 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/12 20:08:09 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static void	get_prog_size(t_asm *a)
 		list = list->next;
 	}
 	size += list->size;
+	if (size > CHAMP_MAX_SIZE)
+		champ_warning(size);
 	reverse_bytes(&size, sizeof(size));
 	a->header.prog_size = size;
 }

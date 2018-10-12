@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/10 14:23:52 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/12 20:20:36 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@
 # define PARSER_ERROR		"Parser error at line "
 # define FILE_OVERFLOW		"File is too big"
 # define EMPTY_FILE			"File is empty"
+# define WARNING_REG		"Warning : Null registry number at line "
 
 typedef unsigned char	t_byte;
 
@@ -145,6 +146,9 @@ void					asm_error(t_asm *a, t_file *line,
 									char *str, const char *err);
 void					parser_error(t_asm *a, t_file *line, const char *err);
 void					err_free_exit(t_asm *a, const char *err);
+void					asm_warning(t_asm *a, t_file *line,
+									char *str, const char *err);
+void					champ_warning(unsigned int size);
 
 void					lexer(t_asm *a);
 void					redux(t_asm *a);
@@ -177,7 +181,7 @@ void					add_t_ind(t_code *new, int index, t_bool ocp);
 
 t_bool					ft_tabequ(const char *const *tab, char *needle);
 void					ft_put_byte(void *n, size_t len);
-void					ft_put_uint(unsigned int nb);
+void					ft_put_uint(unsigned int nb, int fd);
 char					*skip_space(char *line);
 void					ft_putnbr_base(unsigned int n, const char *base);
 

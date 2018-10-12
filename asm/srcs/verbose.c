@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/08 16:15:15 by triou             #+#    #+#             */
-/*   Updated: 2018/10/10 11:47:47 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/12 20:07:43 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	write_prog_size(t_asm *a)
 	}
 	size += list->size;
 	ft_putstr("Program size : ");
-	ft_put_uint(size);
+	ft_put_uint(size, 1);
 	ft_putendl(" bytes");
 }
 

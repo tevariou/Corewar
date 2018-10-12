@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:23:30 by triou             #+#    #+#             */
-/*   Updated: 2018/10/10 13:43:04 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/12 19:16:20 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)
 		if (reg > REG_NUMBER)
 			asm_error(a, op->orig, tmp, WRONG_REG_NUMBER);
 	}
+	if (!reg)
+		asm_warning(a, op->orig, tmp, WARNING_REG);
 	return (reg);
 }
 
