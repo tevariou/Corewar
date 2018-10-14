@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   aff.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/10 16:28:28 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/13 19:12:28 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 
 int		aff(t_mars *mars, t_processus *process)
 {
+	process->bytes_to_jump = process->pc + 3;
 	(void)mars;
-	(void) process;
 	return (SUCCESS);
 }

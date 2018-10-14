@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:52:07 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 21:34:30 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/13 17:31:21 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,4 @@ int			direct_store(t_mars *mars, t_processus *process)
 		ft_load_register(process, dest, srcs);
 	else if (dest_type == IND_CODE)
 		ft_load_mars_value(mars, process->pc + (short)dest % IDX_MOD, srcs, process->player);
-	return (SUCCESS);
 }

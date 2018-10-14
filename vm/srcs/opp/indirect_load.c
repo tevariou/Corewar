@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:56:13 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 21:38:50 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/11 23:07:55 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int		indirect_load(t_mars *mars, t_processus *process)
 	dest = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT2);
 	if(!check_ocp(opc) || !process->opcode)
 		return (0);
-	address = ft_get_mars_value(mars, process->pc + ((short)(srcs1 + srcs2)) % IDX_MOD, REG_SIZE);
+	address = ft_get_mars_value(mars, process->pc + ((short)srcs1 + (short)srcs2) % IDX_MOD, REG_SIZE);
 	ft_load_register(process, dest, address);
 	if (address)
 		process->carry = 0;

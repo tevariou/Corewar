@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/11 20:30:00 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/13 17:57:31 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned		ft_get_register(t_processus *process, unsigned index)
 	if (!index)
 		return (0);
 	index--;
-	if (index > REG_NUMBER)
+	if (index >= REG_NUMBER + 1)
 		return (0);
 	value = 0;
 	i = 0;
@@ -40,7 +40,7 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 
 	if (!index)
 		return (0);
-	if (index > REG_NUMBER)
+	if (index > REG_NUMBER + 1)
 		return (0);
 	i = 0;
 	while (++i <= REG_SIZE)
@@ -53,7 +53,7 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 
 t_bool		ft_is_register(int index)
 {
-	if (index < 1 || index >= 16)
+	if (index < 1 || index > 16)
 		return (0);
 	return (1);
 }

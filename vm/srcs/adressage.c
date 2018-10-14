@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   adressage.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lterrail <lterrail@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 16:29:57 by lterrail          #+#    #+#             */
-/*   Updated: 2018/10/10 16:55:32 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/13 19:23:04 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ unsigned	ft_local_restriction(unsigned pc, unsigned target)
 
 int	ft_op_need_restriction(int (*op)(t_mars *, t_processus *))
 {
-	if (op == &long_direct_load || op == &long_indirect_load || 
+	if (op == &long_direct_load  || op == &long_indirect_load ||
 		op == &long_fork || op == &jump)
 		return (0);
 	return (1);

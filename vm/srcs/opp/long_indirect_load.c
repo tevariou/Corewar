@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:03:22 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 21:54:27 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/13 14:52:57 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,14 @@ static int	check_ocp(int ocp)
 	param_type3 = ft_get_param_type(ocp, 3);
 	if (!param_type1 || !param_type2 || !param_type3)
 		return (0);
-//	if(param_type3 == REG_CODE && !(param_type3 != DIR_CODE) && !(param_type1 != DIR_CODE))
-		return (1);
-	return (0);
+	return (1);
 }
 
 int		long_indirect_load(t_mars *mars, t_processus *process)
 {
 	int srcs1;
 	int srcs2;
-	int dest;
+	short dest;
 	int opc;
 	int address;
 

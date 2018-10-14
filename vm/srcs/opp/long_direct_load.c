@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:59:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 21:32:17 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/13 16:07:32 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ static int	check_ocp(int ocp)
 	param_type3 = ft_get_param_type(ocp, 3);
 	if (!param_type1 || !param_type2 || param_type3 || ft_get_param_type(ocp, 4))
 		return (0);
-//	if(param_type2 == REG_CODE && !param_type3 && param_type1 != REG_CODE)
-		return (1);
-	return (0);
+	return (1);
+
 }
 
+#include <limits.h>
 int		long_direct_load(t_mars *mars, t_processus *process)
 {
 	int srcs;
@@ -52,8 +52,9 @@ int		long_direct_load(t_mars *mars, t_processus *process)
 	dest = ft_get_dest(mars, process, ft_get_param_type(opc, 2), DIRECT4);
 	if(!process->opcode || !check_ocp(opc))
 		return (process->carry);
-	ft_load_register(process, dest, srcs);
-	if (srcs)
+	srcs = srcs >> 16;
+	ft_load_register(process, dest, (short)srcs);
+	if ((short)srcs)
 		process->carry = 0;
 	else
 		process->carry = 1;
