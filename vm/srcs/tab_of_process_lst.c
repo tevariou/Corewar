@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 15:49:14 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/10 18:19:28 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:47:11 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@
 
 t_processus   **init_tab_of_process(t_mars *mars)
 {
-    ft_memset(mars->process_lst, 0, sizeof(t_processus *));
+    ft_memset(mars->process_lst, 0, sizeof(t_processus *) * PT_SIZE);
     return (mars->process_lst);
 }
 
 t_processus     *tab_set_process(t_mars *mars, t_processus *new_process, int dest)
 {
+    t_processus *tmp;
+    t_processus *tmp2;
+
     if (!new_process)
         return (NULL);
     if (!mars->process_lst[dest % PT_SIZE])
@@ -29,11 +32,24 @@ t_processus     *tab_set_process(t_mars *mars, t_processus *new_process, int des
         new_process->next = NULL;
         mars->process_lst[dest % PT_SIZE] = new_process;
     }
-    else
+    else if (new_process->id > mars->process_lst[dest % PT_SIZE]->id)
     {
         new_process->next = mars->process_lst[dest % PT_SIZE];
         mars->process_lst[dest % PT_SIZE] = new_process;
     }
+    else
+    {
+        
+        tmp2 = mars->process_lst[dest % PT_SIZE];
+        tmp = tmp2->next;
+        while (tmp && new_process->id < tmp->id)
+        {
+            tmp2 = tmp;
+            tmp = tmp->next;
+        }
+        tmp2->next = new_process;
+        new_process->next = tmp;
+     }
     return (new_process);
 }
 
@@ -48,7 +64,6 @@ t_processus     *tab_get_next_process(t_mars *mars, int dest)
         mars->process_lst[dest % PT_SIZE] = get->next;
     return(get);   
 }
-
 
 t_processus     *tab_see_process(t_mars *mars, int dest)
 {

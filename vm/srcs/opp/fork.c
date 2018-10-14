@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/13 18:41:02 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:48:44 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,21 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, short dest)
 	copy->pc = dest;
 	copy->bytes_to_jump = dest;
 	i = 0;
-	while (i <= REG_NUMBER + 10)
+	mars->nb_process++;
+	copy->id = mars->nb_process;
+	while (i <= REG_NUMBER + 1)
 	{
 		reg = ft_get_register(process, i);
 		ft_load_register(copy, i, reg);
 		i++;
 	}
-	copy->id = mars->nb_process;
 	copy->player = process->player;
 	copy->name = process->name;
 	copy->nbr_of_live = process->nbr_of_live;
 	copy->opcode = 0;
 	copy->carry = process->carry;
 	copy->last_cycle_live = process->last_cycle_live;
-	tab_set_process(mars, copy, mars->current_cycle + 1);
+	tab_set_process(mars, copy, mars->current_cycle);
 	return(copy);
 }
 
@@ -58,13 +59,11 @@ int		ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
-	ft_copy_process(process, mars, ft_global_restriction(process->pc + (short)dest % IDX_MOD));
+	ft_copy_process(process, mars, ft_global_restriction(process->pc + ((short)dest) % IDX_MOD));
 	if (dest)
 		process->carry = 0;
 	else
 		process->carry = 1;
-	mars->nb_process++;
 	process->bytes_to_jump = process->pc + IND_SIZE + 1;
 	return (SUCCESS);
 }
-

@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/13 16:59:52 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/14 19:00:34 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 unsigned		ft_get_mars_value(t_mars *mars, unsigned index, unsigned size)
 {
 	unsigned	i;
-	unsigned	value;
+	int	value;
 
 	value = 0;
 	i = 0;

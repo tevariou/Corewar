@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:59:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 18:36:19 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:17:00 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int		indirect_store(t_mars *mars, t_processus *process)
 	srcs3 = ft_get_srcs(mars, process, ft_get_param_type(opc, 3), DIRECT2);
 	if(!check_ocp(opc) || !process->opcode)
 		return(process->carry);
-	dest = process->pc + (short)(srcs2 + srcs3) % IDX_MOD;
+	dest = process->pc + ((short)(srcs2 + srcs3)) % IDX_MOD;
 	ft_load_mars_value(mars, dest, srcs1, process->player);
 	return (SUCCESS);
 }

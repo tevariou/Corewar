@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/13 16:59:54 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/14 19:13:46 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ unsigned    ft_get_srcs(t_mars *mars, t_processus *process, int code, int dir_si
         if (ft_op_need_restriction(process->opcode))
             source  = (short)source % IDX_MOD;
         else
-            source = (short)source % MEM_SIZE;
-        source = ft_get_mars_value(mars, process->pc + source, DIRECT4);
+            source = (short)source;
+        source = ft_get_mars_value(mars, process->pc + (short)source, DIRECT4);
         process->bytes_to_jump += IND_SIZE;
     }
     else

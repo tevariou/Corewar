@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:10:28 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/13 17:34:17 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/14 19:51:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ static int	check_ocp(int ocp)
 	param_type3 = ft_get_param_type(ocp, 3);
 	if (!param_type1 || !param_type2 || ft_get_param_type(ocp, 3) || ft_get_param_type(ocp, 4))
 		return (0);
-//	if(param_type2 == REG_CODE && !param_type3 && param_type1 != REG_CODE)
-		return (1);
-	return (0);
+	return (1);
 }
 
 
