@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 16:28:19 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 18:35:22 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,49 +33,20 @@
 ** de votre creativité.
 */
 
-int		ft_live_belong_to_other(t_mars *mars, int i)
-{
-	t_processus *tmp;
-
-	tmp = tab_see_process(mars, mars->current_cycle);
-	while (tmp)
-	{
-		if (tmp->player == i)
-		{
-			tmp->nbr_of_live++;
-			tmp->last_cycle_live = mars->current_cycle;
-		}
-		tmp = tmp->next;
-	}
-	return (0);
-}
-
-static int	ft_live_belong_to_other2(t_mars *mars, int i)
-{
-	t_champion *tmp;
-
-	tmp = mars->champion_lst;
-	while (tmp)
-	{
-		if (tmp->id == i)
-		{
-			tmp->nbr_of_live++;
-			tmp->last_cycle_live = mars->current_cycle;
-		}
-		tmp = tmp->next;
-	}
-	return (0);
-}
-
 int		live(t_mars *mars, t_processus *process)
 {
 	int i;
+	t_champion *c;
 
+	c = mars->champion_lst;
 	i = ft_get_mars_value(mars, process->pc + 1, REG_SIZE);
-	//ft_live_belong_to_other(mars, i);
-	ft_live_belong_to_other2(mars, i);
-	if (process->player == i)
-		process->last_cycle_live = mars->current_cycle;
+	while (c)
+	{
+		if (i == c->id)
+			c->last_cycle_live = mars->current_cycle;
+		c = c->next;
+	}
+	process->last_cycle_live = mars->current_cycle;
 	process->bytes_to_jump = process->pc + REG_SIZE + 1;
 	return (process->carry);
 }

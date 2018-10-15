@@ -6,38 +6,38 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:55:53 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 18:48:02 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 #include "libft.h"
 
-void	ft_kill_process(t_mars *mars)
+int	ft_kill_process(t_mars *mars)
 {
-	t_processus *process;
-	t_processus *tmp;
+	unsigned i;
+	t_processus	*tmp;
+	int	at_least_one;
 
-	process = mars->process_lst[0];
-	while (mars->process_lst[0] &&
-			mars->process_lst[0]->last_cycle_live < mars->cycle_to_die)
+	at_least_one = 0;
+	i = mars->current_cycle;
+	while (i < mars->current_cycle + PT_SIZE)
 	{
-		tmp = mars->process_lst[0]->next;
-		free(mars->process_lst);
-		mars->process_lst[0] = tmp;
-	}
-	while (process && process->next)
-	{
-		if (process->next->next &&
-		process->next->last_cycle_live < mars->cycle_to_die)
+		while ((tmp = tab_get_next_process(mars, i)))
 		{
-			tmp = process->next;
-			process->next = process->next->next;
-			free(tmp);
+			if (tmp->last_cycle_live < mars->current_cycle - mars->cycle_teta)
+				free(tmp);
+			else
+			{
+				set_jump_stock(mars, tmp);
+				at_least_one = 1;
+			}
 		}
-		tmp = process;
-		process = process->next;
+		while ((tmp = get_jump_stock(mars)))
+			tab_set_process(mars, tmp, i);
+		i++;
 	}
+	return (at_least_one);
 }
 
 void	ft_init_champs_life(t_champion *champion)
@@ -57,7 +57,8 @@ void	ft_cycles_handler(t_mars *mars)
 	mars->current_cycle++;
 	if (mars->current_cycle == mars->cycle_to_die)
 	{
-		//	ft_kill_process(mars);
+		if (!ft_kill_process(mars))
+			 end_game(mars);
 		mars->cycle_to_die += mars->cycle_teta;
 		mars->cycle_teta -= mars->cycle_delta;
 		ft_init_champs_life(mars->champion_lst);

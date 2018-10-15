@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:15:10 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 18:42:27 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,7 @@ char						*ft_get_opcode_name(t_mars *mars, t_processus *process);
 unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsigned color);
 int							ft_is_visualisator(t_mars *mars, char **av);
 int							ft_is_dump_option(t_mars *mars, char **av);
+void						end_game(t_mars *mars);
 
 /*
 ** loop during battle
