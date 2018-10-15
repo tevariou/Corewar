@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/14 19:06:26 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:50:43 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ t_processus		*ft_new_empty_processus(void)
 	return (process);
 }
 
-int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **av)
+int				ft_add_parameter_to_processus(t_mars *mars,
+t_processus *process, char **av)
 {
-
 	char *tmp;
 
 	tmp = NULL;
@@ -92,7 +92,8 @@ int				ft_add_parameter_to_processus(t_mars *mars, t_processus *process, char **
 ** return a NULL pointer. Else a new processus is returned..
 */
 
-t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, int ac)
+t_processus		*ft_argv_have_champ(t_mars *mars,
+char **av, int *current_index, int ac)
 {
 	t_processus *process;
 	int			i;
@@ -119,7 +120,8 @@ t_processus		*ft_argv_have_champ(t_mars *mars, char **av, int *current_index, in
 	return (process);
 }
 
-void		ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *process)
+void		ft_add_champ_to_mars(t_mars *mars,
+	t_champion *champion, t_processus *process)
 {
 	if (!(champion = (t_champion *)malloc(sizeof(t_champion))))
 		ft_exit(mars, "malloc error");
@@ -132,13 +134,3 @@ void		ft_add_champ_to_mars(t_mars *mars, t_champion *champion, t_processus *proc
 	champion->next = mars->champion_lst;
 	mars->champion_lst = champion;
 }
-
-/*
-** add a processus at the begining of the lst of mars processus.
-*/
-/*
-void			ft_add_processus_to_mars(t_mars *mars, t_processus *process)
-{
-	process->next = mars->process_lst;
-	mars->process_lst = process;
-}*/

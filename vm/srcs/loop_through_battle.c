@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:22:58 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:37:38 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,16 @@ static int	execut_process_turn(t_mars *mars, t_processus *current_process)
 	if (current_process->opcode)
 		current_process->opcode(mars, current_process);
 	ft_move_pc(mars, current_process);
-	set_jump_stock(mars,current_process);
-		return (0);
-	if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
-		ft_idle_turn(current_process, mars->current_cycle);
-	if (mars->visualisor == VERBOSE)
-		mars->ft_display(mars, current_process);
+	set_jump_stock(mars, current_process);
+	return (1);
+}
+
+static int	set_next_instruction(t_mars *mars, t_processus *process)
+{
+	if (ft_get_opcode(mars, process,
+		*mars->memory[ft_global_restriction(process->pc)]) == OPP_ERROR)
+		ft_idle_turn(process, mars->current_cycle);
+	tab_set_process(mars, process, process->next_instruction_cycle);
 	return (1);
 }
 
@@ -43,15 +47,12 @@ static int	execute_one_cycle(t_mars *mars)
 	t_processus	*current_process;
 
 	while ((current_process = tab_get_next_process(mars, mars->current_cycle)))
-	{
-		if (execut_process_turn(mars, current_process))
-			tab_set_process(mars, current_process, current_process->next_instruction_cycle);
-	}
+		execut_process_turn(mars, current_process);
 	while ((current_process = get_jump_stock(mars)))
 	{
-		if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
-			ft_idle_turn(current_process, mars->current_cycle);
-		tab_set_process(mars, current_process, current_process->next_instruction_cycle);
+		set_next_instruction(mars, current_process);
+		if (mars->visualisor == VERBOSE)
+			mars->ft_display(mars, current_process);
 	}
 	return (1);
 }
@@ -63,9 +64,9 @@ void		loop_through_battle(t_mars *mars)
 	v = &mars->visu;
 	while (execute_one_cycle(mars))
 	{
-		
 		v->current_frame++;
-		if ( mars->visualisor > 0 && mars->visualisor != VERBOSE && v->current_frame == v->frame)
+		if (mars->visualisor > 0 &&
+			mars->visualisor != VERBOSE && v->current_frame == v->frame)
 		{
 			mars->ft_display(mars, NULL);
 			v->current_frame = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cycle_mars_handler.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/10 16:51:52 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:55:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_kill_process(t_mars *mars)
 {
 	t_processus *process;
 	t_processus *tmp;
-// have to do an iteration instead ofceck for zero
+
 	process = mars->process_lst[0];
 	while (mars->process_lst[0] &&
 			mars->process_lst[0]->last_cycle_live < mars->cycle_to_die)
@@ -28,7 +28,8 @@ void	ft_kill_process(t_mars *mars)
 	}
 	while (process && process->next)
 	{
-		if (process->next->next && process->next->last_cycle_live < mars->cycle_to_die)
+		if (process->next->next &&
+		process->next->last_cycle_live < mars->cycle_to_die)
 		{
 			tmp = process->next;
 			process->next = process->next->next;
@@ -56,7 +57,7 @@ void	ft_cycles_handler(t_mars *mars)
 	mars->current_cycle++;
 	if (mars->current_cycle == mars->cycle_to_die)
 	{
-	//	ft_kill_process(mars);
+		//	ft_kill_process(mars);
 		mars->cycle_to_die += mars->cycle_teta;
 		mars->cycle_teta -= mars->cycle_delta;
 		ft_init_champs_life(mars->champion_lst);

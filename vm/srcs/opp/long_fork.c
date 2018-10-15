@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:00:58 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 18:24:03 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:25:12 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		long_fork(t_mars *mars, t_processus *process)
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
 	mars->nb_process++;
-	ft_copy_process(process, mars, ft_global_restriction(process->pc + dest));
+	ft_copy_process(process, mars, ft_global_restriction(process->pc + (short)dest));
 		if (dest)
 		process->carry = 0;
 	else
