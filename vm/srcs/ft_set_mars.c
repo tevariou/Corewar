@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/10 17:54:53 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:14:23 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_mars		*ft_new_mars(void)
 	mars->current_cycle = 0;
 	mars->nb_process = 0;
 	init_tab_of_process(mars);
+	mars->tmp_jump = NULL;
 	mars->champion_lst = NULL;
 	mars->ft_display = NULL;
 	mars->visualisor = 0;

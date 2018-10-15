@@ -6,13 +6,33 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 15:49:14 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/14 20:47:11 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:19:41 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 #include "libft.h"
 
+
+t_processus     *set_jump_stock(t_mars *mars, t_processus *process)
+{
+    if (!process)
+        return (NULL);
+    process->next = mars->tmp_jump;
+    mars->tmp_jump = process;
+    return (process);
+}
+
+t_processus     *get_jump_stock(t_mars *mars)
+{
+    t_processus *get;
+
+    if (!mars->tmp_jump)
+        return (NULL);
+    get = mars->tmp_jump;
+    mars->tmp_jump = get->next;
+    return (get);
+}
 
 t_processus   **init_tab_of_process(t_mars *mars)
 {

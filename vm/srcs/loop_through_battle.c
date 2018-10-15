@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/13 18:05:09 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:22:58 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ static int	execut_process_turn(t_mars *mars, t_processus *current_process)
 	t_visu *v;
 
 	v = &mars->visu;
-		if (current_process->opcode)
-			current_process->opcode(mars, current_process);
-		ft_move_pc(mars, current_process);
-		if (ft_get_opcode(mars, current_process,
-		*mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
-			ft_idle_turn(current_process, mars->current_cycle);
+	if (current_process->opcode)
+		current_process->opcode(mars, current_process);
+	ft_move_pc(mars, current_process);
+	set_jump_stock(mars,current_process);
+		return (0);
+	if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
+		ft_idle_turn(current_process, mars->current_cycle);
 	if (mars->visualisor == VERBOSE)
 		mars->ft_display(mars, current_process);
 	return (1);
@@ -43,7 +44,13 @@ static int	execute_one_cycle(t_mars *mars)
 
 	while ((current_process = tab_get_next_process(mars, mars->current_cycle)))
 	{
-		execut_process_turn(mars, current_process);
+		if (execut_process_turn(mars, current_process))
+			tab_set_process(mars, current_process, current_process->next_instruction_cycle);
+	}
+	while ((current_process = get_jump_stock(mars)))
+	{
+		if (ft_get_opcode(mars, current_process, *mars->memory[ft_global_restriction(current_process->pc)]) == OPP_ERROR)
+			ft_idle_turn(current_process, mars->current_cycle);
 		tab_set_process(mars, current_process, current_process->next_instruction_cycle);
 	}
 	return (1);

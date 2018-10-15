@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/10 18:06:08 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/15 17:15:10 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ struct						s_mars
 	void					(*ft_display)(t_mars *, t_processus *);
 	int						visualisor;
 	int						dump;
+	t_processus				*tmp_jump;
 	int						verbose;
 	t_visu					visu;
 };
@@ -185,5 +186,8 @@ t_processus     *tab_set_process(t_mars *mars, t_processus *new_process, int des
 t_processus     *tab_get_next_process(t_mars *mars, int dest);
 t_processus    *move_process(t_mars *mars, int current_index, int dest);
 t_processus     *tab_see_process(t_mars *mars, int dest);
+t_processus     *set_jump_stock(t_mars *mars, t_processus *process);
+t_processus     *get_jump_stock(t_mars *mars);
+
 #endif
 
