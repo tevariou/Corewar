@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 18:48:02 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 18:09:12 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,15 @@ int	ft_kill_process(t_mars *mars)
 
 	at_least_one = 0;
 	i = mars->current_cycle;
-	while (i < mars->current_cycle + PT_SIZE)
+	while (i < mars->current_cycle + PT_SIZE + 1)
 	{
 		while ((tmp = tab_get_next_process(mars, i)))
 		{
-			if (tmp->last_cycle_live < mars->current_cycle - mars->cycle_teta)
+			if (tmp->last_cycle_live <= mars->current_cycle - mars->cycle_teta)
+			{
 				free(tmp);
+				mars->nb_process--;
+			}
 			else
 			{
 				set_jump_stock(mars, tmp);
@@ -47,7 +50,7 @@ void	ft_init_champs_life(t_champion *champion)
 	champ = champion;
 	while (champ)
 	{
-		champ->nbr_of_live = 0;	
+		champ->nbr_of_live = 0;
 		champ = champ->next;
 	}
 }
@@ -59,8 +62,19 @@ void	ft_cycles_handler(t_mars *mars)
 	{
 		if (!ft_kill_process(mars))
 			 end_game(mars);
-		mars->cycle_to_die += mars->cycle_teta;
-		mars->cycle_teta -= mars->cycle_delta;
-		ft_init_champs_life(mars->champion_lst);
+		if (mars->nbr_of_live >= NBR_LIVE || mars->max_check == 1)
+		{
+			mars->max_check = MAX_CHECKS;
+			mars->cycle_to_die += mars->cycle_teta;
+			mars->cycle_teta -= mars->cycle_delta;
+			ft_init_champs_life(mars->champion_lst);
+		}
+		else
+		{
+			mars->max_check--;
+			mars->cycle_to_die += mars->cycle_teta;
+			ft_init_champs_life(mars->champion_lst);
+		}
+		mars->nbr_of_live = 0;
 	}
 }

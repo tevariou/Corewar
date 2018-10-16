@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:14:23 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 16:31:25 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ t_mars		*ft_new_mars(void)
 	mars->visualisor = 0;
 	mars->verbose = -1;
 	mars->dump = -1;
+	mars->max_check = 10;
+	mars->nbr_of_live = 0;
 	return (mars);
 }
 

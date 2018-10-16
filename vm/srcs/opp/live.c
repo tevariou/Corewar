@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   live.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/15 18:35:22 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 16:54:40 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,11 @@ int		live(t_mars *mars, t_processus *process)
 	while (c)
 	{
 		if (i == c->id)
+		{
 			c->last_cycle_live = mars->current_cycle;
+			c->nbr_of_live++;
+			mars->nbr_of_live++;
+		}
 		c = c->next;
 	}
 	process->last_cycle_live = mars->current_cycle;

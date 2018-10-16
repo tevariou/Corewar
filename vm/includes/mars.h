@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 18:42:27 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 16:50:14 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ struct						s_mars
 	unsigned				cycle_teta;
 	unsigned				cycle_delta;
 	unsigned				nb_process;
+	unsigned				max_check;
+	unsigned				nbr_of_live;
 	t_processus				*process_lst[PT_SIZE];
 	t_champion				*champion_lst;
 	void					(*ft_display)(t_mars *, t_processus *);
@@ -191,4 +193,3 @@ t_processus     *set_jump_stock(t_mars *mars, t_processus *process);
 t_processus     *get_jump_stock(t_mars *mars);
 
 #endif
-

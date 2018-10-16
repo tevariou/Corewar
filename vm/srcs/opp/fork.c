@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fork.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/14 20:48:44 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 17:54:02 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** OCP: ❌   Add: ✅      Carry: ❌   Cycle: 800
 ** @params dest	: DIRECT2 Address RAM
 **
-** Genere un nouveau processus a l'adresse passée en parametre par copie 
+** Genere un nouveau processus a l'adresse passée en parametre par copie
 ** du processus appelant. Le nouveau processus garde donc l'etat de tout
 ** les registres et du carry, seul le PC differe
 ** ( sauf dans le cas d'un fork %0 ).
@@ -49,7 +49,7 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, short dest)
 	copy->nbr_of_live = process->nbr_of_live;
 	copy->opcode = 0;
 	copy->carry = process->carry;
-	copy->last_cycle_live = process->last_cycle_live;
+	copy->last_cycle_live = 0;
 	tab_set_process(mars, copy, mars->current_cycle);
 	return(copy);
 }
@@ -59,11 +59,11 @@ int		ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
-	ft_copy_process(process, mars, ft_global_restriction(process->pc + ((short)dest) % IDX_MOD));
 	if (dest)
 		process->carry = 0;
 	else
 		process->carry = 1;
+	ft_copy_process(process, mars, ft_global_restriction(process->pc + ((short)dest) % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE + 1;
 	return (SUCCESS);
 }
