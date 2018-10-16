@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/08 15:53:40 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/11 10:34:21 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	ft_init_ncurses(t_visu *visu)
 		&visu->info_box, &visu->info);
 	create_windows((int[4]){7, ARENA_W + INFO_W, ARENA_H, 0}, "Live",
 		&visu->live_box, &visu->live);
+	ft_ncurses_print_intro(visu);
 }
 
 void	ft_close_ncurses(t_visu *visu)
