@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 18:42:27 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 16:14:33 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ typedef struct				s_champion
 	unsigned				nbr_of_live;
 	unsigned				nb_process;
 	unsigned				last_cycle_live;
+	header_t				header;
 	struct s_champion		*next;
 }							t_champion;
 
@@ -114,6 +115,7 @@ unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, u
 int							ft_is_visualisator(t_mars *mars, char **av);
 int							ft_is_dump_option(t_mars *mars, char **av);
 void						end_game(t_mars *mars);
+void						ft_display_no_verbose_entry(t_mars *mars);
 
 /*
 ** loop during battle

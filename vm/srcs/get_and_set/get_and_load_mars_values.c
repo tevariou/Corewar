@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/14 19:00:34 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 18:16:39 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ unsigned 		ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsi
 	while (i > 0)
 	{
 		*mars->memory[ft_global_restriction(index + i - 1)] = (t_byte)value % 256;
-		mars->memory[ft_global_restriction(index + i - 1)][1] = color + 1;
+		mars->memory[ft_global_restriction(index + i - 1)][1] = color;
 		i--;
 		value = value / 256;
 	}

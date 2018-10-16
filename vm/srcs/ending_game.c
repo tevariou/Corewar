@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 18:48:45 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 18:04:54 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void    end_game(t_mars *mars)
             winner = c;
             c = c->next;
     }
-    printf("and the winner is : \n", winner->name);
-    ft_exit(mars, winner->name);
+    printf("\nAnd the winner is : %s \n", winner->header.prog_name);
+    printf("He says: %s\n", winner->header.comment);
+    ft_exit(mars, "");
 }

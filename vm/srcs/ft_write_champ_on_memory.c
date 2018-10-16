@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_write_champ_on_memory.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 15:25:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/16 18:16:04 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,38 @@ int		ft_put_string_on_circular_memory(t_mars *mars, t_processus *process,
 	return (1);
 }
 
+ static int ft_read_information(t_mars *mars, t_processus *process, int fd)
+ {
+	t_champion	*champ;
+	unsigned char		tmp[5];
+	int l;
+
+	champ = mars->champion_lst;
+	while (champ && champ->id != process->id)
+		champ = champ->next;
+	read(fd, tmp, 4);
+	tmp[4] = 0;
+	champ->header.magic = tmp[0] * 256 * 256 * 256 + tmp[1] * 256 * 256 + tmp[2] * 256 + tmp[3];
+	 if (champ->header.magic != COREWAR_EXEC_MAGIC)
+	 	ft_exit(mars, "one argument is not a .cor");
+	l = read(fd, champ->header.prog_name, PROG_NAME_LENGTH);
+	champ->header.prog_name[l] = 0;
+	read(fd, tmp, 4);
+	read(fd, tmp, 4);
+	tmp[4] = 0;
+	champ->header.prog_size = tmp[0] * 256 * 256 * 256 + tmp[1] * 256 * 256 + tmp[2] * 256 + tmp[3];
+	l = read(fd, champ->header.comment, COMMENT_LENGTH + 4);
+	champ->header.prog_name[l] = 0;
+	return (1);
+ }
+
 int		ft_load_champ_from_file_to_memory(t_mars *mars, t_processus *process, int fd)
 {
-	char	info[PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE];
-	char	buffer[CHAMP_MAX_SIZE + 1];
-	int		buff_size;
+	char		buffer[CHAMP_MAX_SIZE + 1];
+	int			buff_size;
 
-	read(fd, info, PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE);
-	buff_size = read(fd, buffer, CHAMP_MAX_SIZE);
+	ft_read_information(mars, process, fd);
+		buff_size = read(fd, buffer, CHAMP_MAX_SIZE);
 	if (buff_size >= CHAMP_MAX_SIZE)
 		return (0);
 	buffer[buff_size] = 0;
