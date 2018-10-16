@@ -18,8 +18,10 @@ int	set_option(int ac, char **av)
 	{
 		if (ft_strequ(av[1], OPTION_STR_A))
 			return (OPTION_A);
-		if (ft_strequ(av[1], OPTION_STR_D))
+		else if (ft_strequ(av[1], OPTION_STR_D))
 			return (OPTION_D);
+		else
+			print_usage_exit();
 	}
 	else if (ac == 2 && (ft_strequ(av[1], OPTION_STR_A)
 		|| ft_strequ(av[1], OPTION_STR_D)))
