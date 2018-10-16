@@ -1,26 +1,26 @@
 #!/bin/sh
 
-cor="cor"
+cor=".cor"
 dir="champs"
 
 for f in $dir/*.s
 do
 	./zaz $f &>/dev/null
-	if [ -f "$(echo $f | rev | cut -c2- | rev)$cor" ]
+	if [ -f "$(echo $f | rev | cut -c3- | rev)$cor" ]
 	then
-		hexdump -C $(echo $f | rev | cut -c2- | rev)$cor > $dir/zaz
-		rm -f $(echo $f | rev | cut -c2- | rev)$cor
+		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > $dir/zaz
+		rm -f $(echo $f | rev | cut -c3- | rev)$cor
 	fi
-	./tev $f >/dev/null
-	if [ -f "$(echo $f | rev | cut -c2- | rev)$cor" ]
+	./tev $f &>/dev/null
+	if [ -f "$(echo $f | rev | cut -c3- | rev)$cor" ]
 	then
-		hexdump -C $(echo $f | rev | cut -c2- | rev)$cor > $dir/tev
-		rm -f $(echo $f | rev | cut -c2- | rev)$cor
+		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > $dir/tev
+		rm -f $(echo $f | rev | cut -c3- | rev)$cor
 	fi
 	if [ -f "$dir/tev" ] && [ -f "$dir/zaz" ]
 	then
-		echo "Testing $f"
-		diff $dir/zaz $dir/tev
+		echo "Testing $(echo $f | rev | cut -c3- | rev) ..."
+		diff -s $dir/zaz $dir/tev
 	fi
 	if [ -f "$dir/tev" ]
 	then
