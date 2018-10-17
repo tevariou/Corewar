@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 21:59:08 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 22:35:31 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define MARS_H
 
 # include "visu.h"
-# include <zaz.h>
+# include "op.h"
 # include <sys/types.h>
 # include <stdio.h>
 

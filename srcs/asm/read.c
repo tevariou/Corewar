@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 17:55:12 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 18:27:13 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/09 20:56:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,50 +15,63 @@
 #include <stdlib.h>
 #include "asm.h"
 
-static void		check_extension(char *file)
+static void	add_input_line(t_asm *a, char *line, unsigned short n)
 {
-	size_t	len;
+	t_file	*head;
+	t_file	*new;
+	t_file	*tail;
 
-	if ((len = ft_strlen(file)) <= 2 || !ft_strequ(file + len - 2, EXT))
-		err_free_exit(NULL, WRONG_EXT);
+	if (!(new = ft_memalloc(sizeof(*new))))
+		err_free_exit(a, NULL);
+	new->line = line;
+	new->n = n;
+	new->tokens = NULL;
+	if (!(head = a->input))
+	{
+		new->prev = new;
+		new->next = new;
+		a->input = new;
+		return ;
+	}
+	tail = head->prev;
+	tail->next = new;
+	new->prev = tail;
+	new->next = head;
+	head->prev = new;
 }
 
-static void		remove_whitespaces(t_asm *a, char **line)
+static void	remove_whitespaces(t_asm *a, char **line)
 {
 	char	*tmp;
 
-	tmp = *line;
-	if (!(*line = ft_strtrim(*line)))
+	if (!(tmp = ft_strtrim(*line)))
 	{
-		free(tmp);
+		free(*line);
 		err_free_exit(a, NULL);
 	}
-	free(tmp);
+	free(*line);
+	*line = tmp;
 }
 
-static void		get_header(t_asm *a, int fd, size_t *n)
+static void	record_file(t_asm *a, int fd)
 {
-	get_name(a, fd, n);
-	get_comment(a, fd, n);
-}
-
-static void		record_file(t_asm *a, int fd)
-{
-	int		ret;
-	char	*line;
-	size_t	n;
+	int				ret;
+	char			*line;
+	unsigned short	n;
 
 	line = NULL;
 	n = 1;
-	get_header(a, fd, &n);
+	get_name(a, fd, &n);
+	get_comment(a, fd, &n);
 	while ((ret = get_next_line(fd, &line)))
 	{
 		if (ret < 0)
 			err_free_exit(a, NULL);
-		remove_whitespaces(a, &line);
 		ft_strclr(ft_strchr(line, COMMENT_CHAR));
+		ft_strclr(ft_strchr(line, ';'));
+		remove_whitespaces(a, &line);
 		if (*line)
-			add_input_line(a, &line, n);
+			add_input_line(a, line, n);
 		else
 			free(line);
 		line = NULL;
@@ -71,8 +84,7 @@ void		get_file(t_asm *a, char *file)
 {
 	int		fd;
 
-	a->input = NULL;
-	check_extension(file);
+	check_extension(file, EXT);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		err_free_exit(a, NULL);
 	record_file(a, fd);
