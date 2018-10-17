@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-const t_parse	g_parse_tab[8] = {
+static const t_parse	g_parse_tab[8] = {
 	{{"live", "zjmp", "lfork", "fork", 0}, &ft_parse_0, 1},
 	{{"ld", 0}, &ft_parse_1, 2},
 	{{"st", 0}, &ft_parse_2, 2},

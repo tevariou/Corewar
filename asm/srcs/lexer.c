@@ -13,7 +13,7 @@
 #include "asm.h"
 #include <stdlib.h>
 
-const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
+static const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =
 {
 	{&ft_str_label, L_LAB},
 	{&ft_reg, L_REG},
