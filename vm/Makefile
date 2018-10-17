@@ -6,15 +6,14 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/17 17:26:21 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/17 21:22:07 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME	= corewar
 CC		= gcc
-CFLAGS	= -Wall  -Wextra -pedantic $(debug) -g
-# CFLAGS	+= -pedantic -fsanitize=address -g3
+CFLAGS	= -Wall -Wextra -Werror -g
 SDIR	= srcs
 INC 	= ./libft/
 

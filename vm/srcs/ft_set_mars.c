@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 17:38:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 21:16:49 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,34 @@ t_mars		*ft_new_mars(void)
 	return (mars);
 }
 
+void	set_default_player_number(t_mars *mars, t_processus *current)
+{
+	int			numero;
+	t_champion	*tmp;
+
+	if (!current->player)
+		numero = 1;
+	else
+		numero = current->player;
+	tmp = mars->champion_lst;
+	while (tmp)
+	{
+		if (numero == tmp->id)
+		{
+			if (!current->player)
+			{
+				numero++;
+				tmp = mars->champion_lst;
+			}
+			else
+				ft_exit(mars, "twice number player");
+		}
+		else
+			tmp = tmp->next;
+	}
+	current->player = numero;
+}
+
 /*
 ** start of parsing functions. Will check if parameters are viable and
 ** return an initialized mars if succed or NULL otherwise.
@@ -60,20 +88,19 @@ t_mars		*ft_set_mars(int ac, char **av)
 	t_mars			*mars;
 	t_processus		*current_champion;
 	int				i;
+	int				value;
 
 	i = 1;
+	value = 1;
 	mars = ft_new_mars();
-	if (!mars)
-		ft_exit(NULL, E_NO_MARS);
-	if (ac == 1)
+	if (!mars || ac == 1)
 		ft_exit(mars, "bad av");
 	while (i < ac && mars->count_players < 5)
 	{
 		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
 			ft_exit(mars, "bad av");
 		mars->count_players++;
-		if (!current_champion->player)
-			current_champion->player = mars->count_players;
+		set_default_player_number(mars, current_champion);
 		ft_add_champ_to_mars(mars, mars->champion_lst, current_champion);
 		tab_set_process(mars, current_champion, 0);
 	}
