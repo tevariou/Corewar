@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:37:38 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:27:19 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void		loop_through_battle(t_mars *mars)
 		if (!mars->visualisor && mars->dump > 0)
 			if (mars->current_cycle == (unsigned)mars->dump)
 			{
-				ft_info_ram(mars);
+				ft_display_memory(mars);
 				ft_exit(mars, "");
 			}
 		ft_cycles_handler(mars);

@@ -6,18 +6,18 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 17:35:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:37:47 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 #include "libft.h"
 
-int	ft_kill_process(t_mars *mars)
+int		ft_kill_process(t_mars *mars)
 {
-	unsigned i;
+	unsigned	i;
 	t_processus	*tmp;
-	int	at_least_one;
+	int			at_least_one;
 
 	at_least_one = 0;
 	i = mars->current_cycle;

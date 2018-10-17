@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   substraction.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:08:35 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 20:30:41 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:44:53 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 
 int		substraction(t_mars *mars, t_processus *process)
 {
-		int srcs1;
+	int srcs1;
 	int srcs2;
 	int desti;
 	int opc;
@@ -35,7 +35,7 @@ int		substraction(t_mars *mars, t_processus *process)
 	process->bytes_to_jump = process->pc + 2;
 	opc = ft_get_mars_value(mars, process->pc + 1, 1);
 	if (opc != 0x54)
-		return(0);
+		return (0);
 	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT4);
 	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT4);
 	desti = ft_get_dest(mars, process, ft_get_param_type(opc, 3), DIRECT4);
@@ -43,10 +43,7 @@ int		substraction(t_mars *mars, t_processus *process)
 		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 3, 1))
 		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 4, 1)))
 		return (0);
-		ft_load_register(process, desti, srcs1 - srcs2);
-	if (srcs1 - srcs2)
-		process->carry = 0;
-	else
-		process->carry = 1;
+	ft_load_register(process, desti, srcs1 - srcs2);
+	process->carry = (srcs1 - srcs2) ? 0 : 1;
 	return (SUCCESS);
 }

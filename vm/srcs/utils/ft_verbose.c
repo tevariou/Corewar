@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_verbose.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 12:42:46 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 16:37:56 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:42:38 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void		ft_verbose(t_mars *mars, t_processus *process)
 {
-	// printf("%d\n", process->player);
 	if (mars->verbose == -1)
 		return ;
 	if (mars->verbose & 0x01)
@@ -33,14 +32,12 @@ void		ft_verbose(t_mars *mars, t_processus *process)
 	{
 		if (ft_get_opcode_name(mars, process) != NULL)
 		{
-			printf("Proc %d | %s", process->id, ft_get_opcode_name(mars, process));
-			printf(" - %d %d %d\n", process->params[0], process->params[1], process->params[2]);
+			printf("Proc %d | %s", process->id,
+				ft_get_opcode_name(mars, process));
+			printf(" - %d %d %d\n", process->params[0],
+				process->params[1], process->params[2]);
 		}
 	}
-	if ((mars->verbose >> 3) & 0x01)
-		printf("Death\n");
-	if ((mars->verbose >> 4) & 0x01)
-		printf("PC\n");
 }
 
 void		ft_display_no_verbose_entry(t_mars *mars)

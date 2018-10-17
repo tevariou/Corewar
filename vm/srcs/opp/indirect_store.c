@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   indirect_store.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:59:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/14 20:17:00 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:46:21 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,17 @@ static int	check_ocp(int ocp)
 	param_type1 = ft_get_param_type(ocp, 1);
 	param_type2 = ft_get_param_type(ocp, 2);
 	param_type3 = ft_get_param_type(ocp, 3);
-	if (!param_type1 || !param_type2 || !param_type3 || ft_get_param_type(ocp, 4))
+	if (!param_type1
+		|| !param_type2
+		|| !param_type3
+		|| ft_get_param_type(ocp, 4))
 		return (0);
-	if(param_type1 == REG_CODE)
+	if (param_type1 == REG_CODE)
 		return (1);
 	return (0);
 }
 
-int		indirect_store(t_mars *mars, t_processus *process)
+int			indirect_store(t_mars *mars, t_processus *process)
 {
 	int srcs1;
 	int srcs2;
@@ -55,8 +58,8 @@ int		indirect_store(t_mars *mars, t_processus *process)
 	srcs1 = ft_get_srcs(mars, process, ft_get_param_type(opc, 1), DIRECT2);
 	srcs2 = ft_get_srcs(mars, process, ft_get_param_type(opc, 2), DIRECT2);
 	srcs3 = ft_get_srcs(mars, process, ft_get_param_type(opc, 3), DIRECT2);
-	if(!check_ocp(opc) || !process->opcode)
-		return(process->carry);
+	if (!check_ocp(opc) || !process->opcode)
+		return (process->carry);
 	dest = process->pc + ((short)(srcs2 + srcs3)) % IDX_MOD;
 	ft_load_mars_value(mars, dest, srcs1, process->player);
 	return (SUCCESS);

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/06 23:19:55 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/07 00:01:03 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:24:27 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,16 +63,7 @@ int		ft_is_visualisator(t_mars *mars, char **av)
 		mars->visualisor = NCURSE;
 		return (1);
 	}
-	else if (ft_strequ("-d", *av))
-	{
-		if (mars->dump != -1)
-			ft_print_usage(mars);
-		mars->ft_display = &ft_debug_info;
-		mars->visualisor = DEBUG;
-		return (1);
-	}
 	else if (ft_strequ("-v", *av))
 		return (ft_is_verbose(mars, av));
 	return (0);
 }
-

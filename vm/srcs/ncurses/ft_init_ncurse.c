@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 10:34:21 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/16 16:37:54 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include "visu.h"
 
-static void		create_windows(int coord[4], char *name,	
+static void		create_windows(int coord[4], char *name,
 	WINDOW **box, WINDOW **content)
 {
 	size_t len;
@@ -29,7 +29,7 @@ static void		create_windows(int coord[4], char *name,
 	wrefresh(*content);
 }
 
-void	ft_ncurses_color(void)
+void			ft_ncurses_color(void)
 {
 	start_color();
 	init_color(11, 800, 800, 800);
@@ -46,12 +46,12 @@ void	ft_ncurses_color(void)
 	init_pair(12, COLOR_WHITE, COLOR_BLACK);
 }
 
-void		ft_ncurses_create_thread(t_visu *visu)
+void			ft_ncurses_create_thread(t_visu *visu)
 {
 	pthread_create(&visu->th_input, NULL, &ft_ncurses_get_input, visu);
 }
 
-void	ft_init_ncurses(t_visu *visu)
+void			ft_init_ncurses(t_visu *visu)
 {
 	initscr();
 	noecho();
@@ -75,7 +75,7 @@ void	ft_init_ncurses(t_visu *visu)
 	ft_ncurses_print_intro(visu);
 }
 
-void	ft_close_ncurses(t_visu *visu)
+void			ft_close_ncurses(t_visu *visu)
 {
 	delwin(visu->arena);
 	delwin(visu->info);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   jump.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:03:06 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/11 19:47:34 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 17:03:55 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 ** OCP: ❌    Add: ❌      Carry: ❌     Cycle: 20
 ** @params dest	: DIRECT2 Address RAM
 **
-** Saute a l'adresse passé en parametre si le carry est a l'etat un. 
-** L'adresse devient alors celle de la prochaine instruction. Si le carry 
+** Saute a l'adresse passé en parametre si le carry est a l'etat un.
+** L'adresse devient alors celle de la prochaine instruction. Si le carry
 ** est a l'etat zero, rien ne se passe et le flot continue normalement jusqu'a
-** l'instruction suivante. Rien ne precise si l'instruction consomme 
+** l'instruction suivante. Rien ne precise si l'instruction consomme
 ** la totalité de ces cycles dans ce cas, a vous d'en decider.
 */
 

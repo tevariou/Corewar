@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 17:54:02 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:42:21 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 ** ( sauf dans le cas d'un fork %0 ).
 */
 
-t_processus *ft_copy_process(t_processus *process, t_mars *mars, short dest)
+t_processus		*ft_copy_process(t_processus *process,
+	t_mars *mars, short dest)
 {
 	t_processus	*copy;
 	int			i;
@@ -51,19 +52,17 @@ t_processus *ft_copy_process(t_processus *process, t_mars *mars, short dest)
 	copy->carry = process->carry;
 	copy->last_cycle_live = 0;
 	tab_set_process(mars, copy, mars->current_cycle);
-	return(copy);
+	return (copy);
 }
 
-int		ft_fork(t_mars *mars, t_processus *process)
+int				ft_fork(t_mars *mars, t_processus *process)
 {
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
-	if (dest)
-		process->carry = 0;
-	else
-		process->carry = 1;
-	ft_copy_process(process, mars, ft_global_restriction(process->pc + ((short)dest) % IDX_MOD));
+	process->carry = (dest) ? 0 : 1;
+	ft_copy_process(process, mars,
+		ft_global_restriction(process->pc + ((short)dest) % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE + 1;
 	return (SUCCESS);
 }

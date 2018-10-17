@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 10:48:08 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/10 16:40:01 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:19:53 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 void	ft_print_usage(t_mars *mars)
 {
-	printf("Usage : ./corewar [-dump x]|[-v x | -i | -d][-a x &| -n x] <*.cor> <...>\n");
+	printf("Usage : ./corewar [-dump x]|[-v x | -i | -d][-a x &| -n x] \
+		<*.cor> <...>\n");
 	printf("## Champs Options :\n");
 	printf("-a X : Change loaded addres to X in RAM\n");
 	printf("-n X : Change champs number player to X\n");

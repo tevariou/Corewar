@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   aff.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 16:02:21 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:41:26 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** passe a l'etat 1, sinon a l'état 0. A vous de choisir le formattage
 ** de la sortie ecran. Vous pouvez par exemple preciser a chaque aff
 ** l'id de sont processus d'origine, ou bien attribuer une couleur a
-** chaque processus, ou encore attribuer une ligne de aff par processus, 
+** chaque processus, ou encore attribuer une ligne de aff par processus,
 ** ou n'importe quoi d'autre avec les processus, l'important reste que
 ** votre sortie de aff soit le plus swag possible.
 */

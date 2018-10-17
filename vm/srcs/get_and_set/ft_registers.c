@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_registers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/13 17:57:31 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:52:28 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 unsigned		ft_get_register(t_processus *process, unsigned index)
 {
-	unsigned value;
-	int i;
+	unsigned	value;
+	int			i;
 
 	if (!index)
 		return (0);
@@ -34,7 +34,8 @@ unsigned		ft_get_register(t_processus *process, unsigned index)
 	return (value);
 }
 
-unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
+unsigned		ft_load_register(t_processus *process,
+		unsigned index, unsigned value)
 {
 	int i;
 
@@ -51,16 +52,17 @@ unsigned		ft_load_register(t_processus *process, unsigned index, unsigned value)
 	return (1);
 }
 
-t_bool		ft_is_register(int index)
+t_bool			ft_is_register(int index)
 {
 	if (index < 1 || index > 16)
 		return (0);
 	return (1);
 }
 
-t_bool		ft_memory_is_register(t_mars *mars, int address)
+t_bool			ft_memory_is_register(t_mars *mars, int address)
 {
-	if (!*mars->memory[ft_global_restriction(address)] || *mars->memory[ft_global_restriction(address)] > 16)
+	if (!*mars->memory[ft_global_restriction(address)]
+		|| *mars->memory[ft_global_restriction(address)] > 16)
 		return (0);
 	return (1);
 }
