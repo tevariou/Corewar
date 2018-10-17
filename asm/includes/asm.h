@@ -15,6 +15,7 @@
 
 # include "op.h"
 # include <stdbool.h>
+# include <sys/types.h>
 
 # define WRITING_FILE		"Writing output program to "
 # define DUMPING_A			"Dumping annotated program on standard output"
