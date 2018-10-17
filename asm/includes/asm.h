@@ -162,8 +162,8 @@ void					set_bytecode(t_asm *a);
 unsigned short			convert_label_short(t_asm *a, t_code *op, char *str);
 unsigned int			convert_label_int(t_asm *a, t_code *op, char *str);
 
-unsigned int			atoi_base_int(char *str, char *base);
-unsigned short			atoi_base_short(char *str, char *base);
+unsigned int			atoi_base_int(char *str, const char *base);
+unsigned short			atoi_base_short(char *str, const char *base);
 unsigned char			atoi_reg(t_asm *a, t_code *op, char *str);
 void					reverse_bytes(void *n, size_t size);
 

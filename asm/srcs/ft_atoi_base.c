@@ -32,13 +32,14 @@ unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)
 	return (reg);
 }
 
-unsigned short	atoi_base_short(char *str, char *base)
+unsigned short	atoi_base_short(char *str, const char *base)
 {
-	unsigned short	ret;
-	int				sign;
+	short	ret;
+	int		sign;
 
 	sign = (*str == '-') ? -1 : 1;
-	str = (*str == '-' || *str == '+') ? str + 1 : str;
+	if (*str == '-' || *str == '+')
+		 str += 1;
 	ret = 0;
 	while (ft_strchr(base, ft_toupper(*str)))
 	{
@@ -50,13 +51,14 @@ unsigned short	atoi_base_short(char *str, char *base)
 	return (ret);
 }
 
-unsigned int	atoi_base_int(char *str, char *base)
+unsigned int	atoi_base_int(char *str, const char *base)
 {
 	int	ret;
 	int	sign;
 
 	sign = (*str == '-') ? -1 : 1;
-	str = (*str == '-' || *str == '+') ? str + 1 : str;
+	if (*str == '-' || *str == '+')
+		 str += 1;
 	ret = 0;
 	while (ft_strchr(base, ft_toupper(*str)))
 	{
