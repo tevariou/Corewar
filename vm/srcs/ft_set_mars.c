@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:14:23 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:22:28 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ t_mars		*ft_new_mars(void)
 	int		i;
 	t_mars	*mars;
 
-	mars = (t_mars *)malloc(sizeof(t_mars));
-	if (!mars)
+	if (!(mars = (t_mars *)malloc(sizeof(t_mars))))
 		return (NULL);
 	i = -1;
 	if (!(mars->memory = (t_byte **)malloc(sizeof(t_byte*) * MEM_SIZE)))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   long_fork.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:00:58 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/15 17:25:12 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:43:42 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,9 @@ int		long_fork(t_mars *mars, t_processus *process)
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
 	mars->nb_process++;
-	ft_copy_process(process, mars, ft_global_restriction(process->pc + (short)dest));
-		if (dest)
-		process->carry = 0;
-	else
-		process->carry = 1;
+	ft_copy_process(process, mars,
+		ft_global_restriction(process->pc + (short)dest));
+	process->carry = (dest) ? 0 : 1;
 	process->bytes_to_jump = process->pc + IND_SIZE + 1;
 	return (SUCCESS);
 }

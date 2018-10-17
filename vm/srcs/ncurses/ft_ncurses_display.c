@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/10 16:38:08 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:49:13 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ void	ft_ncurses_print_champs(t_mars *mars, t_champion *champ)
 	wattron(v->info, COLOR_PAIR(champ->id_color));
 	wprintw(v->info, "%s\n", champ->name);
 	wattroff(v->info, COLOR_PAIR(champ->id_color));
-
 	wattron(v->info, COLOR_PAIR(12));
 	wprintw(v->info, "Nb process : ");
 	wattroff(v->info, COLOR_PAIR(0));
 	wattron(v->info, COLOR_PAIR(champ->id_color));
 	wprintw(v->info, "%u\n", champ->nb_process);
 	wattroff(v->info, COLOR_PAIR(champ->id_color));
-
 	wattron(v->info, COLOR_PAIR(12));
 	wprintw(v->info, "Last Cycle Live : ");
 	wattroff(v->info, COLOR_PAIR(12));
@@ -58,7 +56,9 @@ void	ft_ncurses_print_process_pc(t_mars *mars)
 		while (p)
 		{
 			wattron(v->arena, COLOR_PAIR(p->player + 6));
-			mvwprintw(v->arena, (ft_global_restriction(p->pc) / 64), ((ft_global_restriction(p->pc) % 64) * 3), "%2.2X", *mars->memory[ft_global_restriction(p->pc)]);
+			mvwprintw(v->arena, (ft_global_restriction(p->pc) / 64),
+				((ft_global_restriction(p->pc) % 64) * 3), "%2.2X",
+				*mars->memory[ft_global_restriction(p->pc)]);
 			wattroff(v->arena, COLOR_PAIR(p->player + 6));
 			p = p->next;
 		}
@@ -78,7 +78,8 @@ void	ft_ncurses_info_ram(t_mars *mars)
 	while (i < MEM_SIZE)
 	{
 		wattron(v->arena, COLOR_PAIR(mars->memory[i][1]));
-		mvwprintw(v->arena, i / 64, i % 64 * 3, "%02.2hhX ", mars->memory[i][0]);
+		mvwprintw(v->arena, i / 64, i % 64 * 3, "%02.2hhX ",
+			mars->memory[i][0]);
 		wattroff(v->arena, COLOR_PAIR(mars->memory[i][1]));
 		i++;
 	}
@@ -108,7 +109,6 @@ void	ft_ncurses_info_mars(t_mars *mars)
 		champ = champ->next;
 	}
 	ft_ncurses_print_controlers(v);
-	// wrefresh(v->info);
 }
 
 void	ft_ncurses_display(t_mars *mars, t_processus *process)
@@ -120,7 +120,7 @@ void	ft_ncurses_display(t_mars *mars, t_processus *process)
 	ft_ncurses_info_mars(mars);
 	ft_ncurses_info_ram(mars);
 	ft_ncurses_print_live(mars);
-	ft_ncurses_handle_pause(v);
+	ft_ncurses_handle_pause(mars, v);
 	wrefresh(v->info);
 	wrefresh(v->live);
 	wrefresh(v->arena);

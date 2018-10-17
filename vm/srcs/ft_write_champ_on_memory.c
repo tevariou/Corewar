@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/04 15:25:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:22:45 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ int		ft_put_string_on_circular_memory(t_mars *mars, t_processus *process,
 	return (1);
 }
 
-int		ft_load_champ_from_file_to_memory(t_mars *mars, t_processus *process, int fd)
+int		ft_load_champ_from_file_to_memory(t_mars *mars,
+	t_processus *process, int fd)
 {
 	char	info[PROG_NAME_LENGTH + COMMENT_LENGTH + SEPARATOR_LINE];
 	char	buffer[CHAMP_MAX_SIZE + 1];

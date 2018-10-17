@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   live.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/15 18:35:22 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:42:45 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **
 ** Rapporte le joueur designé par le premier parametre comme etant en vie.
 ** L'instruction ecrit sur la sortie standard un message du type
-** "Le joueur $player_name ( $player_id ), a été raporter comme étant en vie".
+** Le joueur $player_name ( $player_id ), a été raporter comme étant en vie
 ** Libre a vous de 'pimper' le message comme bon vous semble, du moment que
 ** l'idée passe et qu'il contienne les variables sus nommée.
 ** Un joueur ne vie que tant qu'au moins un processus effectue un
@@ -35,8 +35,8 @@
 
 int		live(t_mars *mars, t_processus *process)
 {
-	int i;
-	t_champion *c;
+	int			i;
+	t_champion	*c;
 
 	c = mars->champion_lst;
 	i = ft_get_mars_value(mars, process->pc + 1, REG_SIZE);

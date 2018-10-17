@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 10:30:33 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/10 16:46:42 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:01:12 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_free_process(t_mars *mars)
 {
 	t_processus *tmp;
-	int i;
+	int			i;
 
 	i = 0;
 	while (i < PT_SIZE)
@@ -26,6 +26,7 @@ void	ft_free_process(t_mars *mars)
 		i++;
 	}
 }
+
 void	ft_free_champion(t_champion *champ)
 {
 	t_champion *tmp;

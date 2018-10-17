@@ -6,7 +6,7 @@
 #    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/10/16 12:40:45 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/17 17:26:21 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,7 @@ ITEMS 	= 	mars.c 							\
 		  	ft_prepare_mars_memory.c 		\
 		  	ft_write_champ_on_memory.c	 	\
 		  	ft_errors.c 					\
-			ft_get_params.c					\
-		  	ft_debug_display.c	 			\
+		  	ft_display_memory.c	 			\
 			$(S_G_DIR)/ft_registers.c		\
 			$(S_G_DIR)/get_and_load_mars_values.c \
 			$(S_G_DIR)/ft_parse_opc.c		\
