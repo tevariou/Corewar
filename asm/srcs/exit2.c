@@ -32,12 +32,10 @@ void	header_error(t_asm *a, char *line)
 
 void	print_usage_exit(void)
 {
-	ft_putstr_fd("Usage:\t./asm [-a] <sourcefile.s>", 2);
-	ft_putstr_fd(" | -d <binaryfile.cor>\n", 2);
-	ft_putstr_fd("Options:\t-a : Instead of creating a .cor file, outputs ", 2);
-	ft_putstr_fd("a stripped and annotated version of the code ", 2);
-	ft_putstr_fd("to the standard output\n", 2);
-	ft_putendl_fd("\t\t-d : Translate a binary file into assembly", 2);
+	ft_putendl_fd("Usage:\t./asm [-a] <sourcefile.s> | -d <binaryfile.cor>\n" \
+	"Options:\t-a : Instead of creating a .cor file, outputs " \
+	"a stripped and annotated version of the code to the standard output\n" \
+	"\t\t-d : Translate a binary file into assembly", 2);
 	exit(EXIT_FAILURE);
 }
 
