@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 21:23:20 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 21:59:08 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ typedef unsigned char		t_byte;
 # define NO_VERBOSE			0
 
 # define PT_SIZE			1001
+
+# define E_NO_MARS			"Error : no vm detected\n"
+# define E_PLAYERS_COUNT	"Error : numbers of player seems to be not good\n"
+# define E_CHAMPS_WRITE		"Error : champions are writted one on the other\n"
+# define E_CHAMPS_READ		"Error : could not read a champion\n"
+# define E_TWICE_NUM		"Error : twice number player\n"
+# define E_NOT_COR			"Error : one argument is not a .cor\n"
+# define E_MALLOC			"Error : malloc error\n"
+# define E_USAGE			"usage"
 
 typedef struct s_mars		t_mars;
 typedef struct				s_processus

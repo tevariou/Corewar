@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 17:40:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 22:03:04 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ static int	ft_read_information(t_mars *mars, t_processus *process, int fd)
 	int				l;
 
 	champ = mars->champion_lst;
-	while (champ && champ->id != process->id)
+	while (champ && champ->id != process->player)
 		champ = champ->next;
 	read(fd, tmp, 4);
 	tmp[4] = 0;
-	champ->header.magic = tmp[0] * 256 * 256 * 256 + tmp[1]\
+	champ->header.magic = tmp[0] * 256 * 256 * 256 + tmp[1]
 		* 256 * 256 + tmp[2] * 256 + tmp[3];
 	if (champ->header.magic != COREWAR_EXEC_MAGIC)
-		ft_exit(mars, "one argument is not a .cor");
+		ft_exit(mars, E_NOT_COR);
 	l = read(fd, champ->header.prog_name, PROG_NAME_LENGTH);
 	champ->header.prog_name[l] = 0;
 	read(fd, tmp, 4);

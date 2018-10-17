@@ -6,14 +6,13 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 21:16:49 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 21:35:38 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "mars.h"
-#include "const_errors.h"
 
 /*
 ** Create a new Mars. Malloc what have to. Return a mars if succed, NULL else
@@ -70,7 +69,7 @@ void	set_default_player_number(t_mars *mars, t_processus *current)
 				tmp = mars->champion_lst;
 			}
 			else
-				ft_exit(mars, "twice number player");
+				ft_exit(mars, E_TWICE_NUM);
 		}
 		else
 			tmp = tmp->next;
@@ -94,11 +93,11 @@ t_mars		*ft_set_mars(int ac, char **av)
 	value = 1;
 	mars = ft_new_mars();
 	if (!mars || ac == 1)
-		ft_exit(mars, "bad av");
+		ft_exit(mars, E_USAGE);
 	while (i < ac && mars->count_players < 5)
 	{
 		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
-			ft_exit(mars, "bad av");
+			ft_exit(mars, E_USAGE);
 		mars->count_players++;
 		set_default_player_number(mars, current_champion);
 		ft_add_champ_to_mars(mars, mars->champion_lst, current_champion);
@@ -107,6 +106,6 @@ t_mars		*ft_set_mars(int ac, char **av)
 	if (mars->count_players < 1 || mars->count_players > MAX_PLAYERS)
 		ft_exit(mars, E_PLAYERS_COUNT);
 	if (!ft_prepare_mars_memory(mars))
-		ft_exit(mars, "yep");
+		ft_exit(mars, E_USAGE);
 	return (mars);
 }

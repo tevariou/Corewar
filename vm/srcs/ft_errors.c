@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 16:24:17 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 19:09:11 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 21:28:42 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	ft_exit(t_mars *mars, char *error)
 {
-	if (ft_strequ(error, "bad av"))
+	if (ft_strequ(error, E_USAGE))
 		ft_print_usage(mars);
 	else
 		write(2, error, ft_strlen(error));

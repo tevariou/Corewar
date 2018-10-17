@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 17:22:02 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 21:27:02 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ int	ft_read_multiple_champion(t_mars *mars)
 		current_process->bytes_to_jump = current_process->pc;
 		ft_load_register(current_process, 1, current_process->player);
 		if (!ft_load_champ_from_file_to_memory(mars, current_process, fd))
-			ft_exit(mars, "champions are writted one on the other\n");
+			ft_exit(mars, E_CHAMPS_WRITE);
 		current_process = current_process->next;
 		close(fd);
 	}
 	if (fd < 0)
-		ft_exit(mars, "could not read a champion");
+		ft_exit(mars, E_CHAMPS_READ);
 	return (1);
 }
 
