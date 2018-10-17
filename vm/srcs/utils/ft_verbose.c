@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_verbose.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 12:42:46 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/07 21:14:32 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/16 16:37:56 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,18 @@ void		ft_verbose(t_mars *mars, t_processus *process)
 		printf("Death\n");
 	if ((mars->verbose >> 4) & 0x01)
 		printf("PC\n");
+}
+
+void		ft_display_no_verbose_entry(t_mars *mars)
+{
+	t_champion *champ;
+
+	printf("Introducing challengers... \n\n");
+	champ = mars->champion_lst;
+	while (champ)
+	{
+		printf("*** %-10s,weigthing %4d bytes, is a new challenger *** \n",
+			champ->header.prog_name, champ->header.prog_size);
+		champ = champ->next;
+	}
 }

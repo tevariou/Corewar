@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 15:49:14 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 17:45:17 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/16 18:02:25 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ t_processus	**init_tab_of_process(t_mars *mars)
 
 t_processus	*tab_set_process(t_mars *mars, t_processus *new_process, int dest)
 {
-	t_processus *tmp;
-	t_processus *tmp2;
-
 	if (!new_process)
 		return (NULL);
 	if (!mars->process_lst[dest % PT_SIZE])
@@ -51,24 +48,12 @@ t_processus	*tab_set_process(t_mars *mars, t_processus *new_process, int dest)
 		new_process->next = NULL;
 		mars->process_lst[dest % PT_SIZE] = new_process;
 	}
-	else if (new_process->id > mars->process_lst[dest % PT_SIZE]->id)
+	else
 	{
 		new_process->next = mars->process_lst[dest % PT_SIZE];
 		mars->process_lst[dest % PT_SIZE] = new_process;
-	}
-	else
-	{
-		tmp2 = mars->process_lst[dest % PT_SIZE];
-		tmp = tmp2->next;
-		while (tmp && new_process->id < tmp->id)
-		{
-			tmp2 = tmp;
-			tmp = tmp->next;
-		}
-		tmp2->next = new_process;
-		new_process->next = tmp;
-	}
-	return (new_process);
+	}	
+return (new_process);
 }
 
 t_processus	*tab_get_next_process(t_mars *mars, int dest)

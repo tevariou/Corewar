@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_add_processus_to_mars.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/16 18:07:35 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:36:01 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,4 +133,8 @@ void		ft_add_champ_to_mars(t_mars *mars,
 	champion->nb_process = 1;
 	champion->next = mars->champion_lst;
 	mars->champion_lst = champion;
+	champion->header.magic = 0;
+	champion->header.comment[0] = 0;
+	champion->header.prog_name[0] = 0;
+	champion->header.prog_size = 0;
 }

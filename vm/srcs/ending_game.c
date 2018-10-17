@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/15 18:48:45 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:06:47 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,18 @@ void    end_game(t_mars *mars)
 
     c = mars->champion_lst;
     winner = mars->champion_lst;
-    while (c)
-    {
-        if (c->last_cycle_live > winner->last_cycle_live)
-            winner = c;
-            c = c->next;
+    if (!mars->visualisor)
+     {
+        while (c)
+        {   
+            if (c->last_cycle_live > winner->last_cycle_live)
+                winner = c;
+                c = c->next;
+        }
+    printf("\nAnd the winner is : %s \n", winner->header.prog_name);
+    printf("He says: %s\n", winner->header.comment);
     }
-    printf("and the winner is : \n", winner->name);
-    ft_exit(mars, winner->name);
+    else if (mars->visualisor == NCURSE)
+		ft_close_ncurses(&mars->visu);
+    ft_exit(mars, "");
 }

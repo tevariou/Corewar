@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/16 16:50:14 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:35:45 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ typedef struct				s_champion
 	unsigned				nbr_of_live;
 	unsigned				nb_process;
 	unsigned				last_cycle_live;
+	header_t				header;
 	struct s_champion		*next;
 }							t_champion;
 
@@ -116,6 +117,7 @@ unsigned 					ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, u
 int							ft_is_visualisator(t_mars *mars, char **av);
 int							ft_is_dump_option(t_mars *mars, char **av);
 void						end_game(t_mars *mars);
+void						ft_display_no_verbose_entry(t_mars *mars);
 
 /*
 ** loop during battle

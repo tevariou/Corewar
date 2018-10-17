@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/13 19:12:28 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/17 16:02:21 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,15 @@
 
 int		aff(t_mars *mars, t_processus *process)
 {
+	int ocp;
+	int srcs;
+
 	process->bytes_to_jump = process->pc + 3;
-	(void)mars;
+	ocp = ft_get_mars_value(mars, process->pc + 1, 1);
+	if (ft_get_param_type(ocp, 1) != REG &&
+		!ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1)))
+		return (ERROR);
+	srcs = ft_get_register(process, ft_get_mars_value(mars, process->pc + 2, 1));
+	printf("%c",srcs % 256);
 	return (SUCCESS);
 }

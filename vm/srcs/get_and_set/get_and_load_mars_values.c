@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_and_load_mars_values.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/16 17:59:39 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/17 17:36:08 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ unsigned 		ft_load_mars_value(t_mars *mars, unsigned index, unsigned value, unsi
 	while (i > 0)
 	{
 		*mars->memory[ft_global_restriction(index + i - 1)] = (t_byte)value % 256;
-		mars->memory[ft_global_restriction(index + i - 1)][1] = color + 1;
+		mars->memory[ft_global_restriction(index + i - 1)][1] = color;
 		i--;
 		value = value / 256;
 	}
