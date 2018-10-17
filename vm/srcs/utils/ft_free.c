@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 10:30:33 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 17:01:12 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 19:07:12 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ void	ft_free_mars(t_mars *mars)
 	ft_free_memory(mars->memory);
 	ft_free_process(mars);
 	ft_free_champion(mars->champion_lst);
+	free(mars);
 	mars = NULL;
 }

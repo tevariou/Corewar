@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 17:27:19 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 18:59:47 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,16 @@ static int	execute_one_cycle(t_mars *mars)
 	return (1);
 }
 
-void		loop_through_battle(t_mars *mars)
+t_champion	*loop_through_battle(t_mars *mars)
 {
-	t_visu *v;
+	t_visu		*v;
+	t_champion	*winner;
 
 	v = &mars->visu;
 	while (execute_one_cycle(mars))
 	{
 		v->current_frame++;
-		if (mars->visualisor > 0 &&
-			mars->visualisor != VERBOSE && v->current_frame == v->frame)
+		if (mars->visualisor == NCURSE && v->current_frame == v->frame)
 		{
 			mars->ft_display(mars, NULL);
 			v->current_frame = 0;
@@ -82,6 +82,8 @@ void		loop_through_battle(t_mars *mars)
 				ft_display_memory(mars);
 				ft_exit(mars, "");
 			}
-		ft_cycles_handler(mars);
+		if ((winner = ft_cycles_handler(mars)) != NULL)
+			return (winner);
 	}
+	return (NULL);
 }

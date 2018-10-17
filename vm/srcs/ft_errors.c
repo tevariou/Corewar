@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 16:24:17 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/09 11:44:09 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 19:09:11 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ void	ft_exit(t_mars *mars, char *error)
 		write(2, error, ft_strlen(error));
 	if (mars)
 		ft_free_mars(mars);
-	free(mars);
 	exit(0);
 }

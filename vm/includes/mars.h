@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 17:36:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/17 21:23:20 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,14 +123,14 @@ unsigned					ft_load_mars_value(t_mars *mars,
 								unsigned index, unsigned value, unsigned color);
 int							ft_is_visualisator(t_mars *mars, char **av);
 int							ft_is_dump_option(t_mars *mars, char **av);
-void						end_game(t_mars *mars);
+t_champion					*end_game(t_mars *mars);
 void						ft_display_no_verbose_entry(t_mars *mars);
 
 /*
 ** loop during battle
 */
-void						loop_through_battle(t_mars *marss);
-void						ft_cycles_handler(t_mars *mars);
+t_champion					*loop_through_battle(t_mars *marss);
+t_champion					*ft_cycles_handler(t_mars *mars);
 void						ft_move_pc(t_mars *mars, t_processus *process);
 
 /*
