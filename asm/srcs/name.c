@@ -6,17 +6,17 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:24:55 by triou             #+#    #+#             */
-/*   Updated: 2018/09/17 21:28:23 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/10 12:42:34 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 #include <stdlib.h>
 
-static void		record_prog_name(t_asm *a, char *line, char *s)
+static void	record_name(t_asm *a, char *line, char *s)
 {
 	size_t	len;
-	
+
 	if ((len = ft_strchr(s, '"') - s) > PROG_NAME_LENGTH)
 	{
 		free(line);
@@ -27,69 +27,47 @@ static void		record_prog_name(t_asm *a, char *line, char *s)
 	s = ft_strchr(s, '"') + 1;
 	while (ft_isspace(*s))
 		s++;
-	if (*s && *s != '#')
+	if (*s && *s != COMMENT_CHAR)
 		header_error(a, line);
 	free(line);
 }
 
-static void		get_quote_name(t_asm *a, int fd, size_t *n, char *line)
+static char	*start_read(t_asm *a, int fd, char **line, unsigned short *n)
 {
-	char	*s;
-	char	*buff;
-	char	*tmp;
 	int		ret;
+	char	*tmp;
 
-	s = line;
-	while (ft_isspace(*s))
-		s++;
-	if (*s == '"')
-		s++;
-	else
-		header_error(a, line);
-	buff = NULL;
-	while (!ft_strchr(ft_strchr(line, '"') + 1, '"') && (ret = get_next_line(fd, &buff)) > 0)
+	tmp = NULL;
+	while ((ret = get_next_line(fd, line)))
 	{
 		if (ret < 0)
 			err_free_exit(a, NULL);
-		tmp = line;
-		line = ft_strjoin(line, buff);
-		free(tmp);
-		ft_strdel(&buff);
-		if (!line)
-			err_free_exit(a, NULL);
-		if (!(++(*n)))
-			err_free_exit(a, FILE_OVERFLOW);
+		tmp = skip_space(*line);
+		if (!(*n += 1))
+			header_error(a, *line);
+		if (*tmp && *tmp != COMMENT_CHAR)
+			break ;
+		ft_strdel(line);
 	}
-	if (!ret)
-		header_error(a, line);
-	record_prog_name(a, line, ft_strchr(line, '"') + 1, n);
+	if (!tmp)
+		err_free_exit(a, EMPTY_FILE);
+	return (tmp);
 }
 
-void		get_name(t_asm *a, int fd, size_t *n)
+void		get_name(t_asm *a, int fd, unsigned short *n)
 {
-	int		ret;
 	char	*line;
 	char	*tmp;
 
-	while ((ret = get_next_line(fd, &line)))
-	{
-		if (ret < 0)
-			err_free_exit(a, NULL);
-		tmp = line;
-		while (ft_isspace(*tmp))
-			tmp++;
-		if (*tmp && *tmp != COMMENT_CHAR)
-			break ;	
-		ft_strdel(&line);
-		if (!(++(*n)))
-			err_free_exit(a, FILE_OVERFLOW);
-	}
-	if (!ft_strnequ(line, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
+	tmp = start_read(a, fd, &line, n);
+	if (!ft_strnequ(tmp, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
 		header_error(a, line);
-	tmp = line;
-	line = ft_strdup(line + ft_strlen(NAME_CMD_STRING));
-	free(tmp);	
-	if (!line)
+	if (!(tmp = ft_strjoin(tmp + ft_strlen(NAME_CMD_STRING), "\n")))
+	{
+		free(line);
 		err_free_exit(a, NULL);
-	get_quote_name(a, fd, n, line);
+	}
+	free(line);
+	line = get_quote(a, fd, n, tmp);
+	record_name(a, line, ft_strchr(line, '"') + 1);
 }

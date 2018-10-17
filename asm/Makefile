@@ -6,12 +6,12 @@
 #    By: triou <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
-#    Updated: 2018/09/18 19:23:38 by triou            ###   ########.fr        #
+#    Updated: 2018/10/10 11:59:22 by triou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -g -fsanitize=address -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 NAME = asm
 SDIR = srcs
 IDIR = includes
@@ -19,15 +19,37 @@ ODIR = objs
 LDIR = ../libft
 SRCS =	asm.c \
 		comment.c \
-		exit.c \
-		list.c \
+		exit1.c \
+		exit2.c \
 		name.c \
+		add_op.c \
 		option.c \
 		read.c \
 		compile.c \
+		redux.c \
 		lexer.c \
-		ft_lex.c \
-		op.c
+		ft_lex1.c \
+		ft_lex2.c \
+		op.c \
+		parser.c \
+		ft_parse1.c \
+		ft_parse2.c \
+		labels.c \
+		free.c \
+		bytecode.c \
+		ft_atoi_base.c \
+		write.c \
+		convert_label_int.c \
+		convert_label_short.c \
+		verbose.c \
+		decompile.c \
+		decompile_tools1.c \
+		decompile_tools2.c \
+		tools1.c \
+		tools2.c \
+		tools3.c \
+		init_bytecode.c \
+		ft_parse_tools.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

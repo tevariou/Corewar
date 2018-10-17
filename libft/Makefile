@@ -35,7 +35,16 @@ SRCS =	ft_memset.c \
 		ft_strtrim.c \
 		ft_strclr.c \
 		ft_strncpy.c \
-		get_next_line.c
+		get_next_line.c \
+		ft_putnbr_fd.c \
+		ft_putstr_fd.c \
+		ft_putchar_fd.c \
+		ft_strstr.c \
+		ft_strnstr.c \
+		ft_putendl_fd.c \
+		ft_itoa.c \
+		ft_tolower.c \
+		ft_toupper.c
 _INCLUDES = libft.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))
 _OBJ = $(SRCS:.c=.o)
@@ -46,11 +55,11 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	@ar crs $@ $^
 	@echo "\033[1;34mLibft \033[1;35mhas been created \033[1;5;32msuccessfully.\033[0m"
-	
+
 $(ODIR)/%.o : $(SDIR)/%.c $(INCLUDES)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(IDIR)
 
-clean : 
+clean :
 	@rm -f $(OBJ)
 
 fclean : clean

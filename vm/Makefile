@@ -1,0 +1,110 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/06/18 08:57:44 by triou             #+#    #+#              #
+#    Updated: 2018/10/17 21:22:07 by lmazeaud         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+NAME	= corewar
+CC		= gcc
+CFLAGS	= -Wall -Wextra -Werror -g
+SDIR	= srcs
+INC 	= ./libft/
+
+IDIR	= includes
+ODIR	= objs
+OPPDIR  = opp
+S_G_DIR	= get_and_set
+NCUDIR  = ncurses
+UTIDIR	= utils
+LDIR	= libft
+
+ITEMS 	= 	mars.c 							\
+		  	ft_set_mars.c 					\
+		  	ft_add_processus_to_mars.c	 	\
+		  	ft_prepare_mars_memory.c 		\
+		  	ft_write_champ_on_memory.c	 	\
+		  	ft_errors.c 					\
+		  	ft_display_memory.c	 			\
+			$(S_G_DIR)/ft_registers.c		\
+			$(S_G_DIR)/get_and_load_mars_values.c \
+			$(S_G_DIR)/ft_parse_opc.c		\
+			$(S_G_DIR)/get_srcs.c \
+			$(OPPDIR)/ft_get_opcode.c		\
+		  	$(OPPDIR)/addition.c			\
+		  	$(OPPDIR)/aff.c 				\
+		  	$(OPPDIR)/and.c 				\
+		  	$(OPPDIR)/direct_load.c 		\
+		  	$(OPPDIR)/direct_store.c 		\
+		  	$(OPPDIR)/fork.c 				\
+		  	$(OPPDIR)/indirect_load.c 		\
+		  	$(OPPDIR)/indirect_store.c 		\
+		  	$(OPPDIR)/jump.c 				\
+		  	$(OPPDIR)/live.c 				\
+		  	$(OPPDIR)/long_direct_load.c 	\
+		  	$(OPPDIR)/long_fork.c 			\
+		  	$(OPPDIR)/long_indirect_load.c	\
+		  	$(OPPDIR)/or.c 					\
+		  	$(OPPDIR)/substraction.c 		\
+		  	$(OPPDIR)/xor.c 				\
+		  	$(NCUDIR)/ft_init_ncurse.c		\
+		  	$(NCUDIR)/ft_ncurses_display.c	\
+		  	$(NCUDIR)/ft_ncurses_print_intro.c	\
+		  	$(NCUDIR)/ft_ncurses_print_live.c	\
+		  	$(NCUDIR)/ft_ncurses_get_input.c\
+			$(UTIDIR)/ft_print_usage.c		\
+			$(UTIDIR)/ft_verbose.c			\
+			$(UTIDIR)/ft_free.c			\
+			$(UTIDIR)/ft_get_mars_options.c	\
+			loop_through_battle.c			\
+			cycle_mars_handler.c			\
+			ft_move_pc.c					\
+			adressage.c						\
+			tab_of_process_lst.c			\
+			ending_game.c					\
+
+OBJS	= $(addprefix $(ODIR)/, $(ITEMS:.c=.o))
+
+MD		= mkdir -p
+
+all : $(NAME)
+
+$(NAME) : $(OBJS)
+	@make -C $(LDIR)
+	@$(CC) $(CFLAGS) -o $(NAME) $^ -I $(IDIR) -I $(LDIR) -L $(LDIR) -lft -lncurses
+	@echo "success !!!!!!"
+
+
+$(OBJS) : | $(ODIR)
+
+$(ODIR):
+	$(MD) $(ODIR)
+	$(MD) $(ODIR)/opp
+	$(MD) $(ODIR)/get_and_set	
+
+
+$(ODIR)/%.o : $(SDIR)/%.c $(INCLUDES)
+	@$(MD) $(ODIR)/$(OPPDIR)
+	@$(MD) $(ODIR)/$(NCUDIR)
+	@$(MD) $(ODIR)/$(UTIDIR)
+	@$(MD) $(ODIR)/$(S_G_DIR)
+	@$(CC) $(CFLAGS) -o $@ -c $< -I $(IDIR) -I $(LDIR)
+	@echo "compiling $<"
+
+clean :
+	@$(MAKE) -C $(LDIR) clean
+	@rm -rf $(ODIR)
+
+fclean : clean
+	@$(MAKE) -C $(LDIR) fclean
+	@rm -f $(NAME)
+
+re : fclean all
+
+.PHONY: all clean fclean re
