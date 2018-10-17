@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/18 21:37:47 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 21:28:40 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/17 23:38:23 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ void			ft_putendl_fd(char const *s, int fd);
 char			*ft_itoa(int n);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+int				ft_printf(const char *format, ...);
 
 #endif
