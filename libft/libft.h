@@ -14,12 +14,8 @@
 # define LIBFT_H
 
 # include <sys/types.h>
+# include <stdbool.h>
 # define BUFF_SIZE 1024
-
-typedef enum	e_bool {
-	FALSE,
-	TRUE
-}				t_bool;
 
 char			*ft_strdup(const char *s1);
 char			*ft_strndup(const char *s, size_t n);
@@ -41,8 +37,8 @@ int				ft_isspace(int c);
 int				ft_isdigit(int c);
 void			ft_putnbr(int n);
 void			ft_strclr(char *s);
-t_bool			ft_strequ(const char *s1, const char *s2);
-t_bool			ft_strnequ(const char *s1, const char *s2, size_t n);
+bool			ft_strequ(const char *s1, const char *s2);
+bool			ft_strnequ(const char *s1, const char *s2, size_t n);
 void			ft_putchar(char c);
 void			ft_putendl(const char *s);
 void			ft_putstr(const char *s);

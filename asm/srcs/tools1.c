@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <stdlib.h>
 
 void		check_extension(char *file, const char *ext)
@@ -22,7 +23,7 @@ void		check_extension(char *file, const char *ext)
 		err_free_exit(NULL, WRONG_EXT);
 }
 
-t_bool		dir_len(t_byte op_code)
+bool		dir_len(t_byte op_code)
 {
 	int	i;
 
@@ -32,7 +33,7 @@ t_bool		dir_len(t_byte op_code)
 	return (g_op_tab[i].dir_size);
 }
 
-t_bool		ft_tabequ(const char *const *tab, char *needle)
+bool		ft_tabequ(const char *const *tab, char *needle)
 {
 	int	i;
 
@@ -40,10 +41,10 @@ t_bool		ft_tabequ(const char *const *tab, char *needle)
 	while (tab[i])
 	{
 		if (ft_strequ(tab[i], needle))
-			return (TRUE);
+			return (true);
 		i++;
 	}
-	return (FALSE);
+	return (false);
 }
 
 static void	ft_put_hex(unsigned char nb)

@@ -12,6 +12,7 @@
 
 #include <limits.h>
 #include "asm.h"
+#include "libft.h"
 
 static unsigned short	return_short_value(int len)
 {

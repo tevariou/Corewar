@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <limits.h>
 
 unsigned char	atoi_reg(t_asm *a, t_code *op, char *str)

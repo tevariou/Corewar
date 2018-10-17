@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-t_bool			ft_parse_5(t_file *line, t_lex **token)
+bool			ft_parse_5(t_file *line, t_lex **token)
 {
 	t_lex	*list;
 	t_lex	*end;
@@ -20,7 +20,7 @@ t_bool			ft_parse_5(t_file *line, t_lex **token)
 	list = *token;
 	end = line->tokens;
 	if (list->token == L_BLANKS && (list = list->next) == end)
-		return (FALSE);
+		return (false);
 	if (list->arg_type == T_DIR)
 		list = traverse_arg(line, list, T_DIR);
 	else if (list->prev->token == L_BLANKS && list->arg_type == T_IND)
@@ -28,17 +28,17 @@ t_bool			ft_parse_5(t_file *line, t_lex **token)
 	else if (list->prev->token == L_BLANKS && list->arg_type == T_REG)
 		list = list->next;
 	else
-		return (FALSE);
+		return (false);
 	if (list == end || list->token != L_SEPARATOR || (list = list->next) == end
 		|| !(list = is_dir_reg(line, list)) || (list == end
 		|| list->token != L_SEPARATOR || (list = list->next) == end
 		|| list->arg_type != T_REG))
-		return (FALSE);
+		return (false);
 	*token = list->next;
-	return (TRUE);
+	return (true);
 }
 
-t_bool			ft_parse_6(t_file *line, t_lex **token)
+bool			ft_parse_6(t_file *line, t_lex **token)
 {
 	t_lex	*list;
 	t_lex	*end;
@@ -52,12 +52,12 @@ t_bool			ft_parse_6(t_file *line, t_lex **token)
 		|| (list == end || list->token != L_SEPARATOR
 		|| (list = list->next) == end)
 		|| !(list = is_dir_reg(line, list)))
-		return (FALSE);
+		return (false);
 	*token = list;
-	return (TRUE);
+	return (true);
 }
 
-t_bool			ft_parse_7(t_file *line, t_lex **token)
+bool			ft_parse_7(t_file *line, t_lex **token)
 {
 	t_lex	*list;
 	t_lex	*end;
@@ -66,7 +66,7 @@ t_bool			ft_parse_7(t_file *line, t_lex **token)
 	end = line->tokens;
 	if ((list->token != L_BLANKS || (list = list->next) == end)
 		|| (list->arg_type != T_REG))
-		return (FALSE);
+		return (false);
 	*token = list->next;
-	return (TRUE);
+	return (true);
 }

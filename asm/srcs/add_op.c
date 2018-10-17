@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void	add_t_reg(t_code *new, int index, t_bool ocp)
+void	add_t_reg(t_code *new, int index, bool ocp)
 {
 	new->size += 1;
 	if (ocp)
@@ -26,7 +26,7 @@ void	add_t_reg(t_code *new, int index, t_bool ocp)
 	}
 }
 
-void	add_t_dir(t_code *new, int index, t_bool ocp)
+void	add_t_dir(t_code *new, int index, bool ocp)
 {
 	new->size = (dir_len(new->op_code)) ? new->size + 2 : new->size + 4;
 	if (ocp)
@@ -40,7 +40,7 @@ void	add_t_dir(t_code *new, int index, t_bool ocp)
 	}
 }
 
-void	add_t_ind(t_code *new, int index, t_bool ocp)
+void	add_t_ind(t_code *new, int index, bool ocp)
 {
 	new->size += 2;
 	if (ocp)

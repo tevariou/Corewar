@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <stdlib.h>
 
 static void	record_name(t_asm *a, char *line, char *s)

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 
 int	set_option(int ac, char **av)
 {
