@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "asm.h"
+#include "libft.h"
 
 static void	add_input_line(t_asm *a, char *line, unsigned short n)
 {

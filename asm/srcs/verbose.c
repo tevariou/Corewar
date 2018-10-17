@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 
 static void	write_prog_size(t_asm *a)
 {

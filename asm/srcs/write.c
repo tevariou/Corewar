@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>

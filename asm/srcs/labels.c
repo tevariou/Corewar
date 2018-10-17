@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <stdlib.h>
 
 static t_file	*get_target(t_asm *a, t_file *list)
@@ -49,23 +50,23 @@ static void		add_label(t_asm *a, t_file *list)
 	head->prev = new;
 }
 
-static t_bool	do_label_exist(t_label *list, char *str)
+static bool	do_label_exist(t_label *list, char *str)
 {
 	t_label	*tail;
 
 	ft_strclr(ft_strchr(str, LABEL_CHAR));
 	if (!list)
-		return (FALSE);
+		return (false);
 	tail = list->prev;
 	while (list != tail)
 	{
 		if (ft_strequ(list->name, str))
-			return (TRUE);
+			return (true);
 		list = list->next;
 	}
 	if (ft_strequ(list->name, str))
-		return (TRUE);
-	return (FALSE);
+		return (true);
+	return (false);
 }
 
 void			get_labels(t_asm *a)

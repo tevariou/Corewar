@@ -23,7 +23,7 @@ static const t_parse	g_parse_tab[8] = {
 	{{"aff", 0}, &ft_parse_7, 1}
 };
 
-static t_bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
+static bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
 {
 	t_lex	*list;
 	int		i;
@@ -35,17 +35,17 @@ static t_bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
 		if (ft_tabequ(g_parse_tab[i].name, list->val))
 		{
 			if ((*token = list->next) == line->tokens)
-				return (FALSE);
+				return (false);
 			if (g_parse_tab[i].n_args != line->n_args)
 				parser_error(a, line, INVALID_ARGS);
 			return (g_parse_tab[i].f(line, token));
 		}
 		i++;
 	}
-	return (FALSE);
+	return (false);
 }
 
-static t_bool	p_blanks(t_lex **token)
+static bool	p_blanks(t_lex **token)
 {
 	t_lex	*list;
 
@@ -53,12 +53,12 @@ static t_bool	p_blanks(t_lex **token)
 	if (list->token == L_BLANKS)
 	{
 		*token = list->next;
-		return (TRUE);
+		return (true);
 	}
-	return (FALSE);
+	return (false);
 }
 
-static t_bool	p_lab(t_lex **token)
+static bool	p_lab(t_lex **token)
 {
 	t_lex	*list;
 
@@ -66,9 +66,9 @@ static t_bool	p_lab(t_lex **token)
 	if (list->token == L_LAB)
 	{
 		*token = list->next;
-		return (TRUE);
+		return (true);
 	}
-	return (FALSE);
+	return (false);
 }
 
 static void		parse_line(t_asm *a, t_file *line)

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 
 static unsigned short	convert_short(t_asm *a, t_code *op, char *str)
 {

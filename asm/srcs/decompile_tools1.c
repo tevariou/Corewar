@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/uio.h>
@@ -26,7 +27,7 @@ void	ft_buffer(char **out, char *new)
 	*out = tmp;
 }
 
-void	put_reg(int in, char **out, t_bool end)
+void	put_reg(int in, char **out, bool end)
 {
 	t_byte	buff;
 	char	*n;
@@ -46,7 +47,7 @@ void	put_reg(int in, char **out, t_bool end)
 		ft_buffer(out, sep);
 }
 
-void	put_ind(int in, char **out, t_bool end)
+void	put_ind(int in, char **out, bool end)
 {
 	short	buff;
 	char	*n;
@@ -66,7 +67,7 @@ void	put_ind(int in, char **out, t_bool end)
 		ft_buffer(out, sep);
 }
 
-void	put_dir(int in, char **out, t_bool end, t_bool len)
+void	put_dir(int in, char **out, bool end, bool len)
 {
 	int		buff;
 	char	*n;

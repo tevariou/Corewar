@@ -14,7 +14,7 @@
 # define ASM_H
 
 # include "op.h"
-# include "libft.h"
+# include <stdbool.h>
 
 # define WRITING_FILE		"Writing output program to "
 # define DUMPING_A			"Dumping annotated program on standard output"
@@ -51,8 +51,8 @@ typedef struct			s_op {
 	t_byte				op_code;
 	int					n_cycles;
 	char				*comment;
-	t_bool				ocp;
-	t_bool				dir_size;
+	bool				ocp;
+	bool				dir_size;
 }						t_op;
 
 extern const t_op		g_op_tab[17];
@@ -93,7 +93,7 @@ typedef struct			s_file {
 
 typedef struct			s_parse {
 	const char			*name[5];
-	t_bool				(*f)(t_file *line, t_lex **token);
+	bool				(*f)(t_file *line, t_lex **token);
 	int					n_args;
 }						t_parse;
 
@@ -155,7 +155,7 @@ void					redux(t_asm *a);
 void					parser(t_asm *a);
 void					get_labels(t_asm *a);
 void					free_all(t_asm *a);
-t_bool					dir_len(t_byte op_code);
+bool					dir_len(t_byte op_code);
 void					write_bytecode(t_asm *a, char *file);
 void					set_bytecode(t_asm *a);
 
@@ -175,20 +175,20 @@ void					verbose_output(t_asm *a);
 void					decompile_bin(char *file);
 void					decompile_error(char **out);
 
-void					add_t_reg(t_code *new, int index, t_bool ocp);
-void					add_t_dir(t_code *new, int index, t_bool ocp);
-void					add_t_ind(t_code *new, int index, t_bool ocp);
+void					add_t_reg(t_code *new, int index, bool ocp);
+void					add_t_dir(t_code *new, int index, bool ocp);
+void					add_t_ind(t_code *new, int index, bool ocp);
 
-t_bool					ft_tabequ(const char *const *tab, char *needle);
+bool					ft_tabequ(const char *const *tab, char *needle);
 void					ft_put_byte(void *n, size_t len);
 void					ft_put_uint(unsigned int nb, int fd);
 char					*skip_space(char *line);
 void					ft_putnbr_base(unsigned int n, const char *base);
 
 void					ft_buffer(char **out, char *new);
-void					put_reg(int n, char **out, t_bool end);
-void					put_ind(int n, char **out, t_bool end);
-void					put_dir(int n, char **out, t_bool end, t_bool len);
+void					put_reg(int n, char **out, bool end);
+void					put_ind(int n, char **out, bool end);
+void					put_dir(int n, char **out, bool end, bool len);
 
 void					read_magic(int in);
 void					read_name(int in, char **out);
@@ -210,13 +210,13 @@ char					*ft_number(char *str);
 char					*ft_instruct(char *str);
 char					*ft_blanks(char *str);
 
-t_bool					ft_parse_0(t_file *line, t_lex **token);
-t_bool					ft_parse_1(t_file *line, t_lex **token);
-t_bool					ft_parse_2(t_file *line, t_lex **token);
-t_bool					ft_parse_3(t_file *line, t_lex **token);
-t_bool					ft_parse_4(t_file *line, t_lex **token);
-t_bool					ft_parse_5(t_file *line, t_lex **token);
-t_bool					ft_parse_6(t_file *line, t_lex **token);
-t_bool					ft_parse_7(t_file *line, t_lex **token);
+bool					ft_parse_0(t_file *line, t_lex **token);
+bool					ft_parse_1(t_file *line, t_lex **token);
+bool					ft_parse_2(t_file *line, t_lex **token);
+bool					ft_parse_3(t_file *line, t_lex **token);
+bool					ft_parse_4(t_file *line, t_lex **token);
+bool					ft_parse_5(t_file *line, t_lex **token);
+bool					ft_parse_6(t_file *line, t_lex **token);
+bool					ft_parse_7(t_file *line, t_lex **token);
 
 #endif

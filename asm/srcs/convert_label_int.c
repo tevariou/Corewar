@@ -12,6 +12,7 @@
 
 #include <limits.h>
 #include "asm.h"
+#include "libft.h"
 
 static unsigned int	return_int_value(long len)
 {

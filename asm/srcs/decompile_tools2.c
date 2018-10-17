@@ -60,14 +60,14 @@ void		read_comment(int in, char **out)
 static void	put_values(t_byte op, int i, int in, char **out)
 {
 	int		j;
-	t_bool	end;
+	bool	end;
 
 	j = 0;
-	end = FALSE;
+	end = false;
 	while (j < g_op_tab[i].n_args)
 	{
 		if (++j == g_op_tab[i].n_args)
-			end = TRUE;
+			end = true;
 		if (op >> 6 == 1)
 			put_reg(in, out, end);
 		else if (op >> 6 == 2)
