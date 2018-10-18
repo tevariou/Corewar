@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 19:25:11 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:27:28 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,7 @@ void						*ft_free_current_process(t_processus *process);
 /*
 ** Ncurses
 */
-void 						ft_init_ncurses();
+void						ft_init_ncurses();
 void						ft_ncurses_print_live(t_mars *mars);
 void						ft_ncurses_handle_pause(t_mars *mars, t_visu *v);
 
@@ -209,7 +209,6 @@ unsigned					ft_get_srcs(t_mars *mars, t_processus *process,
 unsigned					ft_get_dest(t_mars *mars, t_processus *process,
 								int code, int dir_size);
 int							check_register(int ocp, int index, int value);
-
 
 /*
 ** gestion deu tableau de lsite chainee
