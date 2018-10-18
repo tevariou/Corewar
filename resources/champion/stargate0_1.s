@@ -5,7 +5,7 @@
 
 ###bigger champ
 and r2,r2,r2
-zjmp %510
+zjmp %508
 live %0
 live %0
 live %0
@@ -108,6 +108,8 @@ live %0
 live %0
 live %0
 live %0
+live %0
+zjmp %33
 live %0
 live %0
 live %0
