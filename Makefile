@@ -29,37 +29,37 @@ ASM_INCS	:=	-I $(ASM_INC_SRC)
 
 ## ASM - SOURCES
 ASM_SRCS	:=	asm.c				\
-				header.c \
-				exit1.c \
-				exit2.c \
-				add_op.c \
-				option.c \
-				read.c \
-				compile.c \
-				redux.c \
-				lexer.c \
-				ft_lex1.c \
-				ft_lex2.c \
-				op.c \
-				parser.c \
-				ft_parse1.c \
-				ft_parse2.c \
-				labels.c \
-				free.c \
-				bytecode.c \
-				ft_atoi_base.c \
-				write.c \
+				header.c 			\
+				exit1.c	 			\
+				exit2.c 			\
+				add_op.c 			\
+				option.c 			\
+				read.c 				\
+				compile.c 			\
+				redux.c 			\
+				lexer.c 			\
+				ft_lex1.c 			\
+				ft_lex2.c 			\
+				op.c 				\
+				parser.c 			\
+				ft_parse1.c			\
+				ft_parse2.c			\
+				labels.c 			\
+				free.c 				\
+				bytecode.c 			\
+				ft_atoi_base.c 		\
+				write.c 			\
 				convert_label_int.c \
 				convert_label_short.c \
-				verbose.c \
-				decompile.c \
-				decompile_tools1.c \
-				decompile_tools2.c \
-				tools1.c \
-				tools2.c \
-				tools3.c \
-				init_bytecode.c \
-				ft_parse_tools.c \
+				verbose.c 			\
+				decompile.c 		\
+				decompile_tools1.c 	\
+				decompile_tools2.c 	\
+				tools1.c 			\
+				tools2.c 			\
+				tools3.c 			\
+				init_bytecode.c 	\
+				ft_parse_tools.c 	\
 				header_tools.c
 
 ASM_OBJS	:=	$(addprefix $(ASM_OBJ_DIR)/, $(ASM_SRCS:.c=.o))
@@ -171,7 +171,7 @@ $(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
 	@$(MD) $(VM_OBJ_DIR)/$(VM_NCUDIR)
 	@$(MD) $(VM_OBJ_DIR)/$(VM_UTIDIR)
 	@$(MD) $(VM_OBJ_DIR)/$(VM_S_G_DIR)
-	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF)
+	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
 
 clean:
