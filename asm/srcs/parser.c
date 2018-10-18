@@ -80,10 +80,10 @@ static void		parse_line(t_asm *a, t_file *line)
 	end = list;
 	if (p_lab(&list))
 	{
-		if ((list != line->tokens && p_blanks(&list)
+		if (list == end || (list != end && p_blanks(&list)
 			&& p_instruct(a, line, &list) && list == end)
-			|| (list != line->tokens && p_instruct(a, line, &list)
-			&& list == end) || (list == end))
+			|| (list != end && p_instruct(a, line, &list)
+			&& list == end))
 			return ;
 	}
 	else if (p_instruct(a, line, &list) && list == end)
