@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 13:56:19 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 18:23:08 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:15:21 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define VISU_H
 
 # include <pthread.h>
+# include <ncurses.h>
 
 # define ARENA_H	(LINES - 8)
 # define ARENA_W	(COLS - 60)
@@ -23,13 +24,7 @@
 # define ON			1
 # define OFF		0
 # define NCURSE		1
-# define DEBUG		2
 # define VERBOSE	3
-
-# define HEART		'▓'
-
-
-# include <ncurses.h>
 
 typedef struct		s_visu
 {

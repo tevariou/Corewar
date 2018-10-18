@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 15:49:14 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:44:43 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ t_processus	*tab_set_process(t_mars *mars, t_processus *new_process, int dest)
 	{
 		new_process->next = mars->process_lst[dest % PT_SIZE];
 		mars->process_lst[dest % PT_SIZE] = new_process;
-	}	
-return (new_process);
+	}
+	return (new_process);
 }
 
 t_processus	*tab_get_next_process(t_mars *mars, int dest)

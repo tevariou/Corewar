@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 17:43:24 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:09:33 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,6 @@ void		ft_add_champ_to_mars(t_mars *mars,
 	champion->name = process->name;
 	champion->nbr_of_live = 0;
 	champion->last_cycle_live = 0;
-	champion->nb_process = 1;
 	champion->next = mars->champion_lst;
 	mars->champion_lst = champion;
 	champion->header.magic = 0;

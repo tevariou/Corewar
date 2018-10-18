@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 17:38:19 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:10:28 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ typedef struct				s_processus
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
 	int						(*opcode)(struct s_mars *, struct s_processus *);
-	unsigned int			params[3];
 	unsigned				bytes_to_jump;
 	struct s_processus		*next;
 }							t_processus;
@@ -80,7 +79,6 @@ typedef struct				s_champion
 	int						id_color;
 	char					*name;
 	unsigned				nbr_of_live;
-	unsigned				nb_process;
 	unsigned				last_cycle_live;
 	t_header				header;
 	struct s_champion		*next;
