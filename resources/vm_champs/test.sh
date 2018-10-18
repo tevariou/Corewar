@@ -14,6 +14,7 @@ do
 		rm -f $(echo $f | rev | cut -c3- | rev)$cor
 	fi
 	./tev $f >/dev/null 2>&1
+	echo "$(valgrind --leak-check=yes ./tev -a $f >/dev/null 2>&1 | grep lost)"
 	if [ -f "$(echo $f | rev | cut -c3- | rev)$cor" ]
 	then
 		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > tev_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)
