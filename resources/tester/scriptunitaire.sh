@@ -1,5 +1,5 @@
 rm diff
-for f in champions/unitests/*.cor
+for f in unitests/*.cor
 do
 	echo "\n" >> diff
 	let "count=1000"

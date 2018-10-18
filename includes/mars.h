@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 19:27:28 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:48:16 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ typedef unsigned char		t_byte;
 # define PT_SIZE			1001
 
 # define E_NO_MARS			"Error : no vm detected\n"
-# define E_PLAYERS_COUNT	"Error : numbers of player seems to be not good\n"
-# define E_CHAMPS_WRITE		"Error : champions are writted one on the other\n"
+# define E_PLAYERS_COUNT	"Error : Too many champions\n"
+# define E_CHAMPS_WRITE		"Error : Failed to load one champion in memory\n"
 # define E_CHAMPS_READ		"Error : could not read a champion\n"
 # define E_TWICE_NUM		"Error : twice number player\n"
 # define E_NOT_COR			"Error : one argument is not a .cor\n"

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 13:56:19 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 19:27:27 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:29:26 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@
 typedef struct		s_visu
 {
 	WINDOW			*arena_box;
+	WINDOW			*info_box;
 	WINDOW			*live_box;
+	WINDOW			*live;
 	WINDOW			*arena;
 	WINDOW			*info;
-	WINDOW			*live;
 	unsigned		sleep;
 	int				abort;
 	int				frame;
