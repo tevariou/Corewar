@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abiestro <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/01 13:01:09 by abiestro          #+#    #+#              #
-#    Updated: 2018/05/30 19:36:02 by abiestro         ###   ########.fr        #
+#    Updated: 2018/10/18 16:30:40 by lmazeaud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,6 @@ INCLUDES		= $(addprefix $(PATH_INCLUDES)/, ft_printf.h)
 all:$(NAME)
 
 $(NAME):$(OBJS)
-		@echo "objects builded..."
 		@ar -rcs $(NAME) $(OBJS) $(OBJS_EXTRA)
 		@echo $(NAME) "ready!"
 
@@ -61,15 +60,15 @@ $(PATH_OBJS) :
 
 $(PATH_OBJS)/%.o : $(PATH_SOURCES)/%.c
 	@$(CC) -c $(CFLAGS)  $<  -o $@
-	@echo "builded -->" $@
+
 
 clean:
 		@rm -rf $(PATH_OBJS)
-		@echo "objects removed 😇 "
+		@echo "objects removed ft_printf "
 
 fclean: clean
 		@rm -f $(NAME)
-		@echo $(NAME) "removed 😇 "
+		@echo "removed $(NAME)"
 
 re: fclean all
 
