@@ -6,12 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 17:42:21 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 14:27:38 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include <stdlib.h>
 
 /*
 ** Fork - 0x0C

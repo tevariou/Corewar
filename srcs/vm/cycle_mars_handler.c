@@ -6,12 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 19:18:01 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include "libft.h"
 
 int		ft_kill_process(t_mars *mars)
 {
@@ -76,7 +75,7 @@ t_champion	*ft_cycles_handler(t_mars *mars)
 			ft_init_champs_life(mars->champion_lst);
 		}
 		if (mars->visualisor == VERBOSE && ((mars->verbose >> 1) & 0x01))
-			printf("Cycle to die is now %d\n", mars->cycle_to_die);
+			ft_printf("Cycle to die is now %d\n", mars->cycle_to_die);
 		mars->nbr_of_live = 0;
 	}
 	return (NULL);

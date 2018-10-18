@@ -4,7 +4,8 @@ NAME = libft.a
 SDIR = .
 IDIR = .
 ODIR = .
-SRCS =	ft_memset.c \
+SRCS =	ft_atoi.c	\
+		ft_memset.c \
 		ft_memcpy.c \
 		ft_memalloc.c \
 		ft_strlen.c \
@@ -54,15 +55,16 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@ar crs $@ $^
-	@echo "\033[1;34mLibft \033[1;35mhas been created \033[1;5;32msuccessfully.\033[0m"
+	@echo "Libft has been created successfully !"
 
 $(ODIR)/%.o : $(SDIR)/%.c $(INCLUDES)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(IDIR)
 
 clean :
 	@rm -f $(OBJ)
+	@echo "objects removed in libft"
 
 fclean : clean
 	@rm -f $(NAME)
-
+	@echo $(NAME) "removed libft.a"
 re : fclean all

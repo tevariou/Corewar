@@ -6,14 +6,12 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:00:46 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 21:27:02 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include "mars.h"
-#include <stdio.h>
-#include <unistd.h>
 #include <limits.h>
 
 int	ft_read_multiple_champion(t_mars *mars)

@@ -6,12 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 16:52:28 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include "libft.h"
 
 unsigned		ft_get_register(t_processus *process, unsigned index)
 {
@@ -49,20 +48,20 @@ unsigned		ft_load_register(t_processus *process,
 		process->registers[index * REG_SIZE - i] = value % 256;
 		value = value / 256;
 	}
-	return (1);
+	return (SUCCESS);
 }
 
-t_bool			ft_is_register(int index)
+int			ft_is_register(int index)
 {
 	if (index < 1 || index > 16)
 		return (0);
-	return (1);
+	return (SUCCESS);
 }
 
-t_bool			ft_memory_is_register(t_mars *mars, int address)
+int			ft_memory_is_register(t_mars *mars, int address)
 {
 	if (!*mars->memory[ft_global_restriction(address)]
 		|| *mars->memory[ft_global_restriction(address)] > 16)
 		return (0);
-	return (1);
+	return (SUCCESS);
 }

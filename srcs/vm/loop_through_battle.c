@@ -6,12 +6,10 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 18:59:47 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include "mars.h"
 
 static void	ft_idle_turn(t_processus *p, int current_cycle)
@@ -30,7 +28,7 @@ static int	execut_process_turn(t_mars *mars, t_processus *current_process)
 		current_process->opcode(mars, current_process);
 	ft_move_pc(mars, current_process);
 	set_jump_stock(mars, current_process);
-	return (1);
+	return (SUCCESS);
 }
 
 static int	set_next_instruction(t_mars *mars, t_processus *process)
@@ -39,7 +37,7 @@ static int	set_next_instruction(t_mars *mars, t_processus *process)
 		*mars->memory[ft_global_restriction(process->pc)]) == OPP_ERROR)
 		ft_idle_turn(process, mars->current_cycle);
 	tab_set_process(mars, process, process->next_instruction_cycle);
-	return (1);
+	return (SUCCESS);
 }
 
 static int	execute_one_cycle(t_mars *mars)
@@ -54,7 +52,7 @@ static int	execute_one_cycle(t_mars *mars)
 		if (mars->visualisor == VERBOSE)
 			mars->ft_display(mars, current_process);
 	}
-	return (1);
+	return (SUCCESS);
 }
 
 t_champion	*loop_through_battle(t_mars *mars)

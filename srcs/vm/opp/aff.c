@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 17:41:26 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 14:59:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int		aff(t_mars *mars, t_processus *process)
 		!ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1)))
 		return (ERROR);
 	srcs = ft_get_register(process, ft_get_mars_value(mars, process->pc + 2, 1));
-	printf("%c",srcs % 256);
+	ft_printf("%c",srcs % 256);
 	return (SUCCESS);
 }

@@ -6,23 +6,18 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:31:12 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 22:08:18 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mars.h"
-#include <unistd.h>
-#include <stdio.h>
 #include <locale.h>
-#include "libft.h"
+#include "mars.h"
 
 int		main(int ac, char **av)
 {
 	t_mars		*mars;
 	t_champion	*winner;
 
-
-	ft_prinf("coucou");
 	setlocale(LC_ALL, "");
 	mars = ft_set_mars(ac, av);
 	if (mars->visualisor == NCURSE)
@@ -32,8 +27,8 @@ int		main(int ac, char **av)
 	winner = loop_through_battle(mars);
 	if (mars->visualisor == NCURSE)
 		ft_close_ncurses(&mars->visu);
-	printf("The winner is %s\n", winner->header.prog_name);
-	printf("He says : \"%s\" \n", winner->header.comment);
+	ft_printf("The winner is %s\n", winner->header.prog_name);
+	ft_printf("He says : \"%s\" \n", winner->header.comment);
 	ft_free_mars(mars);
 	return (SUCCESS);
 }

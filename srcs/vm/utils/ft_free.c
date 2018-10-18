@@ -6,11 +6,10 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 10:30:33 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 19:07:12 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 14:28:27 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "mars.h"
 
 void	ft_free_process(t_mars *mars)

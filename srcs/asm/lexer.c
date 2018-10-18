@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "asm.h"
+#include "libft.h"
 #include <stdlib.h>
 
 static const t_ft_lex	g_ft_lex[FT_LEX_NUMBER] =

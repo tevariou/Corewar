@@ -6,14 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 21:59:23 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "mars.h"
-#include "libft.h"
-#include <stdio.h>
 
 t_processus		*ft_new_empty_processus(void)
 {
@@ -55,7 +52,7 @@ t_processus *process, char **av)
 		while (ft_isdigit(*tmp))
 			tmp++;
 		if (*tmp)
-			return (-1);
+			return (ERROR);
 		process->player = atoi(av[1]);
 		return (2);
 	}
@@ -65,7 +62,7 @@ t_processus *process, char **av)
 		while (ft_isdigit(*tmp))
 			tmp++;
 		if (*tmp)
-			return (-1);
+			return (ERROR);
 		process->pc = atoi(av[1]);
 		return (2);
 	}
@@ -78,10 +75,10 @@ t_processus *process, char **av)
 			if (ft_strequ(".cor", tmp))
 			{
 				process->name = *av;
-				return (1);
+				return (SUCCESS);
 			}
 		}
-		return (-1);
+		return (ERROR);
 	}
 }
 

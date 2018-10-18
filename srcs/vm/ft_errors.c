@@ -6,13 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 16:24:17 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 21:28:42 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "mars.h"
-#include "libft.h"
 
 void	ft_exit(t_mars *mars, char *error)
 {

@@ -6,13 +6,12 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 16:37:54 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:04:25 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
 #include "visu.h"
+#include "libft.h"
 
 static void		create_windows(int coord[4], char *name,
 	WINDOW **box, WINDOW **content)

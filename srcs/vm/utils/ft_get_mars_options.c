@@ -6,12 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/06 23:19:55 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 17:24:27 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:36 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include "libft.h"
 
 int		ft_is_dump_option(t_mars *mars, char **av)
 {
@@ -26,8 +25,8 @@ int		ft_is_dump_option(t_mars *mars, char **av)
 		while (ft_isdigit(*tmp))
 			tmp++;
 		if (*tmp)
-			return (-1);
-		mars->dump = atoi(av[1]);
+			return (ERROR);
+		mars->dump = ft_atoi(av[1]);
 		return (2);
 	}
 	return (0);
@@ -44,8 +43,8 @@ int		ft_is_verbose(t_mars *mars, char **av)
 	while (ft_isdigit(*tmp))
 		tmp++;
 	if (*tmp)
-		return (-1);
-	mars->verbose = atoi(av[1]);
+		return (ERROR);
+	mars->verbose = ft_atoi(av[1]);
 	mars->visualisor = VERBOSE;
 	mars->ft_display = &ft_verbose;
 	return (2);
@@ -61,7 +60,7 @@ int		ft_is_visualisator(t_mars *mars, char **av)
 			ft_print_usage(mars);
 		mars->ft_display = &ft_ncurses_display;
 		mars->visualisor = NCURSE;
-		return (1);
+		return (SUCCESS);
 	}
 	else if (ft_strequ("-v", *av))
 		return (ft_is_verbose(mars, av));

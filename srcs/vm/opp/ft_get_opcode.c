@@ -6,12 +6,12 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 19:43:32 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 16:43:31 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 14:22:05 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include "asm.h"
+#include "operations.h"
 
 int		ft_get_opcode(t_mars *mars, t_processus *process, t_byte opcode)
 {

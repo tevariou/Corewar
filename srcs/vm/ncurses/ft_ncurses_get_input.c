@@ -6,14 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 10:10:24 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 16:41:02 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:02:44 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include "visu.h"
-#include "../../includes/mars.h"
+#include "mars.h"
 
 void	ft_ncurses_handle_input(t_visu *visu, int input)
 {

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tab_of_process_lst.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 15:49:14 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/16 18:02:25 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
-#include "libft.h"
 
 t_processus	*set_jump_stock(t_mars *mars, t_processus *process)
 {

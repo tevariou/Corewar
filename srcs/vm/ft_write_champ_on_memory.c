@@ -6,13 +6,11 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/17 22:03:04 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "mars.h"
-#include <stdio.h>
 
 int			ft_put_string_on_circular_memory(t_mars *mars, t_processus *process,
 		const char *champion, int size)
