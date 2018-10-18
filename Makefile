@@ -13,9 +13,9 @@ LIB_FT_DIR	:=	$(LIB_DIR)/libft
 LIB_PR_DIR	:= 	$(LIB_DIR)/ft_printf
 LIBFT_A		:=	$(LIB_FT_DIR)/libft.a
 PRINTF_A	:=	$(LIB_PR_DIR)/libftprintf.a
-LIBFT		:=	-L $(LIB_FT_DIR) -lft
-PRINTF		:=	-L $(LIB_PR_DIR) -lftprintf
-NCURSES		:=  -L -lncurses
+LIBFT		:=	-L$(LIB_FT_DIR) -lft
+PRINTF		:=	-L$(LIB_PR_DIR) -lftprintf
+NCURSES		:=  -lncurses
 
 # ASM
 ASM_SRC_DIR := $(SRC_DIR)/asm
@@ -23,7 +23,8 @@ ASM_OBJ_DIR := $(OBJ_DIR)/asm
 
 ## ASM - INCLUDES
 ASM_INC_SRC	:=	$(INC_DIR)/asm.h 	\
-				$(INC_DIR)/op.h
+				$(INC_DIR)/op.h		\
+				$(LIB_FT_DIR)/$(INC_DIR)/libft.h
 ASM_INCS	:=	-I $(ASM_INC_SRC)
 
 ## ASM - SOURCES
@@ -65,15 +66,15 @@ ASM_OBJS	:=	$(addprefix $(ASM_OBJ_DIR)/, $(ASM_SRCS:.c=.o))
 # VM
 VM_SRC_DIR	:=	$(SRC_DIR)/vm
 VM_OBJ_DIR	:=	$(OBJ_DIR)/vm
-VM_OPPDIR 	:=	opp
-VM_S_G_DIR	:=	get_and_set
-VM_NCUDIR 	:=	ncurses
-VM_UTIDIR 	:=	utils
+VM_OPPDIR 	:=	$(VM_OBJ_DIR)/opp
+VM_S_G_DIR	:=	$(VM_OBJ_DIR)/get_and_set
+VM_NCUDIR 	:=	$(VM_OBJ_DIR)/ncurses
+VM_UTIDIR 	:=	$(VM_OBJ_DIR)/utils
 
 ## VM - INCLUDES
 VM_INC_SRC	:=	$(INC_DIR)/mars.h 	\
 				$(INC_DIR)/visu.h	\
-				$(INC_DIR)/op.h		
+				$(INC_DIR)/op.h		\
 VM_INCS	:=	-I $(VM_INC_SRC)
 
 ## VM - SOURCES
@@ -140,7 +141,7 @@ LOG_CLIGNO		= \033[5m
 
 .PHONY: all clean fclean re
 
-all: $(LIB_DIR) $(NAME1)
+all: $(LIB_DIR) $(NAME1) $(NAME2)
 
 $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)
 	
@@ -150,12 +151,24 @@ $(LIBFT_A):
 $(PRINTF_A):
 	@$(MK) $(LIB_PR_DIR)
 
-$(NAME1): $(ASM_OBJS)	
+$(NAME1): $(ASM_OBJS)
+	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
 
-$(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c $(INC_DIR)
-	$(MD) $(OBJ_DIR)
-	$(MD) $(ASM_OBJ_DIR)
-	$(CC) $(CFLAGS) -o $@ $^ -I $(INC_DIR) $(LIBFT)
+$(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c
+	@$(MD) $(OBJ_DIR)
+	@$(MD) $(ASM_OBJ_DIR)
+	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
+
+$(NAME2): $(VM_OBJS)
+	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF)
+
+$(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
+	@$(MD) $(VM_OBJ_DIR)
+	@$(MD) $(VM_OPPDIR)
+	@$(MD) $(VM_NCUDIR)
+	@$(MD) $(VM_UTIDIR)
+	@$(MD) $(VM_S_G_DIR)
+	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
 clean:
 	@$(MK_C) $(LIB_FT_DIR)
