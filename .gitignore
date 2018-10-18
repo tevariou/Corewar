@@ -1,8 +1,6 @@
 .DS_Store
 .*.swp
 *.o
-corewar
-asm
 *.a
 *.json
 vm/srcs/mars.c
