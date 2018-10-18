@@ -27,7 +27,8 @@ void	header_error(t_asm *a, char *line)
 {
 	free_all(a);
 	ft_putendl_fd(WRONG_HEADER, 2);
-	free(line);
+	if (line)
+		free(line);
 	exit(EXIT_FAILURE);
 }
 

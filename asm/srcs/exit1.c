@@ -23,6 +23,7 @@ static void	output_error(t_asm *a, char *line, char *val)
 	if (!(tmp = ft_strdup(val)))
 		err_free_exit(a, NULL);
 	ft_strclr(ft_strchr(tmp, ' '));
+	ft_strclr(ft_strchr(tmp, '\t'));
 	ft_strclr(ft_strchr(tmp, ','));
 	p = ft_strstr(line, val);
 	write(2, line, p - line);

@@ -11,17 +11,16 @@
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -g -fsanitize=address -Wall -Werror -Wextra
 NAME = asm
 SDIR = srcs
 IDIR = includes
 ODIR = objs
 LDIR = ../libft
 SRCS =	asm.c \
-		comment.c \
+		header.c \
 		exit1.c \
 		exit2.c \
-		name.c \
 		add_op.c \
 		option.c \
 		read.c \
@@ -49,7 +48,8 @@ SRCS =	asm.c \
 		tools2.c \
 		tools3.c \
 		init_bytecode.c \
-		ft_parse_tools.c
+		ft_parse_tools.c \
+		header_tools.c
 LIB = ft
 _INCLUDES = op.h asm.h
 INClUDES = $(patsubst %, $(IDIR)/%, $(_INCLUDES))

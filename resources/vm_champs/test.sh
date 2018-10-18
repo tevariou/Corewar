@@ -3,31 +3,35 @@
 cor=".cor"
 dir="champs"
 
+mkdir -p tev_dir
+mkdir -p zaz_dir
 for f in $dir/*.s
 do
-	./zaz $f &>/dev/null
+	darling shell ./zaz $f >/dev/null 2>&1
 	if [ -f "$(echo $f | rev | cut -c3- | rev)$cor" ]
 	then
-		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > $dir/zaz
+		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > zaz_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)
 		rm -f $(echo $f | rev | cut -c3- | rev)$cor
 	fi
-	./tev $f &>/dev/null
+	./tev $f >/dev/null 2>&1
 	if [ -f "$(echo $f | rev | cut -c3- | rev)$cor" ]
 	then
-		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > $dir/tev
+		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > tev_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)
 		rm -f $(echo $f | rev | cut -c3- | rev)$cor
 	fi
-	if [ -f "$dir/tev" ] && [ -f "$dir/zaz" ]
+	if [ -f "zaz_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)" ] & [ -f "tev_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)" ]
 	then
-		echo "Testing $(echo $f | rev | cut -c3- | rev) ..."
-		diff -s $dir/zaz $dir/tev
-	fi
-	if [ -f "$dir/tev" ]
+		diff -s zaz_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev) tev_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)
+	elif [ -f "tev_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)" ]
 	then
-		rm -f $dir/tev
-	fi
-	if [ -f "$dir/zaz" ]
+		echo "WARNING : $(echo $f | cut -c8- | rev | cut -c3- | rev) created by tev but not zaz"
+	elif [ -f "zaz_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)" ]
 	then
-		rm -f $dir/zaz
+		echo "WARNING : $(echo $f | cut -c8- | rev | cut -c3- | rev) created by zaz but not tev"
+	else
+		echo "."
 	fi
+	sleep 0.1
 done
+rm -rf tev_dir
+rm -rf zaz_dir
