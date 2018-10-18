@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 13:56:19 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 18:03:14 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:23:08 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct		s_visu
 	int				frame;
 	int				current_frame;
 	int				pause;
+	int				speed;
 	pthread_t		th_input;
 }					t_visu;
 

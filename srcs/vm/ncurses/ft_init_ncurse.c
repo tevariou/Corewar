@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 21:33:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 15:04:25 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:24:29 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void			ft_init_ncurses(t_visu *visu)
 	ft_ncurses_color();
 	ft_ncurses_create_thread(visu);
 	visu->sleep = 25000;
+	visu->speed = 40;
 	visu->pause = OFF;
 	visu->abort = OFF;
 	visu->frame = 1;

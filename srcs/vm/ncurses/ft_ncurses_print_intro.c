@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/11 10:18:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 18:09:37 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:18:57 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,19 @@ void	ft_ncurses_print_intro(t_visu *v)
 void	ft_ncurses_print_how_to_control(t_visu *v)
 {
 	wattron(v->info, COLOR_PAIR(4));
-	wprintw(v->info, "\n\n\n\n         +---------+\n");
-	wprintw(v->info, "         |    ↑    |\n");
-	wprintw(v->info, "         |   more  |\n");
-	wprintw(v->info, "         |  frame  |\n");
-	wprintw(v->info, "         |         |\n");
-	wprintw(v->info, "+--------+---------+---------+\n");
-	wprintw(v->info, "|        |         |         |\n");
-	wprintw(v->info, "|  less  |  less   |   more  |\n");
-	wprintw(v->info, "|  speed |  frame  |  speed  |\n");
-	wprintw(v->info, "|    ←   |    ↓    |    →    |\n");
-	wprintw(v->info, "+--------+---------+---------+\n\n\n");
-	wprintw(v->info, "+----------------------------+\n");
-	wprintw(v->info, "|  Space : PAUSE    q: Quit  |\n");
-	wprintw(v->info, "+----------------------------+\n");
+	wprintw(v->info, "\n\n\n\n	         +---------+\n");
+	wprintw(v->info, "	         |    ↑    |\n");
+	wprintw(v->info, "	         |   more  |\n");
+	wprintw(v->info, "	         |  frame  |\n");
+	wprintw(v->info, "	         |         |\n");
+	wprintw(v->info, "	+--------+---------+---------+\n");
+	wprintw(v->info, "	|        |         |         |\n");
+	wprintw(v->info, "	|  less  |  less   |   more  |\n");
+	wprintw(v->info, "	|  speed |  frame  |  speed  |\n");
+	wprintw(v->info, "	|    ←   |    ↓    |    →    |\n");
+	wprintw(v->info, "	+--------+---------+---------+\n\n\n");
+	wprintw(v->info, "	+----------------------------+\n");
+	wprintw(v->info, "	|  Space : PAUSE    q: Quit  |\n");
+	wprintw(v->info, "	+----------------------------+\n");
 	wattroff(v->info, COLOR_PAIR(4));
 }
