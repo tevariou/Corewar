@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:12:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 17:38:19 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_mars		t_mars;
 typedef struct				s_processus
 {
 	int						id;
+	int						id_color;
 	int						player;
 	int						carry;
 	char					*name;

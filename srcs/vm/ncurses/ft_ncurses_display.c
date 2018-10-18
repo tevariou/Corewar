@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:03:32 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ void	ft_ncurses_print_process_pc(t_mars *mars)
 		p = tab_see_process(mars, i);
 		while (p)
 		{
-			wattron(v->arena, COLOR_PAIR(p->player + 6));
+			wattron(v->arena, COLOR_PAIR(p->id_color + 6));
 			mvwprintw(v->arena, (ft_global_restriction(p->pc) / 64),
 				((ft_global_restriction(p->pc) % 64) * 3), "%2.2hhX",
 				*mars->memory[ft_global_restriction(p->pc)]);
-			wattroff(v->arena, COLOR_PAIR(p->player + 6));
+			wattroff(v->arena, COLOR_PAIR(p->id_color + 6));
 			p = p->next;
 		}
 		i++;
@@ -104,6 +104,7 @@ void	ft_ncurses_info_mars(t_mars *mars)
 		champ = champ->next;
 	}
 	ft_ncurses_print_controlers(v);
+	ft_ncurses_print_how_to_control(v);
 }
 
 void	ft_ncurses_display(t_mars *mars, t_processus *process)

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:59:34 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 16:46:21 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 17:41:10 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,6 @@ int			indirect_store(t_mars *mars, t_processus *process)
 	if (!check_ocp(opc) || !process->opcode)
 		return (process->carry);
 	dest = process->pc + ((short)(srcs2 + srcs3)) % IDX_MOD;
-	ft_load_mars_value(mars, dest, srcs1, process->player);
+	ft_load_mars_value(mars, dest, srcs1, process->id_color);
 	return (SUCCESS);
 }

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 13:56:19 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 16:37:15 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:03:14 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,6 @@ void				ft_close_ncurses(t_visu *visu);
 void				*ft_ncurses_get_input(void *data);
 void				ft_ncurses_print_controlers(t_visu *v);
 void				ft_ncurses_print_intro(t_visu *v);
+void				ft_ncurses_print_how_to_control(t_visu *v);
+
 #endif

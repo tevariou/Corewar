@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 17:44:30 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			ft_put_string_on_circular_memory(t_mars *mars, t_processus *process,
 		if (mars->memory[(process->pc + i) % MEM_SIZE][0])
 			return (0);
 		mars->memory[(process->pc + i) % (MEM_SIZE)][0] = (char)champion[i];
-		mars->memory[(process->pc + i) % (MEM_SIZE)][1] = process->player;
+		mars->memory[(process->pc + i) % (MEM_SIZE)][1] = process->id_color;
 		i++;
 	}
 	return (1);
