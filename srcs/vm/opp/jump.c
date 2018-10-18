@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   jump.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:03:06 by lmazeaud          #+#    #+#             */
-<<<<<<< HEAD:srcs/vm/opp/jump.c
-/*   Updated: 2018/10/16 17:03:55 by lmazeaud         ###   ########.fr       */
-=======
-/*   Updated: 2018/10/18 15:41:39 by abiestro         ###   ########.fr       */
->>>>>>> new_archi:vm/srcs/opp/jump.c
+/*   Updated: 2018/10/18 16:00:30 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
