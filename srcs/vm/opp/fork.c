@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 14:27:38 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:09:44 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ t_processus		*ft_copy_process(t_processus *process,
 		ft_exit(mars, "malloc error\n");
 	copy->pc = dest;
 	copy->bytes_to_jump = dest;
-	i = 0;
+	i = -1;
 	mars->nb_process++;
 	copy->id = mars->nb_process;
-	while (i <= REG_NUMBER + 1)
+	while (++i <= REG_NUMBER + 1)
 	{
 		reg = ft_get_register(process, i);
 		ft_load_register(copy, i, reg);
-		i++;
 	}
+	copy->id_color = process->id_color;
 	copy->player = process->player;
 	copy->name = process->name;
 	copy->nbr_of_live = process->nbr_of_live;

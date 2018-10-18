@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_add_processus_to_mars.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 19:10:16 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:23:08 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_processus		*ft_new_empty_processus(void)
 		return (NULL);
 	iterator_register = 0;
 	process->id = 0;
+	process->id_color = 0;
 	process->player = 0;
 	process->pc = 0;
 	process->next_instruction_cycle = 0;
@@ -123,7 +124,6 @@ void			ft_add_champ_to_mars(t_mars *mars,
 	champion->name = process->name;
 	champion->nbr_of_live = 0;
 	champion->last_cycle_live = 0;
-	champion->nb_process = 1;
 	champion->next = mars->champion_lst;
 	mars->champion_lst = champion;
 	champion->header.magic = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 18:32:29 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:23:13 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ t_mars		*ft_set_mars(int ac, char **av)
 		if (!(current_champion = ft_argv_have_champ(mars, av, &i, ac)))
 			ft_exit(mars, E_USAGE);
 		mars->count_players++;
+		current_champion->id_color = mars->count_players;
 		set_default_player_number(mars, current_champion);
 		ft_add_champ_to_mars(mars, mars->champion_lst, current_champion);
 		tab_set_process(mars, current_champion, 0);

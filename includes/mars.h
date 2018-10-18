@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:12:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:25:11 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_mars		t_mars;
 typedef struct				s_processus
 {
 	int						id;
+	int						id_color;
 	int						player;
 	int						carry;
 	char					*name;
@@ -68,7 +69,6 @@ typedef struct				s_processus
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
 	int						(*opcode)(struct s_mars *, struct s_processus *);
-	unsigned int			params[3];
 	unsigned				bytes_to_jump;
 	struct s_processus		*next;
 }							t_processus;
@@ -79,7 +79,6 @@ typedef struct				s_champion
 	int						id_color;
 	char					*name;
 	unsigned				nbr_of_live;
-	unsigned				nb_process;
 	unsigned				last_cycle_live;
 	t_header				header;
 	struct s_champion		*next;
@@ -153,7 +152,7 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 void						ft_ncurses_display(t_mars *mars,
 								t_processus *process);
 void						ft_verbose(t_mars *mars, t_processus *process);
-void						ft_display_memory(t_mars *mars);
+void						ft_display_dump(t_mars *mars);
 void						ft_print_usage(t_mars *mars);
 void						ft_free_mars(t_mars *mars);
 void						*ft_free_current_process(t_processus *process);
