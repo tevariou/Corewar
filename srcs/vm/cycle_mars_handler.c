@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   cycle_mars_handler.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:25:59 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 
-int		ft_kill_process(t_mars *mars)
+int			ft_kill_process(t_mars *mars)
 {
 	unsigned	i;
 	t_processus	*tmp;
@@ -20,7 +20,7 @@ int		ft_kill_process(t_mars *mars)
 
 	at_least_one = 0;
 	i = mars->current_cycle;
-	while (i < mars->current_cycle + PT_SIZE + 1)
+	while (++i < mars->current_cycle + PT_SIZE + 2)
 	{
 		while ((tmp = tab_get_next_process(mars, i)))
 		{
@@ -37,12 +37,11 @@ int		ft_kill_process(t_mars *mars)
 		}
 		while ((tmp = get_jump_stock(mars)))
 			tab_set_process(mars, tmp, i);
-		i++;
 	}
 	return (at_least_one);
 }
 
-void	ft_init_champs_life(t_champion *champion)
+void		ft_init_champs_life(t_champion *champion)
 {
 	t_champion *champ;
 

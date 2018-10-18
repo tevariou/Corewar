@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_add_processus_to_mars.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:10:16 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,18 @@ t_processus		*ft_new_empty_processus(void)
 	return (process);
 }
 
+static int		ft_is_number(char *tmp)
+{
+	if (!*tmp)
+		return (ERROR);
+	while (ft_isdigit(*tmp))
+		tmp++;
+	if (*tmp)
+		return (ERROR);
+	else
+		return (SUCCESS);
+}
+
 int				ft_add_parameter_to_processus(t_mars *mars,
 t_processus *process, char **av)
 {
@@ -46,38 +58,22 @@ t_processus *process, char **av)
 	process->id = mars->nb_process;
 	if (!*av)
 		return (0);
-	else if (ft_strequ("-n", *av))
+	else if (ft_strequ("-n", *av) && ft_is_number(av[1]) == SUCCESS)
 	{
-		tmp = av[1];
-		while (ft_isdigit(*tmp))
-			tmp++;
-		if (*tmp)
-			return (ERROR);
-		process->player = atoi(av[1]);
+		process->player = ft_atoi(av[1]);
 		return (2);
 	}
-	else if (ft_strequ("-a", *av))
+	else if (ft_strequ("-a", *av) && ft_is_number(av[1]) == SUCCESS)
 	{
-		tmp = av[1];
-		while (ft_isdigit(*tmp))
-			tmp++;
-		if (*tmp)
-			return (ERROR);
-		process->pc = atoi(av[1]);
+		process->pc = ft_atoi(av[1]);
 		return (2);
 	}
 	else
 	{
 		tmp = *av;
 		while (*tmp)
-		{
-			++tmp;
-			if (ft_strequ(".cor", tmp))
-			{
-				process->name = *av;
+			if (ft_strequ(".cor", tmp++) && (process->name = *av))
 				return (SUCCESS);
-			}
-		}
 		return (ERROR);
 	}
 }
@@ -100,7 +96,7 @@ char **av, int *current_index, int ac)
 	k = 0;
 	process = ft_new_empty_processus();
 	if (!process)
-		return (NULL);
+		ft_exit(mars, E_MALLOC);
 	i += ft_is_dump_option(mars, &av[*current_index]);
 	i += ft_is_visualisator(mars, &av[*current_index]);
 	while (!process->name && (*current_index + i) < ac)
@@ -117,7 +113,7 @@ char **av, int *current_index, int ac)
 	return (process);
 }
 
-void		ft_add_champ_to_mars(t_mars *mars,
+void			ft_add_champ_to_mars(t_mars *mars,
 	t_champion *champion, t_processus *process)
 {
 	if (!(champion = (t_champion *)malloc(sizeof(t_champion))))

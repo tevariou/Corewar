@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_mars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:32:29 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Create a new Mars. Malloc what have to. Return a mars if succed, NULL else
 */
 
-t_mars		*ft_new_mars(void)
+t_mars		*ft_mars_alloc(void)
 {
 	int		i;
 	t_mars	*mars;
@@ -29,6 +29,16 @@ t_mars		*ft_new_mars(void)
 	while (++i < MEM_SIZE)
 		if (!(mars->memory[i] = (t_byte *)malloc(sizeof(t_byte) * 2)))
 			return (NULL);
+	return (mars);
+}
+
+t_mars		*ft_new_mars(void)
+{
+	t_mars	*mars;
+
+	mars = NULL;
+	if (!(mars = ft_mars_alloc()))
+		ft_exit(NULL, E_MALLOC);
 	mars->cycle_to_die = CYCLE_TO_DIE;
 	mars->count_players = 0;
 	mars->cycle_delta = CYCLE_DELTA;
@@ -47,7 +57,7 @@ t_mars		*ft_new_mars(void)
 	return (mars);
 }
 
-void	set_default_player_number(t_mars *mars, t_processus *current)
+void		set_default_player_number(t_mars *mars, t_processus *current)
 {
 	int			numero;
 	t_champion	*tmp;
