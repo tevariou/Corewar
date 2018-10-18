@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 17:36:40 by triou             #+#    #+#             */
-/*   Updated: 2018/10/18 15:18:10 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/09 16:23:17 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static const t_parse	g_parse_tab[8] = {
 	{{"live", "zjmp", "lfork", "fork", 0}, &ft_parse_0, 1},
-	{{"ld", 0}, &ft_parse_1, 2},
+	{{"ld", "lld", 0}, &ft_parse_1, 2},
 	{{"st", 0}, &ft_parse_2, 2},
 	{{"add", "sub", 0}, &ft_parse_3, 3},
 	{{"and", "or", "xor", 0}, &ft_parse_4, 3},
@@ -80,10 +80,10 @@ static void		parse_line(t_asm *a, t_file *line)
 	end = list;
 	if (p_lab(&list))
 	{
-		if ((list != line->tokens && p_blanks(&list)
+		if (list == end || (list != end && p_blanks(&list)
 			&& p_instruct(a, line, &list) && list == end)
-			|| (list != line->tokens && p_instruct(a, line, &list)
-			&& list == end) || (list == end))
+			|| (list != end && p_instruct(a, line, &list)
+			&& list == end))
 			return ;
 	}
 	else if (p_instruct(a, line, &list) && list == end)

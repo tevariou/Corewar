@@ -54,25 +54,27 @@ static void	remove_whitespaces(t_asm *a, char **line)
 	*line = tmp;
 }
 
-static void	record_file(t_asm *a, int fd)
+static void	record_file(t_asm *a, int fd, unsigned short n)
 {
 	int				ret;
 	char			*line;
-	unsigned short	n;
 
 	line = NULL;
-	n = 1;
-	get_name(a, fd, &n);
-	get_comment(a, fd, &n);
+	get_header(a, fd, &n, false);
 	while ((ret = get_next_line(fd, &line)))
 	{
-		if (ret < 0)
+		if (ret < 0 && !line)
 			err_free_exit(a, NULL);
 		ft_strclr(ft_strchr(line, COMMENT_CHAR));
 		ft_strclr(ft_strchr(line, ';'));
 		remove_whitespaces(a, &line);
-		if (*line)
+		if (*line && ret > 0)
 			add_input_line(a, line, n);
+		else if (*line)
+		{
+			free(line);
+			err_free_exit(a, NO_NEWLINE);
+		}
 		else
 			free(line);
 		line = NULL;
@@ -83,12 +85,12 @@ static void	record_file(t_asm *a, int fd)
 
 void		get_file(t_asm *a, char *file)
 {
-	int		fd;
+	int				fd;
 
 	check_extension(file, EXT);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		err_free_exit(a, NULL);
-	record_file(a, fd);
+	record_file(a, fd, 1);
 	if (close(fd) < 0)
 		err_free_exit(a, NULL);
 }

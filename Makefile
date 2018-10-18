@@ -29,38 +29,39 @@ ASM_INCS	:=	-I $(ASM_INC_SRC)
 
 ## ASM - SOURCES
 ASM_SRCS	:=	asm.c				\
-				comment.c 			\
-				exit1.c 			\
-				exit2.c 			\
-				name.c 				\
-				add_op.c 			\
-				option.c 			\
-				read.c 				\
-				compile.c 			\
-				redux.c 			\
-				lexer.c 			\
-				ft_lex1.c 			\
-				ft_lex2.c 			\
-				op.c 				\
-				parser.c 			\
-				ft_parse1.c 		\
-				ft_parse2.c 		\
-				labels.c 			\
-				free.c 				\
-				bytecode.c 			\
-				ft_atoi_base.c 		\
-				write.c 			\
+				header.c \
+				exit1.c \
+				exit2.c \
+				add_op.c \
+				option.c \
+				read.c \
+				compile.c \
+				redux.c \
+				lexer.c \
+				ft_lex1.c \
+				ft_lex2.c \
+				op.c \
+				parser.c \
+				ft_parse1.c \
+				ft_parse2.c \
+				labels.c \
+				free.c \
+				bytecode.c \
+				ft_atoi_base.c \
+				write.c \
 				convert_label_int.c \
 				convert_label_short.c \
-				verbose.c 			\
-				decompile.c			\
-				decompile_tools1.c 	\
-				decompile_tools2.c 	\
-				tools1.c 			\
-				tools2.c 			\
-				tools3.c 			\
-				init_bytecode.c 	\
-				ft_parse_tools.c
+				verbose.c \
+				decompile.c \
+				decompile_tools1.c \
+				decompile_tools2.c \
+				tools1.c \
+				tools2.c \
+				tools3.c \
+				init_bytecode.c \
+				ft_parse_tools.c \
+				header_tools.c
+
 ASM_OBJS	:=	$(addprefix $(ASM_OBJ_DIR)/, $(ASM_SRCS:.c=.o))
 
 # VM
@@ -153,10 +154,7 @@ $(PRINTF_A):
 
 $(NAME1): $(ASM_OBJS)
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
-<<<<<<< HEAD
 	@echo "$(LOG_GREEN)Asm has been created successfully !$(LOG_NOCOLOR)"
-=======
->>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 $(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c
 	@$(MD) $(OBJ_DIR)
@@ -164,7 +162,6 @@ $(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
 $(NAME2): $(VM_OBJS)
-<<<<<<< HEAD
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(NCURSES)
 	@echo "$(LOG_GREEN)Corewar has been created successfully !$(LOG_NOCOLOR)"
 
@@ -174,35 +171,20 @@ $(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
 	@$(MD) $(VM_OBJ_DIR)/$(VM_NCUDIR)
 	@$(MD) $(VM_OBJ_DIR)/$(VM_UTIDIR)
 	@$(MD) $(VM_OBJ_DIR)/$(VM_S_G_DIR)
-=======
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF)
 
-$(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
-	@$(MD) $(VM_OBJ_DIR)
-	@$(MD) $(VM_OPPDIR)
-	@$(MD) $(VM_NCUDIR)
-	@$(MD) $(VM_UTIDIR)
-	@$(MD) $(VM_S_G_DIR)
->>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
-	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
 clean:
 	@$(MK_C) $(LIB_FT_DIR)
 	@$(MK_C) $(LIB_PR_DIR)
 	@$(RM) $(OBJ_DIR)
-<<<<<<< HEAD
 	@echo "$(LOG_RED)Delete all Objects files ! $(LOG_NOCOLOR)"
-=======
->>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 fclean: clean
 	@$(MK_FC) $(LIB_FT_DIR)
 	@$(MK_FC) $(LIB_PR_DIR)
 	@$(RM) $(NAME1)
 	@$(RM) $(NAME2)
-<<<<<<< HEAD
 	@echo "$(LOG_RED)$(NAME1) and $(NAME2) has been deleted !$(LOG_NOCOLOR)"
-=======
->>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 re: fclean all
