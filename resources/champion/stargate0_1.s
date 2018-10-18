@@ -114,10 +114,8 @@ live %0
 live %0
 live %0
 live %0
-live %0
-live %0
-live %0
-st r1, 6
+st r1, 11
+st r8,  2147483647
 live %0
 
 ###tentative 1 creation Stargate
@@ -137,10 +135,10 @@ ld %168428400, r14
 ld %67235843, r13
 ld %1879245295, r12
 ld %151119360, r11
-ld %117440512, r2
-ld %2718563841, r3
+ld %100663296, r2
+ld %2685009409, r3
 ld %57672961, r4
-ld %151587081, r5
+ld %252645135, r5
 st r16, 511
 st r15, 510
 st r14, 509
@@ -148,7 +146,7 @@ st r13, 508
 st r12, 507
 st r11, 506
 and r6 ,r6 ,r6
-zjmp %480
+zjmp %479
 
 
 
