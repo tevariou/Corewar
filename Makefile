@@ -153,7 +153,10 @@ $(PRINTF_A):
 
 $(NAME1): $(ASM_OBJS)
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
+<<<<<<< HEAD
 	@echo "$(LOG_GREEN)Asm has been created successfully !$(LOG_NOCOLOR)"
+=======
+>>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 $(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c
 	@$(MD) $(OBJ_DIR)
@@ -161,6 +164,7 @@ $(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
 $(NAME2): $(VM_OBJS)
+<<<<<<< HEAD
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(NCURSES)
 	@echo "$(LOG_GREEN)Corewar has been created successfully !$(LOG_NOCOLOR)"
 
@@ -170,19 +174,35 @@ $(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
 	@$(MD) $(VM_OBJ_DIR)/$(VM_NCUDIR)
 	@$(MD) $(VM_OBJ_DIR)/$(VM_UTIDIR)
 	@$(MD) $(VM_OBJ_DIR)/$(VM_S_G_DIR)
+=======
+	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF)
+
+$(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
+	@$(MD) $(VM_OBJ_DIR)
+	@$(MD) $(VM_OPPDIR)
+	@$(MD) $(VM_NCUDIR)
+	@$(MD) $(VM_UTIDIR)
+	@$(MD) $(VM_S_G_DIR)
+>>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
 clean:
 	@$(MK_C) $(LIB_FT_DIR)
 	@$(MK_C) $(LIB_PR_DIR)
 	@$(RM) $(OBJ_DIR)
+<<<<<<< HEAD
 	@echo "$(LOG_RED)Delete all Objects files ! $(LOG_NOCOLOR)"
+=======
+>>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 fclean: clean
 	@$(MK_FC) $(LIB_FT_DIR)
 	@$(MK_FC) $(LIB_PR_DIR)
 	@$(RM) $(NAME1)
 	@$(RM) $(NAME2)
+<<<<<<< HEAD
 	@echo "$(LOG_RED)$(NAME1) and $(NAME2) has been deleted !$(LOG_NOCOLOR)"
+=======
+>>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 re: fclean all

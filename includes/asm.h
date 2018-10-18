@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   asm.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/12 20:20:36 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/18 15:11:56 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 # define ASM_H
 
 # include "op.h"
+<<<<<<< HEAD
 # include <stdbool.h>
 # include <sys/types.h>
+=======
+# include "libft.h"
+>>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 
 # define WRITING_FILE		"Writing output program to "
 # define DUMPING_A			"Dumping annotated program on standard output"
@@ -52,8 +56,13 @@ typedef struct			s_op {
 	t_byte				op_code;
 	int					n_cycles;
 	char				*comment;
+<<<<<<< HEAD
 	bool				ocp;
 	bool				dir_size;
+=======
+	t_bool				ocp;
+	t_bool				dir_size;
+>>>>>>> 5e7f500317f89f4b0982d361ed4ad8b4eba4935a
 }						t_op;
 
 extern const t_op		g_op_tab[17];

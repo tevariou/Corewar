@@ -6,20 +6,22 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:01:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 15:12:57 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MARS_H
 # define MARS_H
 
-# include "visu.h"
-# include "op.h"
-# include "libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/types.h>
 # include <stdio.h>
+# include "visu.h"
+# include "op.h"
+# include "visu.h"
+# include "op.h"
+# include "libft.h"
 
 typedef unsigned char		t_byte;
 
