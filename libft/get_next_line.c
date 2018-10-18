@@ -51,7 +51,7 @@ static int	save_data(int ret, char **line, char *data)
 		return (0);
 	}
 	else if (!(tmp = ft_strchr(*line, '\n')) && !ret)
-		return (1);
+		return (-1);
 	ft_strcpy(data, tmp + 1);
 	ft_strclr(tmp);
 	tmp = *line;

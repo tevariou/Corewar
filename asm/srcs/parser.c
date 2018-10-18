@@ -14,7 +14,7 @@
 
 static const t_parse	g_parse_tab[8] = {
 	{{"live", "zjmp", "lfork", "fork", 0}, &ft_parse_0, 1},
-	{{"ld", 0}, &ft_parse_1, 2},
+	{{"ld", "lld", 0}, &ft_parse_1, 2},
 	{{"st", 0}, &ft_parse_2, 2},
 	{{"add", "sub", 0}, &ft_parse_3, 3},
 	{{"and", "or", "xor", 0}, &ft_parse_4, 3},

@@ -1,21 +1,9 @@
-;******************************************************************************;
-;                                                                              ;
-;                                                         :::      ::::::::    ;
-;    champ.s                                            :+:      :+:    :+:    ;
-;                                                     +:+ +:+         +:+      ;
-;    By: aelola <aelola@student.42.fr>              +#+  +:+       +#+         ;
-;                                                 +#+#+#+#+#+   +#+            ;
-;    Created: 2014/02/25 11:56:47 by aelola            #+#    #+#              ;
-;    Updated: 2014/02/25 11:56:48 by aelola           ###   ########.fr        ;
-;                                                                              ;
-;******************************************************************************;
-
 .name		"lazer"
 .comment	"Mundo dit beaucoup son nom pour pas l'oublier, pck c deja arriver!"
 
 entry:
 	sti		r1, %:live, %1
-	sti		r1, %:mov, %1
+	sti		r1, %:mov, %1;
 	sti		r1, %:wall, %1
 	sti		r1, %:torpille_front, %1
 	sti		r1, %:write_front, %1

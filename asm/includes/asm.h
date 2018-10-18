@@ -29,19 +29,19 @@
 # define HEXA				"0123456789ABCDEF"
 # define DEC				"0123456789"
 # define FT_LEX_NUMBER		8
-# define WRONG_EXT			"Invalid filename"
-# define WRONG_HEADER		"Wrong header format"
-# define NAME_TOO_LONG		"Program name is too long"
-# define COMMENT_TOO_LONG	"Program comment is too long"
-# define NO_INSTRUCTION		"No instruction"
-# define WRONG_REG_NUMBER	"Wrong registry number at line "
-# define UNKNOWN_LABEL		"Unknown label found at line "
-# define INVALID_ARGS		"Invalid arguments at line "
+# define WRONG_EXT			"Error : Invalid filename"
+# define WRONG_HEADER		"Error : Wrong header format"
+# define NAME_TOO_LONG		"Error : Program name is too long"
+# define COMMENT_TOO_LONG	"Error : Program comment is too long"
+# define NO_INSTRUCTION		"Error : No instruction"
+# define WRONG_REG_NUMBER	"Error : Wrong registry number at line "
+# define UNKNOWN_LABEL		"Error : Unknown label found at line "
+# define INVALID_ARGS		"Error : Invalid arguments at line "
 # define LEXER_ERROR		"Lexical error at line "
 # define PARSER_ERROR		"Parser error at line "
-# define FILE_OVERFLOW		"File is too big"
-# define EMPTY_FILE			"File is empty"
+# define FILE_OVERFLOW		"Error : File is too big"
 # define WARNING_REG		"Warning : Null registry number at line "
+# define NO_NEWLINE			"Error : New line required after instruction"
 
 typedef unsigned char	t_byte;
 
@@ -133,8 +133,9 @@ typedef struct			s_asm {
 
 char					*get_quote(t_asm *a, int fd,
 									unsigned short *n, char *line);
-void					get_comment(t_asm *a, int fd, unsigned short *n);
-void					get_name(t_asm *a, int fd, unsigned short *n);
+char					*start_read(t_asm *a, int fd, char **line,
+									unsigned short *n);
+void					get_header(t_asm *a, int fd, unsigned short *n, bool flag);
 
 void					print_usage_exit(void);
 void					init_bytecode(t_asm *a);
