@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mars.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:12:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:06:30 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,7 +153,7 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 void						ft_ncurses_display(t_mars *mars,
 								t_processus *process);
 void						ft_verbose(t_mars *mars, t_processus *process);
-void						ft_display_memory(t_mars *mars);
+void						ft_display_dump(t_mars *mars);
 void						ft_print_usage(t_mars *mars);
 void						ft_free_mars(t_mars *mars);
 void						*ft_free_current_process(t_processus *process);
@@ -161,7 +161,7 @@ void						*ft_free_current_process(t_processus *process);
 /*
 ** Ncurses
 */
-void 						ft_init_ncurses();
+void						ft_init_ncurses();
 void						ft_ncurses_print_live(t_mars *mars);
 void						ft_ncurses_handle_pause(t_mars *mars, t_visu *v);
 
@@ -210,7 +210,6 @@ unsigned					ft_get_srcs(t_mars *mars, t_processus *process,
 unsigned					ft_get_dest(t_mars *mars, t_processus *process,
 								int code, int dir_size);
 int							check_register(int ocp, int index, int value);
-
 
 /*
 ** gestion deu tableau de lsite chainee

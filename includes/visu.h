@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 13:56:19 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/16 16:37:15 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:05:22 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 # define VERBOSE	3
 
 # define HEART		'▓'
-
 
 # include <ncurses.h>
 

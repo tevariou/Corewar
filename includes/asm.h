@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   asm.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: triou <triou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:04:54 by triou             #+#    #+#             */
-/*   Updated: 2018/10/12 20:20:36 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/18 19:05:47 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,8 @@ char					*get_quote(t_asm *a, int fd,
 									unsigned short *n, char *line);
 char					*start_read(t_asm *a, int fd, char **line,
 									unsigned short *n);
-void					get_header(t_asm *a, int fd, unsigned short *n, bool flag);
+void					get_header(t_asm *a, int fd, unsigned short *n,
+									bool flag);
 
 void					print_usage_exit(void);
 void					init_bytecode(t_asm *a);
