@@ -84,8 +84,7 @@ void		get_header(t_asm *a, int fd, unsigned short *n, bool flag)
 		record_comment(a, line, ft_strchr(line, '"') + 1);
 		return (get_header(a, fd, n, true));
 	}
-	else if (flag
-		&& !ft_strnequ(tmp, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
+	else if (!ft_strnequ(tmp, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
 		header_error(a, line);
 	if (!(tmp = ft_strjoin(tmp + ft_strlen(NAME_CMD_STRING), "\n")))
 		header_error(a, line);
