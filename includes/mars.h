@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:12:57 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:48:16 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ typedef unsigned char		t_byte;
 # define PT_SIZE			1001
 
 # define E_NO_MARS			"Error : no vm detected\n"
-# define E_PLAYERS_COUNT	"Error : numbers of player seems to be not good\n"
-# define E_CHAMPS_WRITE		"Error : champions are writted one on the other\n"
+# define E_PLAYERS_COUNT	"Error : Too many champions\n"
+# define E_CHAMPS_WRITE		"Error : Failed to load one champion in memory\n"
 # define E_CHAMPS_READ		"Error : could not read a champion\n"
 # define E_TWICE_NUM		"Error : twice number player\n"
 # define E_NOT_COR			"Error : one argument is not a .cor\n"
@@ -59,6 +59,7 @@ typedef struct s_mars		t_mars;
 typedef struct				s_processus
 {
 	int						id;
+	int						id_color;
 	int						player;
 	int						carry;
 	char					*name;
@@ -68,7 +69,6 @@ typedef struct				s_processus
 	unsigned				last_cycle_live;
 	unsigned				next_instruction_cycle;
 	int						(*opcode)(struct s_mars *, struct s_processus *);
-	unsigned int			params[3];
 	unsigned				bytes_to_jump;
 	struct s_processus		*next;
 }							t_processus;
@@ -79,7 +79,6 @@ typedef struct				s_champion
 	int						id_color;
 	char					*name;
 	unsigned				nbr_of_live;
-	unsigned				nb_process;
 	unsigned				last_cycle_live;
 	t_header				header;
 	struct s_champion		*next;
@@ -153,7 +152,7 @@ void						ft_move_pc(t_mars *mars, t_processus *process);
 void						ft_ncurses_display(t_mars *mars,
 								t_processus *process);
 void						ft_verbose(t_mars *mars, t_processus *process);
-void						ft_display_memory(t_mars *mars);
+void						ft_display_dump(t_mars *mars);
 void						ft_print_usage(t_mars *mars);
 void						ft_free_mars(t_mars *mars);
 void						*ft_free_current_process(t_processus *process);
@@ -161,7 +160,7 @@ void						*ft_free_current_process(t_processus *process);
 /*
 ** Ncurses
 */
-void 						ft_init_ncurses();
+void						ft_init_ncurses();
 void						ft_ncurses_print_live(t_mars *mars);
 void						ft_ncurses_handle_pause(t_mars *mars, t_visu *v);
 
@@ -210,7 +209,6 @@ unsigned					ft_get_srcs(t_mars *mars, t_processus *process,
 unsigned					ft_get_dest(t_mars *mars, t_processus *process,
 								int code, int dir_size);
 int							check_register(int ocp, int index, int value);
-
 
 /*
 ** gestion deu tableau de lsite chainee

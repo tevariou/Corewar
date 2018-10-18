@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:04:59 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 14:59:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:57:54 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ int		aff(t_mars *mars, t_processus *process)
 
 	process->bytes_to_jump = process->pc + 3;
 	ocp = ft_get_mars_value(mars, process->pc + 1, 1);
-	if (ft_get_param_type(ocp, 1) != REG &&
-		!ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1)))
+	if (ft_get_param_type(ocp, 1) != REG || ft_get_param_type(ocp, 2)
+		|| !ocp || (ocp & 0xffffff)
+		|| !ft_is_register(ft_get_mars_value(mars, process->pc + 2, 1)))
 		return (ERROR);
-	srcs = ft_get_register(process, ft_get_mars_value(mars, process->pc + 2, 1));
-	ft_printf("%c",srcs % 256);
+	srcs = ft_get_register(process,
+		ft_get_mars_value(mars, process->pc + 2, 1));
+	ft_printf("%c", srcs % 256);
 	return (SUCCESS);
 }

@@ -121,7 +121,9 @@ VM_SRCS		:=	mars.c 									\
 				ft_move_pc.c							\
 				adressage.c								\
 				tab_of_process_lst.c					\
-				ending_game.c							
+				ft_stock.c							\
+				ending_game.c
+
 VM_OBJS		:=	$(addprefix $(VM_OBJ_DIR)/, $(VM_SRCS:.c=.o))
 
 # TERMINAL COMMANDS
@@ -145,7 +147,7 @@ LOG_CLIGNO		= \033[5m
 all: $(LIB_DIR) $(NAME1) $(NAME2)
 
 $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)
-	
+
 $(LIBFT_A):
 	@$(MK) $(LIB_FT_DIR)
 

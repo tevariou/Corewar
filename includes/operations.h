@@ -6,12 +6,12 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 00:46:18 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 15:13:19 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:04:49 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ASM_H
-# define ASM_H
+#ifndef OPERATIONS_H
+# define OPERATIONS_H
 
 # define LIVE               0x01
 # define DIRECT_LOAD        0x02
@@ -33,6 +33,7 @@
 # define DIRECT_2			2
 # define DIRECT_4			4
 # define NO_DIRECT			0
+
 typedef struct				s_pf_opp
 {
 	unsigned				value;
@@ -63,4 +64,3 @@ t_pf_opp					g_opps[NB_OPPS] =
 };
 
 #endif
-

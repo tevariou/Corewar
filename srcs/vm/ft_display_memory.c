@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_display_memory.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:56:07 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "mars.h"
 
-void	ft_display_memory(t_mars *mars)
+static void		ft_display_memory(t_mars *mars)
 {
 	int i;
 
@@ -31,4 +30,14 @@ void	ft_display_memory(t_mars *mars)
 			ft_printf("\n%#.4x : ", i);
 	}
 	ft_printf("\n\n");
+}
+
+void			ft_display_dump(t_mars *mars)
+{
+	if (!mars->visualisor && mars->dump > 0 &&
+		mars->current_cycle == (unsigned)mars->dump)
+	{
+		ft_display_memory(mars);
+		ft_exit(mars, "");
+	}
 }

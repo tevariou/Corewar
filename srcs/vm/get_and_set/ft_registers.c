@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_registers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 15:05:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:26:25 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,14 @@ unsigned		ft_load_register(t_processus *process,
 	return (SUCCESS);
 }
 
-int			ft_is_register(int index)
+int				ft_is_register(int index)
 {
 	if (index < 1 || index > 16)
 		return (0);
 	return (SUCCESS);
 }
 
-int			ft_memory_is_register(t_mars *mars, int address)
+int				ft_memory_is_register(t_mars *mars, int address)
 {
 	if (!*mars->memory[ft_global_restriction(address)]
 		|| *mars->memory[ft_global_restriction(address)] > 16)

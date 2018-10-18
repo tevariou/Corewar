@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_through_battle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 17:46:41 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 15:03:51 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 18:56:48 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,7 @@ t_champion	*loop_through_battle(t_mars *mars)
 			ft_close_ncurses(v);
 			ft_exit(mars, "");
 		}
-		if (!mars->visualisor && mars->dump > 0)
-			if (mars->current_cycle == (unsigned)mars->dump)
-			{
-				ft_display_memory(mars);
-				ft_exit(mars, "");
-			}
+		ft_display_dump(mars);
 		if ((winner = ft_cycles_handler(mars)) != NULL)
 			return (winner);
 	}

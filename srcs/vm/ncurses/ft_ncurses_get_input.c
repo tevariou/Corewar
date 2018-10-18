@@ -6,18 +6,29 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/03 10:10:24 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 15:02:44 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 19:06:39 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mars.h"
 
-void	ft_ncurses_handle_input(t_visu *visu, int input)
+void	ft_ncurses_get_speed(t_visu *visu, int input)
 {
 	if (input == KEY_LEFT && visu->sleep < 200000)
+	{
 		visu->sleep *= 2;
+		visu->speed /= 2;
+	}
 	if (input == KEY_RIGHT && visu->sleep > 2500)
+	{
 		visu->sleep /= 2;
+		visu->speed *= 2;
+	}
+}
+
+void	ft_ncurses_handle_input(t_visu *visu, int input)
+{
+	ft_ncurses_get_speed(visu, input);
 	if (input == 'q')
 	{
 		visu->abort = 1;
@@ -53,7 +64,9 @@ void	ft_ncurses_handle_pause(t_mars *mars, t_visu *v)
 {
 	if (v->pause == OFF)
 	{
-		wprintw(v->info, "\n\n\nPAUSE ...\n");
+		wattron(v->info, COLOR_PAIR(2));
+		wprintw(v->info, "\nPAUSE ...\n\n");
+		wattroff(v->info, COLOR_PAIR(2));
 		while (1)
 		{
 			if (v->abort)
@@ -64,7 +77,9 @@ void	ft_ncurses_handle_pause(t_mars *mars, t_visu *v)
 			if (v->pause == ON)
 			{
 				werase(v->info);
-				wprintw(v->info, "\n\n\nRUNNING ...\n");
+				wattron(v->info, COLOR_PAIR(1));
+				wprintw(v->info, "\nRUNNING ...\n\n");
+				wattroff(v->info, COLOR_PAIR(1));
 				break ;
 			}
 			usleep(500);
@@ -74,9 +89,16 @@ void	ft_ncurses_handle_pause(t_mars *mars, t_visu *v)
 
 void	ft_ncurses_print_controlers(t_visu *v)
 {
-	(v->pause)
-		? wprintw(v->info, "\n\n\n RUNNING ...\n")
-		: wprintw(v->info, "\n\n\n PAUSE ...\n");
-	wprintw(v->info, "\nCycle/sec : %d \n", (v->sleep / 10000));
-	wprintw(v->info, "\nCycle/Frame : %d \n", v->frame);
+	if (v->pause)
+	{
+		wattron(v->info, COLOR_PAIR(1));
+		wprintw(v->info, "\nRUNNING ...\n\n");
+		wattroff(v->info, COLOR_PAIR(1));
+	}
+	else
+	{
+		wattron(v->info, COLOR_PAIR(2));
+		wprintw(v->info, "\nPAUSE ...\n\n");
+		wattroff(v->info, COLOR_PAIR(2));
+	}
 }

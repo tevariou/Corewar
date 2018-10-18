@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:52:07 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 17:32:04 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/18 17:40:54 by lmazeaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ int			direct_store(t_mars *mars, t_processus *process)
 		ft_load_register(process, dest, srcs);
 	else if (dest_type == IND_CODE)
 		ft_load_mars_value(mars,
-			process->pc + ((short)dest) % IDX_MOD, srcs, process->player);
+			process->pc + ((short)dest) % IDX_MOD, srcs, process->id_color);
 	return (SUCCESS);
 }
