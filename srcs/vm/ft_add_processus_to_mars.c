@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 18:29:00 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 19:23:08 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/19 14:28:54 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,14 @@ t_processus *process, char **av)
 	process->id = mars->nb_process;
 	if (!*av)
 		return (0);
-	else if (ft_strequ("-n", *av) && ft_is_number(av[1]) == SUCCESS)
+	else if (ft_strequ("-n", *av) && ft_is_number(av[1]) == SUCCESS
+			&& !process->player)
 	{
 		process->player = ft_atoi(av[1]);
 		return (2);
 	}
-	else if (ft_strequ("-a", *av) && ft_is_number(av[1]) == SUCCESS)
+	else if (ft_strequ("-a", *av) && ft_is_number(av[1]) == SUCCESS
+			&& !process->pc)
 	{
 		process->pc = ft_atoi(av[1]);
 		return (2);
