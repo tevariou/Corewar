@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:51:33 by triou             #+#    #+#             */
-/*   Updated: 2018/10/12 20:16:54 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/19 18:27:18 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static void	output_error(t_asm *a, char *line, char *val)
 	ft_strclr(ft_strchr(tmp, ' '));
 	ft_strclr(ft_strchr(tmp, '\t'));
 	ft_strclr(ft_strchr(tmp, ','));
+	ft_strclr(ft_strchr(tmp, ':'));
 	p = ft_strstr(line, val);
 	write(2, line, p - line);
 	ft_putstr_fd("\e[4m\033[1;31m", 2);

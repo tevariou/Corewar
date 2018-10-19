@@ -24,7 +24,7 @@ int			ft_kill_process(t_mars *mars)
 	{
 		while ((tmp = tab_get_next_process(mars, i)))
 		{
-			if (mars->cycle_teta <= 0 || tmp->last_cycle_live <= mars->current_cycle - mars->cycle_teta)
+			if (tmp->last_cycle_live <= mars->current_cycle - mars->cycle_teta)
 			{
 				free(tmp);
 				mars->nb_process--;

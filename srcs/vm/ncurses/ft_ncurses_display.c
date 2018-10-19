@@ -98,7 +98,6 @@ void	ft_ncurses_info_mars(t_mars *mars)
 	wprintw(v->info, "next cycle to die : %d --- \n\n", mars->cycle_to_die);
 	wprintw(v->info, "cycle to die : %d --- \n\n", mars->cycle_teta);
 	wprintw(v->info, "nb process %d --- \n\n", mars->nb_process);
-	wprintw(v->info, "MAX_CHECKS %d --- \n\n", mars->max_check);
 	champ = mars->champion_lst;
 	while (champ)
 	{

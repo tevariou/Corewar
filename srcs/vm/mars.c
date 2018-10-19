@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:31:12 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/19 15:06:32 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/19 19:24:57 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ int		main(int ac, char **av)
 	winner = loop_through_battle(mars);
 	if (mars->visualisor == NCURSE)
 		ft_close_ncurses(&mars->visu);
-	ft_printf("Player %d(%s) win the game in %d cycle!!\n", winner->id,
-		winner->header.prog_name, mars->current_cycle);
+	ft_printf("Player %d(%s) win the game in %d cycle!!\n",
+		winner->id, winner->header.prog_name,
+		mars->current_cycle);
 	ft_printf("He says : \"%s\" \n", winner->header.comment);
 	ft_free_mars(mars);
 	return (SUCCESS);

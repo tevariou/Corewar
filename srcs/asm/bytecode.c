@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 17:36:18 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 18:55:56 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/19 18:38:48 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,7 @@ static void				set_values(t_asm *a)
 void					set_bytecode(t_asm *a)
 {
 	init_bytecode(a);
+	if (!(a->output))
+		err_free_exit(a, NO_INSTRUCTION);
 	set_values(a);
 }

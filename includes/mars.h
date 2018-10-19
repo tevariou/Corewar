@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 20:14:52 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/19 14:31:49 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/10/19 19:11:20 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ typedef unsigned char		t_byte;
 # define E_NOT_COR			"Error : one argument is not a .cor\n"
 # define E_MALLOC			"Error : malloc error\n"
 # define E_USAGE			"usage"
+# define E_NO_CODE			"Error : no code \n"
 
 typedef struct s_mars		t_mars;
 typedef struct				s_processus

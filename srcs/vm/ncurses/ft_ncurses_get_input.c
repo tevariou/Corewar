@@ -72,7 +72,7 @@ void	ft_ncurses_handle_pause(t_mars *mars, t_visu *v)
 			if (v->abort)
 			{
 				ft_close_ncurses(v);
-				ft_exit(mars, NULL);
+				ft_exit(mars, "");
 			}
 			if (v->pause == ON)
 			{

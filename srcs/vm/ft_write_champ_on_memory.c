@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 22:38:21 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 17:44:30 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/19 19:16:08 by triou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static int	ft_read_information(t_mars *mars, t_processus *process, int fd)
 	unsigned char	tmp[5];
 	int				l;
 
+	ft_bzero(tmp, 5);
 	champ = mars->champion_lst;
 	while (champ && champ->id != process->player)
 		champ = champ->next;
@@ -44,15 +45,16 @@ static int	ft_read_information(t_mars *mars, t_processus *process, int fd)
 		* 256 * 256 + tmp[2] * 256 + tmp[3];
 	if (champ->header.magic != COREWAR_EXEC_MAGIC)
 		ft_exit(mars, E_NOT_COR);
-	l = read(fd, champ->header.prog_name, PROG_NAME_LENGTH);
-	champ->header.prog_name[l] = 0;
+	if ((l = read(fd, champ->header.prog_name, PROG_NAME_LENGTH)) != -1)
+		champ->header.prog_name[l] = 0;
 	read(fd, tmp, 4);
 	read(fd, tmp, 4);
-	tmp[4] = 0;
-	champ->header.prog_size = tmp[0] * 256 * 256 * 256 + tmp[1]\
-		* 256 * 256 + tmp[2] * 256 + tmp[3];
-	l = read(fd, champ->header.comment, COMMENT_LENGTH + 4);
-	champ->header.prog_name[l] = 0;
+	if ((champ->header.prog_size = tmp[0] * 256 * 256 * 256 + tmp[1]
+		* 256 * 256 + tmp[2] * 256 + tmp[3]) == 0 || champ->header.prog_size
+			> CHAMP_MAX_SIZE)
+		ft_exit(mars, E_NO_CODE);
+	if ((l = read(fd, champ->header.comment, COMMENT_LENGTH + 4)) != -1)
+		champ->header.comment[l] = 0;
 	return (1);
 }
 
@@ -64,6 +66,8 @@ int			ft_load_champ_from_file_to_memory(t_mars *mars,
 
 	ft_read_information(mars, process, fd);
 	buff_size = read(fd, buffer, CHAMP_MAX_SIZE);
+	if (buff_size <= 0)
+		return (0);
 	if (buff_size >= CHAMP_MAX_SIZE)
 		return (0);
 	buffer[buff_size] = 0;

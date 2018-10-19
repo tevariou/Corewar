@@ -145,7 +145,6 @@ LOG_CLIGNO		= \033[5m
 .PHONY: all clean fclean re
 
 all: $(LIB_DIR) $(NAME1) $(NAME2)
-	@cat resources/ASCII_COREWAR
 
 $(NAME1): $(LIBFT_A) $(ASM_OBJS)
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
@@ -155,6 +154,7 @@ $(NAME1): $(LIBFT_A) $(ASM_OBJS)
 $(NAME2): $(LIBFT_A) $(PRINTF_A) $(VM_OBJS)
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(NCURSES)
 	@echo "$(LOG_GREEN)Corewar has been created successfully !$(LOG_NOCOLOR)"
+	@cat resources/ASCII_COREWAR
 
 $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)
 
