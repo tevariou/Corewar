@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 16:43:31 by triou             #+#    #+#             */
-/*   Updated: 2018/10/12 20:06:26 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/19 14:45:33 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*get_line(t_asm *a, char *line, char **buff)
+static char			*get_line(t_asm *a, char *line, char **buff)
 {
 	char	*tmp;
 
@@ -32,7 +32,7 @@ static char	*get_line(t_asm *a, char *line, char **buff)
 	return (tmp);
 }
 
-char		*get_quote(t_asm *a, int fd, unsigned short *n, char *line)
+char				*get_quote(t_asm *a, int fd, unsigned short *n, char *line)
 {
 	char	*s;
 	char	*buff;
@@ -60,7 +60,8 @@ char		*get_quote(t_asm *a, int fd, unsigned short *n, char *line)
 	return (line);
 }
 
-char	*start_read(t_asm *a, int fd, char **line, unsigned short *n)
+char				*start_read(t_asm *a, int fd, char **line,
+		unsigned short *n)
 {
 	int		ret;
 	char	*tmp;

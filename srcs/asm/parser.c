@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 17:36:40 by triou             #+#    #+#             */
-/*   Updated: 2018/10/09 16:23:17 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/19 14:43:59 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static const t_parse	g_parse_tab[8] = {
 	{{"aff", 0}, &ft_parse_7, 1}
 };
 
-static bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
+static bool				p_instruct(t_asm *a, t_file *line, t_lex **token)
 {
 	t_lex	*list;
 	int		i;
@@ -45,7 +45,7 @@ static bool	p_instruct(t_asm *a, t_file *line, t_lex **token)
 	return (false);
 }
 
-static bool	p_blanks(t_lex **token)
+static bool				p_blanks(t_lex **token)
 {
 	t_lex	*list;
 
@@ -58,7 +58,7 @@ static bool	p_blanks(t_lex **token)
 	return (false);
 }
 
-static bool	p_lab(t_lex **token)
+static bool				p_lab(t_lex **token)
 {
 	t_lex	*list;
 
@@ -71,7 +71,7 @@ static bool	p_lab(t_lex **token)
 	return (false);
 }
 
-static void		parse_line(t_asm *a, t_file *line)
+static void				parse_line(t_asm *a, t_file *line)
 {
 	t_lex	*list;
 	t_lex	*end;
@@ -91,7 +91,7 @@ static void		parse_line(t_asm *a, t_file *line)
 	parser_error(a, line, PARSER_ERROR);
 }
 
-void			parser(t_asm *a)
+void					parser(t_asm *a)
 {
 	t_file	*line;
 	t_file	*tail;

@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:23:30 by triou             #+#    #+#             */
-/*   Updated: 2018/10/12 19:16:20 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/19 14:44:33 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ unsigned short	atoi_base_short(char *str, const char *base)
 
 	sign = (*str == '-') ? -1 : 1;
 	if (*str == '-' || *str == '+')
-		 str += 1;
+		str += 1;
 	ret = 0;
 	while (ft_strchr(base, ft_toupper(*str)))
 	{
@@ -59,7 +59,7 @@ unsigned int	atoi_base_int(char *str, const char *base)
 
 	sign = (*str == '-') ? -1 : 1;
 	if (*str == '-' || *str == '+')
-		 str += 1;
+		str += 1;
 	ret = 0;
 	while (ft_strchr(base, ft_toupper(*str)))
 	{
