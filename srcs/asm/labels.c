@@ -6,7 +6,7 @@
 /*   By: triou <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 14:57:14 by triou             #+#    #+#             */
-/*   Updated: 2018/10/10 11:43:06 by triou            ###   ########.fr       */
+/*   Updated: 2018/10/19 14:42:42 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void		add_label(t_asm *a, t_file *list)
 	head->prev = new;
 }
 
-static bool	do_label_exist(t_label *list, char *str)
+static bool		do_label_exist(t_label *list, char *str)
 {
 	t_label	*tail;
 
