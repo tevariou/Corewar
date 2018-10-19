@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ncurses_display.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 17:57:11 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 19:08:49 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/19 14:53:57 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ void	ft_ncurses_info_mars(t_mars *mars)
 	wprintw(v->info, "next cycle to die : %d --- \n\n", mars->cycle_to_die);
 	wprintw(v->info, "cycle to die : %d --- \n\n", mars->cycle_teta);
 	wprintw(v->info, "nb process %d --- \n\n", mars->nb_process);
+	wprintw(v->info, "MAX_CHECKS %d --- \n\n", mars->max_check);
 	champ = mars->champion_lst;
 	while (champ)
 	{

@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 23:17:30 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/17 17:42:33 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/19 14:35:24 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ int		live(t_mars *mars, t_processus *process)
 		{
 			c->last_cycle_live = mars->current_cycle;
 			c->nbr_of_live++;
-			mars->nbr_of_live++;
 		}
 		c = c->next;
 	}
+	mars->nbr_of_live++;
 	process->last_cycle_live = mars->current_cycle;
 	process->bytes_to_jump = process->pc + REG_SIZE + 1;
 	return (process->carry);

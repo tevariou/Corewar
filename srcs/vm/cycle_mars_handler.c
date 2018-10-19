@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/28 18:29:38 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 18:25:59 by lterrail         ###   ########.fr       */
+/*   Updated: 2018/10/19 15:04:14 by lterrail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int			ft_kill_process(t_mars *mars)
 	{
 		while ((tmp = tab_get_next_process(mars, i)))
 		{
-			if (tmp->last_cycle_live <= mars->current_cycle - mars->cycle_teta)
+			if (mars->cycle_teta <= 0 || tmp->last_cycle_live <= mars->current_cycle - mars->cycle_teta)
 			{
 				free(tmp);
 				mars->nb_process--;
@@ -56,15 +56,15 @@ void		ft_init_champs_life(t_champion *champion)
 t_champion	*ft_cycles_handler(t_mars *mars)
 {
 	mars->current_cycle++;
-	if (mars->current_cycle == mars->cycle_to_die)
+	if (mars->current_cycle >= mars->cycle_to_die)
 	{
 		if (!ft_kill_process(mars))
 			return (end_game(mars));
 		if (mars->nbr_of_live >= NBR_LIVE || mars->max_check == 1)
 		{
 			mars->max_check = MAX_CHECKS;
-			mars->cycle_to_die += mars->cycle_teta;
 			mars->cycle_teta -= mars->cycle_delta;
+			mars->cycle_to_die += mars->cycle_teta;
 			ft_init_champs_life(mars->champion_lst);
 		}
 		else
