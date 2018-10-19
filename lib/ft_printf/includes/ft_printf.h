@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/01 19:22:07 by abiestro          #+#    #+#             */
-/*   Updated: 2018/05/30 18:46:23 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/06/18 19:15:34 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# define BUFF_SIZE  128
+# define BUFF_SIZE 2000
 # define PTF_FLAG_ALL			(    0b111111111111)
 # define PTF_TOGGLE_FLAG(x, flag)	(x ^= flag)
 # define PTF_TURNON_FLAG(x, flag)	(x |= flag)

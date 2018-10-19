@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 22:53:53 by lmazeaud          #+#    #+#             */
-/*   Updated: 2018/10/18 19:09:44 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/19 13:45:42 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int				ft_fork(t_mars *mars, t_processus *process)
 	unsigned	dest;
 
 	dest = ft_get_mars_value(mars, process->pc + 1, IND_SIZE);
-	process->carry = (dest) ? 0 : 1;
+//	process->carry = (dest) ? 0 : 1;
 	ft_copy_process(process, mars,
 		ft_global_restriction(process->pc + ((short)dest) % IDX_MOD));
 	process->bytes_to_jump = process->pc + IND_SIZE + 1;

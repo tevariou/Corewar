@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+         #
+#    By: abiestro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/01 13:01:09 by abiestro          #+#    #+#              #
-#    Updated: 2018/10/18 16:30:40 by lmazeaud         ###   ########.fr        #
+#    Updated: 2018/10/19 14:11:54 by abiestro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,14 +61,11 @@ $(PATH_OBJS) :
 $(PATH_OBJS)/%.o : $(PATH_SOURCES)/%.c
 	@$(CC) -c $(CFLAGS)  $<  -o $@
 
-
 clean:
 		@rm -rf $(PATH_OBJS)
-		@echo "objects removed ft_printf "
 
 fclean: clean
 		@rm -f $(NAME)
-		@echo "removed $(NAME)"
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: abiestro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/01 12:48:13 by abiestro          #+#    #+#             */
-/*   Updated: 2018/05/29 21:41:08 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/06/08 23:53:55 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,23 @@
 int				write_buffer(char **buffer, int src)
 {
 	static int	buff_delimitor = 0;
+	static char *s = 0;
 	int			returned;
 
-	if (buffer)
+	if (buffer && ++buff_delimitor)
 	{
+		if (s == 0)
+			s = *buffer;
 		**buffer = src;
-		buff_delimitor++;
-		if (buff_delimitor > 0 && buff_delimitor % BUFF_SIZE == 0)
+		if (buff_delimitor != 0 && buff_delimitor % BUFF_SIZE == 0)
 		{
-			write(1, buffer, BUFF_SIZE);
-			*buffer = buffer[-BUFF_SIZE];
+			*buffer = s;
+			write(1, *buffer, BUFF_SIZE);
 		}
 		else
 			++*buffer;
 	}
-	if (!buffer)
+	else
 	{
 		returned = buff_delimitor;
 		if (src == '0')
@@ -114,6 +116,6 @@ int				ft_printf(const char *format, ...)
 			format = &format[i];
 	}
 	va_end(argl);
-	write(1, buffer, write_buffer(NULL, 0));
+	write(1, buffer, write_buffer(NULL, 0) % BUFF_SIZE);
 	return (write_buffer(NULL, '0'));
 }
