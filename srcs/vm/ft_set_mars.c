@@ -6,7 +6,7 @@
 /*   By: lmazeaud <lmazeaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 15:53:45 by abiestro          #+#    #+#             */
-/*   Updated: 2018/10/18 19:23:13 by lmazeaud         ###   ########.fr       */
+/*   Updated: 2018/10/19 14:33:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void		set_default_player_number(t_mars *mars, t_processus *current)
 	t_champion	*tmp;
 
 	if (!current->player)
-		numero = 1;
+		numero = INT_MAX;
 	else
 		numero = current->player;
 	tmp = mars->champion_lst;
@@ -73,7 +73,7 @@ void		set_default_player_number(t_mars *mars, t_processus *current)
 		{
 			if (!current->player)
 			{
-				numero++;
+				numero--;
 				tmp = mars->champion_lst;
 			}
 			else
