@@ -145,8 +145,19 @@ LOG_CLIGNO		= \033[5m
 .PHONY: all clean fclean re
 
 all: $(LIB_DIR) $(NAME1) $(NAME2)
+	@cat resources/ASCII_COREWAR
+
+$(NAME1): $(LIBFT_A) $(ASM_OBJS)
+	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
+	@echo "$(LOG_GREEN)Asm has been created successfully !$(LOG_NOCOLOR)"
+
+
+$(NAME2): $(LIBFT_A) $(PRINTF_A) $(VM_OBJS)
+	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(NCURSES)
+	@echo "$(LOG_GREEN)Corewar has been created successfully !$(LOG_NOCOLOR)"
 
 $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)
+
 
 $(LIBFT_A):
 	@$(MK) $(LIB_FT_DIR)
@@ -154,18 +165,12 @@ $(LIBFT_A):
 $(PRINTF_A):
 	@$(MK) $(LIB_PR_DIR)
 
-$(NAME1): $(ASM_OBJS)
-	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
-	@echo "$(LOG_GREEN)Asm has been created successfully !$(LOG_NOCOLOR)"
 
 $(ASM_OBJ_DIR)/%.o: $(ASM_SRC_DIR)/%.c
 	@$(MD) $(OBJ_DIR)
 	@$(MD) $(ASM_OBJ_DIR)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I $(INC_DIR)
 
-$(NAME2): $(VM_OBJS)
-	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(NCURSES)
-	@echo "$(LOG_GREEN)Corewar has been created successfully !$(LOG_NOCOLOR)"
 
 $(VM_OBJ_DIR)/%.o: $(VM_SRC_DIR)/%.c
 	@$(MD) $(VM_OBJ_DIR)/$(VM_OBJ_DIR)

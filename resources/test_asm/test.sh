@@ -7,7 +7,7 @@ mkdir -p tev_dir
 mkdir -p zaz_dir
 for f in $dir/*.s
 do
-	darling shell ./zaz $f >/dev/null 2>&1
+	./zaz $f >/dev/null 2>&1
 	if [ -f "$(echo $f | rev | cut -c3- | rev)$cor" ]
 	then
 		hexdump -C $(echo $f | rev | cut -c3- | rev)$cor > zaz_dir/$(echo $f | cut -c8- | rev | cut -c3- | rev)
