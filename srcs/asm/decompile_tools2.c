@@ -29,11 +29,12 @@ void		read_magic(int in)
 
 void		read_name(int in, char **out)
 {
-	char			buff[PROG_NAME_LENGTH];
+	char			buff[PROG_NAME_LENGTH + 1];
 	unsigned char	bin[SEPARATOR_LINE * 2];
 
 	if (read(in, buff, PROG_NAME_LENGTH) <= 0)
 		decompile_error(out);
+	buff[PROG_NAME_LENGTH] = '\0';
 	ft_buffer(out, NAME_CMD_STRING);
 	ft_buffer(out, " \"");
 	ft_buffer(out, buff);
@@ -44,11 +45,12 @@ void		read_name(int in, char **out)
 
 void		read_comment(int in, char **out)
 {
-	char			buff[COMMENT_LENGTH];
+	char			buff[COMMENT_LENGTH + 1];
 	unsigned char	bin[SEPARATOR_LINE];
 
 	if (read(in, buff, COMMENT_LENGTH) <= 0)
 		decompile_error(out);
+	buff[COMMENT_LENGTH + 1] = '\0';
 	ft_buffer(out, COMMENT_CMD_STRING);
 	ft_buffer(out, " \"");
 	ft_buffer(out, buff);
