@@ -50,7 +50,7 @@ void		read_comment(int in, char **out)
 
 	if (read(in, buff, COMMENT_LENGTH) <= 0)
 		decompile_error(out);
-	buff[COMMENT_LENGTH + 1] = '\0';
+	buff[COMMENT_LENGTH] = '\0';
 	ft_buffer(out, COMMENT_CMD_STRING);
 	ft_buffer(out, " \"");
 	ft_buffer(out, buff);
